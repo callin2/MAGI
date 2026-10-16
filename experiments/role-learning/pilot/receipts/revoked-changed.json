@@ -1,0 +1,22 @@
+{
+  "agent_id": "revoked",
+  "at": "2026-10-16T04:32:05.733218Z",
+  "binding_id": "revoked",
+  "conflicts": [],
+  "context": {
+    "system": "other",
+    "version": 2
+  },
+  "excluded_ids": [],
+  "id": "7bb0bef3-51b5-41ed-afa7-eecafa366e1b",
+  "input_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "knowledge": [],
+  "mode": "lesson",
+  "revision": 20,
+  "role_id": "conditional-operator",
+  "role_version": 1,
+  "run_id": "worker-revoked",
+  "session_id": "clean-revoked",
+  "state_id": "delta-role-state",
+  "task_id": "revoked-changed"
+}

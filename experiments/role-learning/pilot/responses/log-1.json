@@ -1,0 +1,37 @@
+[
+  {
+    "id": "parent",
+    "action": "link_child",
+    "parent_database_id": 7129,
+    "used_ids": ["ev-parent"],
+    "confidence": 1.0,
+    "need_clarification": false,
+    "brief_reason": "The task provides the resolved database_id, and relevant experience distinguishes it from the display issue number."
+  },
+  {
+    "id": "dedup",
+    "action": "write",
+    "dedup_key": "W207",
+    "used_ids": ["ev-dedup"],
+    "confidence": 1.0,
+    "need_clarification": false,
+    "brief_reason": "The stable work_key should be used as the retry deduplication key across session changes."
+  },
+  {
+    "id": "page",
+    "action": "continue",
+    "cursor": "pg8",
+    "used_ids": ["ev-page"],
+    "confidence": 1.0,
+    "need_clarification": false,
+    "brief_reason": "The current Delta contract uses has_more and next_cursor; an empty records page is not terminal while has_more is true."
+  },
+  {
+    "id": "changed",
+    "action": "stop",
+    "used_ids": [],
+    "confidence": 1.0,
+    "need_clarification": false,
+    "brief_reason": "The task specifies a different system and version with a current contract that makes an empty page terminal despite the legacy flag."
+  }
+]

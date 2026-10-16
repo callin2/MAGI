@@ -1,0 +1,133 @@
+{
+  "agent_id": "lesson-2",
+  "at": "2026-10-16T04:30:03.534428Z",
+  "binding_id": "lesson-2",
+  "conflicts": [],
+  "context": {
+    "system": "delta",
+    "version": 1
+  },
+  "id": "999dde00-16bc-4037-a8dc-413bc8ebe4f8",
+  "input_sha256": "e1ba300ba8a346640bfc12a7aa8cda0684b7b5ac2c59564241f4dd7ef2eb695e",
+  "knowledge": [
+    {
+      "conditions": {
+        "system": "delta",
+        "version": 1
+      },
+      "conflict_key": "retry-deduplication",
+      "fact": "Retries using session-specific event IDs created duplicate records for the same work key.",
+      "falsifier": "Retries with different session IDs are automatically collapsed without supplying the stable work key.",
+      "grants": [],
+      "hypothesis": "Deduplication was keyed by session ID instead of the stable work key.",
+      "id": "lesson-ev-dedup",
+      "kind": "technical",
+      "owner": "reflection-agent",
+      "rule": "Use the stable work key as the deduplication key across retries and sessions.",
+      "scope": "role",
+      "source_id": "ev-dedup",
+      "state_id": "delta-role-state",
+      "status": "active",
+      "validation": {
+        "lesson_id": "lesson-ev-dedup",
+        "reference": "validation-review.md",
+        "tests": [
+          {
+            "case": "coordinator-source-check",
+            "evidence": "ev-dedup",
+            "passed": true
+          },
+          {
+            "case": "different-context-is-not-retrieved",
+            "counterexample": true,
+            "evidence": "scripts/test_role_memory.py",
+            "passed": true
+          }
+        ]
+      },
+      "version": 1
+    },
+    {
+      "conditions": {
+        "system": "delta",
+        "version": 1
+      },
+      "conflict_key": "pagination-completion",
+      "fact": "An empty records page can have has_more=true and a next_cursor.",
+      "falsifier": "The API contract guarantees that records=[] always means has_more=false.",
+      "grants": [],
+      "hypothesis": "Pagination stopped because empty records was incorrectly treated as completion.",
+      "id": "lesson-ev-page",
+      "kind": "technical",
+      "owner": "reflection-agent",
+      "rule": "Continue pagination while has_more is true, following next_cursor even when records is empty.",
+      "scope": "role",
+      "source_id": "ev-page",
+      "state_id": "delta-role-state",
+      "status": "active",
+      "validation": {
+        "lesson_id": "lesson-ev-page",
+        "reference": "validation-review.md",
+        "tests": [
+          {
+            "case": "coordinator-source-check",
+            "evidence": "ev-page",
+            "passed": true
+          },
+          {
+            "case": "different-context-is-not-retrieved",
+            "counterexample": true,
+            "evidence": "scripts/test_role_memory.py",
+            "passed": true
+          }
+        ]
+      },
+      "version": 1
+    },
+    {
+      "conditions": {
+        "system": "delta",
+        "version": 1
+      },
+      "conflict_key": "parent-identifier",
+      "fact": "The parent field requires the issue database ID, not the displayed issue number.",
+      "falsifier": "A request using the displayed issue number succeeds where the database ID request would fail.",
+      "grants": [],
+      "hypothesis": "The rejected request used the display number where the API expected the database identifier.",
+      "id": "lesson-ev-parent",
+      "kind": "technical",
+      "owner": "reflection-agent",
+      "rule": "Resolve and submit the parent database ID when creating a child issue.",
+      "scope": "role",
+      "source_id": "ev-parent",
+      "state_id": "delta-role-state",
+      "status": "active",
+      "validation": {
+        "lesson_id": "lesson-ev-parent",
+        "reference": "validation-review.md",
+        "tests": [
+          {
+            "case": "coordinator-source-check",
+            "evidence": "ev-parent",
+            "passed": true
+          },
+          {
+            "case": "different-context-is-not-retrieved",
+            "counterexample": true,
+            "evidence": "scripts/test_role_memory.py",
+            "passed": true
+          }
+        ]
+      },
+      "version": 1
+    }
+  ],
+  "mode": "lesson",
+  "revision": 17,
+  "role_id": "conditional-operator",
+  "role_version": 1,
+  "run_id": "worker-lesson-2",
+  "session_id": "clean-lesson-2",
+  "state_id": "delta-role-state",
+  "task_id": "lesson-2-page"
+}

@@ -1,0 +1,21 @@
+{
+  "agent_id": "none-1",
+  "at": "2026-10-16T04:30:02.257584Z",
+  "binding_id": "none-1",
+  "conflicts": [],
+  "context": {
+    "system": "delta",
+    "version": 1
+  },
+  "id": "76f1b7eb-6065-40b3-b7d0-a197b4548e74",
+  "input_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "knowledge": [],
+  "mode": "none",
+  "revision": 17,
+  "role_id": "conditional-operator",
+  "role_version": 1,
+  "run_id": "worker-none-1",
+  "session_id": "clean-none-1",
+  "state_id": "delta-role-state",
+  "task_id": "none-1-dedup"
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "lesson-ev-parent",
+    "source_id": "ev-parent",
+    "fact": "The parent field requires the issue database ID, not the displayed issue number.",
+    "hypothesis": "The rejected request used the display number where the API expected the database identifier.",
+    "rule": "Resolve and submit the parent database ID when creating a child issue.",
+    "conditions": {
+      "system": "delta",
+      "version": 1
+    },
+    "falsifier": "A request using the displayed issue number succeeds where the database ID request would fail.",
+    "kind": "technical",
+    "scope": "role",
+    "conflict_key": "parent-identifier"
+  },
+  {
+    "id": "lesson-ev-dedup",
+    "source_id": "ev-dedup",
+    "fact": "Retries using session-specific event IDs created duplicate records for the same work key.",
+    "hypothesis": "Deduplication was keyed by session ID instead of the stable work key.",
+    "rule": "Use the stable work key as the deduplication key across retries and sessions.",
+    "conditions": {
+      "system": "delta",
+      "version": 1
+    },
+    "falsifier": "Retries with different session IDs are automatically collapsed without supplying the stable work key.",
+    "kind": "technical",
+    "scope": "role",
+    "conflict_key": "retry-deduplication"
+  },
+  {
+    "id": "lesson-ev-page",
+    "source_id": "ev-page",
+    "fact": "An empty records page can have has_more=true and a next_cursor.",
+    "hypothesis": "Pagination stopped because empty records was incorrectly treated as completion.",
+    "rule": "Continue pagination while has_more is true, following next_cursor even when records is empty.",
+    "conditions": {
+      "system": "delta",
+      "version": 1
+    },
+    "falsifier": "The API contract guarantees that records=[] always means has_more=false.",
+    "kind": "technical",
+    "scope": "role",
+    "conflict_key": "pagination-completion"
+  }
+]

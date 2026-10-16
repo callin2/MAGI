@@ -1,0 +1,14 @@
+{
+  "frozen_at": "2026-10-16T04:28:41.163999Z",
+  "sha256": {
+    "events.json": "a285608da17fc5568379db4a97c5adfe8b6741a879463cda3e0967f71b2cf718",
+    "cases.json": "47b5e0588046232fa29a93c25bc683b339f5e75f76da69b7f6615cc7a62bc414",
+    "protocol.md": "0d5a644904d084c710949123bba55d87440f92bee66b4f30394754d013b55d4d"
+  },
+  "repetitions": 2,
+  "conditions": [
+    "none",
+    "log",
+    "lesson"
+  ]
+}

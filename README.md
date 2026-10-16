@@ -4,6 +4,13 @@
 
 현재는 연구 계약과 소규모 실제 AI 파일럿 단계입니다. 범용 엔진·모델 연결 런타임·자동 변화 감지는 구현되지 않았습니다. 확정된 제품 아키텍처나 성능 보증은 아닙니다.
 
+역할 경험의 지속을 위한 작은 SQLite/JSON adapter와 새 에이전트 전이 탐색 시험을 추가했습니다. [기존 사례 비교](docs/learning-precedents.md), [독립 검토 후 계약](docs/role-learning-contract.md), [실행 결과와 한계](docs/role-learning-pilot-report.md)를 확인할 수 있습니다. 저장·조회·범위·철회 경로는 시험했으며, 정제 교훈의 독립적 이득과 전체 토큰 효율은 입증하지 못했습니다. [#16](https://github.com/callin2/MAGI/issues/16)·[#18](https://github.com/callin2/MAGI/issues/18)에 남은 검증을 연결했습니다.
+
+```sh
+python3 scripts/test_role_memory.py -v
+python3 scripts/check_role_learning.py
+```
+
 ## 요구사항과 연구 계약
 
 - [상위 요구사항 #1](https://github.com/callin2/MAGI/issues/1)

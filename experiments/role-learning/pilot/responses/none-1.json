@@ -1,0 +1,37 @@
+[
+  {
+    "id": "parent",
+    "action": "link_child",
+    "parent_database_id": 7129,
+    "used_ids": [],
+    "confidence": 1.0,
+    "need_clarification": false,
+    "brief_reason": "The lookup explicitly provides database_id=7129 and the requested action is link_child."
+  },
+  {
+    "id": "dedup",
+    "action": "write",
+    "dedup_key": null,
+    "used_ids": [],
+    "confidence": 0.2,
+    "need_clarification": true,
+    "brief_reason": "The required dedup_key construction for a retry across sessions is unspecified."
+  },
+  {
+    "id": "page",
+    "action": null,
+    "cursor": null,
+    "used_ids": [],
+    "confidence": 0.2,
+    "need_clarification": true,
+    "brief_reason": "The delta archive contract does not specify whether has_more or another condition controls continuation."
+  },
+  {
+    "id": "changed",
+    "action": null,
+    "used_ids": [],
+    "confidence": 0.2,
+    "need_clarification": true,
+    "brief_reason": "The provided contract belongs to another system and version, so it cannot establish the delta v1 action."
+  }
+]

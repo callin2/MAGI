@@ -1,0 +1,43 @@
+{
+  "agent_id": "log-1",
+  "at": "2026-10-16T04:30:02.618727Z",
+  "binding_id": "log-1",
+  "conflicts": [],
+  "context": {
+    "system": "other",
+    "version": 2
+  },
+  "id": "ffb896de-eda3-4fac-97f7-f155e3e3da1b",
+  "input_sha256": "23d4ee18cade7aae01dbe4414328cb38d7f46e7d664e43b2cdebbc12b9a527d7",
+  "knowledge": [
+    {
+      "id": "ev-dedup",
+      "observation": "Delta ledger: retry sent event_id=session:s1 then session:s2 for the same work_key W91. Two records were created. Validator says dedup_key must equal stable work_key, independent of session_id. Retry dedup_key=W91 produced one record.",
+      "owner": "reflection-agent",
+      "scope": "role",
+      "state_id": "delta-role-state"
+    },
+    {
+      "id": "ev-page",
+      "observation": "Delta archive: client stopped at records=[] although has_more=true,next_cursor=nx3. Later records were missed. Replay following next_cursor until has_more=false returned all records. Empty records is not the completion condition.",
+      "owner": "reflection-agent",
+      "scope": "role",
+      "state_id": "delta-role-state"
+    },
+    {
+      "id": "ev-parent",
+      "observation": "Delta tracker: attempted POST parent=issue_number 42 was rejected. GET issue 42 returned database_id=9081. Retry parent_database_id=9081 succeeded. Display number and database id are different.",
+      "owner": "reflection-agent",
+      "scope": "role",
+      "state_id": "delta-role-state"
+    }
+  ],
+  "mode": "log",
+  "revision": 17,
+  "role_id": "conditional-operator",
+  "role_version": 1,
+  "run_id": "worker-log-1",
+  "session_id": "clean-log-1",
+  "state_id": "delta-role-state",
+  "task_id": "log-1-changed"
+}

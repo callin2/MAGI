@@ -1,0 +1,37 @@
+[
+  {
+    "id": "parent",
+    "action": "link_child",
+    "parent_database_id": 7129,
+    "used_ids": ["lesson-ev-parent"],
+    "confidence": 1.0,
+    "need_clarification": false,
+    "brief_reason": "The resolved parent database ID is explicitly provided."
+  },
+  {
+    "id": "dedup",
+    "action": "write",
+    "dedup_key": "W207",
+    "used_ids": ["lesson-ev-dedup"],
+    "confidence": 1.0,
+    "need_clarification": false,
+    "brief_reason": "The stable work key is the deduplication key across session retries."
+  },
+  {
+    "id": "page",
+    "action": "continue",
+    "cursor": "pg8",
+    "used_ids": [],
+    "confidence": 0.8,
+    "need_clarification": false,
+    "brief_reason": "has_more=true and a next_cursor indicate another page."
+  },
+  {
+    "id": "changed",
+    "action": "stop",
+    "used_ids": [],
+    "confidence": 1.0,
+    "need_clarification": false,
+    "brief_reason": "The documented v2 contract makes an empty records page terminal despite the legacy flag."
+  }
+]

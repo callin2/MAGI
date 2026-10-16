@@ -41,7 +41,7 @@ binding은 agent, role/version, project, active 여부를 연결한다. 겸임�
 
 read/write: 활성 owner binding만 원본을 변경한다. private는 owner agent만 조회. role scope는 같은 state의 활성 binding만 조회. 다른 역할 공유는 동일 프로젝트의 특정 대상 state에 특정 active lesson version을 가리키는 명시 grant로 표현한다. 수신자는 원본을 수정하지 못하고 자신의 후보를 제안한다. grant 축소/철회 또는 source 철회는 향후 조회를 차단한다. 원본 교훈 자체 철회와 grant만 철회는 구별한다.
 
-적용 조건은 task context의 명시 key/value와 일치해야 한다. first adapter는 사람이/모델이 판단한 의미 충돌을 `conflict_key`로 표현하고 같은 key의 서로 다른 active 규칙이 동시에 후보가 되면 모두 보류한다. 의미 충돌의 자동 발견은 구현하지 않는다. 최신 revision은 신선도이지 진실의 우선순위가 아니다.
+적용 조건은 task context의 명시 key/value와 일치해야 한다. first adapter는 사람이/모델이 판단한 의미 충돌을 `conflict_key`로 표현하고 같은 key의 서로 다른 active 규칙이 동시에 후보가 되면 해당 조회에서 모두 보류한다. 원본 active 상태는 다른 조건의 조회까지 무효화하지 않도록 유지하며 receipt의 conflicts로 보류를 기록한다. 의미 충돌의 자동 발견은 구현하지 않는다. 최신 revision은 신선도이지 진실의 우선순위가 아니다.
 
 조회는 먼저 binding/state/권한/active/grant/version/조건을 검사한 뒤 관련 항목을 반환한다. 이 필터는 adapter 경계이며 에이전트의 OS 파일 접근을 제한하는 보안 sandbox가 아니다. 같은 저장 파일을 직접 읽을 수 있는 실행 사이의 보안 격리를 주장하지 않는다.
 

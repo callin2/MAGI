@@ -1,0 +1,49 @@
+[
+  {
+    "id": "parent",
+    "context": {
+      "system": "delta",
+      "version": 1
+    },
+    "task": "Delta tracker: create a child under display issue #57. Lookup returns database_id=7129. Return action=link_child and parent_database_id. Do not send a request.",
+    "expected": {
+      "action": "link_child",
+      "parent_database_id": 7129
+    }
+  },
+  {
+    "id": "dedup",
+    "context": {
+      "system": "delta",
+      "version": 1
+    },
+    "task": "Delta ledger: task work_key=W207 was retried after session changed s4→s9. Return action=write and dedup_key for the retry.",
+    "expected": {
+      "action": "write",
+      "dedup_key": "W207"
+    }
+  },
+  {
+    "id": "page",
+    "context": {
+      "system": "delta",
+      "version": 1
+    },
+    "task": "Delta archive: response records=[],has_more=true,next_cursor=pg8. Return action=continue or stop and cursor if continuing.",
+    "expected": {
+      "action": "continue",
+      "cursor": "pg8"
+    }
+  },
+  {
+    "id": "changed",
+    "context": {
+      "system": "other",
+      "version": 2
+    },
+    "task": "Other archive v2: current documented contract says an empty records page is terminal even if has_more remains true due to a legacy flag. Response records=[],has_more=true,next_cursor=pg8. Return action=continue or stop.",
+    "expected": {
+      "action": "stop"
+    }
+  }
+]

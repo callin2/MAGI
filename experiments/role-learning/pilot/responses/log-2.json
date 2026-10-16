@@ -1,0 +1,37 @@
+[
+  {
+    "id": "parent",
+    "action": "link_child",
+    "parent_database_id": 7129,
+    "used_ids": ["ev-parent"],
+    "confidence": 1.0,
+    "need_clarification": false,
+    "brief_reason": "The current task provides the resolved database_id; the matching experience distinguishes it from the display issue number."
+  },
+  {
+    "id": "dedup",
+    "action": "write",
+    "dedup_key": "W207",
+    "used_ids": ["ev-dedup"],
+    "confidence": 1.0,
+    "need_clarification": false,
+    "brief_reason": "Retries must use the stable work_key as dedup_key across session changes."
+  },
+  {
+    "id": "page",
+    "action": "continue",
+    "cursor": "pg8",
+    "used_ids": ["ev-page"],
+    "confidence": 1.0,
+    "need_clarification": false,
+    "brief_reason": "The current Delta v1 contract continues while has_more is true, even with an empty records page."
+  },
+  {
+    "id": "changed",
+    "action": "stop",
+    "used_ids": [],
+    "confidence": 1.0,
+    "need_clarification": false,
+    "brief_reason": "The task specifies the current Other v2 contract, where an empty records page is terminal despite the legacy has_more flag."
+  }
+]

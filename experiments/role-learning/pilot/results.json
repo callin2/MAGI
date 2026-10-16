@@ -1,0 +1,347 @@
+{
+  "main": {
+    "none": {
+      "strict_correct": 3,
+      "secondary_semantic_correct": 3,
+      "clarification_requests": 5,
+      "cases": 8
+    },
+    "log": {
+      "strict_correct": 8,
+      "secondary_semantic_correct": 8,
+      "clarification_requests": 0,
+      "cases": 8
+    },
+    "lesson": {
+      "strict_correct": 5,
+      "secondary_semantic_correct": 8,
+      "clarification_requests": 0,
+      "cases": 8
+    }
+  },
+  "runs": {
+    "none-1": {
+      "strict_correct": 1,
+      "secondary_semantic_correct": 1,
+      "clarification_requests": 3,
+      "cases": 4,
+      "details": [
+        {
+          "id": "parent",
+          "strict_correct": true,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        },
+        {
+          "id": "dedup",
+          "strict_correct": false,
+          "secondary_semantic_correct": false,
+          "need_clarification": true,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        },
+        {
+          "id": "page",
+          "strict_correct": false,
+          "secondary_semantic_correct": false,
+          "need_clarification": true,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        },
+        {
+          "id": "changed",
+          "strict_correct": false,
+          "secondary_semantic_correct": false,
+          "need_clarification": true,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        }
+      ]
+    },
+    "none-2": {
+      "strict_correct": 2,
+      "secondary_semantic_correct": 2,
+      "clarification_requests": 2,
+      "cases": 4,
+      "details": [
+        {
+          "id": "parent",
+          "strict_correct": true,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        },
+        {
+          "id": "dedup",
+          "strict_correct": false,
+          "secondary_semantic_correct": false,
+          "need_clarification": true,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        },
+        {
+          "id": "page",
+          "strict_correct": false,
+          "secondary_semantic_correct": false,
+          "need_clarification": true,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        },
+        {
+          "id": "changed",
+          "strict_correct": true,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        }
+      ]
+    },
+    "log-1": {
+      "strict_correct": 4,
+      "secondary_semantic_correct": 4,
+      "clarification_requests": 0,
+      "cases": 4,
+      "details": [
+        {
+          "id": "parent",
+          "strict_correct": true,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        },
+        {
+          "id": "dedup",
+          "strict_correct": true,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        },
+        {
+          "id": "page",
+          "strict_correct": true,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        },
+        {
+          "id": "changed",
+          "strict_correct": true,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        }
+      ]
+    },
+    "log-2": {
+      "strict_correct": 4,
+      "secondary_semantic_correct": 4,
+      "clarification_requests": 0,
+      "cases": 4,
+      "details": [
+        {
+          "id": "parent",
+          "strict_correct": true,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        },
+        {
+          "id": "dedup",
+          "strict_correct": true,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        },
+        {
+          "id": "page",
+          "strict_correct": true,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        },
+        {
+          "id": "changed",
+          "strict_correct": true,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        }
+      ]
+    },
+    "lesson-1": {
+      "strict_correct": 4,
+      "secondary_semantic_correct": 4,
+      "clarification_requests": 0,
+      "cases": 4,
+      "details": [
+        {
+          "id": "parent",
+          "strict_correct": true,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        },
+        {
+          "id": "dedup",
+          "strict_correct": true,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        },
+        {
+          "id": "page",
+          "strict_correct": true,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        },
+        {
+          "id": "changed",
+          "strict_correct": true,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        }
+      ]
+    },
+    "lesson-2": {
+      "strict_correct": 1,
+      "secondary_semantic_correct": 4,
+      "clarification_requests": 0,
+      "cases": 4,
+      "details": [
+        {
+          "id": "parent",
+          "strict_correct": false,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        },
+        {
+          "id": "dedup",
+          "strict_correct": false,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        },
+        {
+          "id": "page",
+          "strict_correct": false,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        },
+        {
+          "id": "changed",
+          "strict_correct": true,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        }
+      ]
+    },
+    "ablation": {
+      "strict_correct": 1,
+      "secondary_semantic_correct": 4,
+      "clarification_requests": 0,
+      "cases": 4,
+      "details": [
+        {
+          "id": "parent",
+          "strict_correct": false,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        },
+        {
+          "id": "dedup",
+          "strict_correct": false,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        },
+        {
+          "id": "page",
+          "strict_correct": false,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        },
+        {
+          "id": "changed",
+          "strict_correct": true,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        }
+      ]
+    },
+    "revoked": {
+      "strict_correct": 4,
+      "secondary_semantic_correct": 4,
+      "clarification_requests": 0,
+      "cases": 4,
+      "details": [
+        {
+          "id": "parent",
+          "strict_correct": true,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        },
+        {
+          "id": "dedup",
+          "strict_correct": true,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        },
+        {
+          "id": "page",
+          "strict_correct": true,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        },
+        {
+          "id": "changed",
+          "strict_correct": true,
+          "secondary_semantic_correct": true,
+          "need_clarification": false,
+          "high_confidence_semantic_error": false,
+          "unsupported_used_ids": false
+        }
+      ]
+    }
+  },
+  "total_model_tokens": null,
+  "total_model_cost": null,
+  "causal_generalization": "not established"
+}

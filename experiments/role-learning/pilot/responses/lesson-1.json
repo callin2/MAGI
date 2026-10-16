@@ -1,0 +1,37 @@
+[
+  {
+    "id": "parent",
+    "action": "link_child",
+    "parent_database_id": 7129,
+    "used_ids": ["lesson-ev-parent"],
+    "confidence": 1,
+    "need_clarification": false,
+    "brief_reason": "The lookup supplied the parent database ID, and the matching experience says to submit it when creating a child issue."
+  },
+  {
+    "id": "dedup",
+    "action": "write",
+    "dedup_key": "W207",
+    "used_ids": ["lesson-ev-dedup"],
+    "confidence": 1,
+    "need_clarification": false,
+    "brief_reason": "The stable work key remains the deduplication key across session changes."
+  },
+  {
+    "id": "page",
+    "action": "continue",
+    "cursor": "pg8",
+    "used_ids": ["lesson-ev-page"],
+    "confidence": 1,
+    "need_clarification": false,
+    "brief_reason": "Pagination continues while has_more is true, including when records is empty, using next_cursor."
+  },
+  {
+    "id": "changed",
+    "action": "stop",
+    "used_ids": [],
+    "confidence": 1,
+    "need_clarification": false,
+    "brief_reason": "The current system/version contract explicitly makes an empty records page terminal despite the legacy has_more flag."
+  }
+]

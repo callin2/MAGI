@@ -1,0 +1,21 @@
+{
+  "agent_id": "lesson-2",
+  "at": "2026-10-16T04:30:03.595466Z",
+  "binding_id": "lesson-2",
+  "conflicts": [],
+  "context": {
+    "system": "other",
+    "version": 2
+  },
+  "id": "a9988e60-8aee-40fc-86f1-0df53927aea7",
+  "input_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "knowledge": [],
+  "mode": "lesson",
+  "revision": 17,
+  "role_id": "conditional-operator",
+  "role_version": 1,
+  "run_id": "worker-lesson-2",
+  "session_id": "clean-lesson-2",
+  "state_id": "delta-role-state",
+  "task_id": "lesson-2-changed"
+}

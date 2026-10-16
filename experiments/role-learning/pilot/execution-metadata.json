@@ -1,0 +1,23 @@
+{
+  "native_parent_session": "01a141f1-e54a-7243-a57b-3565250dbcc7",
+  "model": "inherited same parent model/settings; no per-worker override",
+  "fresh_workers": "fork_turns=none; only assigned input allowed",
+  "decision_turns": {
+    "design_reviews": 3,
+    "implementation_reviews": 2,
+    "experience_reflection": 1,
+    "main_trials": 6,
+    "ablation_revocation": 2
+  },
+  "artifact_save_followup_turns": 12,
+  "provider_model_calls": null,
+  "total_tokens": null,
+  "total_cost": null,
+  "evidence": "JSON judgment outputs and adapter application receipts, not external API actions",
+  "code_sha256": {
+    "prepare_role_learning.py": "76666403b602f01e12fb6e14a35d7e2af28e16cc0008395bb4140f7e0c0be5da",
+    "check_role_learning.py": "47b86ea9dc5d1c93beadd01d704b172a516c341c426d64edce6e8a83fbcb6139",
+    "test_role_memory.py": "9627cfb9be89fdd90124cae46cb2e1985509a8af9b86b88df05de63fced62410",
+    "role_memory.py": "396516b8568942927f112ac98d60ce8ec9c6d3f37f629a1cc5f86737783b5167"
+  }
+}

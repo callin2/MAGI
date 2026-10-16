@@ -1,0 +1,44 @@
+[
+  {
+    "id": "parent",
+    "action": "link_child",
+    "required action fields": {
+      "parent_database_id": 7129
+    },
+    "used_ids": ["lesson-ev-parent"],
+    "confidence": 1.0,
+    "need_clarification": false,
+    "brief_reason": "The resolved parent database ID must be submitted when creating the child."
+  },
+  {
+    "id": "dedup",
+    "action": "write",
+    "required action fields": {
+      "dedup_key": "W207"
+    },
+    "used_ids": ["lesson-ev-dedup"],
+    "confidence": 1.0,
+    "need_clarification": false,
+    "brief_reason": "The stable work key remains the deduplication key across session changes."
+  },
+  {
+    "id": "page",
+    "action": "continue",
+    "required action fields": {
+      "cursor": "pg8"
+    },
+    "used_ids": ["lesson-ev-page"],
+    "confidence": 1.0,
+    "need_clarification": false,
+    "brief_reason": "Pagination continues when has_more is true, including for an empty records page."
+  },
+  {
+    "id": "changed",
+    "action": "stop",
+    "required action fields": {},
+    "used_ids": [],
+    "confidence": 1.0,
+    "need_clarification": false,
+    "brief_reason": "The current documented contract makes an empty records page terminal despite the legacy has_more flag."
+  }
+]

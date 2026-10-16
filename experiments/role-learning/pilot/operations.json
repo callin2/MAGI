@@ -1,0 +1,3565 @@
+[
+  {
+    "request": {
+      "op": "state",
+      "id": "delta-role-state",
+      "role_id": "conditional-operator",
+      "role_version": 1,
+      "project": "synthetic-pilot",
+      "purpose": "Apply documented API contracts",
+      "criteria": "correctness, scope, evidence, no invented permissions"
+    },
+    "exit_code": 0,
+    "result": {
+      "revision": 1,
+      "state": {
+        "active": true,
+        "criteria": "correctness, scope, evidence, no invented permissions",
+        "id": "delta-role-state",
+        "project": "synthetic-pilot",
+        "purpose": "Apply documented API contracts",
+        "role_id": "conditional-operator",
+        "role_version": 1
+      }
+    }
+  },
+  {
+    "request": {
+      "op": "bind",
+      "id": "trainer",
+      "agent_id": "reflection-agent",
+      "state_id": "delta-role-state",
+      "role_id": "conditional-operator",
+      "role_version": 1,
+      "project": "synthetic-pilot"
+    },
+    "exit_code": 0,
+    "result": {
+      "binding": {
+        "active": true,
+        "agent_id": "reflection-agent",
+        "id": "trainer",
+        "project": "synthetic-pilot",
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "state_id": "delta-role-state"
+      },
+      "revision": 2
+    }
+  },
+  {
+    "request": {
+      "op": "event",
+      "binding_id": "trainer",
+      "scope": "role",
+      "event": {
+        "id": "ev-parent",
+        "observation": "Delta tracker: attempted POST parent=issue_number 42 was rejected. GET issue 42 returned database_id=9081. Retry parent_database_id=9081 succeeded. Display number and database id are different.",
+        "scope": "role"
+      }
+    },
+    "exit_code": 0,
+    "result": {
+      "event_id": "ev-parent",
+      "revision": 3
+    }
+  },
+  {
+    "request": {
+      "op": "event",
+      "binding_id": "trainer",
+      "scope": "role",
+      "event": {
+        "id": "ev-dedup",
+        "observation": "Delta ledger: retry sent event_id=session:s1 then session:s2 for the same work_key W91. Two records were created. Validator says dedup_key must equal stable work_key, independent of session_id. Retry dedup_key=W91 produced one record.",
+        "scope": "role"
+      }
+    },
+    "exit_code": 0,
+    "result": {
+      "event_id": "ev-dedup",
+      "revision": 4
+    }
+  },
+  {
+    "request": {
+      "op": "event",
+      "binding_id": "trainer",
+      "scope": "role",
+      "event": {
+        "id": "ev-page",
+        "observation": "Delta archive: client stopped at records=[] although has_more=true,next_cursor=nx3. Later records were missed. Replay following next_cursor until has_more=false returned all records. Empty records is not the completion condition.",
+        "scope": "role"
+      }
+    },
+    "exit_code": 0,
+    "result": {
+      "event_id": "ev-page",
+      "revision": 5
+    }
+  },
+  {
+    "request": {
+      "op": "candidate",
+      "binding_id": "trainer",
+      "lesson": {
+        "id": "lesson-ev-parent",
+        "source_id": "ev-parent",
+        "fact": "The parent field requires the issue database ID, not the displayed issue number.",
+        "hypothesis": "The rejected request used the display number where the API expected the database identifier.",
+        "rule": "Resolve and submit the parent database ID when creating a child issue.",
+        "conditions": {
+          "system": "delta",
+          "version": 1
+        },
+        "falsifier": "A request using the displayed issue number succeeds where the database ID request would fail.",
+        "kind": "technical",
+        "scope": "role",
+        "conflict_key": "parent-identifier"
+      }
+    },
+    "exit_code": 0,
+    "result": {
+      "candidate_id": "lesson-ev-parent",
+      "revision": 6
+    }
+  },
+  {
+    "request": {
+      "op": "activate",
+      "binding_id": "trainer",
+      "lesson_id": "lesson-ev-parent",
+      "validation": {
+        "lesson_id": "lesson-ev-parent",
+        "reference": "validation-review.md",
+        "tests": [
+          {
+            "case": "coordinator-source-check",
+            "passed": true,
+            "evidence": "ev-parent"
+          },
+          {
+            "case": "different-context-is-not-retrieved",
+            "passed": true,
+            "counterexample": true,
+            "evidence": "scripts/test_role_memory.py"
+          }
+        ]
+      }
+    },
+    "exit_code": 0,
+    "result": {
+      "lesson_id": "lesson-ev-parent",
+      "revision": 7,
+      "status": "active"
+    }
+  },
+  {
+    "request": {
+      "op": "candidate",
+      "binding_id": "trainer",
+      "lesson": {
+        "id": "lesson-ev-dedup",
+        "source_id": "ev-dedup",
+        "fact": "Retries using session-specific event IDs created duplicate records for the same work key.",
+        "hypothesis": "Deduplication was keyed by session ID instead of the stable work key.",
+        "rule": "Use the stable work key as the deduplication key across retries and sessions.",
+        "conditions": {
+          "system": "delta",
+          "version": 1
+        },
+        "falsifier": "Retries with different session IDs are automatically collapsed without supplying the stable work key.",
+        "kind": "technical",
+        "scope": "role",
+        "conflict_key": "retry-deduplication"
+      }
+    },
+    "exit_code": 0,
+    "result": {
+      "candidate_id": "lesson-ev-dedup",
+      "revision": 8
+    }
+  },
+  {
+    "request": {
+      "op": "activate",
+      "binding_id": "trainer",
+      "lesson_id": "lesson-ev-dedup",
+      "validation": {
+        "lesson_id": "lesson-ev-dedup",
+        "reference": "validation-review.md",
+        "tests": [
+          {
+            "case": "coordinator-source-check",
+            "passed": true,
+            "evidence": "ev-dedup"
+          },
+          {
+            "case": "different-context-is-not-retrieved",
+            "passed": true,
+            "counterexample": true,
+            "evidence": "scripts/test_role_memory.py"
+          }
+        ]
+      }
+    },
+    "exit_code": 0,
+    "result": {
+      "lesson_id": "lesson-ev-dedup",
+      "revision": 9,
+      "status": "active"
+    }
+  },
+  {
+    "request": {
+      "op": "candidate",
+      "binding_id": "trainer",
+      "lesson": {
+        "id": "lesson-ev-page",
+        "source_id": "ev-page",
+        "fact": "An empty records page can have has_more=true and a next_cursor.",
+        "hypothesis": "Pagination stopped because empty records was incorrectly treated as completion.",
+        "rule": "Continue pagination while has_more is true, following next_cursor even when records is empty.",
+        "conditions": {
+          "system": "delta",
+          "version": 1
+        },
+        "falsifier": "The API contract guarantees that records=[] always means has_more=false.",
+        "kind": "technical",
+        "scope": "role",
+        "conflict_key": "pagination-completion"
+      }
+    },
+    "exit_code": 0,
+    "result": {
+      "candidate_id": "lesson-ev-page",
+      "revision": 10
+    }
+  },
+  {
+    "request": {
+      "op": "activate",
+      "binding_id": "trainer",
+      "lesson_id": "lesson-ev-page",
+      "validation": {
+        "lesson_id": "lesson-ev-page",
+        "reference": "validation-review.md",
+        "tests": [
+          {
+            "case": "coordinator-source-check",
+            "passed": true,
+            "evidence": "ev-page"
+          },
+          {
+            "case": "different-context-is-not-retrieved",
+            "passed": true,
+            "counterexample": true,
+            "evidence": "scripts/test_role_memory.py"
+          }
+        ]
+      }
+    },
+    "exit_code": 0,
+    "result": {
+      "lesson_id": "lesson-ev-page",
+      "revision": 11,
+      "status": "active"
+    }
+  },
+  {
+    "request": {
+      "op": "bind",
+      "id": "none-1",
+      "agent_id": "none-1",
+      "state_id": "delta-role-state",
+      "role_id": "conditional-operator",
+      "role_version": 1,
+      "project": "synthetic-pilot"
+    },
+    "exit_code": 0,
+    "result": {
+      "binding": {
+        "active": true,
+        "agent_id": "none-1",
+        "id": "none-1",
+        "project": "synthetic-pilot",
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "state_id": "delta-role-state"
+      },
+      "revision": 12
+    }
+  },
+  {
+    "request": {
+      "op": "bind",
+      "id": "log-1",
+      "agent_id": "log-1",
+      "state_id": "delta-role-state",
+      "role_id": "conditional-operator",
+      "role_version": 1,
+      "project": "synthetic-pilot"
+    },
+    "exit_code": 0,
+    "result": {
+      "binding": {
+        "active": true,
+        "agent_id": "log-1",
+        "id": "log-1",
+        "project": "synthetic-pilot",
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "state_id": "delta-role-state"
+      },
+      "revision": 13
+    }
+  },
+  {
+    "request": {
+      "op": "bind",
+      "id": "lesson-1",
+      "agent_id": "lesson-1",
+      "state_id": "delta-role-state",
+      "role_id": "conditional-operator",
+      "role_version": 1,
+      "project": "synthetic-pilot"
+    },
+    "exit_code": 0,
+    "result": {
+      "binding": {
+        "active": true,
+        "agent_id": "lesson-1",
+        "id": "lesson-1",
+        "project": "synthetic-pilot",
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "state_id": "delta-role-state"
+      },
+      "revision": 14
+    }
+  },
+  {
+    "request": {
+      "op": "bind",
+      "id": "none-2",
+      "agent_id": "none-2",
+      "state_id": "delta-role-state",
+      "role_id": "conditional-operator",
+      "role_version": 1,
+      "project": "synthetic-pilot"
+    },
+    "exit_code": 0,
+    "result": {
+      "binding": {
+        "active": true,
+        "agent_id": "none-2",
+        "id": "none-2",
+        "project": "synthetic-pilot",
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "state_id": "delta-role-state"
+      },
+      "revision": 15
+    }
+  },
+  {
+    "request": {
+      "op": "bind",
+      "id": "log-2",
+      "agent_id": "log-2",
+      "state_id": "delta-role-state",
+      "role_id": "conditional-operator",
+      "role_version": 1,
+      "project": "synthetic-pilot"
+    },
+    "exit_code": 0,
+    "result": {
+      "binding": {
+        "active": true,
+        "agent_id": "log-2",
+        "id": "log-2",
+        "project": "synthetic-pilot",
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "state_id": "delta-role-state"
+      },
+      "revision": 16
+    }
+  },
+  {
+    "request": {
+      "op": "bind",
+      "id": "lesson-2",
+      "agent_id": "lesson-2",
+      "state_id": "delta-role-state",
+      "role_id": "conditional-operator",
+      "role_version": 1,
+      "project": "synthetic-pilot"
+    },
+    "exit_code": 0,
+    "result": {
+      "binding": {
+        "active": true,
+        "agent_id": "lesson-2",
+        "id": "lesson-2",
+        "project": "synthetic-pilot",
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "state_id": "delta-role-state"
+      },
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "none-1",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "delta",
+        "version": 1
+      },
+      "mode": "none",
+      "task_id": "none-1-parent",
+      "session_id": "clean-none-1",
+      "run_id": "worker-none-1"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "none-1",
+        "at": "2026-10-16T04:30:02.198514Z",
+        "binding_id": "none-1",
+        "conflicts": [],
+        "context": {
+          "system": "delta",
+          "version": 1
+        },
+        "id": "87e301f1-5ea8-44dd-a935-c3dfbd982006",
+        "input_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "knowledge": [],
+        "mode": "none",
+        "revision": 17,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-none-1",
+        "session_id": "clean-none-1",
+        "state_id": "delta-role-state",
+        "task_id": "none-1-parent"
+      },
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "none-1",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "delta",
+        "version": 1
+      },
+      "mode": "none",
+      "task_id": "none-1-dedup",
+      "session_id": "clean-none-1",
+      "run_id": "worker-none-1"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "none-1",
+        "at": "2026-10-16T04:30:02.257584Z",
+        "binding_id": "none-1",
+        "conflicts": [],
+        "context": {
+          "system": "delta",
+          "version": 1
+        },
+        "id": "76f1b7eb-6065-40b3-b7d0-a197b4548e74",
+        "input_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "knowledge": [],
+        "mode": "none",
+        "revision": 17,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-none-1",
+        "session_id": "clean-none-1",
+        "state_id": "delta-role-state",
+        "task_id": "none-1-dedup"
+      },
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "none-1",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "delta",
+        "version": 1
+      },
+      "mode": "none",
+      "task_id": "none-1-page",
+      "session_id": "clean-none-1",
+      "run_id": "worker-none-1"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "none-1",
+        "at": "2026-10-16T04:30:02.318777Z",
+        "binding_id": "none-1",
+        "conflicts": [],
+        "context": {
+          "system": "delta",
+          "version": 1
+        },
+        "id": "60e89f69-d89a-4bfb-bd7c-c82a6a61ee58",
+        "input_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "knowledge": [],
+        "mode": "none",
+        "revision": 17,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-none-1",
+        "session_id": "clean-none-1",
+        "state_id": "delta-role-state",
+        "task_id": "none-1-page"
+      },
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "none-1",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "other",
+        "version": 2
+      },
+      "mode": "none",
+      "task_id": "none-1-changed",
+      "session_id": "clean-none-1",
+      "run_id": "worker-none-1"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "none-1",
+        "at": "2026-10-16T04:30:02.377670Z",
+        "binding_id": "none-1",
+        "conflicts": [],
+        "context": {
+          "system": "other",
+          "version": 2
+        },
+        "id": "42c44292-f3e7-4841-8882-e092e08cdff6",
+        "input_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "knowledge": [],
+        "mode": "none",
+        "revision": 17,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-none-1",
+        "session_id": "clean-none-1",
+        "state_id": "delta-role-state",
+        "task_id": "none-1-changed"
+      },
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "log-1",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "delta",
+        "version": 1
+      },
+      "mode": "log",
+      "task_id": "log-1-parent",
+      "session_id": "clean-log-1",
+      "run_id": "worker-log-1"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "log-1",
+        "at": "2026-10-16T04:30:02.438663Z",
+        "binding_id": "log-1",
+        "conflicts": [],
+        "context": {
+          "system": "delta",
+          "version": 1
+        },
+        "id": "a7738417-d45c-4702-85d6-06c6a56ea2b7",
+        "input_sha256": "23d4ee18cade7aae01dbe4414328cb38d7f46e7d664e43b2cdebbc12b9a527d7",
+        "knowledge": [
+          {
+            "id": "ev-dedup",
+            "observation": "Delta ledger: retry sent event_id=session:s1 then session:s2 for the same work_key W91. Two records were created. Validator says dedup_key must equal stable work_key, independent of session_id. Retry dedup_key=W91 produced one record.",
+            "owner": "reflection-agent",
+            "scope": "role",
+            "state_id": "delta-role-state"
+          },
+          {
+            "id": "ev-page",
+            "observation": "Delta archive: client stopped at records=[] although has_more=true,next_cursor=nx3. Later records were missed. Replay following next_cursor until has_more=false returned all records. Empty records is not the completion condition.",
+            "owner": "reflection-agent",
+            "scope": "role",
+            "state_id": "delta-role-state"
+          },
+          {
+            "id": "ev-parent",
+            "observation": "Delta tracker: attempted POST parent=issue_number 42 was rejected. GET issue 42 returned database_id=9081. Retry parent_database_id=9081 succeeded. Display number and database id are different.",
+            "owner": "reflection-agent",
+            "scope": "role",
+            "state_id": "delta-role-state"
+          }
+        ],
+        "mode": "log",
+        "revision": 17,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-log-1",
+        "session_id": "clean-log-1",
+        "state_id": "delta-role-state",
+        "task_id": "log-1-parent"
+      },
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "log-1",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "delta",
+        "version": 1
+      },
+      "mode": "log",
+      "task_id": "log-1-dedup",
+      "session_id": "clean-log-1",
+      "run_id": "worker-log-1"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "log-1",
+        "at": "2026-10-16T04:30:02.497356Z",
+        "binding_id": "log-1",
+        "conflicts": [],
+        "context": {
+          "system": "delta",
+          "version": 1
+        },
+        "id": "c3db592d-afbd-4155-8226-a9bec30fb2a3",
+        "input_sha256": "23d4ee18cade7aae01dbe4414328cb38d7f46e7d664e43b2cdebbc12b9a527d7",
+        "knowledge": [
+          {
+            "id": "ev-dedup",
+            "observation": "Delta ledger: retry sent event_id=session:s1 then session:s2 for the same work_key W91. Two records were created. Validator says dedup_key must equal stable work_key, independent of session_id. Retry dedup_key=W91 produced one record.",
+            "owner": "reflection-agent",
+            "scope": "role",
+            "state_id": "delta-role-state"
+          },
+          {
+            "id": "ev-page",
+            "observation": "Delta archive: client stopped at records=[] although has_more=true,next_cursor=nx3. Later records were missed. Replay following next_cursor until has_more=false returned all records. Empty records is not the completion condition.",
+            "owner": "reflection-agent",
+            "scope": "role",
+            "state_id": "delta-role-state"
+          },
+          {
+            "id": "ev-parent",
+            "observation": "Delta tracker: attempted POST parent=issue_number 42 was rejected. GET issue 42 returned database_id=9081. Retry parent_database_id=9081 succeeded. Display number and database id are different.",
+            "owner": "reflection-agent",
+            "scope": "role",
+            "state_id": "delta-role-state"
+          }
+        ],
+        "mode": "log",
+        "revision": 17,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-log-1",
+        "session_id": "clean-log-1",
+        "state_id": "delta-role-state",
+        "task_id": "log-1-dedup"
+      },
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "log-1",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "delta",
+        "version": 1
+      },
+      "mode": "log",
+      "task_id": "log-1-page",
+      "session_id": "clean-log-1",
+      "run_id": "worker-log-1"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "log-1",
+        "at": "2026-10-16T04:30:02.557753Z",
+        "binding_id": "log-1",
+        "conflicts": [],
+        "context": {
+          "system": "delta",
+          "version": 1
+        },
+        "id": "d83fa5bc-e95f-45f0-8e94-60c049c70784",
+        "input_sha256": "23d4ee18cade7aae01dbe4414328cb38d7f46e7d664e43b2cdebbc12b9a527d7",
+        "knowledge": [
+          {
+            "id": "ev-dedup",
+            "observation": "Delta ledger: retry sent event_id=session:s1 then session:s2 for the same work_key W91. Two records were created. Validator says dedup_key must equal stable work_key, independent of session_id. Retry dedup_key=W91 produced one record.",
+            "owner": "reflection-agent",
+            "scope": "role",
+            "state_id": "delta-role-state"
+          },
+          {
+            "id": "ev-page",
+            "observation": "Delta archive: client stopped at records=[] although has_more=true,next_cursor=nx3. Later records were missed. Replay following next_cursor until has_more=false returned all records. Empty records is not the completion condition.",
+            "owner": "reflection-agent",
+            "scope": "role",
+            "state_id": "delta-role-state"
+          },
+          {
+            "id": "ev-parent",
+            "observation": "Delta tracker: attempted POST parent=issue_number 42 was rejected. GET issue 42 returned database_id=9081. Retry parent_database_id=9081 succeeded. Display number and database id are different.",
+            "owner": "reflection-agent",
+            "scope": "role",
+            "state_id": "delta-role-state"
+          }
+        ],
+        "mode": "log",
+        "revision": 17,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-log-1",
+        "session_id": "clean-log-1",
+        "state_id": "delta-role-state",
+        "task_id": "log-1-page"
+      },
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "log-1",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "other",
+        "version": 2
+      },
+      "mode": "log",
+      "task_id": "log-1-changed",
+      "session_id": "clean-log-1",
+      "run_id": "worker-log-1"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "log-1",
+        "at": "2026-10-16T04:30:02.618727Z",
+        "binding_id": "log-1",
+        "conflicts": [],
+        "context": {
+          "system": "other",
+          "version": 2
+        },
+        "id": "ffb896de-eda3-4fac-97f7-f155e3e3da1b",
+        "input_sha256": "23d4ee18cade7aae01dbe4414328cb38d7f46e7d664e43b2cdebbc12b9a527d7",
+        "knowledge": [
+          {
+            "id": "ev-dedup",
+            "observation": "Delta ledger: retry sent event_id=session:s1 then session:s2 for the same work_key W91. Two records were created. Validator says dedup_key must equal stable work_key, independent of session_id. Retry dedup_key=W91 produced one record.",
+            "owner": "reflection-agent",
+            "scope": "role",
+            "state_id": "delta-role-state"
+          },
+          {
+            "id": "ev-page",
+            "observation": "Delta archive: client stopped at records=[] although has_more=true,next_cursor=nx3. Later records were missed. Replay following next_cursor until has_more=false returned all records. Empty records is not the completion condition.",
+            "owner": "reflection-agent",
+            "scope": "role",
+            "state_id": "delta-role-state"
+          },
+          {
+            "id": "ev-parent",
+            "observation": "Delta tracker: attempted POST parent=issue_number 42 was rejected. GET issue 42 returned database_id=9081. Retry parent_database_id=9081 succeeded. Display number and database id are different.",
+            "owner": "reflection-agent",
+            "scope": "role",
+            "state_id": "delta-role-state"
+          }
+        ],
+        "mode": "log",
+        "revision": 17,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-log-1",
+        "session_id": "clean-log-1",
+        "state_id": "delta-role-state",
+        "task_id": "log-1-changed"
+      },
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "lesson-1",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "delta",
+        "version": 1
+      },
+      "mode": "lesson",
+      "task_id": "lesson-1-parent",
+      "session_id": "clean-lesson-1",
+      "run_id": "worker-lesson-1"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "lesson-1",
+        "at": "2026-10-16T04:30:02.679922Z",
+        "binding_id": "lesson-1",
+        "conflicts": [],
+        "context": {
+          "system": "delta",
+          "version": 1
+        },
+        "id": "3333a66d-f5c7-43e9-b620-36aa2b5ec477",
+        "input_sha256": "e1ba300ba8a346640bfc12a7aa8cda0684b7b5ac2c59564241f4dd7ef2eb695e",
+        "knowledge": [
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "retry-deduplication",
+            "fact": "Retries using session-specific event IDs created duplicate records for the same work key.",
+            "falsifier": "Retries with different session IDs are automatically collapsed without supplying the stable work key.",
+            "grants": [],
+            "hypothesis": "Deduplication was keyed by session ID instead of the stable work key.",
+            "id": "lesson-ev-dedup",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Use the stable work key as the deduplication key across retries and sessions.",
+            "scope": "role",
+            "source_id": "ev-dedup",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-dedup",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-dedup",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "pagination-completion",
+            "fact": "An empty records page can have has_more=true and a next_cursor.",
+            "falsifier": "The API contract guarantees that records=[] always means has_more=false.",
+            "grants": [],
+            "hypothesis": "Pagination stopped because empty records was incorrectly treated as completion.",
+            "id": "lesson-ev-page",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Continue pagination while has_more is true, following next_cursor even when records is empty.",
+            "scope": "role",
+            "source_id": "ev-page",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-page",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-page",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "parent-identifier",
+            "fact": "The parent field requires the issue database ID, not the displayed issue number.",
+            "falsifier": "A request using the displayed issue number succeeds where the database ID request would fail.",
+            "grants": [],
+            "hypothesis": "The rejected request used the display number where the API expected the database identifier.",
+            "id": "lesson-ev-parent",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Resolve and submit the parent database ID when creating a child issue.",
+            "scope": "role",
+            "source_id": "ev-parent",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-parent",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-parent",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          }
+        ],
+        "mode": "lesson",
+        "revision": 17,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-lesson-1",
+        "session_id": "clean-lesson-1",
+        "state_id": "delta-role-state",
+        "task_id": "lesson-1-parent"
+      },
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "lesson-1",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "delta",
+        "version": 1
+      },
+      "mode": "lesson",
+      "task_id": "lesson-1-dedup",
+      "session_id": "clean-lesson-1",
+      "run_id": "worker-lesson-1"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "lesson-1",
+        "at": "2026-10-16T04:30:02.739244Z",
+        "binding_id": "lesson-1",
+        "conflicts": [],
+        "context": {
+          "system": "delta",
+          "version": 1
+        },
+        "id": "53e9cb5d-daf3-45b4-912c-b56656a4fcf1",
+        "input_sha256": "e1ba300ba8a346640bfc12a7aa8cda0684b7b5ac2c59564241f4dd7ef2eb695e",
+        "knowledge": [
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "retry-deduplication",
+            "fact": "Retries using session-specific event IDs created duplicate records for the same work key.",
+            "falsifier": "Retries with different session IDs are automatically collapsed without supplying the stable work key.",
+            "grants": [],
+            "hypothesis": "Deduplication was keyed by session ID instead of the stable work key.",
+            "id": "lesson-ev-dedup",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Use the stable work key as the deduplication key across retries and sessions.",
+            "scope": "role",
+            "source_id": "ev-dedup",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-dedup",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-dedup",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "pagination-completion",
+            "fact": "An empty records page can have has_more=true and a next_cursor.",
+            "falsifier": "The API contract guarantees that records=[] always means has_more=false.",
+            "grants": [],
+            "hypothesis": "Pagination stopped because empty records was incorrectly treated as completion.",
+            "id": "lesson-ev-page",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Continue pagination while has_more is true, following next_cursor even when records is empty.",
+            "scope": "role",
+            "source_id": "ev-page",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-page",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-page",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "parent-identifier",
+            "fact": "The parent field requires the issue database ID, not the displayed issue number.",
+            "falsifier": "A request using the displayed issue number succeeds where the database ID request would fail.",
+            "grants": [],
+            "hypothesis": "The rejected request used the display number where the API expected the database identifier.",
+            "id": "lesson-ev-parent",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Resolve and submit the parent database ID when creating a child issue.",
+            "scope": "role",
+            "source_id": "ev-parent",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-parent",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-parent",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          }
+        ],
+        "mode": "lesson",
+        "revision": 17,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-lesson-1",
+        "session_id": "clean-lesson-1",
+        "state_id": "delta-role-state",
+        "task_id": "lesson-1-dedup"
+      },
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "lesson-1",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "delta",
+        "version": 1
+      },
+      "mode": "lesson",
+      "task_id": "lesson-1-page",
+      "session_id": "clean-lesson-1",
+      "run_id": "worker-lesson-1"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "lesson-1",
+        "at": "2026-10-16T04:30:02.803007Z",
+        "binding_id": "lesson-1",
+        "conflicts": [],
+        "context": {
+          "system": "delta",
+          "version": 1
+        },
+        "id": "55edda92-2b82-4efa-8998-46a732ad82db",
+        "input_sha256": "e1ba300ba8a346640bfc12a7aa8cda0684b7b5ac2c59564241f4dd7ef2eb695e",
+        "knowledge": [
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "retry-deduplication",
+            "fact": "Retries using session-specific event IDs created duplicate records for the same work key.",
+            "falsifier": "Retries with different session IDs are automatically collapsed without supplying the stable work key.",
+            "grants": [],
+            "hypothesis": "Deduplication was keyed by session ID instead of the stable work key.",
+            "id": "lesson-ev-dedup",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Use the stable work key as the deduplication key across retries and sessions.",
+            "scope": "role",
+            "source_id": "ev-dedup",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-dedup",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-dedup",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "pagination-completion",
+            "fact": "An empty records page can have has_more=true and a next_cursor.",
+            "falsifier": "The API contract guarantees that records=[] always means has_more=false.",
+            "grants": [],
+            "hypothesis": "Pagination stopped because empty records was incorrectly treated as completion.",
+            "id": "lesson-ev-page",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Continue pagination while has_more is true, following next_cursor even when records is empty.",
+            "scope": "role",
+            "source_id": "ev-page",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-page",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-page",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "parent-identifier",
+            "fact": "The parent field requires the issue database ID, not the displayed issue number.",
+            "falsifier": "A request using the displayed issue number succeeds where the database ID request would fail.",
+            "grants": [],
+            "hypothesis": "The rejected request used the display number where the API expected the database identifier.",
+            "id": "lesson-ev-parent",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Resolve and submit the parent database ID when creating a child issue.",
+            "scope": "role",
+            "source_id": "ev-parent",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-parent",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-parent",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          }
+        ],
+        "mode": "lesson",
+        "revision": 17,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-lesson-1",
+        "session_id": "clean-lesson-1",
+        "state_id": "delta-role-state",
+        "task_id": "lesson-1-page"
+      },
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "lesson-1",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "other",
+        "version": 2
+      },
+      "mode": "lesson",
+      "task_id": "lesson-1-changed",
+      "session_id": "clean-lesson-1",
+      "run_id": "worker-lesson-1"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "lesson-1",
+        "at": "2026-10-16T04:30:02.866033Z",
+        "binding_id": "lesson-1",
+        "conflicts": [],
+        "context": {
+          "system": "other",
+          "version": 2
+        },
+        "id": "8041a9df-bc6d-4914-adee-94a28ee2be8f",
+        "input_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "knowledge": [],
+        "mode": "lesson",
+        "revision": 17,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-lesson-1",
+        "session_id": "clean-lesson-1",
+        "state_id": "delta-role-state",
+        "task_id": "lesson-1-changed"
+      },
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "none-2",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "delta",
+        "version": 1
+      },
+      "mode": "none",
+      "task_id": "none-2-parent",
+      "session_id": "clean-none-2",
+      "run_id": "worker-none-2"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "none-2",
+        "at": "2026-10-16T04:30:02.925838Z",
+        "binding_id": "none-2",
+        "conflicts": [],
+        "context": {
+          "system": "delta",
+          "version": 1
+        },
+        "id": "636955d4-3836-49c0-b3e5-cd5975699c74",
+        "input_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "knowledge": [],
+        "mode": "none",
+        "revision": 17,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-none-2",
+        "session_id": "clean-none-2",
+        "state_id": "delta-role-state",
+        "task_id": "none-2-parent"
+      },
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "none-2",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "delta",
+        "version": 1
+      },
+      "mode": "none",
+      "task_id": "none-2-dedup",
+      "session_id": "clean-none-2",
+      "run_id": "worker-none-2"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "none-2",
+        "at": "2026-10-16T04:30:02.985006Z",
+        "binding_id": "none-2",
+        "conflicts": [],
+        "context": {
+          "system": "delta",
+          "version": 1
+        },
+        "id": "e32f1a44-2ca4-4588-867e-c301a88327c2",
+        "input_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "knowledge": [],
+        "mode": "none",
+        "revision": 17,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-none-2",
+        "session_id": "clean-none-2",
+        "state_id": "delta-role-state",
+        "task_id": "none-2-dedup"
+      },
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "none-2",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "delta",
+        "version": 1
+      },
+      "mode": "none",
+      "task_id": "none-2-page",
+      "session_id": "clean-none-2",
+      "run_id": "worker-none-2"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "none-2",
+        "at": "2026-10-16T04:30:03.046405Z",
+        "binding_id": "none-2",
+        "conflicts": [],
+        "context": {
+          "system": "delta",
+          "version": 1
+        },
+        "id": "9437278d-9939-48da-a548-ae41924bc307",
+        "input_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "knowledge": [],
+        "mode": "none",
+        "revision": 17,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-none-2",
+        "session_id": "clean-none-2",
+        "state_id": "delta-role-state",
+        "task_id": "none-2-page"
+      },
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "none-2",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "other",
+        "version": 2
+      },
+      "mode": "none",
+      "task_id": "none-2-changed",
+      "session_id": "clean-none-2",
+      "run_id": "worker-none-2"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "none-2",
+        "at": "2026-10-16T04:30:03.108173Z",
+        "binding_id": "none-2",
+        "conflicts": [],
+        "context": {
+          "system": "other",
+          "version": 2
+        },
+        "id": "fa15cbdd-967a-4d84-9155-ad0aa78b1a55",
+        "input_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "knowledge": [],
+        "mode": "none",
+        "revision": 17,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-none-2",
+        "session_id": "clean-none-2",
+        "state_id": "delta-role-state",
+        "task_id": "none-2-changed"
+      },
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "log-2",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "delta",
+        "version": 1
+      },
+      "mode": "log",
+      "task_id": "log-2-parent",
+      "session_id": "clean-log-2",
+      "run_id": "worker-log-2"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "log-2",
+        "at": "2026-10-16T04:30:03.170406Z",
+        "binding_id": "log-2",
+        "conflicts": [],
+        "context": {
+          "system": "delta",
+          "version": 1
+        },
+        "id": "4253dfb6-9267-481e-9a91-27b995dad956",
+        "input_sha256": "23d4ee18cade7aae01dbe4414328cb38d7f46e7d664e43b2cdebbc12b9a527d7",
+        "knowledge": [
+          {
+            "id": "ev-dedup",
+            "observation": "Delta ledger: retry sent event_id=session:s1 then session:s2 for the same work_key W91. Two records were created. Validator says dedup_key must equal stable work_key, independent of session_id. Retry dedup_key=W91 produced one record.",
+            "owner": "reflection-agent",
+            "scope": "role",
+            "state_id": "delta-role-state"
+          },
+          {
+            "id": "ev-page",
+            "observation": "Delta archive: client stopped at records=[] although has_more=true,next_cursor=nx3. Later records were missed. Replay following next_cursor until has_more=false returned all records. Empty records is not the completion condition.",
+            "owner": "reflection-agent",
+            "scope": "role",
+            "state_id": "delta-role-state"
+          },
+          {
+            "id": "ev-parent",
+            "observation": "Delta tracker: attempted POST parent=issue_number 42 was rejected. GET issue 42 returned database_id=9081. Retry parent_database_id=9081 succeeded. Display number and database id are different.",
+            "owner": "reflection-agent",
+            "scope": "role",
+            "state_id": "delta-role-state"
+          }
+        ],
+        "mode": "log",
+        "revision": 17,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-log-2",
+        "session_id": "clean-log-2",
+        "state_id": "delta-role-state",
+        "task_id": "log-2-parent"
+      },
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "log-2",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "delta",
+        "version": 1
+      },
+      "mode": "log",
+      "task_id": "log-2-dedup",
+      "session_id": "clean-log-2",
+      "run_id": "worker-log-2"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "log-2",
+        "at": "2026-10-16T04:30:03.230999Z",
+        "binding_id": "log-2",
+        "conflicts": [],
+        "context": {
+          "system": "delta",
+          "version": 1
+        },
+        "id": "d2cc619c-fb69-4b4f-b371-b62c6f69454a",
+        "input_sha256": "23d4ee18cade7aae01dbe4414328cb38d7f46e7d664e43b2cdebbc12b9a527d7",
+        "knowledge": [
+          {
+            "id": "ev-dedup",
+            "observation": "Delta ledger: retry sent event_id=session:s1 then session:s2 for the same work_key W91. Two records were created. Validator says dedup_key must equal stable work_key, independent of session_id. Retry dedup_key=W91 produced one record.",
+            "owner": "reflection-agent",
+            "scope": "role",
+            "state_id": "delta-role-state"
+          },
+          {
+            "id": "ev-page",
+            "observation": "Delta archive: client stopped at records=[] although has_more=true,next_cursor=nx3. Later records were missed. Replay following next_cursor until has_more=false returned all records. Empty records is not the completion condition.",
+            "owner": "reflection-agent",
+            "scope": "role",
+            "state_id": "delta-role-state"
+          },
+          {
+            "id": "ev-parent",
+            "observation": "Delta tracker: attempted POST parent=issue_number 42 was rejected. GET issue 42 returned database_id=9081. Retry parent_database_id=9081 succeeded. Display number and database id are different.",
+            "owner": "reflection-agent",
+            "scope": "role",
+            "state_id": "delta-role-state"
+          }
+        ],
+        "mode": "log",
+        "revision": 17,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-log-2",
+        "session_id": "clean-log-2",
+        "state_id": "delta-role-state",
+        "task_id": "log-2-dedup"
+      },
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "log-2",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "delta",
+        "version": 1
+      },
+      "mode": "log",
+      "task_id": "log-2-page",
+      "session_id": "clean-log-2",
+      "run_id": "worker-log-2"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "log-2",
+        "at": "2026-10-16T04:30:03.290489Z",
+        "binding_id": "log-2",
+        "conflicts": [],
+        "context": {
+          "system": "delta",
+          "version": 1
+        },
+        "id": "22f47001-0bcf-4c1d-b305-a1094defde47",
+        "input_sha256": "23d4ee18cade7aae01dbe4414328cb38d7f46e7d664e43b2cdebbc12b9a527d7",
+        "knowledge": [
+          {
+            "id": "ev-dedup",
+            "observation": "Delta ledger: retry sent event_id=session:s1 then session:s2 for the same work_key W91. Two records were created. Validator says dedup_key must equal stable work_key, independent of session_id. Retry dedup_key=W91 produced one record.",
+            "owner": "reflection-agent",
+            "scope": "role",
+            "state_id": "delta-role-state"
+          },
+          {
+            "id": "ev-page",
+            "observation": "Delta archive: client stopped at records=[] although has_more=true,next_cursor=nx3. Later records were missed. Replay following next_cursor until has_more=false returned all records. Empty records is not the completion condition.",
+            "owner": "reflection-agent",
+            "scope": "role",
+            "state_id": "delta-role-state"
+          },
+          {
+            "id": "ev-parent",
+            "observation": "Delta tracker: attempted POST parent=issue_number 42 was rejected. GET issue 42 returned database_id=9081. Retry parent_database_id=9081 succeeded. Display number and database id are different.",
+            "owner": "reflection-agent",
+            "scope": "role",
+            "state_id": "delta-role-state"
+          }
+        ],
+        "mode": "log",
+        "revision": 17,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-log-2",
+        "session_id": "clean-log-2",
+        "state_id": "delta-role-state",
+        "task_id": "log-2-page"
+      },
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "log-2",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "other",
+        "version": 2
+      },
+      "mode": "log",
+      "task_id": "log-2-changed",
+      "session_id": "clean-log-2",
+      "run_id": "worker-log-2"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "log-2",
+        "at": "2026-10-16T04:30:03.349268Z",
+        "binding_id": "log-2",
+        "conflicts": [],
+        "context": {
+          "system": "other",
+          "version": 2
+        },
+        "id": "59deec1f-d778-4954-a00f-3d0dcb52988f",
+        "input_sha256": "23d4ee18cade7aae01dbe4414328cb38d7f46e7d664e43b2cdebbc12b9a527d7",
+        "knowledge": [
+          {
+            "id": "ev-dedup",
+            "observation": "Delta ledger: retry sent event_id=session:s1 then session:s2 for the same work_key W91. Two records were created. Validator says dedup_key must equal stable work_key, independent of session_id. Retry dedup_key=W91 produced one record.",
+            "owner": "reflection-agent",
+            "scope": "role",
+            "state_id": "delta-role-state"
+          },
+          {
+            "id": "ev-page",
+            "observation": "Delta archive: client stopped at records=[] although has_more=true,next_cursor=nx3. Later records were missed. Replay following next_cursor until has_more=false returned all records. Empty records is not the completion condition.",
+            "owner": "reflection-agent",
+            "scope": "role",
+            "state_id": "delta-role-state"
+          },
+          {
+            "id": "ev-parent",
+            "observation": "Delta tracker: attempted POST parent=issue_number 42 was rejected. GET issue 42 returned database_id=9081. Retry parent_database_id=9081 succeeded. Display number and database id are different.",
+            "owner": "reflection-agent",
+            "scope": "role",
+            "state_id": "delta-role-state"
+          }
+        ],
+        "mode": "log",
+        "revision": 17,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-log-2",
+        "session_id": "clean-log-2",
+        "state_id": "delta-role-state",
+        "task_id": "log-2-changed"
+      },
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "lesson-2",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "delta",
+        "version": 1
+      },
+      "mode": "lesson",
+      "task_id": "lesson-2-parent",
+      "session_id": "clean-lesson-2",
+      "run_id": "worker-lesson-2"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "lesson-2",
+        "at": "2026-10-16T04:30:03.410370Z",
+        "binding_id": "lesson-2",
+        "conflicts": [],
+        "context": {
+          "system": "delta",
+          "version": 1
+        },
+        "id": "dc877c3c-7bb5-4d5f-900a-9891cadf5004",
+        "input_sha256": "e1ba300ba8a346640bfc12a7aa8cda0684b7b5ac2c59564241f4dd7ef2eb695e",
+        "knowledge": [
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "retry-deduplication",
+            "fact": "Retries using session-specific event IDs created duplicate records for the same work key.",
+            "falsifier": "Retries with different session IDs are automatically collapsed without supplying the stable work key.",
+            "grants": [],
+            "hypothesis": "Deduplication was keyed by session ID instead of the stable work key.",
+            "id": "lesson-ev-dedup",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Use the stable work key as the deduplication key across retries and sessions.",
+            "scope": "role",
+            "source_id": "ev-dedup",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-dedup",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-dedup",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "pagination-completion",
+            "fact": "An empty records page can have has_more=true and a next_cursor.",
+            "falsifier": "The API contract guarantees that records=[] always means has_more=false.",
+            "grants": [],
+            "hypothesis": "Pagination stopped because empty records was incorrectly treated as completion.",
+            "id": "lesson-ev-page",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Continue pagination while has_more is true, following next_cursor even when records is empty.",
+            "scope": "role",
+            "source_id": "ev-page",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-page",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-page",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "parent-identifier",
+            "fact": "The parent field requires the issue database ID, not the displayed issue number.",
+            "falsifier": "A request using the displayed issue number succeeds where the database ID request would fail.",
+            "grants": [],
+            "hypothesis": "The rejected request used the display number where the API expected the database identifier.",
+            "id": "lesson-ev-parent",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Resolve and submit the parent database ID when creating a child issue.",
+            "scope": "role",
+            "source_id": "ev-parent",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-parent",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-parent",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          }
+        ],
+        "mode": "lesson",
+        "revision": 17,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-lesson-2",
+        "session_id": "clean-lesson-2",
+        "state_id": "delta-role-state",
+        "task_id": "lesson-2-parent"
+      },
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "lesson-2",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "delta",
+        "version": 1
+      },
+      "mode": "lesson",
+      "task_id": "lesson-2-dedup",
+      "session_id": "clean-lesson-2",
+      "run_id": "worker-lesson-2"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "lesson-2",
+        "at": "2026-10-16T04:30:03.473810Z",
+        "binding_id": "lesson-2",
+        "conflicts": [],
+        "context": {
+          "system": "delta",
+          "version": 1
+        },
+        "id": "d0e347d0-e9d8-40f6-b79d-bbc7c2d8560d",
+        "input_sha256": "e1ba300ba8a346640bfc12a7aa8cda0684b7b5ac2c59564241f4dd7ef2eb695e",
+        "knowledge": [
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "retry-deduplication",
+            "fact": "Retries using session-specific event IDs created duplicate records for the same work key.",
+            "falsifier": "Retries with different session IDs are automatically collapsed without supplying the stable work key.",
+            "grants": [],
+            "hypothesis": "Deduplication was keyed by session ID instead of the stable work key.",
+            "id": "lesson-ev-dedup",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Use the stable work key as the deduplication key across retries and sessions.",
+            "scope": "role",
+            "source_id": "ev-dedup",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-dedup",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-dedup",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "pagination-completion",
+            "fact": "An empty records page can have has_more=true and a next_cursor.",
+            "falsifier": "The API contract guarantees that records=[] always means has_more=false.",
+            "grants": [],
+            "hypothesis": "Pagination stopped because empty records was incorrectly treated as completion.",
+            "id": "lesson-ev-page",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Continue pagination while has_more is true, following next_cursor even when records is empty.",
+            "scope": "role",
+            "source_id": "ev-page",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-page",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-page",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "parent-identifier",
+            "fact": "The parent field requires the issue database ID, not the displayed issue number.",
+            "falsifier": "A request using the displayed issue number succeeds where the database ID request would fail.",
+            "grants": [],
+            "hypothesis": "The rejected request used the display number where the API expected the database identifier.",
+            "id": "lesson-ev-parent",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Resolve and submit the parent database ID when creating a child issue.",
+            "scope": "role",
+            "source_id": "ev-parent",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-parent",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-parent",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          }
+        ],
+        "mode": "lesson",
+        "revision": 17,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-lesson-2",
+        "session_id": "clean-lesson-2",
+        "state_id": "delta-role-state",
+        "task_id": "lesson-2-dedup"
+      },
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "lesson-2",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "delta",
+        "version": 1
+      },
+      "mode": "lesson",
+      "task_id": "lesson-2-page",
+      "session_id": "clean-lesson-2",
+      "run_id": "worker-lesson-2"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "lesson-2",
+        "at": "2026-10-16T04:30:03.534428Z",
+        "binding_id": "lesson-2",
+        "conflicts": [],
+        "context": {
+          "system": "delta",
+          "version": 1
+        },
+        "id": "999dde00-16bc-4037-a8dc-413bc8ebe4f8",
+        "input_sha256": "e1ba300ba8a346640bfc12a7aa8cda0684b7b5ac2c59564241f4dd7ef2eb695e",
+        "knowledge": [
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "retry-deduplication",
+            "fact": "Retries using session-specific event IDs created duplicate records for the same work key.",
+            "falsifier": "Retries with different session IDs are automatically collapsed without supplying the stable work key.",
+            "grants": [],
+            "hypothesis": "Deduplication was keyed by session ID instead of the stable work key.",
+            "id": "lesson-ev-dedup",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Use the stable work key as the deduplication key across retries and sessions.",
+            "scope": "role",
+            "source_id": "ev-dedup",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-dedup",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-dedup",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "pagination-completion",
+            "fact": "An empty records page can have has_more=true and a next_cursor.",
+            "falsifier": "The API contract guarantees that records=[] always means has_more=false.",
+            "grants": [],
+            "hypothesis": "Pagination stopped because empty records was incorrectly treated as completion.",
+            "id": "lesson-ev-page",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Continue pagination while has_more is true, following next_cursor even when records is empty.",
+            "scope": "role",
+            "source_id": "ev-page",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-page",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-page",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "parent-identifier",
+            "fact": "The parent field requires the issue database ID, not the displayed issue number.",
+            "falsifier": "A request using the displayed issue number succeeds where the database ID request would fail.",
+            "grants": [],
+            "hypothesis": "The rejected request used the display number where the API expected the database identifier.",
+            "id": "lesson-ev-parent",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Resolve and submit the parent database ID when creating a child issue.",
+            "scope": "role",
+            "source_id": "ev-parent",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-parent",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-parent",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          }
+        ],
+        "mode": "lesson",
+        "revision": 17,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-lesson-2",
+        "session_id": "clean-lesson-2",
+        "state_id": "delta-role-state",
+        "task_id": "lesson-2-page"
+      },
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "lesson-2",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "other",
+        "version": 2
+      },
+      "mode": "lesson",
+      "task_id": "lesson-2-changed",
+      "session_id": "clean-lesson-2",
+      "run_id": "worker-lesson-2"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "lesson-2",
+        "at": "2026-10-16T04:30:03.595466Z",
+        "binding_id": "lesson-2",
+        "conflicts": [],
+        "context": {
+          "system": "other",
+          "version": 2
+        },
+        "id": "a9988e60-8aee-40fc-86f1-0df53927aea7",
+        "input_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "knowledge": [],
+        "mode": "lesson",
+        "revision": 17,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-lesson-2",
+        "session_id": "clean-lesson-2",
+        "state_id": "delta-role-state",
+        "task_id": "lesson-2-changed"
+      },
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "none-1",
+      "receipt_id": "87e301f1-5ea8-44dd-a935-c3dfbd982006",
+      "used_ids": [],
+      "output_ref": "responses/none-1.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "87e301f1-5ea8-44dd-a935-c3dfbd982006",
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "none-1",
+      "receipt_id": "76f1b7eb-6065-40b3-b7d0-a197b4548e74",
+      "used_ids": [],
+      "output_ref": "responses/none-1.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "76f1b7eb-6065-40b3-b7d0-a197b4548e74",
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "none-1",
+      "receipt_id": "60e89f69-d89a-4bfb-bd7c-c82a6a61ee58",
+      "used_ids": [],
+      "output_ref": "responses/none-1.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "60e89f69-d89a-4bfb-bd7c-c82a6a61ee58",
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "none-1",
+      "receipt_id": "42c44292-f3e7-4841-8882-e092e08cdff6",
+      "used_ids": [],
+      "output_ref": "responses/none-1.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "42c44292-f3e7-4841-8882-e092e08cdff6",
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "log-1",
+      "receipt_id": "a7738417-d45c-4702-85d6-06c6a56ea2b7",
+      "used_ids": [
+        "ev-parent"
+      ],
+      "output_ref": "responses/log-1.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "a7738417-d45c-4702-85d6-06c6a56ea2b7",
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "log-1",
+      "receipt_id": "c3db592d-afbd-4155-8226-a9bec30fb2a3",
+      "used_ids": [
+        "ev-dedup"
+      ],
+      "output_ref": "responses/log-1.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "c3db592d-afbd-4155-8226-a9bec30fb2a3",
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "log-1",
+      "receipt_id": "d83fa5bc-e95f-45f0-8e94-60c049c70784",
+      "used_ids": [
+        "ev-page"
+      ],
+      "output_ref": "responses/log-1.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "d83fa5bc-e95f-45f0-8e94-60c049c70784",
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "log-1",
+      "receipt_id": "ffb896de-eda3-4fac-97f7-f155e3e3da1b",
+      "used_ids": [],
+      "output_ref": "responses/log-1.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "ffb896de-eda3-4fac-97f7-f155e3e3da1b",
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "lesson-1",
+      "receipt_id": "3333a66d-f5c7-43e9-b620-36aa2b5ec477",
+      "used_ids": [
+        "lesson-ev-parent"
+      ],
+      "output_ref": "responses/lesson-1.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "3333a66d-f5c7-43e9-b620-36aa2b5ec477",
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "lesson-1",
+      "receipt_id": "53e9cb5d-daf3-45b4-912c-b56656a4fcf1",
+      "used_ids": [
+        "lesson-ev-dedup"
+      ],
+      "output_ref": "responses/lesson-1.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "53e9cb5d-daf3-45b4-912c-b56656a4fcf1",
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "lesson-1",
+      "receipt_id": "55edda92-2b82-4efa-8998-46a732ad82db",
+      "used_ids": [
+        "lesson-ev-page"
+      ],
+      "output_ref": "responses/lesson-1.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "55edda92-2b82-4efa-8998-46a732ad82db",
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "lesson-1",
+      "receipt_id": "8041a9df-bc6d-4914-adee-94a28ee2be8f",
+      "used_ids": [],
+      "output_ref": "responses/lesson-1.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "8041a9df-bc6d-4914-adee-94a28ee2be8f",
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "none-2",
+      "receipt_id": "636955d4-3836-49c0-b3e5-cd5975699c74",
+      "used_ids": [],
+      "output_ref": "responses/none-2.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "636955d4-3836-49c0-b3e5-cd5975699c74",
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "none-2",
+      "receipt_id": "e32f1a44-2ca4-4588-867e-c301a88327c2",
+      "used_ids": [],
+      "output_ref": "responses/none-2.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "e32f1a44-2ca4-4588-867e-c301a88327c2",
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "none-2",
+      "receipt_id": "9437278d-9939-48da-a548-ae41924bc307",
+      "used_ids": [],
+      "output_ref": "responses/none-2.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "9437278d-9939-48da-a548-ae41924bc307",
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "none-2",
+      "receipt_id": "fa15cbdd-967a-4d84-9155-ad0aa78b1a55",
+      "used_ids": [],
+      "output_ref": "responses/none-2.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "fa15cbdd-967a-4d84-9155-ad0aa78b1a55",
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "log-2",
+      "receipt_id": "4253dfb6-9267-481e-9a91-27b995dad956",
+      "used_ids": [
+        "ev-parent"
+      ],
+      "output_ref": "responses/log-2.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "4253dfb6-9267-481e-9a91-27b995dad956",
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "log-2",
+      "receipt_id": "d2cc619c-fb69-4b4f-b371-b62c6f69454a",
+      "used_ids": [
+        "ev-dedup"
+      ],
+      "output_ref": "responses/log-2.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "d2cc619c-fb69-4b4f-b371-b62c6f69454a",
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "log-2",
+      "receipt_id": "22f47001-0bcf-4c1d-b305-a1094defde47",
+      "used_ids": [
+        "ev-page"
+      ],
+      "output_ref": "responses/log-2.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "22f47001-0bcf-4c1d-b305-a1094defde47",
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "log-2",
+      "receipt_id": "59deec1f-d778-4954-a00f-3d0dcb52988f",
+      "used_ids": [],
+      "output_ref": "responses/log-2.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "59deec1f-d778-4954-a00f-3d0dcb52988f",
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "lesson-2",
+      "receipt_id": "dc877c3c-7bb5-4d5f-900a-9891cadf5004",
+      "used_ids": [
+        "lesson-ev-parent"
+      ],
+      "output_ref": "responses/lesson-2.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "dc877c3c-7bb5-4d5f-900a-9891cadf5004",
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "lesson-2",
+      "receipt_id": "d0e347d0-e9d8-40f6-b79d-bbc7c2d8560d",
+      "used_ids": [
+        "lesson-ev-dedup"
+      ],
+      "output_ref": "responses/lesson-2.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "d0e347d0-e9d8-40f6-b79d-bbc7c2d8560d",
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "lesson-2",
+      "receipt_id": "999dde00-16bc-4037-a8dc-413bc8ebe4f8",
+      "used_ids": [
+        "lesson-ev-page"
+      ],
+      "output_ref": "responses/lesson-2.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "999dde00-16bc-4037-a8dc-413bc8ebe4f8",
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "lesson-2",
+      "receipt_id": "a9988e60-8aee-40fc-86f1-0df53927aea7",
+      "used_ids": [],
+      "output_ref": "responses/lesson-2.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "a9988e60-8aee-40fc-86f1-0df53927aea7",
+      "revision": 17
+    }
+  },
+  {
+    "request": {
+      "op": "bind",
+      "id": "ablation",
+      "agent_id": "ablation",
+      "state_id": "delta-role-state",
+      "role_id": "conditional-operator",
+      "role_version": 1,
+      "project": "synthetic-pilot"
+    },
+    "exit_code": 0,
+    "result": {
+      "binding": {
+        "active": true,
+        "agent_id": "ablation",
+        "id": "ablation",
+        "project": "synthetic-pilot",
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "state_id": "delta-role-state"
+      },
+      "revision": 18
+    }
+  },
+  {
+    "request": {
+      "op": "bind",
+      "id": "revoked",
+      "agent_id": "revoked",
+      "state_id": "delta-role-state",
+      "role_id": "conditional-operator",
+      "role_version": 1,
+      "project": "synthetic-pilot"
+    },
+    "exit_code": 0,
+    "result": {
+      "binding": {
+        "active": true,
+        "agent_id": "revoked",
+        "id": "revoked",
+        "project": "synthetic-pilot",
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "state_id": "delta-role-state"
+      },
+      "revision": 19
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "ablation",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "delta",
+        "version": 1
+      },
+      "mode": "lesson",
+      "task_id": "ablation-parent",
+      "session_id": "clean-ablation",
+      "run_id": "worker-ablation",
+      "exclude_ids": [
+        "lesson-ev-page"
+      ]
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "ablation",
+        "at": "2026-10-16T04:32:05.247277Z",
+        "binding_id": "ablation",
+        "conflicts": [],
+        "context": {
+          "system": "delta",
+          "version": 1
+        },
+        "excluded_ids": [
+          "lesson-ev-page"
+        ],
+        "id": "0992b22c-44f0-49d2-9997-4ed0c1bec80b",
+        "input_sha256": "e5aed9a615f11b47ea83a38a8bceee947d8d22920a97bc28fbbc204d8def92ab",
+        "knowledge": [
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "retry-deduplication",
+            "fact": "Retries using session-specific event IDs created duplicate records for the same work key.",
+            "falsifier": "Retries with different session IDs are automatically collapsed without supplying the stable work key.",
+            "grants": [],
+            "hypothesis": "Deduplication was keyed by session ID instead of the stable work key.",
+            "id": "lesson-ev-dedup",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Use the stable work key as the deduplication key across retries and sessions.",
+            "scope": "role",
+            "source_id": "ev-dedup",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-dedup",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-dedup",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "parent-identifier",
+            "fact": "The parent field requires the issue database ID, not the displayed issue number.",
+            "falsifier": "A request using the displayed issue number succeeds where the database ID request would fail.",
+            "grants": [],
+            "hypothesis": "The rejected request used the display number where the API expected the database identifier.",
+            "id": "lesson-ev-parent",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Resolve and submit the parent database ID when creating a child issue.",
+            "scope": "role",
+            "source_id": "ev-parent",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-parent",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-parent",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          }
+        ],
+        "mode": "lesson",
+        "revision": 19,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-ablation",
+        "session_id": "clean-ablation",
+        "state_id": "delta-role-state",
+        "task_id": "ablation-parent"
+      },
+      "revision": 19
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "ablation",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "delta",
+        "version": 1
+      },
+      "mode": "lesson",
+      "task_id": "ablation-dedup",
+      "session_id": "clean-ablation",
+      "run_id": "worker-ablation",
+      "exclude_ids": [
+        "lesson-ev-page"
+      ]
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "ablation",
+        "at": "2026-10-16T04:32:05.307491Z",
+        "binding_id": "ablation",
+        "conflicts": [],
+        "context": {
+          "system": "delta",
+          "version": 1
+        },
+        "excluded_ids": [
+          "lesson-ev-page"
+        ],
+        "id": "4f80ed52-da8a-439d-b31c-a527fda11fc9",
+        "input_sha256": "e5aed9a615f11b47ea83a38a8bceee947d8d22920a97bc28fbbc204d8def92ab",
+        "knowledge": [
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "retry-deduplication",
+            "fact": "Retries using session-specific event IDs created duplicate records for the same work key.",
+            "falsifier": "Retries with different session IDs are automatically collapsed without supplying the stable work key.",
+            "grants": [],
+            "hypothesis": "Deduplication was keyed by session ID instead of the stable work key.",
+            "id": "lesson-ev-dedup",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Use the stable work key as the deduplication key across retries and sessions.",
+            "scope": "role",
+            "source_id": "ev-dedup",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-dedup",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-dedup",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "parent-identifier",
+            "fact": "The parent field requires the issue database ID, not the displayed issue number.",
+            "falsifier": "A request using the displayed issue number succeeds where the database ID request would fail.",
+            "grants": [],
+            "hypothesis": "The rejected request used the display number where the API expected the database identifier.",
+            "id": "lesson-ev-parent",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Resolve and submit the parent database ID when creating a child issue.",
+            "scope": "role",
+            "source_id": "ev-parent",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-parent",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-parent",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          }
+        ],
+        "mode": "lesson",
+        "revision": 19,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-ablation",
+        "session_id": "clean-ablation",
+        "state_id": "delta-role-state",
+        "task_id": "ablation-dedup"
+      },
+      "revision": 19
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "ablation",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "delta",
+        "version": 1
+      },
+      "mode": "lesson",
+      "task_id": "ablation-page",
+      "session_id": "clean-ablation",
+      "run_id": "worker-ablation",
+      "exclude_ids": [
+        "lesson-ev-page"
+      ]
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "ablation",
+        "at": "2026-10-16T04:32:05.365671Z",
+        "binding_id": "ablation",
+        "conflicts": [],
+        "context": {
+          "system": "delta",
+          "version": 1
+        },
+        "excluded_ids": [
+          "lesson-ev-page"
+        ],
+        "id": "6076b121-d9b3-4ddf-9087-d0ebf108a16e",
+        "input_sha256": "e5aed9a615f11b47ea83a38a8bceee947d8d22920a97bc28fbbc204d8def92ab",
+        "knowledge": [
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "retry-deduplication",
+            "fact": "Retries using session-specific event IDs created duplicate records for the same work key.",
+            "falsifier": "Retries with different session IDs are automatically collapsed without supplying the stable work key.",
+            "grants": [],
+            "hypothesis": "Deduplication was keyed by session ID instead of the stable work key.",
+            "id": "lesson-ev-dedup",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Use the stable work key as the deduplication key across retries and sessions.",
+            "scope": "role",
+            "source_id": "ev-dedup",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-dedup",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-dedup",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "parent-identifier",
+            "fact": "The parent field requires the issue database ID, not the displayed issue number.",
+            "falsifier": "A request using the displayed issue number succeeds where the database ID request would fail.",
+            "grants": [],
+            "hypothesis": "The rejected request used the display number where the API expected the database identifier.",
+            "id": "lesson-ev-parent",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Resolve and submit the parent database ID when creating a child issue.",
+            "scope": "role",
+            "source_id": "ev-parent",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-parent",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-parent",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          }
+        ],
+        "mode": "lesson",
+        "revision": 19,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-ablation",
+        "session_id": "clean-ablation",
+        "state_id": "delta-role-state",
+        "task_id": "ablation-page"
+      },
+      "revision": 19
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "ablation",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "other",
+        "version": 2
+      },
+      "mode": "lesson",
+      "task_id": "ablation-changed",
+      "session_id": "clean-ablation",
+      "run_id": "worker-ablation",
+      "exclude_ids": [
+        "lesson-ev-page"
+      ]
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "ablation",
+        "at": "2026-10-16T04:32:05.426751Z",
+        "binding_id": "ablation",
+        "conflicts": [],
+        "context": {
+          "system": "other",
+          "version": 2
+        },
+        "excluded_ids": [
+          "lesson-ev-page"
+        ],
+        "id": "796f267e-310a-4645-a000-580111525b82",
+        "input_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "knowledge": [],
+        "mode": "lesson",
+        "revision": 19,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-ablation",
+        "session_id": "clean-ablation",
+        "state_id": "delta-role-state",
+        "task_id": "ablation-changed"
+      },
+      "revision": 19
+    }
+  },
+  {
+    "request": {
+      "op": "revoke",
+      "binding_id": "trainer",
+      "lesson_id": "lesson-ev-page",
+      "reason": "planned revocation probe, not an observed false lesson"
+    },
+    "exit_code": 0,
+    "result": {
+      "lesson_id": "lesson-ev-page",
+      "revision": 20,
+      "status": "revoked"
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "revoked",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "delta",
+        "version": 1
+      },
+      "mode": "lesson",
+      "task_id": "revoked-parent",
+      "session_id": "clean-revoked",
+      "run_id": "worker-revoked"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "revoked",
+        "at": "2026-10-16T04:32:05.549248Z",
+        "binding_id": "revoked",
+        "conflicts": [],
+        "context": {
+          "system": "delta",
+          "version": 1
+        },
+        "excluded_ids": [],
+        "id": "8b67410d-dec2-4122-87ce-4424602306b6",
+        "input_sha256": "e5aed9a615f11b47ea83a38a8bceee947d8d22920a97bc28fbbc204d8def92ab",
+        "knowledge": [
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "retry-deduplication",
+            "fact": "Retries using session-specific event IDs created duplicate records for the same work key.",
+            "falsifier": "Retries with different session IDs are automatically collapsed without supplying the stable work key.",
+            "grants": [],
+            "hypothesis": "Deduplication was keyed by session ID instead of the stable work key.",
+            "id": "lesson-ev-dedup",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Use the stable work key as the deduplication key across retries and sessions.",
+            "scope": "role",
+            "source_id": "ev-dedup",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-dedup",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-dedup",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "parent-identifier",
+            "fact": "The parent field requires the issue database ID, not the displayed issue number.",
+            "falsifier": "A request using the displayed issue number succeeds where the database ID request would fail.",
+            "grants": [],
+            "hypothesis": "The rejected request used the display number where the API expected the database identifier.",
+            "id": "lesson-ev-parent",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Resolve and submit the parent database ID when creating a child issue.",
+            "scope": "role",
+            "source_id": "ev-parent",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-parent",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-parent",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          }
+        ],
+        "mode": "lesson",
+        "revision": 20,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-revoked",
+        "session_id": "clean-revoked",
+        "state_id": "delta-role-state",
+        "task_id": "revoked-parent"
+      },
+      "revision": 20
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "revoked",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "delta",
+        "version": 1
+      },
+      "mode": "lesson",
+      "task_id": "revoked-dedup",
+      "session_id": "clean-revoked",
+      "run_id": "worker-revoked"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "revoked",
+        "at": "2026-10-16T04:32:05.610329Z",
+        "binding_id": "revoked",
+        "conflicts": [],
+        "context": {
+          "system": "delta",
+          "version": 1
+        },
+        "excluded_ids": [],
+        "id": "6340e44f-b3c6-46c5-86ab-119a2157ea9e",
+        "input_sha256": "e5aed9a615f11b47ea83a38a8bceee947d8d22920a97bc28fbbc204d8def92ab",
+        "knowledge": [
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "retry-deduplication",
+            "fact": "Retries using session-specific event IDs created duplicate records for the same work key.",
+            "falsifier": "Retries with different session IDs are automatically collapsed without supplying the stable work key.",
+            "grants": [],
+            "hypothesis": "Deduplication was keyed by session ID instead of the stable work key.",
+            "id": "lesson-ev-dedup",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Use the stable work key as the deduplication key across retries and sessions.",
+            "scope": "role",
+            "source_id": "ev-dedup",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-dedup",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-dedup",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "parent-identifier",
+            "fact": "The parent field requires the issue database ID, not the displayed issue number.",
+            "falsifier": "A request using the displayed issue number succeeds where the database ID request would fail.",
+            "grants": [],
+            "hypothesis": "The rejected request used the display number where the API expected the database identifier.",
+            "id": "lesson-ev-parent",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Resolve and submit the parent database ID when creating a child issue.",
+            "scope": "role",
+            "source_id": "ev-parent",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-parent",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-parent",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          }
+        ],
+        "mode": "lesson",
+        "revision": 20,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-revoked",
+        "session_id": "clean-revoked",
+        "state_id": "delta-role-state",
+        "task_id": "revoked-dedup"
+      },
+      "revision": 20
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "revoked",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "delta",
+        "version": 1
+      },
+      "mode": "lesson",
+      "task_id": "revoked-page",
+      "session_id": "clean-revoked",
+      "run_id": "worker-revoked"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "revoked",
+        "at": "2026-10-16T04:32:05.672591Z",
+        "binding_id": "revoked",
+        "conflicts": [],
+        "context": {
+          "system": "delta",
+          "version": 1
+        },
+        "excluded_ids": [],
+        "id": "70dfa42f-d62a-48c9-a0cc-6288d5e3c4e9",
+        "input_sha256": "e5aed9a615f11b47ea83a38a8bceee947d8d22920a97bc28fbbc204d8def92ab",
+        "knowledge": [
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "retry-deduplication",
+            "fact": "Retries using session-specific event IDs created duplicate records for the same work key.",
+            "falsifier": "Retries with different session IDs are automatically collapsed without supplying the stable work key.",
+            "grants": [],
+            "hypothesis": "Deduplication was keyed by session ID instead of the stable work key.",
+            "id": "lesson-ev-dedup",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Use the stable work key as the deduplication key across retries and sessions.",
+            "scope": "role",
+            "source_id": "ev-dedup",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-dedup",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-dedup",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "conditions": {
+              "system": "delta",
+              "version": 1
+            },
+            "conflict_key": "parent-identifier",
+            "fact": "The parent field requires the issue database ID, not the displayed issue number.",
+            "falsifier": "A request using the displayed issue number succeeds where the database ID request would fail.",
+            "grants": [],
+            "hypothesis": "The rejected request used the display number where the API expected the database identifier.",
+            "id": "lesson-ev-parent",
+            "kind": "technical",
+            "owner": "reflection-agent",
+            "rule": "Resolve and submit the parent database ID when creating a child issue.",
+            "scope": "role",
+            "source_id": "ev-parent",
+            "state_id": "delta-role-state",
+            "status": "active",
+            "validation": {
+              "lesson_id": "lesson-ev-parent",
+              "reference": "validation-review.md",
+              "tests": [
+                {
+                  "case": "coordinator-source-check",
+                  "evidence": "ev-parent",
+                  "passed": true
+                },
+                {
+                  "case": "different-context-is-not-retrieved",
+                  "counterexample": true,
+                  "evidence": "scripts/test_role_memory.py",
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          }
+        ],
+        "mode": "lesson",
+        "revision": 20,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-revoked",
+        "session_id": "clean-revoked",
+        "state_id": "delta-role-state",
+        "task_id": "revoked-page"
+      },
+      "revision": 20
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "revoked",
+      "state_id": "delta-role-state",
+      "context": {
+        "system": "other",
+        "version": 2
+      },
+      "mode": "lesson",
+      "task_id": "revoked-changed",
+      "session_id": "clean-revoked",
+      "run_id": "worker-revoked"
+    },
+    "exit_code": 0,
+    "result": {
+      "receipt": {
+        "agent_id": "revoked",
+        "at": "2026-10-16T04:32:05.733218Z",
+        "binding_id": "revoked",
+        "conflicts": [],
+        "context": {
+          "system": "other",
+          "version": 2
+        },
+        "excluded_ids": [],
+        "id": "7bb0bef3-51b5-41ed-afa7-eecafa366e1b",
+        "input_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "knowledge": [],
+        "mode": "lesson",
+        "revision": 20,
+        "role_id": "conditional-operator",
+        "role_version": 1,
+        "run_id": "worker-revoked",
+        "session_id": "clean-revoked",
+        "state_id": "delta-role-state",
+        "task_id": "revoked-changed"
+      },
+      "revision": 20
+    }
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "ablation",
+      "receipt_id": "0992b22c-44f0-49d2-9997-4ed0c1bec80b",
+      "used_ids": [
+        "lesson-ev-parent"
+      ],
+      "output_ref": "responses/ablation.json"
+    },
+    "exit_code": 1,
+    "result": {
+      "error": "stale receipt: requery in a clean run"
+    },
+    "expected_stale_rejection": true
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "ablation",
+      "receipt_id": "4f80ed52-da8a-439d-b31c-a527fda11fc9",
+      "used_ids": [
+        "lesson-ev-dedup"
+      ],
+      "output_ref": "responses/ablation.json"
+    },
+    "exit_code": 1,
+    "result": {
+      "error": "stale receipt: requery in a clean run"
+    },
+    "expected_stale_rejection": true
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "ablation",
+      "receipt_id": "6076b121-d9b3-4ddf-9087-d0ebf108a16e",
+      "used_ids": [],
+      "output_ref": "responses/ablation.json"
+    },
+    "exit_code": 1,
+    "result": {
+      "error": "stale receipt: requery in a clean run"
+    },
+    "expected_stale_rejection": true
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "ablation",
+      "receipt_id": "796f267e-310a-4645-a000-580111525b82",
+      "used_ids": [],
+      "output_ref": "responses/ablation.json"
+    },
+    "exit_code": 1,
+    "result": {
+      "error": "stale receipt: requery in a clean run"
+    },
+    "expected_stale_rejection": true
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "revoked",
+      "receipt_id": "8b67410d-dec2-4122-87ce-4424602306b6",
+      "used_ids": [
+        "lesson-ev-parent"
+      ],
+      "output_ref": "responses/revoked.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "8b67410d-dec2-4122-87ce-4424602306b6",
+      "revision": 20
+    },
+    "expected_stale_rejection": false
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "revoked",
+      "receipt_id": "6340e44f-b3c6-46c5-86ab-119a2157ea9e",
+      "used_ids": [
+        "lesson-ev-dedup"
+      ],
+      "output_ref": "responses/revoked.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "6340e44f-b3c6-46c5-86ab-119a2157ea9e",
+      "revision": 20
+    },
+    "expected_stale_rejection": false
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "revoked",
+      "receipt_id": "70dfa42f-d62a-48c9-a0cc-6288d5e3c4e9",
+      "used_ids": [],
+      "output_ref": "responses/revoked.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "70dfa42f-d62a-48c9-a0cc-6288d5e3c4e9",
+      "revision": 20
+    },
+    "expected_stale_rejection": false
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "revoked",
+      "receipt_id": "7bb0bef3-51b5-41ed-afa7-eecafa366e1b",
+      "used_ids": [],
+      "output_ref": "responses/revoked.json"
+    },
+    "exit_code": 0,
+    "result": {
+      "applied_receipt": "7bb0bef3-51b5-41ed-afa7-eecafa366e1b",
+      "revision": 20
+    },
+    "expected_stale_rejection": false
+  }
+]
