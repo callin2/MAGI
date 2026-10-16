@@ -1,0 +1,1 @@
+{"op": "complete", "id": "T1", "evidence": [{"path": "comparison.md", "sha256": "da223a3f462a0686efc9dbba3bf3b518f59fde055a10246b42bf90895e269b15"}, {"path": "decision-v3.md", "sha256": "3196ae8cdcaad0904815cc72868d8941b6ac18c28f4f3fa9ce43050644ab1939"}, {"path": "final-v3.md", "sha256": "556ef389186a676dab1ac51e4bbaabc5e133379502049c3c13f2ff5f2a2bbb46"}]}

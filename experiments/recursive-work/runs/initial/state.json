@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "revision": 10,
+  "issues": [
+    {
+      "id": "T1",
+      "title": "MAGI 첫 실사용 구성 결정",
+      "goal": "runtime-decision",
+      "parent_id": null,
+      "acceptance": [
+        "재사용 경로 비교와 첫 실행 구성·미검증 범위를 제출한다"
+      ],
+      "status": "done",
+      "evidence": [
+        {
+          "path": "comparison.md",
+          "sha256": "da223a3f462a0686efc9dbba3bf3b518f59fde055a10246b42bf90895e269b15"
+        },
+        {
+          "path": "decision-v3.md",
+          "sha256": "3196ae8cdcaad0904815cc72868d8941b6ac18c28f4f3fa9ce43050644ab1939"
+        },
+        {
+          "path": "final-v3.md",
+          "sha256": "556ef389186a676dab1ac51e4bbaabc5e133379502049c3c13f2ff5f2a2bbb46"
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "title": "기존 구현 비교",
+      "goal": "composition-comparison",
+      "parent_id": "T1",
+      "acceptance": [
+        "현재 자료 근거로 비교 문서 작성"
+      ],
+      "status": "done",
+      "evidence": [
+        {
+          "path": "comparison.md",
+          "sha256": "da223a3f462a0686efc9dbba3bf3b518f59fde055a10246b42bf90895e269b15"
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "title": "첫 구성 선택·통합",
+      "goal": "composition-selection",
+      "parent_id": "T1",
+      "acceptance": [
+        "한국어 결정 문서와 사용자 안내를 작성하고 검증 경로·미검증 범위를 명시한다"
+      ],
+      "status": "done",
+      "evidence": [
+        {
+          "path": "decision-v3.md",
+          "sha256": "3196ae8cdcaad0904815cc72868d8941b6ac18c28f4f3fa9ce43050644ab1939"
+        },
+        {
+          "path": "review-response.md",
+          "sha256": "ce15a38170c1deb0434488246f16493be988160d09afc3c81a4e841294a50a43"
+        }
+      ]
+    }
+  ],
+  "audit": [
+    {
+      "op": "register_followups",
+      "parent_id": "T1",
+      "created": [
+        "T3"
+      ]
+    },
+    {
+      "op": "complete",
+      "id": "T2"
+    },
+    {
+      "op": "complete",
+      "id": "T3"
+    },
+    {
+      "op": "complete",
+      "id": "T1"
+    },
+    {
+      "op": "reopen",
+      "id": "T3",
+      "reason": "independent review: distinguish current implementation from target runtime",
+      "prior_evidence": [
+        {
+          "id": "T3",
+          "evidence": [
+            {
+              "path": "decision.md",
+              "sha256": "41909566f48fd36d584cc1cc44ba262f611283c8d3ff8fa2cf65b8e5231320df"
+            },
+            {
+              "path": "final.md",
+              "sha256": "4ea44e10f1f889821bbf35cc7047a4d7d2b0929ea78755bcffa06b096ddb36df"
+            }
+          ]
+        },
+        {
+          "id": "T1",
+          "evidence": [
+            {
+              "path": "comparison.md",
+              "sha256": "da223a3f462a0686efc9dbba3bf3b518f59fde055a10246b42bf90895e269b15"
+            },
+            {
+              "path": "decision.md",
+              "sha256": "41909566f48fd36d584cc1cc44ba262f611283c8d3ff8fa2cf65b8e5231320df"
+            },
+            {
+              "path": "final.md",
+              "sha256": "4ea44e10f1f889821bbf35cc7047a4d7d2b0929ea78755bcffa06b096ddb36df"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "complete",
+      "id": "T3"
+    },
+    {
+      "op": "complete",
+      "id": "T1"
+    },
+    {
+      "op": "reopen",
+      "id": "T3",
+      "reason": "respect existing technical/value decision boundary; no new approval gate",
+      "prior_evidence": [
+        {
+          "id": "T3",
+          "evidence": [
+            {
+              "path": "decision-v2.md",
+              "sha256": "0f068c5ebe64b5b363bfd326c87a48f5c02faf0c37a9ceb358353499bdbd798e"
+            },
+            {
+              "path": "review-response.md",
+              "sha256": "ce15a38170c1deb0434488246f16493be988160d09afc3c81a4e841294a50a43"
+            }
+          ]
+        },
+        {
+          "id": "T1",
+          "evidence": [
+            {
+              "path": "comparison.md",
+              "sha256": "da223a3f462a0686efc9dbba3bf3b518f59fde055a10246b42bf90895e269b15"
+            },
+            {
+              "path": "decision-v2.md",
+              "sha256": "0f068c5ebe64b5b363bfd326c87a48f5c02faf0c37a9ceb358353499bdbd798e"
+            },
+            {
+              "path": "final-v2.md",
+              "sha256": "ab371ea6c68cdfe8c04a0946b6c4dd607ddd501690b7eac83d66eeba94c3f433"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "complete",
+      "id": "T3"
+    },
+    {
+      "op": "complete",
+      "id": "T1"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "frozen_at": "2026-10-16T05:20:42.643878Z",
+  "repetitions": 1,
+  "claim": "actual local work transfer; not general efficacy or human time savings",
+  "inputs": {
+    "G": {
+      "task_sha256": "607b7fe0552c8d003aaebae7667cb0c94ca6ad5bdbedd35fa5ad26ad09cc8867",
+      "case_sha256": "aa8ba25e47bdfe8d87e14c3c468de68853168dc39203ae7758633e65052822b4"
+    },
+    "F": {
+      "task_sha256": "084e557301f3dabda9b48950c98021c219ccbcba8fcca34bad94e0043f90ffde",
+      "case_sha256": "9874bf35269c1cfb18df8ae95d7242b7ba47ee618e91a6276edb30f9e8505ac8"
+    },
+    "L": {
+      "task_sha256": "db2d396580da697a83eb0d5e9dece5a4c87a4901f19bdcb5352d59b3ac0a3f64",
+      "case_sha256": "a887a64d23df144f0f80bd1cda7a793adb797bd75873551316477421201c149d"
+    },
+    "E": {
+      "task_sha256": "0fbcf0c628e14ea3e5c2d9fd8c81138823f56c3177bf91bccc66b7ad96bc8dbe",
+      "case_sha256": "acf5534e0d69f3c0ad07bdbb4c80caca614ab090cf207e0783b715bcdc77327f"
+    }
+  }
+}

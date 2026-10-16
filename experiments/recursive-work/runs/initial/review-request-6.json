@@ -1,0 +1,14 @@
+{
+  "op": "complete",
+  "id": "T3",
+  "evidence": [
+    {
+      "path": "decision-v2.md",
+      "sha256": "0f068c5ebe64b5b363bfd326c87a48f5c02faf0c37a9ceb358353499bdbd798e"
+    },
+    {
+      "path": "review-response.md",
+      "sha256": "ce15a38170c1deb0434488246f16493be988160d09afc3c81a4e841294a50a43"
+    }
+  ]
+}

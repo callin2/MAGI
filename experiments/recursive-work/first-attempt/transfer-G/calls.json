@@ -1,0 +1,6 @@
+{"revision":0,"issues":[{"id":"T1","title":"MAGI 업무위임 검증 실행 명세","goal":"delegation-protocol","parent_id":null,"acceptance":["실행 가능한 검증 프로토콜과 별도 과제 데이터를 제출한다"],"status":"open","evidence":[]},{"id":"T2","title":"실행 명세 설계","goal":"protocol-design","parent_id":"T1","acceptance":["목적과 검증 주장을 분리해 실제 수행 명세를 만든다"],"status":"open","evidence":[]}]}
+{"error": "actions required"}
+{"error": "unknown operation"}
+{"error": "unknown operation"}
+{"error": "unknown operation"}
+{"error": "unknown operation"}

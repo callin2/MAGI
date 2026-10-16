@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "revision": 2,
+  "issues": [
+    {
+      "id": "T1",
+      "title": "MAGI 업무위임 검증 실행 명세",
+      "goal": "delegation-protocol",
+      "parent_id": null,
+      "acceptance": [
+        "실행 가능한 검증 프로토콜과 별도 과제 데이터를 제출한다"
+      ],
+      "status": "done",
+      "evidence": [
+        {
+          "path": "protocol.md",
+          "sha256": "a44dbec74f8445ef6e45c77feddb247d58d2e5fe97262591ad649fe93c5de853"
+        },
+        {
+          "path": "cases.json",
+          "sha256": "6bc26b49c27d7f0879e04025a03fc9cfc6dc158ba97db3e7976811af953e56ad"
+        },
+        {
+          "path": "summary.md",
+          "sha256": "de25d093b9711de95df738d140adcb558f702406b24199e924e077d6392e67b8"
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "title": "실행 명세 설계",
+      "goal": "protocol-design",
+      "parent_id": "T1",
+      "acceptance": [
+        "목적과 검증 주장을 분리해 실제 수행 명세를 만든다"
+      ],
+      "status": "done",
+      "evidence": [
+        {
+          "path": "protocol.md",
+          "sha256": "a44dbec74f8445ef6e45c77feddb247d58d2e5fe97262591ad649fe93c5de853"
+        }
+      ]
+    }
+  ],
+  "audit": [
+    {
+      "op": "complete",
+      "id": "T2"
+    },
+    {
+      "op": "complete",
+      "id": "T1"
+    }
+  ]
+}

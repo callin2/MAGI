@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "id": "transfer-L",
+  "goal": "실제 위임 검증 운영 명세",
+  "checks": [
+    {
+      "kind": "unique_goal",
+      "goal": "delegation-protocol"
+    },
+    {
+      "kind": "status",
+      "goal": "delegation-protocol",
+      "status": "done"
+    },
+    {
+      "kind": "unique_goal",
+      "goal": "protocol-design"
+    },
+    {
+      "kind": "status",
+      "goal": "protocol-design",
+      "status": "done"
+    },
+    {
+      "kind": "unique_goal",
+      "goal": "protocol-cases"
+    },
+    {
+      "kind": "status",
+      "goal": "protocol-cases",
+      "status": "done"
+    },
+    {
+      "kind": "goal_exists",
+      "goal": "protocol-design",
+      "parent_goal": "delegation-protocol"
+    },
+    {
+      "kind": "goal_exists",
+      "goal": "protocol-cases",
+      "parent_goal": "delegation-protocol"
+    },
+    {
+      "kind": "artifact_contains",
+      "path": "protocol.md",
+      "text": "MAGI"
+    },
+    {
+      "kind": "artifact_contains",
+      "path": "cases.json",
+      "text": "schema_version"
+    },
+    {
+      "kind": "artifact_contains",
+      "path": "summary.md",
+      "text": "MAGI"
+    },
+    {
+      "kind": "no_done_without_evidence"
+    }
+  ],
+  "expected_claim_scope": "local-tool-action"
+}

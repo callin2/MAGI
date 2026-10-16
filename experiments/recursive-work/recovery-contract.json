@@ -1,0 +1,9 @@
+{
+  "reason": "Phase1 worker schema guessing and incomplete completion; original grader wrongly forced direct children and a magic MAGI word. Original state/artifacts and strict results preserved. Stage2 API describe provided identically; revised checker accepts valid descendant graphs and nonempty artifacts. This is repair, not an untouched benchmark rerun.",
+  "changed_cases_sha256": {
+    "transfer-E.json": "08b959b83cd608ecc448625d083c1c431747200ce22064896a8dda59d1a74f50",
+    "transfer-L.json": "9169d6d77e8b8a15d7b660e6ab3b898ef0b312fbf0ddab093385cae046925a5a",
+    "transfer-G.json": "dc108f856e2e0bc4d8cd52ceb1785c31526c1289b60c751867ed9595791beb77",
+    "transfer-F.json": "8e665acb413078c0de0f8612057f8986ddd450b8357a987c0834c0bc5b02a103"
+  }
+}

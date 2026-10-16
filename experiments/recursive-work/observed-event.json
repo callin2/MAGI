@@ -1,0 +1,9 @@
+{
+  "id": "observed-integration-failures",
+  "observation": "Actual integration calls accepted complete evidence=[] as done and accepted init with T1→T2→T1 parents. Tracker recovery added regression tests and now rejects empty evidence, parent cycles, and reuse under a different parent. Independent evaluator also rejects malformed state and empty checks. Combined 17 tests pass. File existence/hash proves artifact integrity, not full semantic correctness.",
+  "evidence": [
+    "tracker-recovery.md",
+    "scripts/work_pilot/test_tracker.py",
+    "scripts/work_pilot/test_evaluator.py"
+  ]
+}

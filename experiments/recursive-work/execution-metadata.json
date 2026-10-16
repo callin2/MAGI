@@ -1,0 +1,35 @@
+{
+  "task": "actual work package via recursive MAGI DnC",
+  "substantive_work": "tool implementation, integration repair, technical composition decision, four fresh execution-protocol tasks",
+  "code_tests_passed": 25,
+  "initial_document_review_rounds": 2,
+  "additional_user_decision_requests_during_run": 0,
+  "fresh_transfer_workers": 4,
+  "repetitions_per_condition": 1,
+  "total_model_tokens": null,
+  "provider_call_count": null,
+  "human_time_saved": null,
+  "memory_use": "actual source observations→LLM candidates→SQLite→fresh-worker input; causal use unknown",
+  "recovery_cli_observed": {
+    "G": {
+      "calls": 5,
+      "failed": 0,
+      "cli_seconds_only": 0.025153527967631817
+    },
+    "F": {
+      "calls": 4,
+      "failed": 1,
+      "cli_seconds_only": 0.006853478029370308
+    },
+    "L": {
+      "calls": 2,
+      "failed": 0,
+      "cli_seconds_only": 0.0028963040094822645
+    },
+    "E": {
+      "calls": 3,
+      "failed": 0,
+      "cli_seconds_only": 0.007315115071833134
+    }
+  }
+}

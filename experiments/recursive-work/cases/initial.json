@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "id": "initial-decision-work",
+  "goal": "완결된 MAGI 첫 사용 구성 기술 결정",
+  "checks": [
+    {
+      "kind": "goal_exists",
+      "goal": "composition-comparison",
+      "parent_goal": "runtime-decision"
+    },
+    {
+      "kind": "goal_exists",
+      "goal": "composition-selection",
+      "parent_goal": "runtime-decision"
+    },
+    {
+      "kind": "unique_goal",
+      "goal": "runtime-decision"
+    },
+    {
+      "kind": "status",
+      "goal": "runtime-decision",
+      "status": "done"
+    },
+    {
+      "kind": "unique_goal",
+      "goal": "composition-comparison"
+    },
+    {
+      "kind": "status",
+      "goal": "composition-comparison",
+      "status": "done"
+    },
+    {
+      "kind": "unique_goal",
+      "goal": "composition-selection"
+    },
+    {
+      "kind": "status",
+      "goal": "composition-selection",
+      "status": "done"
+    },
+    {
+      "kind": "artifact_contains",
+      "path": "comparison.md",
+      "text": "MAGI"
+    },
+    {
+      "kind": "artifact_contains",
+      "path": "decision.md",
+      "text": "MAGI"
+    },
+    {
+      "kind": "artifact_contains",
+      "path": "final.md",
+      "text": "MAGI"
+    },
+    {
+      "kind": "no_done_without_evidence"
+    }
+  ],
+  "expected_claim_scope": "local-tool-action"
+}

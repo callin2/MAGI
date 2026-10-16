@@ -1,0 +1,48 @@
+{
+  "agent_id": "fresh-L",
+  "at": "2026-10-16T05:20:42.994761Z",
+  "binding_id": "transfer-L",
+  "conflicts": [],
+  "context": {
+    "workspace_type": "local-work-pilot"
+  },
+  "excluded_ids": [],
+  "id": "3cce69d6-4bc4-4fdd-bdee-d4edc349cd8a",
+  "input_sha256": "2e6a946c32d65c20cc66644e50d64fc6c4e121ca98e08a45a049229b26acb984",
+  "knowledge": [
+    {
+      "evidence": [
+        "runs/initial/review-response.md",
+        "runs/initial/decision.md",
+        "runs/initial/decision-v2.md",
+        "runs/initial/decision-v3.md",
+        "runs/initial/calls.json"
+      ],
+      "id": "observed-document-review",
+      "observation": "Actual decision work used local tracker to create/reuse leaf tasks and complete artifacts. Root review found draft conflated target natural-language planning runtime with current memory/tool implementation; corrected in v2. Root review then found v2 inserted a universal human approval boundary for technical learning, contrary to existing user principle; v3 distinguishes technical judgment/validation/adoption/revocation within existing goals from new preference/value/permission decisions. Tracker reopen allowed revised evidence and ancestor recertification.",
+      "owner": "work-observer",
+      "scope": "role",
+      "state_id": "work-author"
+    },
+    {
+      "evidence": [
+        "tracker-recovery.md",
+        "scripts/work_pilot/test_tracker.py",
+        "scripts/work_pilot/test_evaluator.py"
+      ],
+      "id": "observed-integration-failures",
+      "observation": "Actual integration calls accepted complete evidence=[] as done and accepted init with T1→T2→T1 parents. Tracker recovery added regression tests and now rejects empty evidence, parent cycles, and reuse under a different parent. Independent evaluator also rejects malformed state and empty checks. Combined 17 tests pass. File existence/hash proves artifact integrity, not full semantic correctness.",
+      "owner": "work-observer",
+      "scope": "role",
+      "state_id": "work-author"
+    }
+  ],
+  "mode": "log",
+  "revision": 14,
+  "role_id": "work-author",
+  "role_version": 1,
+  "run_id": "new-worker-L",
+  "session_id": "fresh-transfer-L",
+  "state_id": "work-author",
+  "task_id": "delegation-protocol"
+}

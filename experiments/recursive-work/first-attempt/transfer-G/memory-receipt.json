@@ -1,0 +1,21 @@
+{
+  "agent_id": "fresh-G",
+  "at": "2026-10-16T05:20:42.756157Z",
+  "binding_id": "transfer-G",
+  "conflicts": [],
+  "context": {
+    "workspace_type": "local-work-pilot"
+  },
+  "excluded_ids": [],
+  "id": "c74c81bb-0846-4511-8d4e-97ab1070f290",
+  "input_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "knowledge": [],
+  "mode": "none",
+  "revision": 14,
+  "role_id": "work-author",
+  "role_version": 1,
+  "run_id": "new-worker-G",
+  "session_id": "fresh-transfer-G",
+  "state_id": "work-author",
+  "task_id": "delegation-protocol"
+}

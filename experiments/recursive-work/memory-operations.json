@@ -1,0 +1,684 @@
+[
+  {
+    "request": {
+      "op": "state",
+      "id": "work-author",
+      "role_id": "work-author",
+      "role_version": 1,
+      "project": "recursive-work",
+      "purpose": "Produce evidence-bounded usable work packages",
+      "criteria": "Complete useful artifacts, reuse tasks, preserve technical/value boundary"
+    },
+    "result": {
+      "revision": 1,
+      "state": {
+        "active": true,
+        "criteria": "Complete useful artifacts, reuse tasks, preserve technical/value boundary",
+        "id": "work-author",
+        "project": "recursive-work",
+        "purpose": "Produce evidence-bounded usable work packages",
+        "role_id": "work-author",
+        "role_version": 1
+      }
+    }
+  },
+  {
+    "request": {
+      "op": "bind",
+      "id": "trainer",
+      "agent_id": "work-observer",
+      "state_id": "work-author",
+      "role_id": "work-author",
+      "role_version": 1,
+      "project": "recursive-work"
+    },
+    "result": {
+      "binding": {
+        "active": true,
+        "agent_id": "work-observer",
+        "id": "trainer",
+        "project": "recursive-work",
+        "role_id": "work-author",
+        "role_version": 1,
+        "state_id": "work-author"
+      },
+      "revision": 2
+    }
+  },
+  {
+    "request": {
+      "op": "event",
+      "binding_id": "trainer",
+      "scope": "role",
+      "event": {
+        "id": "observed-integration-failures",
+        "observation": "Actual integration calls accepted complete evidence=[] as done and accepted init with T1→T2→T1 parents. Tracker recovery added regression tests and now rejects empty evidence, parent cycles, and reuse under a different parent. Independent evaluator also rejects malformed state and empty checks. Combined 17 tests pass. File existence/hash proves artifact integrity, not full semantic correctness.",
+        "evidence": [
+          "tracker-recovery.md",
+          "scripts/work_pilot/test_tracker.py",
+          "scripts/work_pilot/test_evaluator.py"
+        ]
+      }
+    },
+    "result": {
+      "event_id": "observed-integration-failures",
+      "revision": 3
+    }
+  },
+  {
+    "request": {
+      "op": "event",
+      "binding_id": "trainer",
+      "scope": "role",
+      "event": {
+        "id": "observed-document-review",
+        "observation": "Actual decision work used local tracker to create/reuse leaf tasks and complete artifacts. Root review found draft conflated target natural-language planning runtime with current memory/tool implementation; corrected in v2. Root review then found v2 inserted a universal human approval boundary for technical learning, contrary to existing user principle; v3 distinguishes technical judgment/validation/adoption/revocation within existing goals from new preference/value/permission decisions. Tracker reopen allowed revised evidence and ancestor recertification.",
+        "evidence": [
+          "runs/initial/review-response.md",
+          "runs/initial/decision.md",
+          "runs/initial/decision-v2.md",
+          "runs/initial/decision-v3.md",
+          "runs/initial/calls.json"
+        ]
+      }
+    },
+    "result": {
+      "event_id": "observed-document-review",
+      "revision": 4
+    }
+  },
+  {
+    "request": {
+      "op": "candidate",
+      "binding_id": "trainer",
+      "lesson": {
+        "id": "observed-integration-failures-evidence-gate",
+        "source_id": "observed-integration-failures",
+        "fact": "Integration calls accepted complete evidence=[] as done; tracker recovery added a regression test that rejects empty evidence, and the combined tracker/evaluator suite passes.",
+        "hypothesis": "A completion gate that requires nonempty evidence prevents false done states caused by structurally complete but unsubstantiated reports.",
+        "rule": "When marking work done, reject the state unless evidence is nonempty and validate that condition in the recovery regression suite.",
+        "conditions": {
+          "workspace_type": "local-work-pilot"
+        },
+        "falsifier": "A valid completed work item with no evidence is accepted by the authoritative completion validator without reducing correctness.",
+        "kind": "technical",
+        "scope": "role",
+        "conflict_key": "completion-requires-evidence"
+      }
+    },
+    "result": {
+      "candidate_id": "observed-integration-failures-evidence-gate",
+      "revision": 5
+    }
+  },
+  {
+    "request": {
+      "op": "activate",
+      "binding_id": "trainer",
+      "lesson_id": "observed-integration-failures-evidence-gate",
+      "validation": {
+        "lesson_id": "observed-integration-failures-evidence-gate",
+        "reference": "actual-observation-and-source-review",
+        "tests": [
+          {
+            "case": "source observation explicitly supports scoped rule",
+            "passed": true
+          },
+          {
+            "case": "counterexample outside existing goal/current implementation is not automatically accepted",
+            "passed": true,
+            "counterexample": true
+          }
+        ]
+      }
+    },
+    "result": {
+      "lesson_id": "observed-integration-failures-evidence-gate",
+      "revision": 6,
+      "status": "active"
+    }
+  },
+  {
+    "request": {
+      "op": "candidate",
+      "binding_id": "trainer",
+      "lesson": {
+        "id": "observed-integration-failures-parent-integrity",
+        "source_id": "observed-integration-failures",
+        "fact": "Integration accepted init with T1→T2→T1 parents and accepted reuse under a different parent; recovery tests now reject parent cycles and parent reuse, while the evaluator rejects malformed state.",
+        "hypothesis": "Validating parent-graph acyclicity and immutable parent ownership at recovery boundaries prevents malformed tracker lineage from being reintroduced.",
+        "rule": "At initialization and recovery, reject parent cycles, reject reuse under a different parent, and run regression tests for both invariants.",
+        "conditions": {
+          "workspace_type": "local-work-pilot"
+        },
+        "falsifier": "A recovery path can accept a cyclic parent graph or different-parent reuse while preserving valid lineage and evaluator correctness.",
+        "kind": "technical",
+        "scope": "role",
+        "conflict_key": "parent-lineage-integrity"
+      }
+    },
+    "result": {
+      "candidate_id": "observed-integration-failures-parent-integrity",
+      "revision": 7
+    }
+  },
+  {
+    "request": {
+      "op": "activate",
+      "binding_id": "trainer",
+      "lesson_id": "observed-integration-failures-parent-integrity",
+      "validation": {
+        "lesson_id": "observed-integration-failures-parent-integrity",
+        "reference": "actual-observation-and-source-review",
+        "tests": [
+          {
+            "case": "source observation explicitly supports scoped rule",
+            "passed": true
+          },
+          {
+            "case": "counterexample outside existing goal/current implementation is not automatically accepted",
+            "passed": true,
+            "counterexample": true
+          }
+        ]
+      }
+    },
+    "result": {
+      "lesson_id": "observed-integration-failures-parent-integrity",
+      "revision": 8,
+      "status": "active"
+    }
+  },
+  {
+    "request": {
+      "op": "candidate",
+      "binding_id": "trainer",
+      "lesson": {
+        "id": "observed-document-review-evidence-boundary",
+        "source_id": "observed-document-review",
+        "fact": "Review corrected a draft that conflated the target natural-language planning runtime with the current memory/tool implementation, and then removed a universal human approval boundary that contradicted the existing decision principle; the revised artifact distinguishes technical judgment, validation, adoption, and revocation within existing goals from new preference, value, or permission decisions.",
+        "hypothesis": "Separating documented target architecture from current implementation, while preserving the established human/agent decision boundary, reduces semantic drift without creating an extra approval gate for technical learning.",
+        "rule": "When reviewing technical documentation, label target and current evidence separately and route technical judgment, validation, adoption, and revocation through existing goals; require a new decision boundary only for genuinely new preferences, values, or permissions.",
+        "conditions": {
+          "workspace_type": "local-work-pilot"
+        },
+        "falsifier": "A document that merges target and current implementation and adds universal approval for technical learning is shown by review to preserve accurate evidence scope and the established decision boundary without correction.",
+        "kind": "technical",
+        "scope": "role",
+        "conflict_key": "documentation-evidence-and-decision-boundary"
+      }
+    },
+    "result": {
+      "candidate_id": "observed-document-review-evidence-boundary",
+      "revision": 9
+    }
+  },
+  {
+    "request": {
+      "op": "activate",
+      "binding_id": "trainer",
+      "lesson_id": "observed-document-review-evidence-boundary",
+      "validation": {
+        "lesson_id": "observed-document-review-evidence-boundary",
+        "reference": "actual-observation-and-source-review",
+        "tests": [
+          {
+            "case": "source observation explicitly supports scoped rule",
+            "passed": true
+          },
+          {
+            "case": "counterexample outside existing goal/current implementation is not automatically accepted",
+            "passed": true,
+            "counterexample": true
+          }
+        ]
+      }
+    },
+    "result": {
+      "lesson_id": "observed-document-review-evidence-boundary",
+      "revision": 10,
+      "status": "active"
+    }
+  },
+  {
+    "request": {
+      "op": "bind",
+      "id": "transfer-G",
+      "agent_id": "fresh-G",
+      "state_id": "work-author",
+      "role_id": "work-author",
+      "role_version": 1,
+      "project": "recursive-work"
+    },
+    "result": {
+      "binding": {
+        "active": true,
+        "agent_id": "fresh-G",
+        "id": "transfer-G",
+        "project": "recursive-work",
+        "role_id": "work-author",
+        "role_version": 1,
+        "state_id": "work-author"
+      },
+      "revision": 11
+    }
+  },
+  {
+    "request": {
+      "op": "bind",
+      "id": "transfer-F",
+      "agent_id": "fresh-F",
+      "state_id": "work-author",
+      "role_id": "work-author",
+      "role_version": 1,
+      "project": "recursive-work"
+    },
+    "result": {
+      "binding": {
+        "active": true,
+        "agent_id": "fresh-F",
+        "id": "transfer-F",
+        "project": "recursive-work",
+        "role_id": "work-author",
+        "role_version": 1,
+        "state_id": "work-author"
+      },
+      "revision": 12
+    }
+  },
+  {
+    "request": {
+      "op": "bind",
+      "id": "transfer-L",
+      "agent_id": "fresh-L",
+      "state_id": "work-author",
+      "role_id": "work-author",
+      "role_version": 1,
+      "project": "recursive-work"
+    },
+    "result": {
+      "binding": {
+        "active": true,
+        "agent_id": "fresh-L",
+        "id": "transfer-L",
+        "project": "recursive-work",
+        "role_id": "work-author",
+        "role_version": 1,
+        "state_id": "work-author"
+      },
+      "revision": 13
+    }
+  },
+  {
+    "request": {
+      "op": "bind",
+      "id": "transfer-E",
+      "agent_id": "fresh-E",
+      "state_id": "work-author",
+      "role_id": "work-author",
+      "role_version": 1,
+      "project": "recursive-work"
+    },
+    "result": {
+      "binding": {
+        "active": true,
+        "agent_id": "fresh-E",
+        "id": "transfer-E",
+        "project": "recursive-work",
+        "role_id": "work-author",
+        "role_version": 1,
+        "state_id": "work-author"
+      },
+      "revision": 14
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "transfer-G",
+      "state_id": "work-author",
+      "context": {
+        "workspace_type": "local-work-pilot"
+      },
+      "mode": "none",
+      "task_id": "delegation-protocol",
+      "session_id": "fresh-transfer-G",
+      "run_id": "new-worker-G"
+    },
+    "result": {
+      "receipt": {
+        "agent_id": "fresh-G",
+        "at": "2026-10-16T05:20:42.756157Z",
+        "binding_id": "transfer-G",
+        "conflicts": [],
+        "context": {
+          "workspace_type": "local-work-pilot"
+        },
+        "excluded_ids": [],
+        "id": "c74c81bb-0846-4511-8d4e-97ab1070f290",
+        "input_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "knowledge": [],
+        "mode": "none",
+        "revision": 14,
+        "role_id": "work-author",
+        "role_version": 1,
+        "run_id": "new-worker-G",
+        "session_id": "fresh-transfer-G",
+        "state_id": "work-author",
+        "task_id": "delegation-protocol"
+      },
+      "revision": 14
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "transfer-F",
+      "state_id": "work-author",
+      "context": {
+        "workspace_type": "local-work-pilot"
+      },
+      "mode": "none",
+      "task_id": "delegation-protocol",
+      "session_id": "fresh-transfer-F",
+      "run_id": "new-worker-F"
+    },
+    "result": {
+      "receipt": {
+        "agent_id": "fresh-F",
+        "at": "2026-10-16T05:20:42.876576Z",
+        "binding_id": "transfer-F",
+        "conflicts": [],
+        "context": {
+          "workspace_type": "local-work-pilot"
+        },
+        "excluded_ids": [],
+        "id": "d587a207-e260-49c2-876b-215085dfc0a7",
+        "input_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "knowledge": [],
+        "mode": "none",
+        "revision": 14,
+        "role_id": "work-author",
+        "role_version": 1,
+        "run_id": "new-worker-F",
+        "session_id": "fresh-transfer-F",
+        "state_id": "work-author",
+        "task_id": "delegation-protocol"
+      },
+      "revision": 14
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "transfer-L",
+      "state_id": "work-author",
+      "context": {
+        "workspace_type": "local-work-pilot"
+      },
+      "mode": "log",
+      "task_id": "delegation-protocol",
+      "session_id": "fresh-transfer-L",
+      "run_id": "new-worker-L"
+    },
+    "result": {
+      "receipt": {
+        "agent_id": "fresh-L",
+        "at": "2026-10-16T05:20:42.994761Z",
+        "binding_id": "transfer-L",
+        "conflicts": [],
+        "context": {
+          "workspace_type": "local-work-pilot"
+        },
+        "excluded_ids": [],
+        "id": "3cce69d6-4bc4-4fdd-bdee-d4edc349cd8a",
+        "input_sha256": "2e6a946c32d65c20cc66644e50d64fc6c4e121ca98e08a45a049229b26acb984",
+        "knowledge": [
+          {
+            "evidence": [
+              "runs/initial/review-response.md",
+              "runs/initial/decision.md",
+              "runs/initial/decision-v2.md",
+              "runs/initial/decision-v3.md",
+              "runs/initial/calls.json"
+            ],
+            "id": "observed-document-review",
+            "observation": "Actual decision work used local tracker to create/reuse leaf tasks and complete artifacts. Root review found draft conflated target natural-language planning runtime with current memory/tool implementation; corrected in v2. Root review then found v2 inserted a universal human approval boundary for technical learning, contrary to existing user principle; v3 distinguishes technical judgment/validation/adoption/revocation within existing goals from new preference/value/permission decisions. Tracker reopen allowed revised evidence and ancestor recertification.",
+            "owner": "work-observer",
+            "scope": "role",
+            "state_id": "work-author"
+          },
+          {
+            "evidence": [
+              "tracker-recovery.md",
+              "scripts/work_pilot/test_tracker.py",
+              "scripts/work_pilot/test_evaluator.py"
+            ],
+            "id": "observed-integration-failures",
+            "observation": "Actual integration calls accepted complete evidence=[] as done and accepted init with T1→T2→T1 parents. Tracker recovery added regression tests and now rejects empty evidence, parent cycles, and reuse under a different parent. Independent evaluator also rejects malformed state and empty checks. Combined 17 tests pass. File existence/hash proves artifact integrity, not full semantic correctness.",
+            "owner": "work-observer",
+            "scope": "role",
+            "state_id": "work-author"
+          }
+        ],
+        "mode": "log",
+        "revision": 14,
+        "role_id": "work-author",
+        "role_version": 1,
+        "run_id": "new-worker-L",
+        "session_id": "fresh-transfer-L",
+        "state_id": "work-author",
+        "task_id": "delegation-protocol"
+      },
+      "revision": 14
+    }
+  },
+  {
+    "request": {
+      "op": "query",
+      "binding_id": "transfer-E",
+      "state_id": "work-author",
+      "context": {
+        "workspace_type": "local-work-pilot"
+      },
+      "mode": "lesson",
+      "task_id": "delegation-protocol",
+      "session_id": "fresh-transfer-E",
+      "run_id": "new-worker-E"
+    },
+    "result": {
+      "receipt": {
+        "agent_id": "fresh-E",
+        "at": "2026-10-16T05:20:43.127394Z",
+        "binding_id": "transfer-E",
+        "conflicts": [],
+        "context": {
+          "workspace_type": "local-work-pilot"
+        },
+        "excluded_ids": [],
+        "id": "c469a54b-abb9-4b12-a75f-af65af36ace3",
+        "input_sha256": "fbc854a94d6bb9f543e9d18643f14b884938549bd1378fe20de80b2b69442641",
+        "knowledge": [
+          {
+            "conditions": {
+              "workspace_type": "local-work-pilot"
+            },
+            "conflict_key": "documentation-evidence-and-decision-boundary",
+            "fact": "Review corrected a draft that conflated the target natural-language planning runtime with the current memory/tool implementation, and then removed a universal human approval boundary that contradicted the existing decision principle; the revised artifact distinguishes technical judgment, validation, adoption, and revocation within existing goals from new preference, value, or permission decisions.",
+            "falsifier": "A document that merges target and current implementation and adds universal approval for technical learning is shown by review to preserve accurate evidence scope and the established decision boundary without correction.",
+            "grants": [],
+            "hypothesis": "Separating documented target architecture from current implementation, while preserving the established human/agent decision boundary, reduces semantic drift without creating an extra approval gate for technical learning.",
+            "id": "observed-document-review-evidence-boundary",
+            "kind": "technical",
+            "owner": "work-observer",
+            "rule": "When reviewing technical documentation, label target and current evidence separately and route technical judgment, validation, adoption, and revocation through existing goals; require a new decision boundary only for genuinely new preferences, values, or permissions.",
+            "scope": "role",
+            "source_id": "observed-document-review",
+            "state_id": "work-author",
+            "status": "active",
+            "validation": {
+              "lesson_id": "observed-document-review-evidence-boundary",
+              "reference": "actual-observation-and-source-review",
+              "tests": [
+                {
+                  "case": "source observation explicitly supports scoped rule",
+                  "passed": true
+                },
+                {
+                  "case": "counterexample outside existing goal/current implementation is not automatically accepted",
+                  "counterexample": true,
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "conditions": {
+              "workspace_type": "local-work-pilot"
+            },
+            "conflict_key": "completion-requires-evidence",
+            "fact": "Integration calls accepted complete evidence=[] as done; tracker recovery added a regression test that rejects empty evidence, and the combined tracker/evaluator suite passes.",
+            "falsifier": "A valid completed work item with no evidence is accepted by the authoritative completion validator without reducing correctness.",
+            "grants": [],
+            "hypothesis": "A completion gate that requires nonempty evidence prevents false done states caused by structurally complete but unsubstantiated reports.",
+            "id": "observed-integration-failures-evidence-gate",
+            "kind": "technical",
+            "owner": "work-observer",
+            "rule": "When marking work done, reject the state unless evidence is nonempty and validate that condition in the recovery regression suite.",
+            "scope": "role",
+            "source_id": "observed-integration-failures",
+            "state_id": "work-author",
+            "status": "active",
+            "validation": {
+              "lesson_id": "observed-integration-failures-evidence-gate",
+              "reference": "actual-observation-and-source-review",
+              "tests": [
+                {
+                  "case": "source observation explicitly supports scoped rule",
+                  "passed": true
+                },
+                {
+                  "case": "counterexample outside existing goal/current implementation is not automatically accepted",
+                  "counterexample": true,
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          },
+          {
+            "conditions": {
+              "workspace_type": "local-work-pilot"
+            },
+            "conflict_key": "parent-lineage-integrity",
+            "fact": "Integration accepted init with T1→T2→T1 parents and accepted reuse under a different parent; recovery tests now reject parent cycles and parent reuse, while the evaluator rejects malformed state.",
+            "falsifier": "A recovery path can accept a cyclic parent graph or different-parent reuse while preserving valid lineage and evaluator correctness.",
+            "grants": [],
+            "hypothesis": "Validating parent-graph acyclicity and immutable parent ownership at recovery boundaries prevents malformed tracker lineage from being reintroduced.",
+            "id": "observed-integration-failures-parent-integrity",
+            "kind": "technical",
+            "owner": "work-observer",
+            "rule": "At initialization and recovery, reject parent cycles, reject reuse under a different parent, and run regression tests for both invariants.",
+            "scope": "role",
+            "source_id": "observed-integration-failures",
+            "state_id": "work-author",
+            "status": "active",
+            "validation": {
+              "lesson_id": "observed-integration-failures-parent-integrity",
+              "reference": "actual-observation-and-source-review",
+              "tests": [
+                {
+                  "case": "source observation explicitly supports scoped rule",
+                  "passed": true
+                },
+                {
+                  "case": "counterexample outside existing goal/current implementation is not automatically accepted",
+                  "counterexample": true,
+                  "passed": true
+                }
+              ]
+            },
+            "version": 1
+          }
+        ],
+        "mode": "lesson",
+        "revision": 14,
+        "role_id": "work-author",
+        "role_version": 1,
+        "run_id": "new-worker-E",
+        "session_id": "fresh-transfer-E",
+        "state_id": "work-author",
+        "task_id": "delegation-protocol"
+      },
+      "revision": 14
+    }
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "transfer-G",
+      "receipt_id": "c74c81bb-0846-4511-8d4e-97ab1070f290",
+      "used_ids": [],
+      "output_ref": "experiments/recursive-work/runs/transfer-G/protocol.md"
+    },
+    "result": {
+      "applied_receipt": "c74c81bb-0846-4511-8d4e-97ab1070f290",
+      "revision": 14
+    },
+    "input_included_ids": [],
+    "causal_use": "unknown; no self-report substitution"
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "transfer-F",
+      "receipt_id": "d587a207-e260-49c2-876b-215085dfc0a7",
+      "used_ids": [],
+      "output_ref": "experiments/recursive-work/runs/transfer-F/protocol.md"
+    },
+    "result": {
+      "applied_receipt": "d587a207-e260-49c2-876b-215085dfc0a7",
+      "revision": 14
+    },
+    "input_included_ids": [],
+    "causal_use": "unknown; no self-report substitution"
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "transfer-L",
+      "receipt_id": "3cce69d6-4bc4-4fdd-bdee-d4edc349cd8a",
+      "used_ids": [],
+      "output_ref": "experiments/recursive-work/runs/transfer-L/protocol.md"
+    },
+    "result": {
+      "applied_receipt": "3cce69d6-4bc4-4fdd-bdee-d4edc349cd8a",
+      "revision": 14
+    },
+    "input_included_ids": [
+      "observed-document-review",
+      "observed-integration-failures"
+    ],
+    "causal_use": "unknown; no self-report substitution"
+  },
+  {
+    "request": {
+      "op": "apply",
+      "binding_id": "transfer-E",
+      "receipt_id": "c469a54b-abb9-4b12-a75f-af65af36ace3",
+      "used_ids": [],
+      "output_ref": "experiments/recursive-work/runs/transfer-E/protocol.md"
+    },
+    "result": {
+      "applied_receipt": "c469a54b-abb9-4b12-a75f-af65af36ace3",
+      "revision": 14
+    },
+    "input_included_ids": [
+      "observed-document-review-evidence-boundary",
+      "observed-integration-failures-evidence-gate",
+      "observed-integration-failures-parent-integrity"
+    ],
+    "causal_use": "unknown; no self-report substitution"
+  }
+]

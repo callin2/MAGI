@@ -1,0 +1,18 @@
+{
+  "current_implementation": [
+    "SQLite role memory adapter (7 tests passed)",
+    "local tracker + independent checker + review HTML (19 tests passed)",
+    "actual file creation, tracker completion, review/reopen/recertification have been executed"
+  ],
+  "not_implemented_or_not_proved": [
+    "general automatic natural-language planning runtime",
+    "general learning efficacy, total token savings, human time saved",
+    "products Hermes/Letta/OpenClaw installation/benchmark"
+  ],
+  "existing_principles": [
+    "모든 실제 작업은 먼저 관련 이슈 범위/기존 작업 확인",
+    "기존 목적·제약 안 기술 판단/검증/학습 채택·철회는 agent가 수행",
+    "새 취향·가치·권한 변경만 인간판단",
+    "저장·조회·출력·실제 작업효과를 구분"
+  ]
+}

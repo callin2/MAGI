@@ -1,0 +1,11 @@
+{
+  "id": "observed-document-review",
+  "observation": "Actual decision work used local tracker to create/reuse leaf tasks and complete artifacts. Root review found draft conflated target natural-language planning runtime with current memory/tool implementation; corrected in v2. Root review then found v2 inserted a universal human approval boundary for technical learning, contrary to existing user principle; v3 distinguishes technical judgment/validation/adoption/revocation within existing goals from new preference/value/permission decisions. Tracker reopen allowed revised evidence and ancestor recertification.",
+  "evidence": [
+    "runs/initial/review-response.md",
+    "runs/initial/decision.md",
+    "runs/initial/decision-v2.md",
+    "runs/initial/decision-v3.md",
+    "runs/initial/calls.json"
+  ]
+}

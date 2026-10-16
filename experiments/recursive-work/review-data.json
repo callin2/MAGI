@@ -1,0 +1,125 @@
+{
+  "title": "MAGI가 일을 나누고, 고쳐서 끝낸 결과",
+  "goal": "반복 설명·교정 없이 지적노동을 맡길 수 있는지, 실제 산출물과 작업 상태로 확인한다. 이번에는 첫 실사용 구성 결정과 다음 검증 업무를 수행했다. 25개 도구 시험과 5개 업무의 최종 구조 검사가 통과했다.",
+  "decomposition": {
+    "selected": "사용자 결과 중심: 중요한 분해 판단만 독립 비교 → 책임별 실행 → 독립 검사 → 실패한 부분 수정 → 통합 → 새 세션 업무",
+    "alternatives": [
+      "기능별 구현만 나누기: 실제 사용자 산출물이 빠질 위험",
+      "모든 단계에 다수 에이전트 사용: 작은 작업의 조정 비용 증가"
+    ],
+    "children": [
+      {
+        "title": "작업 도구",
+        "responsibility": "기존 업무 재사용, 하위 작업 등록, 증거·완료·재개방"
+      },
+      {
+        "title": "독립 판정",
+        "responsibility": "에이전트 주장과 별도로 실제 상태·파일·내용 구조 검사"
+      },
+      {
+        "title": "결과 화면",
+        "responsibility": "선택 이유, 실제 결과, 실패·복구·남은 한계를 열어볼 수 있게 통합"
+      }
+    ]
+  },
+  "runs": [
+    {
+      "id": "첫 구성 결정",
+      "condition": "독립 분해·실행·교정·재검증 / 도구 계약 보완 후",
+      "passed": true,
+      "checks": "실제 상태·파일 검사 16/16",
+      "elapsed_seconds": null,
+      "model_tokens": null,
+      "artifact_links": [
+        "runs/initial/decision-v3.md"
+      ]
+    },
+    {
+      "id": "경험 없이 새 업무",
+      "condition": "기본 지침만 / 도구 계약 보완 후",
+      "passed": true,
+      "checks": "실제 상태·파일 검사 17/17",
+      "elapsed_seconds": null,
+      "model_tokens": null,
+      "artifact_links": []
+    },
+    {
+      "id": "고정 규칙으로 새 업무",
+      "condition": "기본 지침 + 고정 절차 / 도구 계약 보완 후",
+      "passed": true,
+      "checks": "실제 상태·파일 검사 17/17",
+      "elapsed_seconds": null,
+      "model_tokens": null,
+      "artifact_links": []
+    },
+    {
+      "id": "원문 경험으로 새 업무",
+      "condition": "기본 지침 + 실제 경험 원문 / 도구 계약 보완 후",
+      "passed": true,
+      "checks": "실제 상태·파일 검사 17/17",
+      "elapsed_seconds": null,
+      "model_tokens": null,
+      "artifact_links": []
+    },
+    {
+      "id": "정제 교훈으로 새 업무",
+      "condition": "기본 지침 + 경험에서 추출한 교훈 / 도구 계약 보완 후",
+      "passed": true,
+      "checks": "실제 상태·파일 검사 17/17",
+      "elapsed_seconds": null,
+      "model_tokens": null,
+      "artifact_links": [
+        "runs/transfer-E/protocol.md",
+        "runs/transfer-E/cases.json"
+      ]
+    }
+  ],
+  "limitations": [
+    "첫 시도에서 경험 없음·고정 규칙·정제 교훈 실행은 미완료였다. 원문 경험 실행만 상태상 완료했으며, 최초 판정기에도 과도한 부모·단어 조건이 있었다.",
+    "원본 실패를 보존하고 모든 조건에 같은 도구 계약 조회를 제공한 뒤 4개 조건 모두 회복했다. 이 결과를 기억이나 정제의 성능 우월성으로 해석할 수 없다.",
+    "첫 문서는 현재 구현과 목표 구조 혼동, 기술 판단의 불필요한 인간 승인 조건 때문에 두 차례 교정했다. 사용자에게 추가 결정을 요구하지 않고 조정자가 수정·재검증했다.",
+    "구조 검사 통과는 문서의 모든 판단이 옳다는 보증이 아니다. 실제 사용자 채택·인간 시간 절감·일반 학습 효과는 미검증이다.",
+    "전체 모델 토큰·비용·생성 시간은 미측정이다. 후반 도구 호출 시간만 실제 기록했으며 전체 비용으로 환산하지 않았다.",
+    "이 실행은 기존 에이전트 도구를 조정해 수행했다. 임의 목표를 자동 처리하는 독립 서비스나 일반 계획 런타임을 완성한 것은 아니다."
+  ],
+  "lessons": [
+    {
+      "observation": "빈 증거로 완료되거나 부모 순환을 허용함",
+      "change": "거부·회귀 시험·독립 상태 검사를 추가",
+      "evidence": "실제 재현과 시험"
+    },
+    {
+      "observation": "완료 후 문서 교정·후속 분해로 증거가 낡아짐",
+      "change": "작업과 완료 조상을 다시 열고 증거를 갱신",
+      "evidence": "실제 문서 v1→v2→v3와 재인증"
+    },
+    {
+      "observation": "도구 형식을 추측하다가 미완료로 멈춤",
+      "change": "도구 계약 자체 조회와 실제 호출 기록을 추가",
+      "evidence": "첫 시도·복구 snapshot"
+    },
+    {
+      "observation": "정제한 교훈이 있어도 최초 작업 완료를 보장하지 못함",
+      "change": "경험·도구 계약·분해·판정의 효과를 구분",
+      "evidence": "4개 조건 결과"
+    }
+  ],
+  "deliverables": [
+    {
+      "label": "첫 실사용 구성 결정 — 무엇을 재사용하고 어떻게 시작하는가",
+      "path": "runs/initial/decision-v3.md"
+    },
+    {
+      "label": "실제 업무위임 검증 운영 명세",
+      "path": "runs/transfer-E/protocol.md"
+    },
+    {
+      "label": "경험·전이 검증 과제 데이터",
+      "path": "runs/transfer-E/cases.json"
+    },
+    {
+      "label": "사용자용 결과 안내",
+      "path": "runs/transfer-E/summary.md"
+    }
+  ]
+}

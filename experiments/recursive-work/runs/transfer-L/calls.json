@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "calls": [
+    {
+      "request": {"op":"register_followups","parent_id":"T2","actions":[{"title":"전이 검증 사례 설계","goal":"protocol-cases","acceptance":["followup·dedup·recovery 각 가족에 경험 과제와 별도 전이 과제가 있다","정답 유출 경계와 전이 차이를 명시한다"]}]},
+      "response": {"revision":1,"created_ids":["T3"],"reused_ids":[]}
+    }
+  ]
+}

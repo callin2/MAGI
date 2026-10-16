@@ -1,0 +1,1 @@
+{"actions":[{"type":"register_followups","parent_id":"T2","issues":[{"title":"전이 검증 사례 설계","goal":"protocol-cases","acceptance":["followup·dedup·recovery 각 가족의 경험 및 별도 전이 사례를 제출한다"]}]}]}

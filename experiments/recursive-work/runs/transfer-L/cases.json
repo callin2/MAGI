@@ -1,0 +1,8 @@
+{"schema_version":1,"cases":[
+  {"id":"followup-experience","family":"followup","goal":"실패한 초안의 교정 원인을 반영해 기존 목적 안에서 후속 검증을 등록한다","is_transfer":false,"acceptance":["기존 child를 조회·재사용하거나 필요한 후속 child만 등록한다","교정 원인과 새 acceptance를 연결한다"]},
+  {"id":"followup-transfer","family":"followup","goal":"새 문서 검토 목적에서 이전 교정 원칙을 적용해 후속 검증을 등록한다","is_transfer":true,"acceptance":["표면 문구와 파일 위치가 바뀌어도 기존 목적과 새 acceptance를 구분한다","새 인간 취향·권한을 임의로 추가하지 않는다"]},
+  {"id":"dedup-experience","family":"dedup","goal":"같은 goal의 기존 이슈를 찾아 중복 등록을 피한다","is_transfer":false,"acceptance":["기존 이슈를 재사용한다","서로 다른 parent 아래 같은 goal을 등록하지 않는다"]},
+  {"id":"dedup-transfer","family":"dedup","goal":"다른 도메인의 반복 요청에서 의미상 같은 작업을 중복 생성하지 않는다","is_transfer":true,"acceptance":["표현·도메인·식별자가 달라도 goal 의미를 비교한다","parent가 다르면 재사용을 거부하고 충돌을 보고한다"]},
+  {"id":"recovery-experience","family":"recovery","goal":"잘못된 완료 evidence와 parent 관계를 감지한 뒤 reopen·재검증한다","is_transfer":false,"acceptance":["빈 evidence와 순환 parent를 완료로 인정하지 않는다","수정 후 새 SHA-256으로 recertification한다"]},
+  {"id":"recovery-transfer","family":"recovery","goal":"새 산출물 유형에서 도구 실패를 보존하고 국소 수정 후 전체 검증을 회복한다","is_transfer":true,"acceptance":["실패 요청·응답을 calls에 남긴다","수정 범위를 기록하고 의미 검증과 파일 무결성을 구분한다"]}
+]}

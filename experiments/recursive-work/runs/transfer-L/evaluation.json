@@ -1,0 +1,96 @@
+{
+  "case_id": "transfer-L",
+  "passed": true,
+  "checks": [
+    {
+      "kind": "state_valid",
+      "passed": true,
+      "detail": "schema_version=1 and unique issue ids"
+    },
+    {
+      "kind": "declared_evidence",
+      "passed": true,
+      "detail": "issue T1 evidence hashes"
+    },
+    {
+      "kind": "declared_evidence",
+      "passed": true,
+      "detail": "issue T2 evidence hashes"
+    },
+    {
+      "kind": "declared_evidence",
+      "passed": true,
+      "detail": "issue T3 evidence hashes"
+    },
+    {
+      "kind": "unique_goal",
+      "passed": true,
+      "detail": "matches=1"
+    },
+    {
+      "kind": "status",
+      "passed": true,
+      "detail": "expected=done"
+    },
+    {
+      "kind": "unique_goal",
+      "passed": true,
+      "detail": "matches=1"
+    },
+    {
+      "kind": "status",
+      "passed": true,
+      "detail": "expected=done"
+    },
+    {
+      "kind": "unique_goal",
+      "passed": true,
+      "detail": "matches=1"
+    },
+    {
+      "kind": "status",
+      "passed": true,
+      "detail": "expected=done"
+    },
+    {
+      "kind": "descendant_goal",
+      "passed": true,
+      "detail": "goal=protocol-design ancestor=delegation-protocol"
+    },
+    {
+      "kind": "descendant_goal",
+      "passed": true,
+      "detail": "goal=protocol-cases ancestor=delegation-protocol"
+    },
+    {
+      "kind": "artifact_nonempty",
+      "passed": true,
+      "detail": "path=protocol.md"
+    },
+    {
+      "kind": "artifact_nonempty",
+      "passed": true,
+      "detail": "path=cases.json"
+    },
+    {
+      "kind": "artifact_nonempty",
+      "passed": true,
+      "detail": "path=summary.md"
+    },
+    {
+      "kind": "no_done_without_evidence",
+      "passed": true,
+      "detail": "all done issues have evidence"
+    },
+    {
+      "kind": "case_data_schema",
+      "passed": true,
+      "detail": "three families, each experience + transfer, unique IDs"
+    }
+  ],
+  "evidence_scope": "local-tool-action",
+  "recorded_tool_calls": null,
+  "call_log_format": "json-object",
+  "total_model_tokens": null,
+  "human_time_saved": null
+}

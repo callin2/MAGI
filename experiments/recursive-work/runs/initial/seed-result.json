@@ -1,0 +1,1 @@
+{"revision":0,"issues":[{"id":"T1","title":"MAGI 첫 실사용 구성 결정","goal":"runtime-decision","parent_id":null,"acceptance":["재사용 경로 비교와 첫 실행 구성·미검증 범위를 제출한다"],"status":"open","evidence":[]},{"id":"T2","title":"기존 구현 비교","goal":"composition-comparison","parent_id":"T1","acceptance":["현재 자료 근거로 비교 문서 작성"],"status":"open","evidence":[]}]}

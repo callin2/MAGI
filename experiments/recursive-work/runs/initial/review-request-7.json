@@ -1,0 +1,18 @@
+{
+  "op": "complete",
+  "id": "T1",
+  "evidence": [
+    {
+      "path": "comparison.md",
+      "sha256": "da223a3f462a0686efc9dbba3bf3b518f59fde055a10246b42bf90895e269b15"
+    },
+    {
+      "path": "decision-v2.md",
+      "sha256": "0f068c5ebe64b5b363bfd326c87a48f5c02faf0c37a9ceb358353499bdbd798e"
+    },
+    {
+      "path": "final-v2.md",
+      "sha256": "ab371ea6c68cdfe8c04a0946b6c4dd607ddd501690b7eac83d66eeba94c3f433"
+    }
+  ]
+}

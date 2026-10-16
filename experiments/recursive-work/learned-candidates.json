@@ -1,0 +1,30 @@
+[
+  {
+    "id": "observed-integration-failures-evidence-gate",
+    "source_id": "observed-integration-failures",
+    "fact": "Integration calls accepted complete evidence=[] as done; tracker recovery added a regression test that rejects empty evidence, and the combined tracker/evaluator suite passes.",
+    "hypothesis": "A completion gate that requires nonempty evidence prevents false done states caused by structurally complete but unsubstantiated reports.",
+    "rule": "When marking work done, reject the state unless evidence is nonempty and validate that condition in the recovery regression suite.",
+    "conditions": {
+      "workspace_type": "local-work-pilot"
+    },
+    "falsifier": "A valid completed work item with no evidence is accepted by the authoritative completion validator without reducing correctness.",
+    "kind": "technical",
+    "scope": "role",
+    "conflict_key": "completion-requires-evidence"
+  },
+  {
+    "id": "observed-integration-failures-parent-integrity",
+    "source_id": "observed-integration-failures",
+    "fact": "Integration accepted init with T1→T2→T1 parents and accepted reuse under a different parent; recovery tests now reject parent cycles and parent reuse, while the evaluator rejects malformed state.",
+    "hypothesis": "Validating parent-graph acyclicity and immutable parent ownership at recovery boundaries prevents malformed tracker lineage from being reintroduced.",
+    "rule": "At initialization and recovery, reject parent cycles, reject reuse under a different parent, and run regression tests for both invariants.",
+    "conditions": {
+      "workspace_type": "local-work-pilot"
+    },
+    "falsifier": "A recovery path can accept a cyclic parent graph or different-parent reuse while preserving valid lineage and evaluator correctness.",
+    "kind": "technical",
+    "scope": "role",
+    "conflict_key": "parent-lineage-integrity"
+  }
+]

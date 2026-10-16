@@ -1,5 +1,14 @@
 # MAGI
 
+## 실제 업무 위임 파일럿
+
+재귀적 MAGI 분해 → 하위 실행 → 통합 실패 수정 → 독립 검증 → 경험 반영 → 새 세션 업무를 실제로 실행했습니다. [결과와 산출물](docs/recursive-work-pilot.md), [첫 구성 결정](experiments/recursive-work/runs/initial/decision-v3.md), [검증 운영 명세](experiments/recursive-work/runs/transfer-E/protocol.md)를 볼 수 있습니다. 25개 도구 시험과 5개 업무의 최종 구조 검사가 통과했으며 초기 미완료·판정 오류·복구도 보존했습니다. 일반 학습 효과와 총비용 우월성은 미입증입니다.
+
+```sh
+python3 -m unittest discover -s scripts/work_pilot -p 'test_*.py' -v
+python3 scripts/work_pilot/check_runs.py
+```
+
 새로운 대상의 해석과 판단 기준 형성을 포함하는 범용 다중 AI 판단 구조를 연구합니다. 사업·기술 의사결정부터 코드 설계까지 적용 가능한 추상 구조가 목표입니다.
 
 현재는 연구 계약과 소규모 실제 AI 파일럿 단계입니다. 범용 엔진·모델 연결 런타임·자동 변화 감지는 구현되지 않았습니다. 확정된 제품 아키텍처나 성능 보증은 아닙니다.

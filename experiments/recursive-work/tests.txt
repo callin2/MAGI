@@ -1,0 +1,30 @@
+test_artifact_nonempty_requires_contained_utf8_file (test_evaluator.EvaluatorTests.test_artifact_nonempty_requires_contained_utf8_file) ... ok
+test_descendant_goal_allows_intermediate_parent (test_evaluator.EvaluatorTests.test_descendant_goal_allows_intermediate_parent) ... ok
+test_done_parent_with_open_descendant_fails (test_evaluator.EvaluatorTests.test_done_parent_with_open_descendant_fails) ... ok
+test_duplicate_ids_rejected (test_evaluator.EvaluatorTests.test_duplicate_ids_rejected) ... ok
+test_empty_checks_fail (test_evaluator.EvaluatorTests.test_empty_checks_fail) ... ok
+test_malformed_issue_state_fails_without_traceback (test_evaluator.EvaluatorTests.test_malformed_issue_state_fails_without_traceback) ... ok
+test_parent_cycle_fails (test_evaluator.EvaluatorTests.test_parent_cycle_fails) ... ok
+test_passes_goal_status_artifact_and_evidence (test_evaluator.EvaluatorTests.test_passes_goal_status_artifact_and_evidence) ... ok
+test_rejects_forged_hash (test_evaluator.EvaluatorTests.test_rejects_forged_hash) ... ok
+test_rejects_traversal_artifact (test_evaluator.EvaluatorTests.test_rejects_traversal_artifact) ... ok
+test_unknown_check_fails (test_evaluator.EvaluatorTests.test_unknown_check_fails) ... ok
+test_html_is_escaped_and_self_contained (test_report.ReportTests.test_html_is_escaped_and_self_contained) ... ok
+test_only_relative_local_paths_are_links (test_report.ReportTests.test_only_relative_local_paths_are_links) ... ok
+test_unknown_values_are_visible (test_report.ReportTests.test_unknown_values_are_visible) ... ok
+test_cli_events_record_success_and_failure (test_tracker.TrackerTests.test_cli_events_record_success_and_failure) ... ok
+test_complete_requires_nonempty_evidence (test_tracker.TrackerTests.test_complete_requires_nonempty_evidence) ... ok
+test_dedup_and_rollback (test_tracker.TrackerTests.test_dedup_and_rollback) ... ok
+test_describe_without_state_is_read_only (test_tracker.TrackerTests.test_describe_without_state_is_read_only) ... ok
+test_evidence_hash_and_branch_isolation (test_tracker.TrackerTests.test_evidence_hash_and_branch_isolation) ... ok
+test_followup_existing_root_parent_conflicts (test_tracker.TrackerTests.test_followup_existing_root_parent_conflicts) ... ok
+test_init_rejects_parent_cycle (test_tracker.TrackerTests.test_init_rejects_parent_cycle) ... ok
+test_new_child_reopens_done_parent (test_tracker.TrackerTests.test_new_child_reopens_done_parent) ... ok
+test_path_traversal (test_tracker.TrackerTests.test_path_traversal) ... ok
+test_reopen_recomplete_after_artifact_change (test_tracker.TrackerTests.test_reopen_recomplete_after_artifact_change) ... ok
+test_wrong_parent_and_atomic_followups (test_tracker.TrackerTests.test_wrong_parent_and_atomic_followups) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 3.180s
+
+OK

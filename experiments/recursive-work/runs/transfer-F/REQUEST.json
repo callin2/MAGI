@@ -1,0 +1,1 @@
+{"op":"complete","id":"T1","evidence":[{"path":"protocol.md","sha256":"a44dbec74f8445ef6e45c77feddb247d58d2e5fe97262591ad649fe93c5de853"},{"path":"cases.json","sha256":"6bc26b49c27d7f0879e04025a03fc9cfc6dc158ba97db3e7976811af953e56ad"},{"path":"summary.md","sha256":"de25d093b9711de95df738d140adcb558f702406b24199e924e077d6392e67b8"}]}

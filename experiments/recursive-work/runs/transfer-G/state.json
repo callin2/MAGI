@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "revision": 4,
+  "issues": [
+    {
+      "id": "T1",
+      "title": "MAGI 업무위임 검증 실행 명세",
+      "goal": "delegation-protocol",
+      "parent_id": null,
+      "acceptance": [
+        "실행 가능한 검증 프로토콜과 별도 과제 데이터를 제출한다"
+      ],
+      "status": "done",
+      "evidence": [
+        {
+          "path": "protocol.md",
+          "sha256": "d857712b941afbb06c5b6b8666636caebc12e5eaacf172c2606f98e1a89533da"
+        },
+        {
+          "path": "cases.json",
+          "sha256": "f864ee1e2b0c62b6ee73f09bb8c62320cd60403e4593d3ecb958d71c869114d5"
+        },
+        {
+          "path": "summary.md",
+          "sha256": "8c59eefa68e382fe1274083cee373dbce8f5c0607b07d0b3cbceb004c26f7c77"
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "title": "실행 명세 설계",
+      "goal": "protocol-design",
+      "parent_id": "T1",
+      "acceptance": [
+        "목적과 검증 주장을 분리해 실제 수행 명세를 만든다"
+      ],
+      "status": "done",
+      "evidence": [
+        {
+          "path": "protocol.md",
+          "sha256": "d857712b941afbb06c5b6b8666636caebc12e5eaacf172c2606f98e1a89533da"
+        },
+        {
+          "path": "cases.json",
+          "sha256": "f864ee1e2b0c62b6ee73f09bb8c62320cd60403e4593d3ecb958d71c869114d5"
+        },
+        {
+          "path": "summary.md",
+          "sha256": "8c59eefa68e382fe1274083cee373dbce8f5c0607b07d0b3cbceb004c26f7c77"
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "title": "전이 검증 사례 설계",
+      "goal": "protocol-cases",
+      "parent_id": "T2",
+      "acceptance": [
+        "followup·dedup·recovery 각 가족의 경험 및 별도 전이 사례를 제출한다"
+      ],
+      "status": "done",
+      "evidence": [
+        {
+          "path": "protocol.md",
+          "sha256": "d857712b941afbb06c5b6b8666636caebc12e5eaacf172c2606f98e1a89533da"
+        },
+        {
+          "path": "cases.json",
+          "sha256": "f864ee1e2b0c62b6ee73f09bb8c62320cd60403e4593d3ecb958d71c869114d5"
+        },
+        {
+          "path": "summary.md",
+          "sha256": "8c59eefa68e382fe1274083cee373dbce8f5c0607b07d0b3cbceb004c26f7c77"
+        }
+      ]
+    }
+  ],
+  "audit": [
+    {
+      "op": "register_followups",
+      "parent_id": "T2",
+      "created": [
+        "T3"
+      ]
+    },
+    {
+      "op": "complete",
+      "id": "T3"
+    },
+    {
+      "op": "complete",
+      "id": "T2"
+    },
+    {
+      "op": "complete",
+      "id": "T1"
+    }
+  ]
+}
