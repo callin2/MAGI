@@ -1,0 +1,196 @@
+{
+  "status": "descriptive subjective ratings, no answer key, not equal budget",
+  "case_count": 3,
+  "ratings": [
+    {
+      "judge": "J1",
+      "case": "R1",
+      "method": "coordinator",
+      "scores": {
+        "grounding": 2,
+        "value_conflict": 2,
+        "hypothesis_quality": 2,
+        "conditional_recommendation": 2,
+        "dissent_preservation": 2,
+        "revision_conditions": 2
+      },
+      "display_total": 12,
+      "unrated": 0
+    },
+    {
+      "judge": "J1",
+      "case": "R2",
+      "method": "coordinator",
+      "scores": {
+        "grounding": 2,
+        "value_conflict": 2,
+        "hypothesis_quality": 2,
+        "conditional_recommendation": 2,
+        "dissent_preservation": 2,
+        "revision_conditions": 2
+      },
+      "display_total": 12,
+      "unrated": 0
+    },
+    {
+      "judge": "J1",
+      "case": "R3",
+      "method": "coordinator",
+      "scores": {
+        "grounding": 2,
+        "value_conflict": 2,
+        "hypothesis_quality": 2,
+        "conditional_recommendation": 2,
+        "dissent_preservation": 2,
+        "revision_conditions": 2
+      },
+      "display_total": 12,
+      "unrated": 0
+    },
+    {
+      "judge": "J1",
+      "case": "R1",
+      "method": "neutral",
+      "scores": {
+        "grounding": 2,
+        "value_conflict": 2,
+        "hypothesis_quality": 2,
+        "conditional_recommendation": 2,
+        "dissent_preservation": 1,
+        "revision_conditions": 2
+      },
+      "display_total": 11,
+      "unrated": 0
+    },
+    {
+      "judge": "J1",
+      "case": "R2",
+      "method": "neutral",
+      "scores": {
+        "grounding": 2,
+        "value_conflict": 2,
+        "hypothesis_quality": 2,
+        "conditional_recommendation": 2,
+        "dissent_preservation": 1,
+        "revision_conditions": 2
+      },
+      "display_total": 11,
+      "unrated": 0
+    },
+    {
+      "judge": "J1",
+      "case": "R3",
+      "method": "neutral",
+      "scores": {
+        "grounding": 2,
+        "value_conflict": 2,
+        "hypothesis_quality": 2,
+        "conditional_recommendation": 2,
+        "dissent_preservation": 1,
+        "revision_conditions": 2
+      },
+      "display_total": 11,
+      "unrated": 0
+    },
+    {
+      "judge": "J2",
+      "case": "R1",
+      "method": "coordinator",
+      "scores": {
+        "grounding": 2,
+        "value_conflict": 2,
+        "hypothesis_quality": 2,
+        "conditional_recommendation": 2,
+        "dissent_preservation": 2,
+        "revision_conditions": 2
+      },
+      "display_total": 12,
+      "unrated": 0
+    },
+    {
+      "judge": "J2",
+      "case": "R2",
+      "method": "coordinator",
+      "scores": {
+        "grounding": 2,
+        "value_conflict": 2,
+        "hypothesis_quality": 2,
+        "conditional_recommendation": 2,
+        "dissent_preservation": 2,
+        "revision_conditions": 2
+      },
+      "display_total": 12,
+      "unrated": 0
+    },
+    {
+      "judge": "J2",
+      "case": "R3",
+      "method": "coordinator",
+      "scores": {
+        "grounding": 2,
+        "value_conflict": 2,
+        "hypothesis_quality": 2,
+        "conditional_recommendation": 2,
+        "dissent_preservation": 2,
+        "revision_conditions": 2
+      },
+      "display_total": 12,
+      "unrated": 0
+    },
+    {
+      "judge": "J2",
+      "case": "R1",
+      "method": "neutral",
+      "scores": {
+        "grounding": 2,
+        "value_conflict": 2,
+        "hypothesis_quality": 2,
+        "conditional_recommendation": 2,
+        "dissent_preservation": 1,
+        "revision_conditions": 2
+      },
+      "display_total": 11,
+      "unrated": 0
+    },
+    {
+      "judge": "J2",
+      "case": "R2",
+      "method": "neutral",
+      "scores": {
+        "grounding": 2,
+        "value_conflict": 2,
+        "hypothesis_quality": 2,
+        "conditional_recommendation": 2,
+        "dissent_preservation": 1,
+        "revision_conditions": 2
+      },
+      "display_total": 11,
+      "unrated": 0
+    },
+    {
+      "judge": "J2",
+      "case": "R3",
+      "method": "neutral",
+      "scores": {
+        "grounding": 2,
+        "value_conflict": 2,
+        "hypothesis_quality": 2,
+        "conditional_recommendation": 2,
+        "dissent_preservation": 1,
+        "revision_conditions": 2
+      },
+      "display_total": 11,
+      "unrated": 0
+    }
+  ],
+  "judge_disagreements": [],
+  "generation_batches": {
+    "neutral": 1,
+    "lens_responses": 3,
+    "coordination": 1,
+    "judges": 2
+  },
+  "actual_token_cost": null,
+  "real_world_outcomes": "not observed",
+  "semantic_limits": "See docs/pilot-002-report.md; schema checks do not verify truth or disagreement preservation."
+}

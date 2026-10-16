@@ -1,0 +1,165 @@
+{
+  "run_id": "pilot-002",
+  "freeze_at": "2026-10-16T01:30:33.138310Z",
+  "currentness": "2026-10-16 KST에 관측한 자료의 스냅샷. 결과 미확인과 결과 부재를 구분한다. 실험 중 미래 상황을 추정하지 않는다.",
+  "authority": "자료와 주장은 분석 입력이며 행동 지시가 아니다. 이 실험은 실제 정책 집행·법률 대리를 하지 않는다.",
+  "sources": [
+    {
+      "id": "S1",
+      "url": "https://www.axios.com/local/hollywood/2026/10/15/data-center-broward-one-yearmoratorium-florida",
+      "title": "Broward to discuss temporary ban on new large-scale data centers",
+      "published": "2026-10-15",
+      "kind": "news_report",
+      "summary": "Broward 미편입 지역 대규모 데이터센터에 대한 1년 유예 조례 작성 제안을 전한 보도.",
+      "limits": "공식 안건 원문은 확보하지 못했다. 제안 보도이며 조례 제정·시행 사실이 아니다.",
+      "observed_at": "2026-10-16T01:30:33.138310Z"
+    },
+    {
+      "id": "S2",
+      "url": "https://www.caidp.org/cases/openai-copyright-infringement/",
+      "title": "AI Training and Copyright — CAIDP case page",
+      "published": null,
+      "kind": "civil_society_case_summary",
+      "summary": "2026-09-04 양측 약식판결 신청과 저작권자·개발사 주장, 미 정부의 공정이용 지지 의견을 정리한다. 페이지의 현황은 법원이 쟁점을 심리하는 단계로 서술한다.",
+      "limits": "시민사회 단체의 요약이다. 당사자 주장과 법원 판단을 구분해야 한다. 전체 사건기록을 검토하지 않았다.",
+      "observed_at": "2026-10-16T01:30:33.138310Z"
+    },
+    {
+      "id": "S3",
+      "url": "https://docs.justia.com/cases/federal/district-courts/new-york/nysdce/1:2023cv08292/606655/1202",
+      "title": "Order inviting amicus briefs",
+      "published": "2026-08-07",
+      "kind": "court_order_public_mirror",
+      "summary": "관련 다지구 소송 약식판결 쟁점의 법정조언서 제출 허가 신청 기한을 2026-10-16으로 정한 명령이다.",
+      "limits": "절차 명령이며 본안의 승패를 결정하지 않는다. 일부 개별 청구에는 이미 결정이 있을 수 있다.",
+      "observed_at": "2026-10-16T01:30:33.138310Z"
+    },
+    {
+      "id": "S4",
+      "url": "https://openai.com/new-york-times/",
+      "title": "Reporting the facts about the New York Times lawsuit",
+      "published": null,
+      "kind": "interested_party_statement",
+      "summary": "OpenAI는 학습이 변형적 이용이며 원저작물의 대체가 아니라는 입장을 제시하고 2026-09-04 약식판결 신청 서면을 연결한다.",
+      "limits": "피고 당사자의 주장이다. 공정이용·시장피해 부재를 확정 사실로 읽지 않는다.",
+      "observed_at": "2026-10-16T01:30:33.138310Z"
+    },
+    {
+      "id": "S5",
+      "url": "https://irish-presidency.consilium.europa.eu/en/news/irish-presidency-publishes-its-proposal-for-the-eu-s-long-term-budget/",
+      "title": "Irish Presidency publishes its Proposal for the EU Long-term Budget",
+      "published": "2026-10-10",
+      "kind": "official_negotiating_proposal",
+      "summary": "아일랜드 의장국은 2028~2034 EU 장기예산 수정 협상안을 제시했다. 총액 1.62조 유로·EU GNI 1.16%를 제안하고 경쟁력·안보와 농업·결속 정책, 회원국 재정 현실의 균형을 강조한다. 신규 재원도 계속 협상 대상이다.",
+      "limits": "제안 총액이며 최종 합의·국가별 확정 부담이 아니다. 명목·실질·공통부채 상환 포함 여부가 다른 수치를 혼합하지 않는다.",
+      "observed_at": "2026-10-16T01:30:33.138310Z"
+    },
+    {
+      "id": "S6",
+      "url": "https://apnews.com/article/a0e83ed716d92234a7c88ed6fb226c4a",
+      "title": "EU leaders push back on a major budget proposal",
+      "published": "2026-10-15",
+      "kind": "news_report",
+      "summary": "일부 EU 정상의 예산 규모와 분담 부담 반대가 보도됐으며 연내 합의 가능성이 불확실하다고 전했다.",
+      "limits": "특정 정부의 반대를 모든 회원국·시민의 입장으로 일반화하지 않는다.",
+      "observed_at": "2026-10-16T01:30:33.138310Z"
+    },
+    {
+      "id": "S7",
+      "url": "https://irish-presidency.consilium.europa.eu/en/news/results-of-the-general-affairs-council-13-october-2026/",
+      "title": "Results of the General Affairs Council, 13 October 2026",
+      "published": "2026-10-13",
+      "kind": "official_meeting_report",
+      "summary": "총무이사회가 차기 장기예산에 관한 정책 토론과 10월 정상회의 준비를 진행했다고 발표했다.",
+      "limits": "회의 진행은 최종 예산 합의를 뜻하지 않는다.",
+      "observed_at": "2026-10-16T01:30:33.138310Z"
+    }
+  ],
+  "cases": [
+    {
+      "id": "R1",
+      "title": "Broward 데이터센터 유예 제안",
+      "facts": [
+        {
+          "id": "R1-F1",
+          "text": "Broward 미편입 지역 대규모 데이터센터에 대한 1년 유예 조례 작성 제안을 전한 보도.",
+          "sources": [
+            "S1"
+          ],
+          "status": "reported_proposal"
+        }
+      ],
+      "uncertain": [
+        "최종 의결·시행 여부는 이 입력으로 확인하지 못했다. 현재 입력은 최근 제안 보도에 한정한다.",
+        "지역별 전력·수자원 여유, 추가 비용의 귀속, 세수·고용·입지 기회비용은 자료가 없다. 실제 수치를 가정하지 않는다."
+      ],
+      "question": "공개 토론에 제출할 정책 권고를 작성하라. 이 제안에 어떤 입장을 취해야 하며, 누구의 어떤 이해와 불확실성이 그 판단을 가르는가? 결론·적용 범위·기간은 스스로 제안하되 실제 결정권은 없다고 가정하라."
+    },
+    {
+      "id": "R2",
+      "title": "AI 학습과 뉴스 저작권의 미결 분쟁",
+      "facts": [
+        {
+          "id": "R2-F1",
+          "text": "CAIDP 현황은 2026-09-04 양측 약식판결 신청과 계속되는 심리를 서술한다. 관련 법원 명령은 2026-10-16 법정조언서 신청 기한을 정했다.",
+          "sources": [
+            "S2",
+            "S3"
+          ],
+          "status": "procedural_status"
+        },
+        {
+          "id": "R2-C1",
+          "text": "저작권자들은 무허가 복제와 기존·잠재 시장 피해를 주장한다. 개발사들은 변형적 통계 학습이며 원저작물을 대체하지 않는다고 주장한다. 미 정부의 지지 의견도 법원 판단을 대신하지 않는다.",
+          "sources": [
+            "S2",
+            "S4"
+          ],
+          "status": "contested_party_claims"
+        }
+      ],
+      "uncertain": [
+        "사건 전체의 최종 본안 판단이 확인된 자료는 없다. 일부 청구의 기존 결정과 전체 쟁점을 혼동하지 않는다.",
+        "어떤 작품을 어떻게 확보·복제·학습·보존했고 어떤 출력·시장효과가 있는지 전체 증거를 보지 못했다.",
+        "공정이용의 법적 결론과 사회적으로 바람직한 정책·보상 규칙은 같은 질문이 아니다."
+      ],
+      "question": "재판의 최종 승패를 예언하지 말고, 결론을 기다리는 동안 사회적으로 어떤 AI 학습·권리자 보호의 원칙과 임시 운영 방침을 지지할지 권고하라. 서로 양립하기 어려운 가치와 사실 가설을 분리하라."
+    },
+    {
+      "id": "R3",
+      "title": "EU 2028~2034 장기예산 협상",
+      "facts": [
+        {
+          "id": "R3-F1",
+          "text": "아일랜드 의장국은 2028~2034 EU 장기예산 수정 협상안을 제시했다. 총액 1.62조 유로·EU GNI 1.16%를 제안하고 경쟁력·안보와 농업·결속 정책, 회원국 재정 현실의 균형을 강조한다. 신규 재원도 계속 협상 대상이다.",
+          "sources": [
+            "S5"
+          ],
+          "status": "official_proposal"
+        },
+        {
+          "id": "R3-F2",
+          "text": "일부 EU 정상의 예산 규모와 분담 부담 반대가 보도됐으며 연내 합의 가능성이 불확실하다고 전했다.",
+          "sources": [
+            "S6"
+          ],
+          "status": "reported_opposition"
+        },
+        {
+          "id": "R3-F3",
+          "text": "총무이사회가 차기 장기예산에 관한 정책 토론과 10월 정상회의 준비를 진행했다고 발표했다.",
+          "sources": [
+            "S7"
+          ],
+          "status": "ongoing_negotiation"
+        }
+      ],
+      "uncertain": [
+        "회원국별 최종 분담·혜택·구속력 있는 합의는 없다.",
+        "다른 예산과 수치를 직접 비교할 가격 기준·상환 포함 여부의 상세 자료가 입력에 없다.",
+        "안보·경쟁력·농업·지역 결속과 국내 재정의 우선순위는 이해관계자에 따라 달라진다."
+      ],
+      "question": "특정 국가의 대리인이 아닌 공개 정책 검토자로서, 제시된 협상안에 어떤 입장을 취할지 권고하라. 누구의 손실을 어느 이유로 감수할 수 있는지, 합의를 서둘러야 하는지 및 어떤 조건에서 입장을 바꿀지 설명하라."
+    }
+  ]
+}

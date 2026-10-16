@@ -30,3 +30,13 @@ python3 scripts/check_pilot.py --check
 ## 남은 후속 검증
 
 [서브이슈 #6](https://github.com/callin2/MAGI/issues/6): 개방형·공통 오류·동일 예산 조건에서 가설 경쟁을 재평가합니다. 아직 실행하지 않았습니다.
+
+## 현재 미결 쟁점의 재실험
+
+[pilot-002 보고서](docs/pilot-002-report.md) · [서브이슈 #7](https://github.com/callin2/MAGI/issues/7)
+
+Broward 데이터센터 유예, AI 학습·뉴스 저작권 분쟁, EU 장기예산 협상에서 세 추상 우선순위의 독립 판단과 별도 조정을 수행했습니다. 실질적 권고 차이와 남는 가치 충돌을 기록했지만, 정답·동일 예산 우월성·실제 사회 효과는 미검증입니다.
+
+```sh
+python3 scripts/check_pilot_002.py --check
+```

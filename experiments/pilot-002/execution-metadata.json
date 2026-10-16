@@ -1,0 +1,33 @@
+{
+  "recorded_at": "2026-10-16T01:33:45.605058Z",
+  "actors": [
+    "real_a",
+    "real_b",
+    "real_c",
+    "real_neutral"
+  ],
+  "model_version": null,
+  "actual_tokens": null,
+  "actual_monetary_cost": null,
+  "exact_per_arm_latency": null,
+  "recording_boundary": "a/b/c saved only after all three final responses were received; neutral was a fresh, separate context with evidence only",
+  "priority_assignment": "controlled lenses, not spontaneous diversity or real stakeholder representation",
+  "responses_sha256": {
+    "a": "446adc2d8afdca38cf7558ed0bba630d1d8290a2b717cb77368778826b806d94",
+    "b": "d8dfa415e5344658c037194bfd5472dbc96316843f1cf3aadd00727ada1c7c64",
+    "c": "3fdc855e1d696b3bb93f6bd48e694401737bf5bc2ef9df9614b98508054f4653",
+    "neutral": "ec4a34a4886e7af676a14e62f82ff887083bb8e19d3be2ac9cb3bb9eece52915",
+    "coordinator": "f806e0f3c8a67fac469956731cd6063e6ea9b7466d3c44d8bd20ffeaa3f14402"
+  },
+  "coordinator_recorded_at": "2026-10-16T01:34:28.998547Z",
+  "assessment_input_sha256": "77178669f7554a3ef63ee14b5156aed545f9144271450ab489bc5e5cade05213",
+  "assessment_recorded_at": "2026-10-16T01:38:13.901344Z",
+  "judges": [
+    "real_judge1",
+    "real_judge2"
+  ],
+  "assessments_sha256": {
+    "j1": "97ccf526b491805e64266c4ac215a68355a8018a0ddb37bcf80ca07e9903a42b",
+    "j2": "a68a23c6ff08b743ab01035b224e3ed8004b7c7a7385ae92034c7dd8b910f277"
+  }
+}
