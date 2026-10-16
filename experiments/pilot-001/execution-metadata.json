@@ -1,0 +1,24 @@
+{
+  "observed_at": "2026-10-16T01:12:04.115634Z",
+  "execution": "Codex subagents, fresh context via fork_turns=none",
+  "actors": [
+    "pilot_a",
+    "pilot_b",
+    "pilot_c",
+    "pilot_coordinator"
+  ],
+  "model_version": null,
+  "token_usage": null,
+  "monetary_cost": null,
+  "per_arm_latency": null,
+  "raw_response_storage": "after all three independent final answers; coordinator run afterward",
+  "output_sha256": {
+    "responses/a.json": "490bb84847d0399a53ae60ff30db12ae0f86e867688411632167c1b56b6ecd03",
+    "responses/b.json": "84dc1f5a18cd94f2681fb15b8ad1e733960be5ca87acdf0a72b575828372f295",
+    "responses/c.json": "f29800b73890a957288914c44069b2d605aabfc2a3915bac4bfb305c2c962835",
+    "responses/coordinator.json": "efd36cbfaba40c062bbf462a48a51ff7aaa438f1886b08fc125e68cbf3e3a129"
+  },
+  "evaluation": "mechanical action aggregation plus non-blind primary-agent qualitative review",
+  "isolation": "Separate conversation context and no-peer-access instruction; not OS/account/cache isolation",
+  "input_manifest": "input-manifest.json"
+}

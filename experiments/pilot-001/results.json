@@ -1,0 +1,103 @@
+{
+  "status": "paired exploratory; not equal budget; not an accuracy benchmark",
+  "cases": [
+    {
+      "id": "K1",
+      "independent": [
+        "B",
+        "B",
+        "B"
+      ],
+      "single": "B",
+      "simple": "B",
+      "competition": "B",
+      "predeclared_action_key": "B"
+    },
+    {
+      "id": "K2",
+      "independent": [
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "single": "Y",
+      "simple": "Y",
+      "competition": "Y",
+      "predeclared_action_key": "Y"
+    },
+    {
+      "id": "N1",
+      "independent": [
+        "INVESTIGATE",
+        "INVESTIGATE",
+        "INVESTIGATE"
+      ],
+      "single": "INVESTIGATE",
+      "simple": "INVESTIGATE",
+      "competition": "INVESTIGATE",
+      "predeclared_action_key": "INVESTIGATE"
+    },
+    {
+      "id": "N2",
+      "independent": [
+        "CLARIFY_AND_TEST",
+        "CLARIFY_AND_TEST",
+        "CLARIFY_AND_TEST"
+      ],
+      "single": "CLARIFY_AND_TEST",
+      "simple": "CLARIFY_AND_TEST",
+      "competition": "CLARIFY_AND_TEST",
+      "predeclared_action_key": "CLARIFY_AND_TEST"
+    },
+    {
+      "id": "D1",
+      "independent": [
+        "KEEP_AND_MONITOR",
+        "KEEP_AND_MONITOR",
+        "KEEP_AND_MONITOR"
+      ],
+      "single": "KEEP_AND_MONITOR",
+      "simple": "KEEP_AND_MONITOR",
+      "competition": "KEEP_AND_MONITOR",
+      "predeclared_action_key": "KEEP_AND_MONITOR"
+    },
+    {
+      "id": "D2",
+      "independent": [
+        "PROVISIONAL_B",
+        "PROVISIONAL_B",
+        "PROVISIONAL_B"
+      ],
+      "single": "PROVISIONAL_B",
+      "simple": "PROVISIONAL_B",
+      "competition": "PROVISIONAL_B",
+      "predeclared_action_key": "PROVISIONAL_B"
+    }
+  ],
+  "action_key_agreement": {
+    "single": 6,
+    "simple": 6,
+    "competition": 6
+  },
+  "known_data_cases": [
+    "K1",
+    "K2"
+  ],
+  "interpretive_preference_cases": [
+    "N1",
+    "N2",
+    "D1",
+    "D2"
+  ],
+  "independent_unanimity_cases": 6,
+  "competition_action_changes_from_simple": 0,
+  "generation_batches": {
+    "single": 1,
+    "simple": 3,
+    "competition": 4
+  },
+  "actual_tokens": null,
+  "actual_monetary_cost": null,
+  "actual_per_arm_latency": null,
+  "semantic_quality": "manual non-blind review in docs/pilot-report.md; not automatically validated"
+}

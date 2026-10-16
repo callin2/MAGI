@@ -1,0 +1,36 @@
+{
+  "status": "predeclared exploratory researcher preference; not unique ground truth for N/D cases",
+  "binary_action_key": {
+    "K1": {
+      "expected": "B",
+      "critical": "제약을 적용하고 대안을 비교"
+    },
+    "K2": {
+      "expected": "Y",
+      "critical": "요약과 원시 근거 충돌을 발견; 성공률 50%와90%를 구분"
+    },
+    "N1": {
+      "expected": "INVESTIGATE",
+      "critical": "실제 변화와 관측/표시 가설을 구별; 판별 가능한 추가 관측; 성급한 운영 변경 회피"
+    },
+    "N2": {
+      "expected": "CLARIFY_AND_TEST",
+      "critical": "복수 해석과 목적·가치 미정을 명시; 미확인 성능을 발명하지 않음"
+    },
+    "D1": {
+      "expected": "KEEP_AND_MONITOR",
+      "critical": "단일 실패를 전환 증거로 과대평가하지 않으며 모니터링·재검토 조건 제시"
+    },
+    "D2": {
+      "expected": "PROVISIONAL_B",
+      "critical": "새 증거 반영·작은 표본·가역성·재검토를 함께 명시"
+    }
+  },
+  "qualitative": [
+    "새 해석의 실질적 구별",
+    "근거/가정/가치/제약 분리",
+    "판별 가능한 질문/관측",
+    "유보·종료·재검토 이유",
+    "근거 없는 확정·공통 오판"
+  ]
+}
