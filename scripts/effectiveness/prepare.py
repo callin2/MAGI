@@ -24,6 +24,7 @@ def prepare():
     if (EXP / 'frozen.json').exists(): raise SystemExit('already frozen; refusing overwrite')
     EXP.mkdir(parents=True, exist_ok=True)
     source = EXP / 'source'; source.mkdir(exist_ok=True)
+    shutil.copyfile(ROOT/'docs/effectiveness-verification-20261018.md',source/'preregistration.md')
     for name in ('tracker.py','test_tracker.py'):
         shutil.copyfile(ROOT / 'scripts/work_pilot' / name, source / name)
     for name, src in [('current-readme.md','README.md'), ('current-pilot.md','docs/recursive-work-pilot.md')]:
@@ -75,7 +76,7 @@ def prepare():
         dump(run/'state.json',seed); dump(run/'seed.json',seed)
         manifest.append({'id':ident,'task':task,'arm':arm,'repetition':rep,'memory_preparation_seconds':memory_seconds,'task_sha256':sha(run/'task.md'),'effective_memory_sha256':sha(run/'memory.json'),'seed_sha256':sha(run/'seed.json')})
     dump(EXP/'runs.json',manifest)
-    tracked=[ROOT/'docs/effectiveness-verification-20261018.md',*sorted((ROOT/'scripts/effectiveness').glob('*.*')),*sorted(source.glob('*'))]
+    tracked=[*sorted((ROOT/'scripts/effectiveness').glob('*.*')),*sorted(source.glob('*'))]
     dump(EXP/'frozen.json',{'frozen_at':datetime.now(timezone.utc).isoformat().replace('+00:00','Z'),'base_commit':'244c7c76624e086331ccf463d4b71c2912ecaf9e','provider':'atomic-8317','model':'gpt-6-luna','thinking':'provider default; client reasoning parameter not sent','runs_sha256':sha(EXP/'runs.json'),'files':{p.relative_to(ROOT).as_posix():sha(p) for p in tracked},'source_defect':'Existing init accepts done with empty evidence; reproduced before experiment','shared_context':'MCP unavailable; no claim of reload/application','historical_training_cost':None,'limits':{'model_turns':16,'tool_calls':60,'seconds':300,'max_output_tokens_per_turn':8192}})
     print(json.dumps({'frozen_runs':len(manifest),'root':str(EXP)}))
 
