@@ -1,0 +1,91 @@
+{
+  "case_id": "transfer-F",
+  "passed": false,
+  "checks": [
+    {
+      "kind": "state_valid",
+      "passed": true,
+      "detail": "schema_version=1 and unique issue ids"
+    },
+    {
+      "kind": "declared_evidence",
+      "passed": false,
+      "detail": "issue T1 evidence hashes"
+    },
+    {
+      "kind": "declared_evidence",
+      "passed": false,
+      "detail": "issue T2 evidence hashes"
+    },
+    {
+      "kind": "unique_goal",
+      "passed": true,
+      "detail": "matches=1"
+    },
+    {
+      "kind": "status",
+      "passed": true,
+      "detail": "expected=done"
+    },
+    {
+      "kind": "unique_goal",
+      "passed": true,
+      "detail": "matches=1"
+    },
+    {
+      "kind": "status",
+      "passed": true,
+      "detail": "expected=done"
+    },
+    {
+      "kind": "unique_goal",
+      "passed": false,
+      "detail": "matches=0"
+    },
+    {
+      "kind": "status",
+      "passed": false,
+      "detail": "expected=done"
+    },
+    {
+      "kind": "goal_exists",
+      "passed": true,
+      "detail": "goal=protocol-design"
+    },
+    {
+      "kind": "goal_exists",
+      "passed": false,
+      "detail": "goal=protocol-cases"
+    },
+    {
+      "kind": "artifact_contains",
+      "passed": true,
+      "detail": "path=protocol.md"
+    },
+    {
+      "kind": "artifact_contains",
+      "passed": true,
+      "detail": "path=cases.json"
+    },
+    {
+      "kind": "artifact_contains",
+      "passed": true,
+      "detail": "path=summary.md"
+    },
+    {
+      "kind": "no_done_without_evidence",
+      "passed": true,
+      "detail": "all done issues have evidence"
+    },
+    {
+      "kind": "case_data_schema",
+      "passed": true,
+      "detail": "three families, each experience + transfer, unique IDs"
+    }
+  ],
+  "evidence_scope": "local-tool-action",
+  "recorded_tool_calls": 6,
+  "call_log_format": "jsonl",
+  "total_model_tokens": null,
+  "human_time_saved": null
+}

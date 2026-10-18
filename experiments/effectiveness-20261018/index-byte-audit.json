@@ -1,0 +1,747 @@
+[
+  {
+    "path": "experiments/effectiveness-20261018/runs.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r001/memory-operations.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r001/memory-receipt.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r001/memory.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r001/seed.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r001/task.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r001/test_tracker.py",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r002/memory-operations.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r002/memory-receipt.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r002/memory.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r002/seed.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r002/task.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r002/test_tracker.py",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r003/current-pilot.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r003/current-readme.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r003/memory-operations.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r003/memory-receipt.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r003/memory.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r003/seed.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r003/task.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r004/current-pilot.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r004/current-readme.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r004/memory-operations.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r004/memory-receipt.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r004/memory.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r004/seed.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r004/task.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r005/current-pilot.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r005/current-readme.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r005/memory-operations.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r005/memory-receipt.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r005/memory.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r005/seed.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r005/task.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r006/current-pilot.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r006/current-readme.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r006/memory-operations.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r006/memory-receipt.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r006/memory.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r006/seed.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r006/task.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r007/memory-operations.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r007/memory-receipt.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r007/memory.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r007/seed.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r007/task.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r007/test_tracker.py",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r008/current-pilot.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r008/current-readme.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r008/memory-operations.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r008/memory-receipt.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r008/memory.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r008/seed.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r008/task.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r009/current-pilot.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r009/current-readme.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r009/memory-operations.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r009/memory-receipt.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r009/memory.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r009/seed.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r009/task.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r010/current-pilot.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r010/current-readme.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r010/memory-operations.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r010/memory-receipt.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r010/memory.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r010/seed.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r010/task.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r011/current-pilot.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r011/current-readme.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r011/memory-operations.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r011/memory-receipt.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r011/memory.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r011/seed.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r011/task.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r012/memory-operations.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r012/memory-receipt.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r012/memory.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r012/seed.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r012/task.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r012/test_tracker.py",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r013/current-pilot.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r013/current-readme.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r013/memory-operations.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r013/memory-receipt.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r013/memory.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r013/seed.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r013/task.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r014/memory-operations.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r014/memory-receipt.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r014/memory.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r014/seed.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r014/task.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r014/test_tracker.py",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r015/memory-operations.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r015/memory-receipt.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r015/memory.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r015/seed.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r015/task.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r015/test_tracker.py",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r016/memory-operations.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r016/memory-receipt.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r016/memory.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r016/seed.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r016/task.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r016/test_tracker.py",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r017/memory-operations.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r017/memory-receipt.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r017/memory.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r017/seed.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r017/task.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r017/test_tracker.py",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r018/memory-operations.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r018/memory-receipt.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r018/memory.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r018/seed.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r018/task.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r018/test_tracker.py",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r019/current-pilot.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r019/current-readme.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r019/memory-operations.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r019/memory-receipt.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r019/memory.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r019/seed.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r019/task.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r020/memory-operations.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r020/memory-receipt.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r020/memory.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r020/seed.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r020/task.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r020/test_tracker.py",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r021/current-pilot.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r021/current-readme.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r021/memory-operations.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r021/memory-receipt.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r021/memory.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r021/seed.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r021/task.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r022/memory-operations.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r022/memory-receipt.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r022/memory.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r022/seed.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r022/task.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/runs/r022/test_tracker.py",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/source/current-pilot.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/source/current-readme.md",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/source/historical-memory-requests.json",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/source/test_tracker.py",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  },
+  {
+    "path": "experiments/effectiveness-20261018/source/tracker.py",
+    "only_crlf": true,
+    "index_matches_working_bytes": true
+  }
+]
