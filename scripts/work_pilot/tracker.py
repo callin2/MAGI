@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import hashlib, json, os, sys, tempfile, time
+import hashlib, json, os, sys, tempfile, time, re
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -52,6 +52,30 @@ def issue(s, ident):
     for i in s["issues"]:
         if i["id"] == ident: return i
     err("issue not found")
+def validate_import(s, root):
+    """Check completion evidence at import, not on reads needed for recovery."""
+    by_id = {i["id"]: i for i in s["issues"]}
+    for i in s["issues"]:
+        if i.get("status") not in ("open", "done") or not isinstance(i.get("evidence"), list):
+            err("invalid issue status or evidence")
+        parent = by_id.get(i.get("parent_id"))
+        if parent is not None and parent.get("status") == "done" and i["status"] != "done":
+            err("done issue has open descendant")
+        if i["status"] != "done":
+            continue
+        if not i["acceptance"] or not i["evidence"]:
+            err("done issue requires acceptance and evidence")
+        for e in i["evidence"]:
+            if not isinstance(e, dict) or not isinstance(e.get("path"), str) or not e["path"] or not isinstance(e.get("sha256"), str) or not re.fullmatch(r"[0-9a-f]{64}", e["sha256"]):
+                err("invalid evidence")
+            path = Path(e["path"])
+            if path.is_absolute() or path.drive:
+                err("evidence path must be relative")
+            p = (root / path).resolve()
+            if root not in p.parents or not p.is_file():
+                err("evidence file invalid")
+            if hashlib.sha256(p.read_bytes()).hexdigest() != e["sha256"]:
+                err("evidence hash mismatch")
 def nextid(s):
     nums=[int(i["id"][1:]) for i in s["issues"] if isinstance(i.get("id"),str) and i["id"].startswith("T") and i["id"][1:].isdigit()]
     return "T" + str(max(nums, default=0)+1)
@@ -70,7 +94,7 @@ def dispatch(state_path, req):
         if state_path.exists(): err("state exists")
         issues=req.get("issues")
         if not isinstance(issues,list): err("issues required")
-        s={"schema_version":SCHEMA,"revision":0,"issues":issues,"audit":[]}; state_ok(s); save_atomic(state_path,s); return {"revision":0,"issues":issues}
+        s={"schema_version":SCHEMA,"revision":0,"issues":issues,"audit":[]}; state_ok(s); validate_import(s,state_path.parent.resolve()); save_atomic(state_path,s); return {"revision":0,"issues":issues}
     s=state_ok(load(state_path))
     if op == "list": return {"revision":s["revision"],"issues":s["issues"]}
     if op == "show": return {"revision":s["revision"],"issue":issue(s,req.get("id"))}
