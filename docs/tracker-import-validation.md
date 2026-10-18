@@ -23,4 +23,4 @@
 
 새 비교 자료는 실험 전에 `.gitattributes`로 바이트 변환을 금지했다. 구형 증거 자료의 이식성 개선은 별도 범위이며, 실험 결과를 바꾸거나 이전 증거 hash를 다시 발급하지 않는다.
 
-이 수정은 작업 브랜치에 검증 완료된 상태이며 main에 배포/병합됐다는 뜻은 아니다. #24의 커밋과 PR 연결은 이슈에 기록한다.
+이 수정은 [커밋 a9a9b35](https://github.com/callin2/MAGI/commit/a9a9b35)에 저장하고 push했다. [PR #25](https://github.com/callin2/MAGI/pull/25)에서 검토 가능하며 main 병합 전이다. [#24 검증 기록](https://github.com/callin2/MAGI/issues/24#issuecomment-6248941557)에 변경 이유·결과·한계를 보존했다.

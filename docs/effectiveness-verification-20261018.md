@@ -2,6 +2,8 @@
 
 관련 업무: [#18](https://github.com/callin2/MAGI/issues/18), [#19](https://github.com/callin2/MAGI/issues/19).
 
+검토 제출: [PR #25](https://github.com/callin2/MAGI/pull/25). [사전 등록 6523f77](https://github.com/callin2/MAGI/commit/6523f77), [입력 바이트 보존 9e7ea72](https://github.com/callin2/MAGI/commit/9e7ea72), [결과·비용·실패 기록 35cde0f](https://github.com/callin2/MAGI/commit/35cde0f). main 병합 전 상태다.
+
 **결론: 실제 코드 수리에서 과거 경험 전달의 유용성 신호를 관찰했다. 그러나 풍부한 정제 교훈 E는 같은 경험을 짧은 규칙으로 전달한 F보다 추가 성공을 만들지 않았고, 처리 토큰은 더 많았다. MAGI 전체의 학습·다중 협의·전문가 라우팅 효과와 인간 시간 절감은 여전히 미입증이다.**
 
 ## 결정 체크포인트
