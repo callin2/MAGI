@@ -1,0 +1,1 @@
+{"schema_version":1,"task":"code","summary":"Hardened init imports to reject invalid status/completion evidence, verify evidence files and hashes, and prevent done parents with open children; preserved list/reopen behavior after later artifact edits.","tests_run":["functions.tests: 14 tests passed (test_tracker.py and test_candidate.py)."],"limitations":[]}

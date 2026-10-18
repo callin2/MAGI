@@ -1,0 +1,22 @@
+{
+  "op": "complete",
+  "id": "T1",
+  "evidence": [
+    {
+      "path": "tracker.py",
+      "sha256": "00a39387bf1db3430334e279afb23627f216f65351390bec411adcb265a34e88"
+    },
+    {
+      "path": "test_candidate.py",
+      "sha256": "0b494beb40ac6d3e06f46e48ef251f47c0f30f9ece7ccc0857de600a98defdde"
+    },
+    {
+      "path": "deliverable.json",
+      "sha256": "1d5ead718a673ac8d43c95fb1327606af837d886528ae0224e801ca61cde0ad4"
+    },
+    {
+      "path": "notes.md",
+      "sha256": "d64805aa69c161fd68a2f2d5bf4967fdff5b5aebdc7f861263af1f4a550a1ce3"
+    }
+  ]
+}

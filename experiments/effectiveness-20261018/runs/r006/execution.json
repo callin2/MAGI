@@ -1,0 +1,94 @@
+{
+  "started_at": "2026-10-18T10:49:48.944Z",
+  "ended_at": "2026-10-18T10:50:26.919Z",
+  "elapsed_seconds": 37.97481149999995,
+  "model_calls": 5,
+  "tool_calls": 9,
+  "tool_errors": 0,
+  "stop": "settled",
+  "provider_error": false,
+  "provider": "atomic-8317",
+  "configured_model": "gpt-6-luna",
+  "usage": [
+    {
+      "input": 1514,
+      "output": 112,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 1626,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 6718,
+      "output": 1177,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 7895,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 1475,
+      "output": 123,
+      "cacheRead": 6528,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 8126,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 492,
+      "output": 123,
+      "cacheRead": 7808,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 8423,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 403,
+      "output": 46,
+      "cacheRead": 8192,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 8641,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    }
+  ],
+  "api_cost_usd": null,
+  "reason_cost_unknown": "Configured proxy prices and upstream billing not independently verified",
+  "fresh_conversation": true,
+  "history_messages_at_start": 1,
+  "external_tools": false
+}

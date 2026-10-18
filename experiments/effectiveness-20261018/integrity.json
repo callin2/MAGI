@@ -1,0 +1,1150 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "id": "frozen:scripts/effectiveness/evaluate.py",
+      "passed": true
+    },
+    {
+      "id": "preregistered_git_content:scripts/effectiveness/evaluate.py",
+      "passed": true,
+      "detail": {
+        "exact_bytes": true,
+        "windows_line_ending_reconstruction": false
+      }
+    },
+    {
+      "id": "frozen:scripts/effectiveness/import_checks.py",
+      "passed": true
+    },
+    {
+      "id": "preregistered_git_content:scripts/effectiveness/import_checks.py",
+      "passed": true,
+      "detail": {
+        "exact_bytes": true,
+        "windows_line_ending_reconstruction": false
+      }
+    },
+    {
+      "id": "frozen:scripts/effectiveness/prepare.py",
+      "passed": true
+    },
+    {
+      "id": "preregistered_git_content:scripts/effectiveness/prepare.py",
+      "passed": true,
+      "detail": {
+        "exact_bytes": true,
+        "windows_line_ending_reconstruction": false
+      }
+    },
+    {
+      "id": "frozen:scripts/effectiveness/run.mjs",
+      "passed": true
+    },
+    {
+      "id": "preregistered_git_content:scripts/effectiveness/run.mjs",
+      "passed": true,
+      "detail": {
+        "exact_bytes": true,
+        "windows_line_ending_reconstruction": false
+      }
+    },
+    {
+      "id": "frozen:scripts/effectiveness/test_evidence.py",
+      "passed": true
+    },
+    {
+      "id": "preregistered_git_content:scripts/effectiveness/test_evidence.py",
+      "passed": true,
+      "detail": {
+        "exact_bytes": true,
+        "windows_line_ending_reconstruction": false
+      }
+    },
+    {
+      "id": "frozen:experiments/effectiveness-20261018/source/current-pilot.md",
+      "passed": true
+    },
+    {
+      "id": "preregistered_git_content:experiments/effectiveness-20261018/source/current-pilot.md",
+      "passed": true,
+      "detail": {
+        "exact_bytes": false,
+        "windows_line_ending_reconstruction": true
+      }
+    },
+    {
+      "id": "frozen:experiments/effectiveness-20261018/source/current-readme.md",
+      "passed": true
+    },
+    {
+      "id": "preregistered_git_content:experiments/effectiveness-20261018/source/current-readme.md",
+      "passed": true,
+      "detail": {
+        "exact_bytes": false,
+        "windows_line_ending_reconstruction": true
+      }
+    },
+    {
+      "id": "frozen:experiments/effectiveness-20261018/source/expertise-proposal.md",
+      "passed": true
+    },
+    {
+      "id": "preregistered_git_content:experiments/effectiveness-20261018/source/expertise-proposal.md",
+      "passed": true,
+      "detail": {
+        "exact_bytes": true,
+        "windows_line_ending_reconstruction": false
+      }
+    },
+    {
+      "id": "frozen:experiments/effectiveness-20261018/source/historical-memory-requests.json",
+      "passed": true
+    },
+    {
+      "id": "preregistered_git_content:experiments/effectiveness-20261018/source/historical-memory-requests.json",
+      "passed": true,
+      "detail": {
+        "exact_bytes": false,
+        "windows_line_ending_reconstruction": true
+      }
+    },
+    {
+      "id": "frozen:experiments/effectiveness-20261018/source/test_tracker.py",
+      "passed": true
+    },
+    {
+      "id": "preregistered_git_content:experiments/effectiveness-20261018/source/test_tracker.py",
+      "passed": true,
+      "detail": {
+        "exact_bytes": false,
+        "windows_line_ending_reconstruction": true
+      }
+    },
+    {
+      "id": "frozen:experiments/effectiveness-20261018/source/tracker.py",
+      "passed": true
+    },
+    {
+      "id": "preregistered_git_content:experiments/effectiveness-20261018/source/tracker.py",
+      "passed": true,
+      "detail": {
+        "exact_bytes": false,
+        "windows_line_ending_reconstruction": true
+      }
+    },
+    {
+      "id": "frozen:experiments/effectiveness-20261018/source/preregistration.md",
+      "passed": true
+    },
+    {
+      "id": "preregistered_git_content:experiments/effectiveness-20261018/source/preregistration.md",
+      "passed": true,
+      "detail": {
+        "exact_bytes": true,
+        "windows_line_ending_reconstruction": false
+      }
+    },
+    {
+      "id": "manifest_hash",
+      "passed": true
+    },
+    {
+      "id": "balanced_primary",
+      "passed": true
+    },
+    {
+      "id": "r001:task_hash",
+      "passed": true
+    },
+    {
+      "id": "r001:effective_memory_hash",
+      "passed": true
+    },
+    {
+      "id": "r001:seed_hash",
+      "passed": true
+    },
+    {
+      "id": "r001:receipt_hash",
+      "passed": true
+    },
+    {
+      "id": "r001:receipt_identity",
+      "passed": true
+    },
+    {
+      "id": "r001:fixed_rules",
+      "passed": true
+    },
+    {
+      "id": "r001:one_fresh_input",
+      "passed": true
+    },
+    {
+      "id": "r001:model_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r001:tool_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r001:model_constant",
+      "passed": true
+    },
+    {
+      "id": "r001:budget",
+      "passed": true
+    },
+    {
+      "id": "r002:task_hash",
+      "passed": true
+    },
+    {
+      "id": "r002:effective_memory_hash",
+      "passed": true
+    },
+    {
+      "id": "r002:seed_hash",
+      "passed": true
+    },
+    {
+      "id": "r002:receipt_hash",
+      "passed": true
+    },
+    {
+      "id": "r002:receipt_identity",
+      "passed": true
+    },
+    {
+      "id": "r002:single_controlled_poison",
+      "passed": true
+    },
+    {
+      "id": "r002:one_fresh_input",
+      "passed": true
+    },
+    {
+      "id": "r002:model_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r002:tool_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r002:model_constant",
+      "passed": true
+    },
+    {
+      "id": "r002:budget",
+      "passed": true
+    },
+    {
+      "id": "r003:task_hash",
+      "passed": true
+    },
+    {
+      "id": "r003:effective_memory_hash",
+      "passed": true
+    },
+    {
+      "id": "r003:seed_hash",
+      "passed": true
+    },
+    {
+      "id": "r003:receipt_hash",
+      "passed": true
+    },
+    {
+      "id": "r003:receipt_identity",
+      "passed": true
+    },
+    {
+      "id": "r003:no_memory",
+      "passed": true
+    },
+    {
+      "id": "r003:one_fresh_input",
+      "passed": true
+    },
+    {
+      "id": "r003:model_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r003:tool_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r003:model_constant",
+      "passed": true
+    },
+    {
+      "id": "r003:budget",
+      "passed": true
+    },
+    {
+      "id": "r004:task_hash",
+      "passed": true
+    },
+    {
+      "id": "r004:effective_memory_hash",
+      "passed": true
+    },
+    {
+      "id": "r004:seed_hash",
+      "passed": true
+    },
+    {
+      "id": "r004:receipt_hash",
+      "passed": true
+    },
+    {
+      "id": "r004:receipt_identity",
+      "passed": true
+    },
+    {
+      "id": "r004:single_controlled_poison",
+      "passed": true
+    },
+    {
+      "id": "r004:one_fresh_input",
+      "passed": true
+    },
+    {
+      "id": "r004:model_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r004:tool_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r004:model_constant",
+      "passed": true
+    },
+    {
+      "id": "r004:budget",
+      "passed": true
+    },
+    {
+      "id": "r005:task_hash",
+      "passed": true
+    },
+    {
+      "id": "r005:effective_memory_hash",
+      "passed": true
+    },
+    {
+      "id": "r005:seed_hash",
+      "passed": true
+    },
+    {
+      "id": "r005:receipt_hash",
+      "passed": true
+    },
+    {
+      "id": "r005:receipt_identity",
+      "passed": true
+    },
+    {
+      "id": "r005:memory_matches_receipt",
+      "passed": true
+    },
+    {
+      "id": "r005:one_fresh_input",
+      "passed": true
+    },
+    {
+      "id": "r005:model_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r005:tool_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r005:model_constant",
+      "passed": true
+    },
+    {
+      "id": "r005:budget",
+      "passed": true
+    },
+    {
+      "id": "r006:task_hash",
+      "passed": true
+    },
+    {
+      "id": "r006:effective_memory_hash",
+      "passed": true
+    },
+    {
+      "id": "r006:seed_hash",
+      "passed": true
+    },
+    {
+      "id": "r006:receipt_hash",
+      "passed": true
+    },
+    {
+      "id": "r006:receipt_identity",
+      "passed": true
+    },
+    {
+      "id": "r006:memory_matches_receipt",
+      "passed": true
+    },
+    {
+      "id": "r006:target_absent",
+      "passed": true
+    },
+    {
+      "id": "r006:actual_revoke",
+      "passed": true
+    },
+    {
+      "id": "r006:one_fresh_input",
+      "passed": true
+    },
+    {
+      "id": "r006:model_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r006:tool_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r006:model_constant",
+      "passed": true
+    },
+    {
+      "id": "r006:budget",
+      "passed": true
+    },
+    {
+      "id": "r007:task_hash",
+      "passed": true
+    },
+    {
+      "id": "r007:effective_memory_hash",
+      "passed": true
+    },
+    {
+      "id": "r007:seed_hash",
+      "passed": true
+    },
+    {
+      "id": "r007:receipt_hash",
+      "passed": true
+    },
+    {
+      "id": "r007:receipt_identity",
+      "passed": true
+    },
+    {
+      "id": "r007:fixed_rules",
+      "passed": true
+    },
+    {
+      "id": "r007:one_fresh_input",
+      "passed": true
+    },
+    {
+      "id": "r007:model_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r007:tool_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r007:model_constant",
+      "passed": true
+    },
+    {
+      "id": "r007:budget",
+      "passed": true
+    },
+    {
+      "id": "r008:task_hash",
+      "passed": true
+    },
+    {
+      "id": "r008:effective_memory_hash",
+      "passed": true
+    },
+    {
+      "id": "r008:seed_hash",
+      "passed": true
+    },
+    {
+      "id": "r008:receipt_hash",
+      "passed": true
+    },
+    {
+      "id": "r008:receipt_identity",
+      "passed": true
+    },
+    {
+      "id": "r008:fixed_rules",
+      "passed": true
+    },
+    {
+      "id": "r008:one_fresh_input",
+      "passed": true
+    },
+    {
+      "id": "r008:model_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r008:tool_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r008:model_constant",
+      "passed": true
+    },
+    {
+      "id": "r008:budget",
+      "passed": true
+    },
+    {
+      "id": "r009:task_hash",
+      "passed": true
+    },
+    {
+      "id": "r009:effective_memory_hash",
+      "passed": true
+    },
+    {
+      "id": "r009:seed_hash",
+      "passed": true
+    },
+    {
+      "id": "r009:receipt_hash",
+      "passed": true
+    },
+    {
+      "id": "r009:receipt_identity",
+      "passed": true
+    },
+    {
+      "id": "r009:memory_matches_receipt",
+      "passed": true
+    },
+    {
+      "id": "r009:target_absent",
+      "passed": true
+    },
+    {
+      "id": "r009:one_fresh_input",
+      "passed": true
+    },
+    {
+      "id": "r009:model_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r009:tool_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r009:model_constant",
+      "passed": true
+    },
+    {
+      "id": "r009:budget",
+      "passed": true
+    },
+    {
+      "id": "r010:task_hash",
+      "passed": true
+    },
+    {
+      "id": "r010:effective_memory_hash",
+      "passed": true
+    },
+    {
+      "id": "r010:seed_hash",
+      "passed": true
+    },
+    {
+      "id": "r010:receipt_hash",
+      "passed": true
+    },
+    {
+      "id": "r010:receipt_identity",
+      "passed": true
+    },
+    {
+      "id": "r010:no_memory",
+      "passed": true
+    },
+    {
+      "id": "r010:one_fresh_input",
+      "passed": true
+    },
+    {
+      "id": "r010:model_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r010:tool_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r010:model_constant",
+      "passed": true
+    },
+    {
+      "id": "r010:budget",
+      "passed": true
+    },
+    {
+      "id": "r011:task_hash",
+      "passed": true
+    },
+    {
+      "id": "r011:effective_memory_hash",
+      "passed": true
+    },
+    {
+      "id": "r011:seed_hash",
+      "passed": true
+    },
+    {
+      "id": "r011:receipt_hash",
+      "passed": true
+    },
+    {
+      "id": "r011:receipt_identity",
+      "passed": true
+    },
+    {
+      "id": "r011:memory_matches_receipt",
+      "passed": true
+    },
+    {
+      "id": "r011:one_fresh_input",
+      "passed": true
+    },
+    {
+      "id": "r011:model_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r011:tool_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r011:model_constant",
+      "passed": true
+    },
+    {
+      "id": "r011:budget",
+      "passed": true
+    },
+    {
+      "id": "r012:task_hash",
+      "passed": true
+    },
+    {
+      "id": "r012:effective_memory_hash",
+      "passed": true
+    },
+    {
+      "id": "r012:seed_hash",
+      "passed": true
+    },
+    {
+      "id": "r012:receipt_hash",
+      "passed": true
+    },
+    {
+      "id": "r012:receipt_identity",
+      "passed": true
+    },
+    {
+      "id": "r012:no_memory",
+      "passed": true
+    },
+    {
+      "id": "r012:one_fresh_input",
+      "passed": true
+    },
+    {
+      "id": "r012:model_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r012:tool_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r012:model_constant",
+      "passed": true
+    },
+    {
+      "id": "r012:budget",
+      "passed": true
+    },
+    {
+      "id": "r013:task_hash",
+      "passed": true
+    },
+    {
+      "id": "r013:effective_memory_hash",
+      "passed": true
+    },
+    {
+      "id": "r013:seed_hash",
+      "passed": true
+    },
+    {
+      "id": "r013:receipt_hash",
+      "passed": true
+    },
+    {
+      "id": "r013:receipt_identity",
+      "passed": true
+    },
+    {
+      "id": "r013:fixed_rules",
+      "passed": true
+    },
+    {
+      "id": "r013:one_fresh_input",
+      "passed": true
+    },
+    {
+      "id": "r013:model_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r013:tool_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r013:model_constant",
+      "passed": true
+    },
+    {
+      "id": "r013:budget",
+      "passed": true
+    },
+    {
+      "id": "r014:task_hash",
+      "passed": true
+    },
+    {
+      "id": "r014:effective_memory_hash",
+      "passed": true
+    },
+    {
+      "id": "r014:seed_hash",
+      "passed": true
+    },
+    {
+      "id": "r014:receipt_hash",
+      "passed": true
+    },
+    {
+      "id": "r014:receipt_identity",
+      "passed": true
+    },
+    {
+      "id": "r014:no_memory",
+      "passed": true
+    },
+    {
+      "id": "r014:one_fresh_input",
+      "passed": true
+    },
+    {
+      "id": "r014:model_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r014:tool_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r014:model_constant",
+      "passed": true
+    },
+    {
+      "id": "r014:budget",
+      "passed": true
+    },
+    {
+      "id": "r015:task_hash",
+      "passed": true
+    },
+    {
+      "id": "r015:effective_memory_hash",
+      "passed": true
+    },
+    {
+      "id": "r015:seed_hash",
+      "passed": true
+    },
+    {
+      "id": "r015:receipt_hash",
+      "passed": true
+    },
+    {
+      "id": "r015:receipt_identity",
+      "passed": true
+    },
+    {
+      "id": "r015:memory_matches_receipt",
+      "passed": true
+    },
+    {
+      "id": "r015:target_absent",
+      "passed": true
+    },
+    {
+      "id": "r015:actual_revoke",
+      "passed": true
+    },
+    {
+      "id": "r015:one_fresh_input",
+      "passed": true
+    },
+    {
+      "id": "r015:model_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r015:tool_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r015:model_constant",
+      "passed": true
+    },
+    {
+      "id": "r015:budget",
+      "passed": true
+    },
+    {
+      "id": "r016:task_hash",
+      "passed": true
+    },
+    {
+      "id": "r016:effective_memory_hash",
+      "passed": true
+    },
+    {
+      "id": "r016:seed_hash",
+      "passed": true
+    },
+    {
+      "id": "r016:receipt_hash",
+      "passed": true
+    },
+    {
+      "id": "r016:receipt_identity",
+      "passed": true
+    },
+    {
+      "id": "r016:memory_matches_receipt",
+      "passed": true
+    },
+    {
+      "id": "r016:one_fresh_input",
+      "passed": true
+    },
+    {
+      "id": "r016:model_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r016:tool_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r016:model_constant",
+      "passed": true
+    },
+    {
+      "id": "r016:budget",
+      "passed": true
+    },
+    {
+      "id": "r017:task_hash",
+      "passed": true
+    },
+    {
+      "id": "r017:effective_memory_hash",
+      "passed": true
+    },
+    {
+      "id": "r017:seed_hash",
+      "passed": true
+    },
+    {
+      "id": "r017:receipt_hash",
+      "passed": true
+    },
+    {
+      "id": "r017:receipt_identity",
+      "passed": true
+    },
+    {
+      "id": "r017:memory_matches_receipt",
+      "passed": true
+    },
+    {
+      "id": "r017:one_fresh_input",
+      "passed": true
+    },
+    {
+      "id": "r017:model_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r017:tool_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r017:model_constant",
+      "passed": true
+    },
+    {
+      "id": "r017:budget",
+      "passed": true
+    },
+    {
+      "id": "r018:task_hash",
+      "passed": true
+    },
+    {
+      "id": "r018:effective_memory_hash",
+      "passed": true
+    },
+    {
+      "id": "r018:seed_hash",
+      "passed": true
+    },
+    {
+      "id": "r018:receipt_hash",
+      "passed": true
+    },
+    {
+      "id": "r018:receipt_identity",
+      "passed": true
+    },
+    {
+      "id": "r018:memory_matches_receipt",
+      "passed": true
+    },
+    {
+      "id": "r018:target_absent",
+      "passed": true
+    },
+    {
+      "id": "r018:one_fresh_input",
+      "passed": true
+    },
+    {
+      "id": "r018:model_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r018:tool_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r018:model_constant",
+      "passed": true
+    },
+    {
+      "id": "r018:budget",
+      "passed": true
+    },
+    {
+      "id": "r019:task_hash",
+      "passed": true
+    },
+    {
+      "id": "r019:effective_memory_hash",
+      "passed": true
+    },
+    {
+      "id": "r019:seed_hash",
+      "passed": true
+    },
+    {
+      "id": "r019:receipt_hash",
+      "passed": true
+    },
+    {
+      "id": "r019:receipt_identity",
+      "passed": true
+    },
+    {
+      "id": "r019:memory_matches_receipt",
+      "passed": true
+    },
+    {
+      "id": "r019:one_fresh_input",
+      "passed": true
+    },
+    {
+      "id": "r019:model_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r019:tool_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r019:model_constant",
+      "passed": true
+    },
+    {
+      "id": "r019:budget",
+      "passed": true
+    },
+    {
+      "id": "r020:task_hash",
+      "passed": true
+    },
+    {
+      "id": "r020:effective_memory_hash",
+      "passed": true
+    },
+    {
+      "id": "r020:seed_hash",
+      "passed": true
+    },
+    {
+      "id": "r020:receipt_hash",
+      "passed": true
+    },
+    {
+      "id": "r020:receipt_identity",
+      "passed": true
+    },
+    {
+      "id": "r020:memory_matches_receipt",
+      "passed": true
+    },
+    {
+      "id": "r020:one_fresh_input",
+      "passed": true
+    },
+    {
+      "id": "r020:model_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r020:tool_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r020:model_constant",
+      "passed": true
+    },
+    {
+      "id": "r020:budget",
+      "passed": true
+    },
+    {
+      "id": "r021:task_hash",
+      "passed": true
+    },
+    {
+      "id": "r021:effective_memory_hash",
+      "passed": true
+    },
+    {
+      "id": "r021:seed_hash",
+      "passed": true
+    },
+    {
+      "id": "r021:receipt_hash",
+      "passed": true
+    },
+    {
+      "id": "r021:receipt_identity",
+      "passed": true
+    },
+    {
+      "id": "r021:memory_matches_receipt",
+      "passed": true
+    },
+    {
+      "id": "r021:one_fresh_input",
+      "passed": true
+    },
+    {
+      "id": "r021:model_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r021:tool_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r021:model_constant",
+      "passed": true
+    },
+    {
+      "id": "r021:budget",
+      "passed": true
+    },
+    {
+      "id": "r022:task_hash",
+      "passed": true
+    },
+    {
+      "id": "r022:effective_memory_hash",
+      "passed": true
+    },
+    {
+      "id": "r022:seed_hash",
+      "passed": true
+    },
+    {
+      "id": "r022:receipt_hash",
+      "passed": true
+    },
+    {
+      "id": "r022:receipt_identity",
+      "passed": true
+    },
+    {
+      "id": "r022:memory_matches_receipt",
+      "passed": true
+    },
+    {
+      "id": "r022:one_fresh_input",
+      "passed": true
+    },
+    {
+      "id": "r022:model_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r022:tool_calls_observed",
+      "passed": true
+    },
+    {
+      "id": "r022:model_constant",
+      "passed": true
+    },
+    {
+      "id": "r022:budget",
+      "passed": true
+    }
+  ],
+  "completed_runs": 22
+}

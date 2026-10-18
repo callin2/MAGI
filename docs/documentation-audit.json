@@ -1,0 +1,15 @@
+{
+  "observed_at": "2026-10-18T14:57:20.979273+00:00",
+  "base_commit": "b8d1ce1455212ff329b5810956dd5dc2f9b61fc3",
+  "managed_documents": 17,
+  "unique_ids": 17,
+  "checked_files": 19,
+  "local_links": 124,
+  "anchors": 4,
+  "protected_files": 666,
+  "protected_git_diff": [],
+  "checkout_manifest_sha256": "6bfc4f7b5dea35a4a8ec23d29c915e6ef865771d5a090d7d4c18ce7e0adcd2ae",
+  "exact_long_duplicate_paragraph_groups": [],
+  "proposal_body_preserved": true,
+  "errors": []
+}

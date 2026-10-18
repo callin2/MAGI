@@ -1,0 +1,20 @@
+[
+  {
+    "rule": "When reviewing technical documentation, label target and current evidence separately and route technical judgment, validation, adoption, and revocation through existing goals; require a new decision boundary only for genuinely new preferences, values, or permissions.",
+    "conditions": {
+      "workspace_type": "local-work-pilot"
+    }
+  },
+  {
+    "rule": "When marking work done, reject the state unless evidence is nonempty and validate that condition in the recovery regression suite.",
+    "conditions": {
+      "workspace_type": "local-work-pilot"
+    }
+  },
+  {
+    "rule": "At initialization and recovery, reject parent cycles, reject reuse under a different parent, and run regression tests for both invariants.",
+    "conditions": {
+      "workspace_type": "local-work-pilot"
+    }
+  }
+]

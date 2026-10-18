@@ -1,0 +1,104 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "id": "schema",
+      "passed": true
+    },
+    {
+      "id": "nonempty_explanation",
+      "passed": true
+    },
+    {
+      "id": "existing_tasks_reused_without_duplicates",
+      "passed": true
+    },
+    {
+      "id": "actual_tracker_completion",
+      "passed": true
+    },
+    {
+      "id": "current_hash_evidence",
+      "passed": true
+    },
+    {
+      "id": "code_delivery_schema",
+      "passed": true
+    },
+    {
+      "id": "original_tests_unchanged",
+      "passed": true
+    },
+    {
+      "id": "import_contract",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "checks": [
+          {
+            "id": "valid_completed_import",
+            "passed": true
+          },
+          {
+            "id": "empty_import_is_valid",
+            "passed": true
+          },
+          {
+            "id": "done_without_evidence",
+            "passed": true
+          },
+          {
+            "id": "done_without_acceptance",
+            "passed": true
+          },
+          {
+            "id": "unknown_status",
+            "passed": true
+          },
+          {
+            "id": "missing_file",
+            "passed": true
+          },
+          {
+            "id": "hash_mismatch",
+            "passed": true
+          },
+          {
+            "id": "malformed_evidence",
+            "passed": true
+          },
+          {
+            "id": "nonlist_evidence",
+            "passed": true
+          },
+          {
+            "id": "evidence_escape",
+            "passed": true
+          },
+          {
+            "id": "missing_status",
+            "passed": true
+          },
+          {
+            "id": "done_parent_open_child",
+            "passed": true
+          },
+          {
+            "id": "changed_artifact_can_be_listed_and_reopened",
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "regression_suite",
+      "passed": true,
+      "detail": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "test_done_parent_open_child_rejected (test_candidate.ImportRegressions.test_done_parent_open_child_rejected) ... ok\ntest_invalid_done_import_atomic (test_candidate.ImportRegressions.test_invalid_done_import_atomic) ... ok\ntest_valid_import_then_changed_file_list_reopen_clears (test_candidate.ImportRegressions.test_valid_import_then_changed_file_list_reopen_clears) ... ok\ntest_cli_events_record_success_and_failure (test_tracker.TrackerTests.test_cli_events_record_success_and_failure) ... ok\ntest_complete_requires_nonempty_evidence (test_tracker.TrackerTests.test_complete_requires_nonempty_evidence) ... ok\ntest_dedup_and_rollback (test_tracker.TrackerTests.test_dedup_and_rollback) ... ok\ntest_describe_without_state_is_read_only (test_tracker.TrackerTests.test_describe_without_state_is_read_only) ... ok\ntest_evidence_hash_and_branch_isolation (test_tracker.TrackerTests.test_evidence_hash_and_branch_isolation) ... ok\ntest_followup_existing_root_parent_conflicts (test_tracker.TrackerTests.test_followup_existing_root_parent_conflicts) ... ok\ntest_init_rejects_parent_cycle (test_tracker.TrackerTests.test_init_rejects_parent_cycle) ... ok\ntest_new_child_reopens_done_parent (test_tracker.TrackerTests.test_new_child_reopens_done_parent) ... ok\ntest_path_traversal (test_tracker.TrackerTests.test_path_traversal) ... ok\ntest_reopen_recomplete_after_artifact_change (test_tracker.TrackerTests.test_reopen_recomplete_after_artifact_change) ... ok\ntest_wrong_parent_and_atomic_followups (test_tracker.TrackerTests.test_wrong_parent_and_atomic_followups) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 4.220s\n\nOK\n"
+      }
+    }
+  ],
+  "settled": true
+}

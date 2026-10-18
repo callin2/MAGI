@@ -1,0 +1,1 @@
+{"schema_version":1,"task":"code","summary":"Hardened tracker initialization/import validation for completed issues while preserving post-completion list and reopen behavior.","tests_run":["functions.tests: 15 tests passed (original tracker suite and test_candidate.py)"],"limitations":[]}

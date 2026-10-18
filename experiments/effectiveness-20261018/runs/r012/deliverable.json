@@ -1,0 +1,1 @@
+{"schema_version":1,"task":"code","summary":"Validated imported issue lifecycle and evidence invariants atomically while preserving artifact-independent list/reopen behavior.","tests_run":["tests tool: original tracker regression suite and test_candidate.py; 15 tests passed"],"limitations":[]}

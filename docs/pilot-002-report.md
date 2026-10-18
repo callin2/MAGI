@@ -1,4 +1,15 @@
+---
+id: magi.pilot-002-report
+type: report
+status: recorded
+owner: MAGI
+reviewed: 2026-10-18
+issue: https://github.com/callin2/MAGI/issues/7
+---
+
 # pilot-002: 현재 미결 쟁점의 입장별 가설 경쟁
+
+[문서 목차](README.md) · 해당 실험 당시의 기록. 후속 결과는 목차의 연구 기록에서 확인한다.
 
 실행: [#7](https://github.com/callin2/MAGI/issues/7) · 후속 연구: [#6](https://github.com/callin2/MAGI/issues/6) · 요구사항: [#1](https://github.com/callin2/MAGI/issues/1)
 
@@ -91,4 +102,4 @@ R1 C의 6개월은 근거에서 계산한 최적 기간이 아니라 제안이�
 - [익명 평가 입력](../experiments/pilot-002/assessment-input.json), [사후 대응표](../experiments/pilot-002/assessment-mapping.json)
 - [평가 J1](../experiments/pilot-002/assessments/j1.json), [평가 J2](../experiments/pilot-002/assessments/j2.json), [기계적 집계](../experiments/pilot-002/results.json)
 
-`python3 scripts/check_pilot_002.py --check`는 고정 입력 해시, 응답 필드·출처 ID, 익명 패키지 일치, 점수 범위·누락·집계를 검사한다. 실제 사실관계·정책 정당성·AI 신규 응답을 검증하거나 재생성하지 않는다.
+검사 명령은 [실행·검증 안내](verification.md)에 있다. 고정 입력 해시, 응답 필드·출처 ID, 익명 패키지 일치, 점수 범위·누락·집계를 검사하며 실제 사실관계·정책 정당성·새 AI 응답을 검증하지 않는다.

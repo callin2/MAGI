@@ -1,0 +1,199 @@
+{
+  "started_at": "2026-10-18T11:18:43.355Z",
+  "ended_at": "2026-10-18T11:21:47.675Z",
+  "elapsed_seconds": 184.32012060000002,
+  "model_calls": 12,
+  "tool_calls": 14,
+  "tool_errors": 1,
+  "stop": "settled",
+  "provider_error": false,
+  "provider": "atomic-8317",
+  "configured_model": "gpt-6-luna",
+  "usage": [
+    {
+      "input": 1233,
+      "output": 106,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 13,
+      "totalTokens": 1339,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 167,
+      "output": 3433,
+      "cacheRead": 7296,
+      "cacheWrite": 0,
+      "reasoning": 154,
+      "totalTokens": 10896,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 3500,
+      "output": 765,
+      "cacheRead": 7296,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 11561,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 993,
+      "output": 13,
+      "cacheRead": 10624,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 11630,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 1722,
+      "output": 3474,
+      "cacheRead": 11520,
+      "cacheWrite": 0,
+      "reasoning": 51,
+      "totalTokens": 16716,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 3668,
+      "output": 13,
+      "cacheRead": 13056,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 16737,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 564,
+      "output": 77,
+      "cacheRead": 16640,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 17281,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 316,
+      "output": 219,
+      "cacheRead": 17024,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 17559,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 462,
+      "output": 24,
+      "cacheRead": 17152,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 17638,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 644,
+      "output": 223,
+      "cacheRead": 17408,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 18275,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 627,
+      "output": 223,
+      "cacheRead": 17920,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 18770,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 610,
+      "output": 58,
+      "cacheRead": 18432,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 19100,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    }
+  ],
+  "api_cost_usd": null,
+  "reason_cost_unknown": "Configured proxy prices and upstream billing not independently verified",
+  "fresh_conversation": true,
+  "history_messages_at_start": 1,
+  "external_tools": false
+}

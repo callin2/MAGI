@@ -1,0 +1,1 @@
+{"schema_version":1,"task":"code","summary":"Repaired tracker import validation of completed issues, evidence, artifact integrity, and parent completion invariants while keeping stale-artifact list/reopen usable.","tests_run":["functions.tests: original test_tracker.py and test_candidate.py; 13 tests passed"],"limitations":[]}

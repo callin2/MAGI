@@ -1,0 +1,1 @@
+{"schema_version":1,"task":"code","summary":"Hardened init imports for valid completion states while preserving stale-artifact list/reopen recovery.","tests_run":["tests tool: 14 tests passed (original tracker suite and test_candidate.py)"],"limitations":[]}

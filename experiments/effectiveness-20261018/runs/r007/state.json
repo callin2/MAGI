@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "revision": 2,
+  "issues": [
+    {
+      "id": "T1",
+      "title": "MAGI useful work",
+      "goal": "Complete the assigned MAGI work package",
+      "parent_id": null,
+      "acceptance": [
+        "Useful checked artifacts"
+      ],
+      "status": "done",
+      "evidence": [
+        {
+          "path": "tracker.py",
+          "sha256": "4828b686e828e7264164085e685e286fc84338ff20829210f99ba58658d0731f"
+        },
+        {
+          "path": "test_candidate.py",
+          "sha256": "c8ff6155226c8eed8b635888c3d3c0e58313747632f0646c7285d9e6b181875d"
+        },
+        {
+          "path": "deliverable.json",
+          "sha256": "3c0039ae17d7f0397436d1adf0070ed7a164ecf2cffd9c1528ba100344543f88"
+        },
+        {
+          "path": "notes.md",
+          "sha256": "b9a0619d971513c55b5ddc760e84091dc6f8c0496b5dcd4f0390ec02af3cdd64"
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "title": "Existing work item",
+      "goal": "Repair tracker import completion invariants",
+      "parent_id": "T1",
+      "acceptance": [
+        "Requested artifacts and evidence"
+      ],
+      "status": "done",
+      "evidence": [
+        {
+          "path": "tracker.py",
+          "sha256": "4828b686e828e7264164085e685e286fc84338ff20829210f99ba58658d0731f"
+        },
+        {
+          "path": "test_candidate.py",
+          "sha256": "c8ff6155226c8eed8b635888c3d3c0e58313747632f0646c7285d9e6b181875d"
+        },
+        {
+          "path": "deliverable.json",
+          "sha256": "3c0039ae17d7f0397436d1adf0070ed7a164ecf2cffd9c1528ba100344543f88"
+        },
+        {
+          "path": "notes.md",
+          "sha256": "b9a0619d971513c55b5ddc760e84091dc6f8c0496b5dcd4f0390ec02af3cdd64"
+        }
+      ]
+    }
+  ],
+  "audit": [
+    {
+      "op": "complete",
+      "id": "T2"
+    },
+    {
+      "op": "complete",
+      "id": "T1"
+    }
+  ]
+}

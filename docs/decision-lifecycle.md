@@ -1,4 +1,15 @@
+---
+id: magi.decision-lifecycle
+type: contract
+status: draft
+owner: MAGI
+reviewed: 2026-10-18
+issue: https://github.com/callin2/MAGI/issues/4
+---
+
 # MAGI 판단 생명주기 연구 계약 v0.1
+
+[문서 목차](README.md)
 
 이 문서는 대상과 판단 기준이 미리 완전히 주어지지 않은 문제에서, 판단을 언제 진행하고 언제 멈추며 어떤 조건에서 다시 여는지 정의하는 추상 계약이다. 특정 역할 수, 모델, 실행 순서 또는 구현을 확정하지 않는다. 이 계약은 연구·평가용이며 실제 AI 성능을 입증하지 않는다.
 

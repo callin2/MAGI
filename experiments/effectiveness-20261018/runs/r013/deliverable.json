@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "task": "handover",
+  "claims": [
+    {"id": "memory-adapter", "status": "implemented", "evidence": ["current-readme.md"]},
+    {"id": "work-tools", "status": "implemented", "evidence": ["current-readme.md", "current-pilot.md"]},
+    {"id": "general-runtime", "status": "planned", "evidence": ["current-readme.md"]},
+    {"id": "expert-routing", "status": "planned", "evidence": ["expertise-proposal.md"]},
+    {"id": "memory-benefit", "status": "unproven", "evidence": ["current-readme.md", "current-pilot.md"]},
+    {"id": "human-time-saving", "status": "unproven", "evidence": ["current-pilot.md"]}
+  ],
+  "decisions": [
+    {"id": "technical-validation", "owner": "agent", "reason": "Continue bounded technical validation under existing goals; distinguish implementation checks from semantic correctness and adoption."},
+    {"id": "revoke-technical-lesson", "owner": "agent", "reason": "Technical lessons may be reviewed, corrected, or revoked within the existing lifecycle; do not impose blanket new human approval."},
+    {"id": "share-private-memory", "owner": "human", "reason": "Publishing private role memory outside its authorized scope changes permission and requires an explicit human decision; it is not authorized by technical validation."}
+  ],
+  "remaining": [
+    "Run the existing memory checks and inspect actual scope, retrieval, and revocation behavior before claiming current operational fitness.",
+    "Validate memory lesson quality and causal effect on new work; current tests show exercised paths, not benefit.",
+    "Measure total cost and human review time under a bounded comparative protocol; neither saving nor superiority is established.",
+    "Continue expert-discovery and cross-agent query investigation; the proposal is under review, not an implemented routing runtime.",
+    "Do not publish private role memory beyond authorized scope without a human permission decision."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "task": "handover",
+  "claims": [
+    {"id": "memory-adapter", "status": "implemented", "evidence": ["current-readme.md", "current-pilot.md"]},
+    {"id": "work-tools", "status": "implemented", "evidence": ["current-readme.md", "current-pilot.md"]},
+    {"id": "general-runtime", "status": "planned", "evidence": ["current-readme.md"]},
+    {"id": "expert-routing", "status": "planned", "evidence": ["expertise-proposal.md"]},
+    {"id": "memory-benefit", "status": "experimental", "evidence": ["current-readme.md", "current-pilot.md"]},
+    {"id": "human-time-saving", "status": "unproven", "evidence": ["current-pilot.md"]}
+  ],
+  "decisions": [
+    {"id": "technical-validation", "owner": "agent", "reason": "Existing authorized technical checks and bounded validation may proceed; their result must not be overstated."},
+    {"id": "revoke-technical-lesson", "owner": "agent", "reason": "Technical review and revocation within the existing authorized scope may proceed; this does not grant broader sharing permission."},
+    {"id": "share-private-memory", "owner": "human", "reason": "Publishing private role memory outside its authorized scope changes permission and requires an explicit human decision; it is not authorized here."}
+  ],
+  "remaining": [
+    "Run the existing role-memory tests and structural checker in the repository environment, then inspect stored scope and revocation behavior without widening access.",
+    "Use the existing pilots' preserved traces to design a bounded controlled comparison of outcomes and total costs; current evidence does not establish that lessons caused improvement.",
+    "Measure human review time prospectively before claiming time saved.",
+    "General planning runtime and expert discovery/routing remain research or proposal work, not available deployed capabilities.",
+    "Do not publish private role memory beyond its authorized scope without a human permission decision."
+  ]
+}

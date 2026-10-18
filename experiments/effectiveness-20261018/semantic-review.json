@@ -1,0 +1,82 @@
+{
+  "reviewer": "parent agent; unblinded; post-hoc qualitative review",
+  "reviews": [
+    {
+      "id": "r003",
+      "notes_sha256": "11a92cac672c22243022870990b71488e07c9c63821b2b6964c4009e7429fe42",
+      "deliverable_sha256": "4499b9111848cff64541e40af995283aa04bcdb20b30eb812f9f088da8cbaf97",
+      "finding": "No substantive overclaim observed in current-vs-target, causal benefit, human-time or permission boundaries; post-hoc parent review, not blind or independent",
+      "enum_ambiguity": true
+    },
+    {
+      "id": "r004",
+      "notes_sha256": "dd503881ff7babb6f44f5ede96dc25b9cdad17ccb5c75fcaa795e209ad1edc49",
+      "deliverable_sha256": "0013a3f5ee895bcd9d8501c23c3cd647a4afaea4734e4f9c87c21fb117a994fa",
+      "finding": "No substantive overclaim observed in current-vs-target, causal benefit, human-time or permission boundaries; post-hoc parent review, not blind or independent",
+      "enum_ambiguity": false
+    },
+    {
+      "id": "r005",
+      "notes_sha256": "d1db6eee4a0ce3e6414a34b90fde437a75fdd59287ce2699e95bbf453abd6ec5",
+      "deliverable_sha256": "dcfcc1a802fdeb7457471d020d34c295faa1539b9a4bf460179c3ab92320ff25",
+      "finding": "No substantive overclaim observed in current-vs-target, causal benefit, human-time or permission boundaries; post-hoc parent review, not blind or independent",
+      "enum_ambiguity": false
+    },
+    {
+      "id": "r006",
+      "notes_sha256": "7c77c3907bc6b666c10df514426fe87ffa1d687614b22266d9bb58714315724d",
+      "deliverable_sha256": "990314afc9cea846fa1fcbcfc90d4e7bd63dfd015d880438db3610e18457f2ed",
+      "finding": "No substantive overclaim observed in current-vs-target, causal benefit, human-time or permission boundaries; post-hoc parent review, not blind or independent",
+      "enum_ambiguity": false
+    },
+    {
+      "id": "r008",
+      "notes_sha256": "691632576ada5261ebd8adef8f9586155c27cbfa9e9645781e1600079a652124",
+      "deliverable_sha256": "d8b8d760e043e2844c7bd4e7b949c40f3e545bc6c924cfffed3d68f64b0f6379",
+      "finding": "No substantive overclaim observed in current-vs-target, causal benefit, human-time or permission boundaries; post-hoc parent review, not blind or independent",
+      "enum_ambiguity": false
+    },
+    {
+      "id": "r009",
+      "notes_sha256": "20d91d1e6d870b162f827250b1a1ed7561950cff5f84830db88053df8ca88178",
+      "deliverable_sha256": "2eaf5e2a699fe8f0899b48eac0f74ba1bfb2977a78461e9af71a5139d1add65c",
+      "finding": "No substantive overclaim observed in current-vs-target, causal benefit, human-time or permission boundaries; post-hoc parent review, not blind or independent",
+      "enum_ambiguity": true
+    },
+    {
+      "id": "r010",
+      "notes_sha256": "ce3c291e646d81c37d12373648f6792fc27350cce1f94fe1b0a070b08eb59c65",
+      "deliverable_sha256": "6f7ed760724506d31c428f2a7eb9824fb02efaf140e466abb4a46cc6b5611f81",
+      "finding": "No substantive overclaim observed in current-vs-target, causal benefit, human-time or permission boundaries; post-hoc parent review, not blind or independent",
+      "enum_ambiguity": false
+    },
+    {
+      "id": "r011",
+      "notes_sha256": "fee417a5c7de84313c01e867ae9e3873c9941c5f3d7d56a095312a56bdda01c1",
+      "deliverable_sha256": "e143298baad24202fe61bc7176fb3faa95f2f247826165ac941a603843225f79",
+      "finding": "No substantive overclaim observed in current-vs-target, causal benefit, human-time or permission boundaries; post-hoc parent review, not blind or independent",
+      "enum_ambiguity": false
+    },
+    {
+      "id": "r013",
+      "notes_sha256": "6063918017c79ca393a3fa867edf246b9836236c4e98fe4a9fab2367e4fb4bbe",
+      "deliverable_sha256": "fb059617d9f6df52555f5f5bd480b028c60c9a0957a61b8713152ca091c353e3",
+      "finding": "No substantive overclaim observed; post-hoc parent review, not blind or independent",
+      "enum_ambiguity": false
+    },
+    {
+      "id": "r019",
+      "notes_sha256": "a4aa38c7614a1069d4e69c8abf75593c2c2d95aa6e01b3cea89df78a6ec75552",
+      "deliverable_sha256": "c47b4fdeb3a602dee9b857889b22e9d8ab5301d0fa8ab59e4ac43c62b5b566f0",
+      "finding": "No substantive overclaim observed; post-hoc parent review, not blind or independent",
+      "enum_ambiguity": true
+    },
+    {
+      "id": "r021",
+      "notes_sha256": "676d4095da7e5248af445138bf036d6db5cf1d4cfae594320e2ccba81706e91c",
+      "deliverable_sha256": "aa378c62514b90818e255108149da9908fdab5e43cea0422b34ab312352a33ac",
+      "finding": "No substantive overclaim observed; post-hoc parent review, not blind or independent",
+      "enum_ambiguity": false
+    }
+  ]
+}

@@ -1,4 +1,15 @@
+---
+id: magi.pilot-report
+type: report
+status: recorded
+owner: MAGI
+reviewed: 2026-10-18
+issue: https://github.com/callin2/MAGI/issues/5
+---
+
 # pilot-001 실제 AI 탐색 파일럿 보고서
+
+[문서 목차](README.md) · 해당 실험 당시의 기록. 후속 결과는 목차의 연구 기록에서 확인한다.
 
 상위: [요구사항 #1](https://github.com/callin2/MAGI/issues/1) · 실행: [서브이슈 #5](https://github.com/callin2/MAGI/issues/5)
 
@@ -73,6 +84,4 @@ K1의 일부 경쟁 가설은 '필수 제약을 무시하면 A'라는 허용되�
 
 ## 재집계
 
-저장소 루트에서 `python3 scripts/check_pilot.py --check`로 고정 입력·응답 형식·집계 결과를 확인한다. `python3 scripts/check_pilot.py`는 저장된 응답으로 results.json을 재생성한다. **이 명령은 AI를 새로 호출하지 않는다.** 같은 모델의 새로운 출력까지 재현하려면 실제 에이전트 실행 환경이 별도로 필요하다.
-
-위 미검증 조건은 [후속 서브이슈 #6](https://github.com/callin2/MAGI/issues/6)에 등록했습니다.
+읽기 전용 검사와 결과 재생성의 구분은 [실행·검증 안내](verification.md)에 있다. 위 미검증 조건은 [후속 #6](https://github.com/callin2/MAGI/issues/6)에서 관리한다.
