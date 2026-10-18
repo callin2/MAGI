@@ -1,0 +1,199 @@
+{
+  "started_at": "2026-10-18T10:59:01.666Z",
+  "ended_at": "2026-10-18T11:01:53.953Z",
+  "elapsed_seconds": 172.28724380000006,
+  "model_calls": 12,
+  "tool_calls": 14,
+  "tool_errors": 1,
+  "stop": "settled",
+  "provider_error": false,
+  "provider": "atomic-8317",
+  "configured_model": "gpt-6-luna",
+  "usage": [
+    {
+      "input": 940,
+      "output": 91,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 1031,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 130,
+      "output": 3124,
+      "cacheRead": 7040,
+      "cacheWrite": 0,
+      "reasoning": 112,
+      "totalTokens": 10294,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 3196,
+      "output": 723,
+      "cacheRead": 7040,
+      "cacheWrite": 0,
+      "reasoning": 36,
+      "totalTokens": 10959,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 10977,
+      "output": 13,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 10990,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 1103,
+      "output": 3097,
+      "cacheRead": 10880,
+      "cacheWrite": 0,
+      "reasoning": 67,
+      "totalTokens": 15080,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 3167,
+      "output": 13,
+      "cacheRead": 11904,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 15084,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 561,
+      "output": 86,
+      "cacheRead": 14976,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 15623,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 322,
+      "output": 230,
+      "cacheRead": 15360,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 15912,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 485,
+      "output": 24,
+      "cacheRead": 15488,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 15997,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 539,
+      "output": 229,
+      "cacheRead": 15872,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 16640,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 662,
+      "output": 229,
+      "cacheRead": 16256,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 17147,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 657,
+      "output": 64,
+      "cacheRead": 16768,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 17489,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    }
+  ],
+  "api_cost_usd": null,
+  "reason_cost_unknown": "Configured proxy prices and upstream billing not independently verified",
+  "fresh_conversation": true,
+  "history_messages_at_start": 1,
+  "external_tools": false
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 0,
+  "revision": 2,
   "issues": [
     {
       "id": "T1",
@@ -10,8 +10,17 @@
       "acceptance": [
         "Useful checked artifacts"
       ],
-      "status": "open",
-      "evidence": []
+      "status": "done",
+      "evidence": [
+        {
+          "path": "deliverable.json",
+          "sha256": "6f7ed760724506d31c428f2a7eb9824fb02efaf140e466abb4a46cc6b5611f81"
+        },
+        {
+          "path": "notes.md",
+          "sha256": "ce3c291e646d81c37d12373648f6792fc27350cce1f94fe1b0a070b08eb59c65"
+        }
+      ]
     },
     {
       "id": "T2",
@@ -21,9 +30,27 @@
       "acceptance": [
         "Requested artifacts and evidence"
       ],
-      "status": "open",
-      "evidence": []
+      "status": "done",
+      "evidence": [
+        {
+          "path": "deliverable.json",
+          "sha256": "6f7ed760724506d31c428f2a7eb9824fb02efaf140e466abb4a46cc6b5611f81"
+        },
+        {
+          "path": "notes.md",
+          "sha256": "ce3c291e646d81c37d12373648f6792fc27350cce1f94fe1b0a070b08eb59c65"
+        }
+      ]
     }
   ],
-  "audit": []
+  "audit": [
+    {
+      "op": "complete",
+      "id": "T2"
+    },
+    {
+      "op": "complete",
+      "id": "T1"
+    }
+  ]
 }

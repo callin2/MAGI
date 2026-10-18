@@ -5,19 +5,10 @@ from pathlib import Path
 
 SCHEMA = 1
 DESCRIPTION = {"schema_version":1,"state_schema":{"schema_version":1,"revision":"integer","issues":"array","audit":"array"},"evidence_item":{"path":"relative regular file inside workspace root","sha256":"64 lowercase hex characters"},"operations":{
- "describe":{"required":[],"example":{"op":"describe"}},
- "init":{"required":["issues"],"example":{"op":"init","issues":[]}},
- "list":{"required":[],"example":{"op":"list"}},
- "show":{"required":["id"],"example":{"op":"show","id":"T1"}},
- "create":{"required":["title","goal","parent_id","acceptance"],"example":{"op":"create","title":"child","goal":"do work","parent_id":"T1","acceptance":["artifact exists"]}},
- "complete":{"required":["id","evidence"],"example":{"op":"complete","id":"T2","evidence":[{"path":"artifact.txt","sha256":"<sha256>"}]},"condition":"complete leaf issues before their parent; every evidence hash must match"},
- "reopen":{"required":["id","reason"],"example":{"op":"reopen","id":"T2","reason":"corrected artifact"}},
- "branch":{"required":["target"],"example":{"op":"branch","target":"branch.json"}},
- "register_followups":{"required":["parent_id","actions"],"example":{"op":"register_followups","parent_id":"T1","actions":[{"title":"child","goal":"do work","acceptance":["artifact exists"]}]}},
+ "describe":{"required":[],"example":{"op":"describe"}},"init":{"required":["issues"],"example":{"op":"init","issues":[]}},"list":{"required":[],"example":{"op":"list"}},"show":{"required":["id"],"example":{"op":"show","id":"T1"}},"create":{"required":["title","goal","parent_id","acceptance"],"example":{"op":"create","title":"child","goal":"do work","parent_id":"T1","acceptance":["artifact exists"]}},"complete":{"required":["id","evidence"],"example":{"op":"complete","id":"T2","evidence":[{"path":"artifact.txt","sha256":"<sha256>"}]},"condition":"complete leaf issues before their parent; every evidence hash must match"},"reopen":{"required":["id","reason"],"example":{"op":"reopen","id":"T2","reason":"corrected artifact"}},"branch":{"required":["target"],"example":{"op":"branch","target":"branch.json"}},"register_followups":{"required":["parent_id","actions"],"example":{"op":"register_followups","parent_id":"T1","actions":[{"title":"child","goal":"do work","acceptance":["artifact exists"]}]}},
 },"lifecycle":"creating a new child under a done parent automatically reopens that parent and done ancestors, preserving prior evidence in audit and clearing active evidence; reuse-only followups do not change status"}
 
 class Failure(Exception): pass
-
 def norm(s): return " ".join(str(s).split()).casefold()
 def err(msg): raise Failure(msg)
 def load(p):
@@ -48,6 +39,21 @@ def state_ok(s):
             if cur in seen: err("parent cycle")
             seen.add(cur); cur=next(x.get("parent_id") for x in s["issues"] if x["id"]==cur)
     return s
+def validate_import(s, root):
+    state_ok(s)
+    byid={x['id']:x for x in s['issues']}
+    for i in s['issues']:
+        if i.get('status') not in ('open','done'): err('invalid status')
+        ev=i.get('evidence')
+        if not isinstance(ev,list): err('invalid evidence')
+        if i['status']=='done' and (not i.get('acceptance') or not ev): err('completed issue requires acceptance and evidence')
+        for e in ev:
+            if not isinstance(e,dict) or not isinstance(e.get('path'),str) or not e['path'] or not isinstance(e.get('sha256'),str) or len(e['sha256'])!=64 or any(c not in '0123456789abcdef' for c in e['sha256']): err('invalid evidence')
+            p=(root/e['path']).resolve()
+            if root not in p.parents or not p.is_file(): err('evidence file invalid')
+            if i['status']=='done' and hashlib.sha256(p.read_bytes()).hexdigest()!=e['sha256']: err('evidence hash mismatch')
+        if i['status']=='done' and any(x.get('status')!='done' for x in s['issues'] if x.get('parent_id')==i['id']): err('done issue has open descendant')
+    return s
 def issue(s, ident):
     for i in s["issues"]:
         if i["id"] == ident: return i
@@ -70,7 +76,7 @@ def dispatch(state_path, req):
         if state_path.exists(): err("state exists")
         issues=req.get("issues")
         if not isinstance(issues,list): err("issues required")
-        s={"schema_version":SCHEMA,"revision":0,"issues":issues,"audit":[]}; state_ok(s); save_atomic(state_path,s); return {"revision":0,"issues":issues}
+        s={"schema_version":SCHEMA,"revision":0,"issues":issues,"audit":[]}; validate_import(s,state_path.parent.resolve()); save_atomic(state_path,s); return {"revision":0,"issues":issues}
     s=state_ok(load(state_path))
     if op == "list": return {"revision":s["revision"],"issues":s["issues"]}
     if op == "show": return {"revision":s["revision"],"issue":issue(s,req.get("id"))}

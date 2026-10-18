@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 0,
+  "revision": 2,
   "issues": [
     {
       "id": "T1",
@@ -10,8 +10,25 @@
       "acceptance": [
         "Useful checked artifacts"
       ],
-      "status": "open",
-      "evidence": []
+      "status": "done",
+      "evidence": [
+        {
+          "path": "tracker.py",
+          "sha256": "d2fe429c2e6eff7e0e6c54b6d66019f2b043cd02ecd01b531a5dff3eb2824f94"
+        },
+        {
+          "path": "test_candidate.py",
+          "sha256": "9a0401f4110e05b05eb5293223f3e266aff572ca3f7973fb53ed6a7cc5bcb4c7"
+        },
+        {
+          "path": "deliverable.json",
+          "sha256": "c130ad5972b6897ef44ffe025c077a344d306f217b6bb26fdb86dd70468fbe55"
+        },
+        {
+          "path": "notes.md",
+          "sha256": "6c73738742e522853c219177f5a7789348b60f9bce51835b1e3328539c945233"
+        }
+      ]
     },
     {
       "id": "T2",
@@ -21,9 +38,35 @@
       "acceptance": [
         "Requested artifacts and evidence"
       ],
-      "status": "open",
-      "evidence": []
+      "status": "done",
+      "evidence": [
+        {
+          "path": "tracker.py",
+          "sha256": "d2fe429c2e6eff7e0e6c54b6d66019f2b043cd02ecd01b531a5dff3eb2824f94"
+        },
+        {
+          "path": "test_candidate.py",
+          "sha256": "9a0401f4110e05b05eb5293223f3e266aff572ca3f7973fb53ed6a7cc5bcb4c7"
+        },
+        {
+          "path": "deliverable.json",
+          "sha256": "c130ad5972b6897ef44ffe025c077a344d306f217b6bb26fdb86dd70468fbe55"
+        },
+        {
+          "path": "notes.md",
+          "sha256": "6c73738742e522853c219177f5a7789348b60f9bce51835b1e3328539c945233"
+        }
+      ]
     }
   ],
-  "audit": []
+  "audit": [
+    {
+      "op": "complete",
+      "id": "T2"
+    },
+    {
+      "op": "complete",
+      "id": "T1"
+    }
+  ]
 }

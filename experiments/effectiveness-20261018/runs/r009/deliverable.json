@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "task": "handover",
+  "claims": [
+    {"id": "memory-adapter", "status": "implemented", "evidence": ["current-readme.md", "current-pilot.md"]},
+    {"id": "work-tools", "status": "implemented", "evidence": ["current-readme.md", "current-pilot.md"]},
+    {"id": "general-runtime", "status": "planned", "evidence": ["current-readme.md"]},
+    {"id": "expert-routing", "status": "unproven", "evidence": ["expertise-proposal.md", "current-readme.md"]},
+    {"id": "memory-benefit", "status": "unproven", "evidence": ["current-readme.md", "current-pilot.md", "expertise-proposal.md"]},
+    {"id": "human-time-saving", "status": "unproven", "evidence": ["current-pilot.md"]}
+  ],
+  "decisions": [
+    {"id": "technical-validation", "owner": "agent", "reason": "Existing authorized adapter and work-tool validation may proceed within their recorded scope; checks do not establish semantic correctness or product-wide efficacy."},
+    {"id": "revoke-technical-lesson", "owner": "agent", "reason": "Technical lessons may be technically reviewed and their existing authorized scope respected; this does not grant new sharing permission."},
+    {"id": "share-private-memory", "owner": "human", "reason": "Publishing private role memory outside its authorized scope changes permission and is not authorized by existing technical work."}
+  ],
+  "remaining": [
+    "Run a bounded, recorded verification of memory retrieval/use on a pre-specified new task, retaining a comparison and checking scope and revocation behavior; do not claim benefit from retrieval alone.",
+    "Measure human review time and total task cost in a controlled comparison before claiming time savings or efficiency.",
+    "Test expertise discovery and routing against alternatives, including incorrect recommendations, stale knowledge, conflicts, and revoked access; proposal status is not implementation evidence.",
+    "Keep any private role memory within its existing authorization unless a human explicitly decides otherwise."
+  ]
+}

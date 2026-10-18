@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "id": "schema",
+      "passed": true
+    },
+    {
+      "id": "nonempty_explanation",
+      "passed": true
+    },
+    {
+      "id": "existing_tasks_reused_without_duplicates",
+      "passed": true
+    },
+    {
+      "id": "actual_tracker_completion",
+      "passed": true
+    },
+    {
+      "id": "current_hash_evidence",
+      "passed": true
+    },
+    {
+      "id": "all_claims_exactly_once",
+      "passed": true
+    },
+    {
+      "id": "claim_memory-adapter",
+      "passed": true
+    },
+    {
+      "id": "claim_work-tools",
+      "passed": true
+    },
+    {
+      "id": "claim_general-runtime",
+      "passed": true
+    },
+    {
+      "id": "claim_expert-routing",
+      "passed": true
+    },
+    {
+      "id": "claim_memory-benefit",
+      "passed": true
+    },
+    {
+      "id": "claim_human-time-saving",
+      "passed": true
+    },
+    {
+      "id": "all_decisions_exactly_once",
+      "passed": true
+    },
+    {
+      "id": "authority_technical-validation",
+      "passed": true
+    },
+    {
+      "id": "authority_revoke-technical-lesson",
+      "passed": true
+    },
+    {
+      "id": "authority_share-private-memory",
+      "passed": true
+    },
+    {
+      "id": "remaining_explicit",
+      "passed": true
+    }
+  ],
+  "settled": true
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "task": "handover",
+  "claims": [
+    {"id": "memory-adapter", "status": "implemented", "evidence": ["current-readme.md", "current-pilot.md"]},
+    {"id": "work-tools", "status": "implemented", "evidence": ["current-readme.md", "current-pilot.md"]},
+    {"id": "general-runtime", "status": "planned", "evidence": ["current-readme.md"]},
+    {"id": "expert-routing", "status": "planned", "evidence": ["expertise-proposal.md"]},
+    {"id": "memory-benefit", "status": "unproven", "evidence": ["current-readme.md", "current-pilot.md"]},
+    {"id": "human-time-saving", "status": "unproven", "evidence": ["current-pilot.md"]}
+  ],
+  "decisions": [
+    {"id": "technical-validation", "owner": "agent", "reason": "Validation and technical judgment within existing goals can proceed; tests and checks are bounded evidence, not general semantic guarantees."},
+    {"id": "revoke-technical-lesson", "owner": "agent", "reason": "Technical lessons may be reviewed, adopted, or revoked within the existing role-learning goals and scope; no blanket new approval gate is evidenced."},
+    {"id": "share-private-memory", "owner": "human", "reason": "Publishing private role memory outside its authorized scope changes permission and is not already authorized."}
+  ],
+  "remaining": [
+    "Run the existing scripts and independently review the adapter scope and stored lesson lifecycle; do not infer causal memory benefit from retrieval receipts or small pilot outcomes.",
+    "Verify memory effects against a bounded comparison with controlled inputs and preserve failures; measure total model, tool, and human review cost before claiming benefit.",
+    "Do not publish private role memory beyond its authorized scope without a human permission decision.",
+    "Expertise discovery, routing, and cross-agent querying remain proposal questions, not a deployed capability."
+  ]
+}

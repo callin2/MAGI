@@ -1,0 +1,214 @@
+{
+  "started_at": "2026-10-18T11:01:53.960Z",
+  "ended_at": "2026-10-18T11:03:55.645Z",
+  "elapsed_seconds": 121.6851969000001,
+  "model_calls": 13,
+  "tool_calls": 12,
+  "tool_errors": 0,
+  "stop": "settled",
+  "provider_error": false,
+  "provider": "atomic-8317",
+  "configured_model": "gpt-6-luna",
+  "usage": [
+    {
+      "input": 1523,
+      "output": 24,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 1547,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 1961,
+      "output": 24,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 1985,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 326,
+      "output": 19,
+      "cacheRead": 1792,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 2137,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 3529,
+      "output": 20,
+      "cacheRead": 1920,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 5469,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 2507,
+      "output": 3590,
+      "cacheRead": 5248,
+      "cacheWrite": 0,
+      "reasoning": 123,
+      "totalTokens": 11345,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 3719,
+      "output": 759,
+      "cacheRead": 7552,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 12030,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 952,
+      "output": 13,
+      "cacheRead": 11136,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 12101,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 639,
+      "output": 92,
+      "cacheRead": 11904,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 12635,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 275,
+      "output": 259,
+      "cacheRead": 12416,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 12950,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 467,
+      "output": 29,
+      "cacheRead": 12544,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 13040,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 194,
+      "output": 219,
+      "cacheRead": 12928,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 13341,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 681,
+      "output": 219,
+      "cacheRead": 12928,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 13828,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 656,
+      "output": 60,
+      "cacheRead": 13440,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 14156,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    }
+  ],
+  "api_cost_usd": null,
+  "reason_cost_unknown": "Configured proxy prices and upstream billing not independently verified",
+  "fresh_conversation": true,
+  "history_messages_at_start": 1,
+  "external_tools": false
+}

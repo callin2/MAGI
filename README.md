@@ -1,5 +1,18 @@
 # MAGI
 
+## 실제 효과 비교 — 2026-10-18
+
+코드 수리와 고객 인계 두 업무에서 기억 없음·짧은 경험 규칙·원문 로그·정제 교훈을 비교하고 제외/오염/철회를 포함해 22회 실행했습니다. 코드 수리의 무기억 조건은 0/2, 경험을 전달한 세 조건은 각각 2/2였습니다. 정제 교훈은 짧은 규칙과 같은 통과 수를 얻었지만 주 비교의 처리 토큰은 29.6% 더 많았습니다. 작은 표본의 신호이며 MAGI 전체의 효과 증명은 아닙니다.
+
+[결과·비용·한계](docs/effectiveness-verification-20261018.md) · [원판정과 내용 검토](docs/effectiveness-semantic-review-20261018.md) · [원자료](experiments/effectiveness-20261018/) · [#18](https://github.com/callin2/MAGI/issues/18) · [#19](https://github.com/callin2/MAGI/issues/19)
+
+실제 발견한 tracker import 검증 누락도 수정했습니다([#24 및 검증](docs/tracker-import-validation.md)). 기존 포함 32개 회귀와 별도 import 판정 13개가 통과했습니다. 과거 보관 자료는 Windows checkout 줄바꿈 때문에 hash 재검증이 실패할 수 있으며, 새 자료는 바이트를 보존합니다. 현재 실패를 숨기거나 과거 hash를 재발급하지 않았습니다.
+
+```sh
+python -X utf8 scripts/effectiveness/verify_evidence.py
+python -X utf8 scripts/effectiveness/evaluate.py
+```
+
 ## 실제 업무 위임 파일럿
 
 재귀적 MAGI 분해 → 하위 실행 → 통합 실패 수정 → 독립 검증 → 경험 반영 → 새 세션 업무를 실제로 실행했습니다. [결과와 산출물](docs/recursive-work-pilot.md), [첫 구성 결정](experiments/recursive-work/runs/initial/decision-v3.md), [검증 운영 명세](experiments/recursive-work/runs/transfer-E/protocol.md)를 볼 수 있습니다. 25개 도구 시험과 5개 업무의 최종 구조 검사가 통과했으며 초기 미완료·판정 오류·복구도 보존했습니다. 일반 학습 효과와 총비용 우월성은 미입증입니다.

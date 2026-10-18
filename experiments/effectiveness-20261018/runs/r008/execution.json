@@ -1,0 +1,109 @@
+{
+  "started_at": "2026-10-18T10:52:41.063Z",
+  "ended_at": "2026-10-18T10:53:22.215Z",
+  "elapsed_seconds": 41.15139859999996,
+  "model_calls": 6,
+  "tool_calls": 9,
+  "tool_errors": 0,
+  "stop": "settled",
+  "provider_error": false,
+  "provider": "atomic-8317",
+  "configured_model": "gpt-6-luna",
+  "usage": [
+    {
+      "input": 1132,
+      "output": 127,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 13,
+      "totalTokens": 1259,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 5312,
+      "output": 488,
+      "cacheRead": 1024,
+      "cacheWrite": 0,
+      "reasoning": 52,
+      "totalTokens": 6824,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 690,
+      "output": 627,
+      "cacheRead": 6144,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 7461,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 858,
+      "output": 130,
+      "cacheRead": 6656,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 7644,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 401,
+      "output": 130,
+      "cacheRead": 7424,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 7955,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 454,
+      "output": 67,
+      "cacheRead": 7680,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 8201,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    }
+  ],
+  "api_cost_usd": null,
+  "reason_cost_unknown": "Configured proxy prices and upstream billing not independently verified",
+  "fresh_conversation": true,
+  "history_messages_at_start": 1,
+  "external_tools": false
+}

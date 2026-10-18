@@ -1,23 +1,12 @@
 #!/usr/bin/env python3
-import hashlib, json, os, sys, tempfile, time
+import hashlib, json, os, sys, tempfile, time, re
 from datetime import datetime, timezone
 from pathlib import Path
 
 SCHEMA = 1
-DESCRIPTION = {"schema_version":1,"state_schema":{"schema_version":1,"revision":"integer","issues":"array","audit":"array"},"evidence_item":{"path":"relative regular file inside workspace root","sha256":"64 lowercase hex characters"},"operations":{
- "describe":{"required":[],"example":{"op":"describe"}},
- "init":{"required":["issues"],"example":{"op":"init","issues":[]}},
- "list":{"required":[],"example":{"op":"list"}},
- "show":{"required":["id"],"example":{"op":"show","id":"T1"}},
- "create":{"required":["title","goal","parent_id","acceptance"],"example":{"op":"create","title":"child","goal":"do work","parent_id":"T1","acceptance":["artifact exists"]}},
- "complete":{"required":["id","evidence"],"example":{"op":"complete","id":"T2","evidence":[{"path":"artifact.txt","sha256":"<sha256>"}]},"condition":"complete leaf issues before their parent; every evidence hash must match"},
- "reopen":{"required":["id","reason"],"example":{"op":"reopen","id":"T2","reason":"corrected artifact"}},
- "branch":{"required":["target"],"example":{"op":"branch","target":"branch.json"}},
- "register_followups":{"required":["parent_id","actions"],"example":{"op":"register_followups","parent_id":"T1","actions":[{"title":"child","goal":"do work","acceptance":["artifact exists"]}]}},
-},"lifecycle":"creating a new child under a done parent automatically reopens that parent and done ancestors, preserving prior evidence in audit and clearing active evidence; reuse-only followups do not change status"}
+DESCRIPTION = {"schema_version":1,"state_schema":{"schema_version":1,"revision":"integer","issues":"array","audit":"array"},"evidence_item":{"path":"relative regular file inside workspace root","sha256":"64 lowercase hex characters"},"operations":{"describe":{"required":[],"example":{"op":"describe"}},"init":{"required":["issues"],"example":{"op":"init","issues":[]}},"list":{"required":[],"example":{"op":"list"}},"show":{"required":["id"],"example":{"op":"show","id":"T1"}},"create":{"required":["title","goal","parent_id","acceptance"],"example":{"op":"create","title":"child","goal":"do work","parent_id":"T1","acceptance":["artifact exists"]}},"complete":{"required":["id","evidence"],"example":{"op":"complete","id":"T2","evidence":[{"path":"artifact.txt","sha256":"<sha256>"}]},"condition":"complete leaf issues before their parent; every evidence hash must match"},"reopen":{"required":["id","reason"],"example":{"op":"reopen","id":"T2","reason":"corrected artifact"}},"branch":{"required":["target"],"example":{"op":"branch","target":"branch.json"}},"register_followups":{"required":["parent_id","actions"],"example":{"op":"register_followups","parent_id":"T1","actions":[{"title":"child","goal":"do work","acceptance":["artifact exists"]}]} }},"lifecycle":"creating a new child under a done parent automatically reopens that parent and done ancestors, preserving prior evidence in audit and clearing active evidence; reuse-only followups do not change status"}
 
 class Failure(Exception): pass
-
 def norm(s): return " ".join(str(s).split()).casefold()
 def err(msg): raise Failure(msg)
 def load(p):
@@ -39,6 +28,7 @@ def state_ok(s):
     ids=set(); goals=set()
     for i in s["issues"]:
         if not valid_issue(i) or i["id"] in ids or norm(i["goal"]) in goals: err("invalid or duplicate issue")
+        if i.get("status") not in ("open", "done") or not isinstance(i.get("evidence"), list): err("invalid issue status or evidence")
         ids.add(i["id"]); goals.add(norm(i["goal"]))
     for i in s["issues"]:
         if i.get("parent_id") is not None and i["parent_id"] not in ids: err("missing parent")
@@ -48,6 +38,22 @@ def state_ok(s):
             if cur in seen: err("parent cycle")
             seen.add(cur); cur=next(x.get("parent_id") for x in s["issues"] if x["id"]==cur)
     return s
+def validate_import(s, root):
+    children={i["id"]:[] for i in s["issues"]}
+    for i in s["issues"]:
+        if i.get("parent_id") is not None: children[i["parent_id"]].append(i)
+        if i["status"] == "done":
+            if not i["acceptance"]: err("done issue requires acceptance")
+            ev=i["evidence"]
+            if not ev: err("done issue requires evidence")
+            for e in ev:
+                if not isinstance(e,dict) or not isinstance(e.get("path"),str) or not e["path"] or not isinstance(e.get("sha256"),str) or not re.fullmatch(r"[0-9a-f]{64}",e["sha256"]): err("invalid evidence")
+                p=(root/e["path"]).resolve()
+                if root not in p.parents or not p.is_file(): err("evidence file invalid")
+                if hashlib.sha256(p.read_bytes()).hexdigest() != e["sha256"]: err("evidence hash mismatch")
+    def has_open_desc(i):
+        return any(c["status"] != "done" or has_open_desc(c) for c in children[i["id"]])
+    if any(i["status"]=="done" and has_open_desc(i) for i in s["issues"]): err("done issue has open descendant")
 def issue(s, ident):
     for i in s["issues"]:
         if i["id"] == ident: return i
@@ -70,7 +76,7 @@ def dispatch(state_path, req):
         if state_path.exists(): err("state exists")
         issues=req.get("issues")
         if not isinstance(issues,list): err("issues required")
-        s={"schema_version":SCHEMA,"revision":0,"issues":issues,"audit":[]}; state_ok(s); save_atomic(state_path,s); return {"revision":0,"issues":issues}
+        s={"schema_version":SCHEMA,"revision":0,"issues":issues,"audit":[]}; state_ok(s); validate_import(s,state_path.parent.resolve()); save_atomic(state_path,s); return {"revision":0,"issues":issues}
     s=state_ok(load(state_path))
     if op == "list": return {"revision":s["revision"],"issues":s["issues"]}
     if op == "show": return {"revision":s["revision"],"issue":issue(s,req.get("id"))}
@@ -111,8 +117,7 @@ def dispatch(state_path, req):
         i=issue(s,req.get("id")); reason=req.get("reason")
         if i.get("status") != "done": err("issue is not done")
         if not isinstance(reason,str) or not reason.strip(): err("reason required")
-        targets=reopen_chain(s, i, reason)
-        s["revision"]+=1; save_atomic(state_path,s)
+        targets=reopen_chain(s, i, reason); s["revision"]+=1; save_atomic(state_path,s)
         return {"revision":s["revision"],"reopened_ids":targets}
     if op == "register_followups":
         parent=issue(s,req.get("parent_id")); actions=req.get("actions")

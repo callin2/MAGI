@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "task": "handover",
+  "claims": [
+    {"id": "memory-adapter", "status": "implemented", "evidence": ["current-readme.md"]},
+    {"id": "work-tools", "status": "implemented", "evidence": ["current-readme.md", "current-pilot.md"]},
+    {"id": "general-runtime", "status": "planned", "evidence": ["current-readme.md"]},
+    {"id": "expert-routing", "status": "planned", "evidence": ["expertise-proposal.md"]},
+    {"id": "memory-benefit", "status": "unproven", "evidence": ["current-readme.md", "current-pilot.md"]},
+    {"id": "human-time-saving", "status": "unproven", "evidence": ["current-pilot.md"]}
+  ],
+  "decisions": [
+    {"id": "technical-validation", "owner": "agent", "reason": "Existing authorized technical verification can proceed within its agreed scope; report observations without claiming semantic truth or adoption."},
+    {"id": "revoke-technical-lesson", "owner": "agent", "reason": "Technical lesson validation and revocation within existing authorized scope are technical lifecycle work, not a new value choice."},
+    {"id": "share-private-memory", "owner": "human", "reason": "Publishing private role memory outside its authorized scope changes permission and requires an explicit human decision; it is not authorized here."}
+  ],
+  "remaining": [
+    "Run a bounded, pre-specified memory transfer comparison with relevant controls, independently check outcomes, and preserve failures; do not infer causality from retrieval alone.",
+    "Measure model and human time and total costs directly before making efficiency claims.",
+    "Expertise discovery, routing, and answer quality have not been implemented or demonstrated; define authorized scope before any sharing experiment.",
+    "No general natural-language planning or expert-routing runtime is deployed; verify only the documented local scripts and stored artifacts."
+  ]
+}

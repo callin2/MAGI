@@ -1,0 +1,1 @@
+{"schema_version":1,"task":"code","summary":"Validated imported issue statuses and evidence at init, rejecting invalid completions atomically while preserving stale-completion listing and reopen for recertification.","tests_run":["functions.tests: original tracker regression suite and test_candidate.py; 14 tests passed"],"limitations":[]}
