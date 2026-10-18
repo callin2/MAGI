@@ -22,6 +22,7 @@ python3 scripts/check_role_learning.py
 
 ## 요구사항과 연구 계약
 
+- [기억과 전문성 공유 검토](docs/expertise-memory-review.md) — [#23](https://github.com/callin2/MAGI/issues/23), 검토 제안이며 구현 결정은 아님.
 - [상위 요구사항 #1](https://github.com/callin2/MAGI/issues/1)
 - [세 독립 평가 보고서](https://github.com/callin2/MAGI/issues/1#issuecomment-6205482424)
 - [해석·판단 기준 평가 계약](docs/evaluation-contract.md) — [#2](https://github.com/callin2/MAGI/issues/2)
