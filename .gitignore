@@ -1,2 +1,3 @@
 __pycache__/
 *.py[cod]
+experiments/effectiveness-20261018/**/*.sqlite

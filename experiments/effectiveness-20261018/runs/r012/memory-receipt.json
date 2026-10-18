@@ -1,0 +1,21 @@
+{
+  "id": "31c6ea4d-704a-4162-873c-c5de06b30d6c",
+  "at": "2026-10-18T10:42:22.011805Z",
+  "binding_id": "r012",
+  "agent_id": "r012",
+  "role_id": "work-author",
+  "role_version": 1,
+  "state_id": "work-author",
+  "revision": 11,
+  "task_id": "code",
+  "session_id": "r012",
+  "run_id": "r012",
+  "mode": "none",
+  "context": {
+    "workspace_type": "local-work-pilot"
+  },
+  "knowledge": [],
+  "conflicts": [],
+  "excluded_ids": [],
+  "input_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+}

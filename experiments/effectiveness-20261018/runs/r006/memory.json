@@ -1,0 +1,70 @@
+[
+  {
+    "conditions": {
+      "workspace_type": "local-work-pilot"
+    },
+    "conflict_key": "completion-requires-evidence",
+    "fact": "Integration calls accepted complete evidence=[] as done; tracker recovery added a regression test that rejects empty evidence, and the combined tracker/evaluator suite passes.",
+    "falsifier": "A valid completed work item with no evidence is accepted by the authoritative completion validator without reducing correctness.",
+    "grants": [],
+    "hypothesis": "A completion gate that requires nonempty evidence prevents false done states caused by structurally complete but unsubstantiated reports.",
+    "id": "observed-integration-failures-evidence-gate",
+    "kind": "technical",
+    "owner": "work-observer",
+    "rule": "When marking work done, reject the state unless evidence is nonempty and validate that condition in the recovery regression suite.",
+    "scope": "role",
+    "source_id": "observed-integration-failures",
+    "state_id": "work-author",
+    "status": "active",
+    "validation": {
+      "lesson_id": "observed-integration-failures-evidence-gate",
+      "reference": "actual-observation-and-source-review",
+      "tests": [
+        {
+          "case": "source observation explicitly supports scoped rule",
+          "passed": true
+        },
+        {
+          "case": "counterexample outside existing goal/current implementation is not automatically accepted",
+          "counterexample": true,
+          "passed": true
+        }
+      ]
+    },
+    "version": 1
+  },
+  {
+    "conditions": {
+      "workspace_type": "local-work-pilot"
+    },
+    "conflict_key": "parent-lineage-integrity",
+    "fact": "Integration accepted init with T1→T2→T1 parents and accepted reuse under a different parent; recovery tests now reject parent cycles and parent reuse, while the evaluator rejects malformed state.",
+    "falsifier": "A recovery path can accept a cyclic parent graph or different-parent reuse while preserving valid lineage and evaluator correctness.",
+    "grants": [],
+    "hypothesis": "Validating parent-graph acyclicity and immutable parent ownership at recovery boundaries prevents malformed tracker lineage from being reintroduced.",
+    "id": "observed-integration-failures-parent-integrity",
+    "kind": "technical",
+    "owner": "work-observer",
+    "rule": "At initialization and recovery, reject parent cycles, reject reuse under a different parent, and run regression tests for both invariants.",
+    "scope": "role",
+    "source_id": "observed-integration-failures",
+    "state_id": "work-author",
+    "status": "active",
+    "validation": {
+      "lesson_id": "observed-integration-failures-parent-integrity",
+      "reference": "actual-observation-and-source-review",
+      "tests": [
+        {
+          "case": "source observation explicitly supports scoped rule",
+          "passed": true
+        },
+        {
+          "case": "counterexample outside existing goal/current implementation is not automatically accepted",
+          "counterexample": true,
+          "passed": true
+        }
+      ]
+    },
+    "version": 1
+  }
+]

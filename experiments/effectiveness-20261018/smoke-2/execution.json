@@ -1,0 +1,33 @@
+{
+  "started_at": "2026-10-18T10:40:37.324Z",
+  "ended_at": "2026-10-18T10:40:37.894Z",
+  "elapsed_seconds": 0.5706703,
+  "model_calls": 1,
+  "tool_calls": 0,
+  "tool_errors": 0,
+  "stop": "error",
+  "provider_error": true,
+  "provider": "atomic-8317",
+  "configured_model": "gpt-5.5-medium",
+  "usage": [
+    {
+      "input": 0,
+      "output": 0,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 0,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    }
+  ],
+  "api_cost_usd": null,
+  "reason_cost_unknown": "Configured proxy prices and upstream billing not independently verified",
+  "fresh_conversation": true,
+  "history_messages_at_start": 1,
+  "external_tools": false
+}

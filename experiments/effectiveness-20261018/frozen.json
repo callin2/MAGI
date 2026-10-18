@@ -1,0 +1,31 @@
+{
+  "frozen_at": "2026-10-18T10:42:22.482396Z",
+  "base_commit": "244c7c76624e086331ccf463d4b71c2912ecaf9e",
+  "provider": "atomic-8317",
+  "model": "gpt-6-luna",
+  "thinking": "provider default; client reasoning parameter not sent",
+  "runs_sha256": "31fbf7ca1c2813632fbd225ff791275e060244df4059301ed77ff249d7e20605",
+  "files": {
+    "docs/effectiveness-verification-20261018.md": "4d968677cde0506324e959d4519828d25640208ce07f398f77eda5bf98e4d82c",
+    "scripts/effectiveness/evaluate.py": "f61c64f727ce553dd0c06516325d204d6c923f19e19d1eca66f253b2f15a2070",
+    "scripts/effectiveness/import_checks.py": "9b09141f72341d66131fc9eeed7465b9bca043dd086a65b8b59b5c9eba02a390",
+    "scripts/effectiveness/prepare.py": "c6a334f312bb637a2bec9d50325830e0b5f8ec43fb2079bc0a1049993ccf8954",
+    "scripts/effectiveness/run.mjs": "48b1d94c8135f4d60e48ad9171e2ebeacdf659fc945528e46c24193af6ec0219",
+    "scripts/effectiveness/test_evidence.py": "19028dc9384fa4571ba8a00b38fbeca91ebdfbcb11e02dabbf41228aa415f90f",
+    "experiments/effectiveness-20261018/source/current-pilot.md": "ed0a85f733d1b3789dae225ab5dc6b3000adacb9a2dc78645e8eac465c957911",
+    "experiments/effectiveness-20261018/source/current-readme.md": "af76e4a5b2905b730e40abfc9c2aabeecfd45c62cba4dff364459c70ce71dad5",
+    "experiments/effectiveness-20261018/source/expertise-proposal.md": "6a627aa505d22d900d55e0cf1bbafccc3b45c8bff767b58f33dcbf050817fab1",
+    "experiments/effectiveness-20261018/source/historical-memory-requests.json": "dc50450108a570eb7ee6c01a2de0745c537fb2e69a927ac6c8e1f82983f77d5d",
+    "experiments/effectiveness-20261018/source/test_tracker.py": "4d1704c1228702c0bb84b3fe24805e08a02b313659201959efa568548128915d",
+    "experiments/effectiveness-20261018/source/tracker.py": "3eb7d01f10834fdf4c47cb82f03f0651d620b9237c8b5fcf83ae33b050814989"
+  },
+  "source_defect": "Existing init accepts done with empty evidence; reproduced before experiment",
+  "shared_context": "MCP unavailable; no claim of reload/application",
+  "historical_training_cost": null,
+  "limits": {
+    "model_turns": 16,
+    "tool_calls": 60,
+    "seconds": 300,
+    "max_output_tokens_per_turn": 8192
+  }
+}

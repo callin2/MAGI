@@ -1,0 +1,124 @@
+{
+  "id": "67d2a0f8-5de0-4dfa-b4c3-1d4bee4c2b9e",
+  "at": "2026-10-18T10:42:21.778134Z",
+  "binding_id": "r007",
+  "agent_id": "r007",
+  "role_id": "work-author",
+  "role_version": 1,
+  "state_id": "work-author",
+  "revision": 11,
+  "task_id": "code",
+  "session_id": "r007",
+  "run_id": "r007",
+  "mode": "lesson",
+  "context": {
+    "workspace_type": "local-work-pilot"
+  },
+  "knowledge": [
+    {
+      "conditions": {
+        "workspace_type": "local-work-pilot"
+      },
+      "conflict_key": "documentation-evidence-and-decision-boundary",
+      "fact": "Review corrected a draft that conflated the target natural-language planning runtime with the current memory/tool implementation, and then removed a universal human approval boundary that contradicted the existing decision principle; the revised artifact distinguishes technical judgment, validation, adoption, and revocation within existing goals from new preference, value, or permission decisions.",
+      "falsifier": "A document that merges target and current implementation and adds universal approval for technical learning is shown by review to preserve accurate evidence scope and the established decision boundary without correction.",
+      "grants": [],
+      "hypothesis": "Separating documented target architecture from current implementation, while preserving the established human/agent decision boundary, reduces semantic drift without creating an extra approval gate for technical learning.",
+      "id": "observed-document-review-evidence-boundary",
+      "kind": "technical",
+      "owner": "work-observer",
+      "rule": "When reviewing technical documentation, label target and current evidence separately and route technical judgment, validation, adoption, and revocation through existing goals; require a new decision boundary only for genuinely new preferences, values, or permissions.",
+      "scope": "role",
+      "source_id": "observed-document-review",
+      "state_id": "work-author",
+      "status": "active",
+      "validation": {
+        "lesson_id": "observed-document-review-evidence-boundary",
+        "reference": "actual-observation-and-source-review",
+        "tests": [
+          {
+            "case": "source observation explicitly supports scoped rule",
+            "passed": true
+          },
+          {
+            "case": "counterexample outside existing goal/current implementation is not automatically accepted",
+            "counterexample": true,
+            "passed": true
+          }
+        ]
+      },
+      "version": 1
+    },
+    {
+      "conditions": {
+        "workspace_type": "local-work-pilot"
+      },
+      "conflict_key": "completion-requires-evidence",
+      "fact": "Integration calls accepted complete evidence=[] as done; tracker recovery added a regression test that rejects empty evidence, and the combined tracker/evaluator suite passes.",
+      "falsifier": "A valid completed work item with no evidence is accepted by the authoritative completion validator without reducing correctness.",
+      "grants": [],
+      "hypothesis": "A completion gate that requires nonempty evidence prevents false done states caused by structurally complete but unsubstantiated reports.",
+      "id": "observed-integration-failures-evidence-gate",
+      "kind": "technical",
+      "owner": "work-observer",
+      "rule": "When marking work done, reject the state unless evidence is nonempty and validate that condition in the recovery regression suite.",
+      "scope": "role",
+      "source_id": "observed-integration-failures",
+      "state_id": "work-author",
+      "status": "active",
+      "validation": {
+        "lesson_id": "observed-integration-failures-evidence-gate",
+        "reference": "actual-observation-and-source-review",
+        "tests": [
+          {
+            "case": "source observation explicitly supports scoped rule",
+            "passed": true
+          },
+          {
+            "case": "counterexample outside existing goal/current implementation is not automatically accepted",
+            "counterexample": true,
+            "passed": true
+          }
+        ]
+      },
+      "version": 1
+    },
+    {
+      "conditions": {
+        "workspace_type": "local-work-pilot"
+      },
+      "conflict_key": "parent-lineage-integrity",
+      "fact": "Integration accepted init with T1→T2→T1 parents and accepted reuse under a different parent; recovery tests now reject parent cycles and parent reuse, while the evaluator rejects malformed state.",
+      "falsifier": "A recovery path can accept a cyclic parent graph or different-parent reuse while preserving valid lineage and evaluator correctness.",
+      "grants": [],
+      "hypothesis": "Validating parent-graph acyclicity and immutable parent ownership at recovery boundaries prevents malformed tracker lineage from being reintroduced.",
+      "id": "observed-integration-failures-parent-integrity",
+      "kind": "technical",
+      "owner": "work-observer",
+      "rule": "At initialization and recovery, reject parent cycles, reject reuse under a different parent, and run regression tests for both invariants.",
+      "scope": "role",
+      "source_id": "observed-integration-failures",
+      "state_id": "work-author",
+      "status": "active",
+      "validation": {
+        "lesson_id": "observed-integration-failures-parent-integrity",
+        "reference": "actual-observation-and-source-review",
+        "tests": [
+          {
+            "case": "source observation explicitly supports scoped rule",
+            "passed": true
+          },
+          {
+            "case": "counterexample outside existing goal/current implementation is not automatically accepted",
+            "counterexample": true,
+            "passed": true
+          }
+        ]
+      },
+      "version": 1
+    }
+  ],
+  "conflicts": [],
+  "excluded_ids": [],
+  "input_sha256": "fbc854a94d6bb9f543e9d18643f14b884938549bd1378fe20de80b2b69442641"
+}

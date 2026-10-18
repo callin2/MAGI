@@ -1,0 +1,266 @@
+[
+  {
+    "request": {
+      "op": "state",
+      "id": "work-author",
+      "role_id": "work-author",
+      "role_version": 1,
+      "project": "recursive-work",
+      "purpose": "Produce evidence-bounded usable work packages",
+      "criteria": "Complete useful artifacts, reuse tasks, preserve technical/value boundary"
+    },
+    "result": {
+      "state": {
+        "id": "work-author",
+        "role_id": "work-author",
+        "role_version": 1,
+        "project": "recursive-work",
+        "purpose": "Produce evidence-bounded usable work packages",
+        "criteria": "Complete useful artifacts, reuse tasks, preserve technical/value boundary",
+        "active": true
+      },
+      "revision": 1
+    }
+  },
+  {
+    "request": {
+      "op": "bind",
+      "id": "trainer",
+      "agent_id": "work-observer",
+      "state_id": "work-author",
+      "role_id": "work-author",
+      "role_version": 1,
+      "project": "recursive-work"
+    },
+    "result": {
+      "binding": {
+        "id": "trainer",
+        "agent_id": "work-observer",
+        "state_id": "work-author",
+        "role_version": 1,
+        "role_id": "work-author",
+        "project": "recursive-work",
+        "active": true
+      },
+      "revision": 2
+    }
+  },
+  {
+    "request": {
+      "op": "event",
+      "binding_id": "trainer",
+      "scope": "role",
+      "event": {
+        "id": "observed-integration-failures",
+        "observation": "Actual integration calls accepted complete evidence=[] as done and accepted init with T1→T2→T1 parents. Tracker recovery added regression tests and now rejects empty evidence, parent cycles, and reuse under a different parent. Independent evaluator also rejects malformed state and empty checks. Combined 17 tests pass. File existence/hash proves artifact integrity, not full semantic correctness.",
+        "evidence": [
+          "tracker-recovery.md",
+          "scripts/work_pilot/test_tracker.py",
+          "scripts/work_pilot/test_evaluator.py"
+        ]
+      }
+    },
+    "result": {
+      "event_id": "observed-integration-failures",
+      "revision": 3
+    }
+  },
+  {
+    "request": {
+      "op": "event",
+      "binding_id": "trainer",
+      "scope": "role",
+      "event": {
+        "id": "observed-document-review",
+        "observation": "Actual decision work used local tracker to create/reuse leaf tasks and complete artifacts. Root review found draft conflated target natural-language planning runtime with current memory/tool implementation; corrected in v2. Root review then found v2 inserted a universal human approval boundary for technical learning, contrary to existing user principle; v3 distinguishes technical judgment/validation/adoption/revocation within existing goals from new preference/value/permission decisions. Tracker reopen allowed revised evidence and ancestor recertification.",
+        "evidence": [
+          "runs/initial/review-response.md",
+          "runs/initial/decision.md",
+          "runs/initial/decision-v2.md",
+          "runs/initial/decision-v3.md",
+          "runs/initial/calls.json"
+        ]
+      }
+    },
+    "result": {
+      "event_id": "observed-document-review",
+      "revision": 4
+    }
+  },
+  {
+    "request": {
+      "op": "candidate",
+      "binding_id": "trainer",
+      "lesson": {
+        "id": "observed-integration-failures-evidence-gate",
+        "source_id": "observed-integration-failures",
+        "fact": "Integration calls accepted complete evidence=[] as done; tracker recovery added a regression test that rejects empty evidence, and the combined tracker/evaluator suite passes.",
+        "hypothesis": "A completion gate that requires nonempty evidence prevents false done states caused by structurally complete but unsubstantiated reports.",
+        "rule": "When marking work done, reject the state unless evidence is nonempty and validate that condition in the recovery regression suite.",
+        "conditions": {
+          "workspace_type": "local-work-pilot"
+        },
+        "falsifier": "A valid completed work item with no evidence is accepted by the authoritative completion validator without reducing correctness.",
+        "kind": "technical",
+        "scope": "role",
+        "conflict_key": "completion-requires-evidence"
+      }
+    },
+    "result": {
+      "candidate_id": "observed-integration-failures-evidence-gate",
+      "revision": 5
+    }
+  },
+  {
+    "request": {
+      "op": "activate",
+      "binding_id": "trainer",
+      "lesson_id": "observed-integration-failures-evidence-gate",
+      "validation": {
+        "lesson_id": "observed-integration-failures-evidence-gate",
+        "reference": "actual-observation-and-source-review",
+        "tests": [
+          {
+            "case": "source observation explicitly supports scoped rule",
+            "passed": true
+          },
+          {
+            "case": "counterexample outside existing goal/current implementation is not automatically accepted",
+            "passed": true,
+            "counterexample": true
+          }
+        ]
+      }
+    },
+    "result": {
+      "lesson_id": "observed-integration-failures-evidence-gate",
+      "status": "active",
+      "revision": 6
+    }
+  },
+  {
+    "request": {
+      "op": "candidate",
+      "binding_id": "trainer",
+      "lesson": {
+        "id": "observed-integration-failures-parent-integrity",
+        "source_id": "observed-integration-failures",
+        "fact": "Integration accepted init with T1→T2→T1 parents and accepted reuse under a different parent; recovery tests now reject parent cycles and parent reuse, while the evaluator rejects malformed state.",
+        "hypothesis": "Validating parent-graph acyclicity and immutable parent ownership at recovery boundaries prevents malformed tracker lineage from being reintroduced.",
+        "rule": "At initialization and recovery, reject parent cycles, reject reuse under a different parent, and run regression tests for both invariants.",
+        "conditions": {
+          "workspace_type": "local-work-pilot"
+        },
+        "falsifier": "A recovery path can accept a cyclic parent graph or different-parent reuse while preserving valid lineage and evaluator correctness.",
+        "kind": "technical",
+        "scope": "role",
+        "conflict_key": "parent-lineage-integrity"
+      }
+    },
+    "result": {
+      "candidate_id": "observed-integration-failures-parent-integrity",
+      "revision": 7
+    }
+  },
+  {
+    "request": {
+      "op": "activate",
+      "binding_id": "trainer",
+      "lesson_id": "observed-integration-failures-parent-integrity",
+      "validation": {
+        "lesson_id": "observed-integration-failures-parent-integrity",
+        "reference": "actual-observation-and-source-review",
+        "tests": [
+          {
+            "case": "source observation explicitly supports scoped rule",
+            "passed": true
+          },
+          {
+            "case": "counterexample outside existing goal/current implementation is not automatically accepted",
+            "passed": true,
+            "counterexample": true
+          }
+        ]
+      }
+    },
+    "result": {
+      "lesson_id": "observed-integration-failures-parent-integrity",
+      "status": "active",
+      "revision": 8
+    }
+  },
+  {
+    "request": {
+      "op": "candidate",
+      "binding_id": "trainer",
+      "lesson": {
+        "id": "observed-document-review-evidence-boundary",
+        "source_id": "observed-document-review",
+        "fact": "Review corrected a draft that conflated the target natural-language planning runtime with the current memory/tool implementation, and then removed a universal human approval boundary that contradicted the existing decision principle; the revised artifact distinguishes technical judgment, validation, adoption, and revocation within existing goals from new preference, value, or permission decisions.",
+        "hypothesis": "Separating documented target architecture from current implementation, while preserving the established human/agent decision boundary, reduces semantic drift without creating an extra approval gate for technical learning.",
+        "rule": "When reviewing technical documentation, label target and current evidence separately and route technical judgment, validation, adoption, and revocation through existing goals; require a new decision boundary only for genuinely new preferences, values, or permissions.",
+        "conditions": {
+          "workspace_type": "local-work-pilot"
+        },
+        "falsifier": "A document that merges target and current implementation and adds universal approval for technical learning is shown by review to preserve accurate evidence scope and the established decision boundary without correction.",
+        "kind": "technical",
+        "scope": "role",
+        "conflict_key": "documentation-evidence-and-decision-boundary"
+      }
+    },
+    "result": {
+      "candidate_id": "observed-document-review-evidence-boundary",
+      "revision": 9
+    }
+  },
+  {
+    "request": {
+      "op": "activate",
+      "binding_id": "trainer",
+      "lesson_id": "observed-document-review-evidence-boundary",
+      "validation": {
+        "lesson_id": "observed-document-review-evidence-boundary",
+        "reference": "actual-observation-and-source-review",
+        "tests": [
+          {
+            "case": "source observation explicitly supports scoped rule",
+            "passed": true
+          },
+          {
+            "case": "counterexample outside existing goal/current implementation is not automatically accepted",
+            "passed": true,
+            "counterexample": true
+          }
+        ]
+      }
+    },
+    "result": {
+      "lesson_id": "observed-document-review-evidence-boundary",
+      "status": "active",
+      "revision": 10
+    }
+  },
+  {
+    "request": {
+      "op": "bind",
+      "id": "r007",
+      "agent_id": "r007",
+      "state_id": "work-author",
+      "role_id": "work-author",
+      "role_version": 1,
+      "project": "recursive-work"
+    },
+    "result": {
+      "binding": {
+        "id": "r007",
+        "agent_id": "r007",
+        "state_id": "work-author",
+        "role_version": 1,
+        "role_id": "work-author",
+        "project": "recursive-work",
+        "active": true
+      },
+      "revision": 11
+    }
+  }
+]
