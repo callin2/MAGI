@@ -1,4 +1,15 @@
+---
+id: magi.effectiveness-semantic-review-20261018
+type: report
+status: recorded
+owner: MAGI
+reviewed: 2026-10-18
+issue: https://github.com/callin2/MAGI/issues/18
+---
+
 # 자동 판정과 실제 내용의 분리 검토
+
+[문서 목차](README.md) · 해당 실험 당시의 기록. 후속 결과는 목차의 연구 기록에서 확인한다.
 
 [주 비교 문서](effectiveness-verification-20261018.md) · [원판정 코드](../scripts/effectiveness/evaluate.py)
 
@@ -21,7 +32,7 @@ r003의 고정 판정은 `memory-benefit.status`가 `unproven` 대신 `experimen
 
 이 문서들의 명령 안내는 제공된 과거 README/pilot을 기준으로 한다. 별도 Windows 재검증에서 드러난 기존 자료의 UTF-8/줄바꿈 문제는 worker에게 제공되지 않은 새 관측이므로 그 설명을 worker의 기억 실패로 채점하지 않는다. 실제 고객용 최종 문서로 채택할 때에는 이 제한을 반영해야 한다.
 
-나머지 완료 산출물과 전체 원판정 결과를 마지막에 함께 정리한다.
+전체 원판정 결과는 [주 비교 보고서](effectiveness-verification-20261018.md)에 있다.
 
 ## 코드의 실제 실패와 채택 범위
 

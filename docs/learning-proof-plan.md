@@ -1,4 +1,15 @@
+---
+id: magi.learning-proof-plan
+type: plan
+status: historical-proposal
+owner: MAGI
+reviewed: 2026-10-18
+issue: https://github.com/callin2/MAGI/issues/18
+---
+
 # MAGI 판단: 학습 효과 입증에 필요한 것 — #18
+
+[문서 목차](README.md) · 초기 제안 기록. 후속 실행은 [실제 업무 파일럿](recursive-work-pilot.md)과 [효과 비교](effectiveness-verification-20261018.md)에 있다. 제안의 48회와 이후 실행의 22회, F 조건의 정의는 서로 다르다.
 
 ## 판정
 

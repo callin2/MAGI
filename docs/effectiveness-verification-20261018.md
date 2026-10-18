@@ -1,4 +1,15 @@
+---
+id: magi.effectiveness-verification-20261018
+type: report
+status: recorded
+owner: MAGI
+reviewed: 2026-10-18
+issue: https://github.com/callin2/MAGI/issues/18
+---
+
 # MAGI 실제 효과 검증 — 2026-10-18
+
+[문서 목차](README.md) · 해당 실험 당시의 기록. 후속 결과는 목차의 연구 기록에서 확인한다.
 
 관련 업무: [#18](https://github.com/callin2/MAGI/issues/18), [#19](https://github.com/callin2/MAGI/issues/19).
 
@@ -93,12 +104,4 @@ Windows 증거 저장의 줄바꿈 문제와 자동 승인 검토 후 수행한 
 
 ## 자료 재확인
 
-모델 호출 없이 보관 자료를 확인한다. Windows에서는 UTF-8 모드를 명시한다.
-
-```sh
-python -X utf8 scripts/effectiveness/verify_evidence.py
-python -X utf8 scripts/effectiveness/evaluate.py
-python -X utf8 scripts/effectiveness/summarize.py
-```
-
-`evaluate.py`는 저장된 후보 코드의 시험을 다시 실행하며 원래 실패도 재현한다. `collect.py`는 이미 채점한 실행을 재시험하지 않고 집계한다. `prepare.py`는 기존 frozen 자료를 덮어쓰지 않고, `run.mjs`는 완료된 실행을 재생성하지 않는다. 새 연구는 새 실험 식별자와 사전 등록을 사용해야 한다.
+명령과 각 명령이 다시 쓰는 파일은 [실행·검증 안내](verification.md)에 모았다. 원래 실패도 보존된 판정의 일부다. 새 연구는 새 실험 식별자와 사전 등록을 사용한다.
