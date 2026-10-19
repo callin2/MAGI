@@ -1,0 +1,7 @@
+{
+  "read": false,
+  "net": false,
+  "child": false,
+  "worker": false,
+  "addons": false
+}

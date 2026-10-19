@@ -1,0 +1,243 @@
+{
+  "checks": [
+    {
+      "id": "frozen:experiments/cross-system-20261019/source/experience-A.json",
+      "passed": true
+    },
+    {
+      "id": "frozen:experiments/cross-system-20261019/source/preregistration.md",
+      "passed": true
+    },
+    {
+      "id": "frozen:experiments/cross-system-20261019/source/provenance.json",
+      "passed": true
+    },
+    {
+      "id": "frozen:experiments/cross-system-20261019/source/public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "frozen:experiments/cross-system-20261019/source/task.md",
+      "passed": true
+    },
+    {
+      "id": "frozen:experiments/cross-system-20261019/source/verdict-before.mjs",
+      "passed": true
+    },
+    {
+      "id": "frozen:experiments/cross-system-20261019/source/verdict-upstream-reference.mjs",
+      "passed": true
+    },
+    {
+      "id": "frozen:scripts/cross_system/check.py",
+      "passed": true
+    },
+    {
+      "id": "frozen:scripts/cross_system/judge.mjs",
+      "passed": true
+    },
+    {
+      "id": "frozen:scripts/cross_system/prepare.py",
+      "passed": true
+    },
+    {
+      "id": "frozen:scripts/cross_system/provider.mjs",
+      "passed": true
+    },
+    {
+      "id": "frozen:scripts/cross_system/run.mjs",
+      "passed": true
+    },
+    {
+      "id": "frozen:scripts/cross_system/smoke.mjs",
+      "passed": true
+    },
+    {
+      "id": "manifest",
+      "passed": true
+    },
+    {
+      "id": "b001:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "b001:verdict.mjs",
+      "passed": true
+    },
+    {
+      "id": "b001:memory.json",
+      "passed": true
+    },
+    {
+      "id": "b001:task.md",
+      "passed": true
+    },
+    {
+      "id": "b001:memory-exact-projection",
+      "passed": true
+    },
+    {
+      "id": "b001:not-executed",
+      "passed": true
+    },
+    {
+      "id": "b002:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "b002:verdict.mjs",
+      "passed": true
+    },
+    {
+      "id": "b002:memory.json",
+      "passed": true
+    },
+    {
+      "id": "b002:task.md",
+      "passed": true
+    },
+    {
+      "id": "b002:memory-exact-projection",
+      "passed": true
+    },
+    {
+      "id": "b002:not-executed",
+      "passed": true
+    },
+    {
+      "id": "b003:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "b003:verdict.mjs",
+      "passed": true
+    },
+    {
+      "id": "b003:memory.json",
+      "passed": true
+    },
+    {
+      "id": "b003:task.md",
+      "passed": true
+    },
+    {
+      "id": "b003:memory-exact-projection",
+      "passed": true
+    },
+    {
+      "id": "b003:not-executed",
+      "passed": true
+    },
+    {
+      "id": "b004:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "b004:verdict.mjs",
+      "passed": true
+    },
+    {
+      "id": "b004:memory.json",
+      "passed": true
+    },
+    {
+      "id": "b004:task.md",
+      "passed": true
+    },
+    {
+      "id": "b004:memory-exact-projection",
+      "passed": true
+    },
+    {
+      "id": "b004:not-executed",
+      "passed": true
+    },
+    {
+      "id": "b005:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "b005:verdict.mjs",
+      "passed": true
+    },
+    {
+      "id": "b005:memory.json",
+      "passed": true
+    },
+    {
+      "id": "b005:task.md",
+      "passed": true
+    },
+    {
+      "id": "b005:memory-exact-projection",
+      "passed": true
+    },
+    {
+      "id": "b005:not-executed",
+      "passed": true
+    },
+    {
+      "id": "b006:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "b006:verdict.mjs",
+      "passed": true
+    },
+    {
+      "id": "b006:memory.json",
+      "passed": true
+    },
+    {
+      "id": "b006:task.md",
+      "passed": true
+    },
+    {
+      "id": "b006:memory-exact-projection",
+      "passed": true
+    },
+    {
+      "id": "b006:not-executed",
+      "passed": true
+    },
+    {
+      "id": "single-preflight-denial",
+      "passed": true
+    },
+    {
+      "id": "node-syntax:provider.mjs",
+      "passed": true
+    },
+    {
+      "id": "node-syntax:run.mjs",
+      "passed": true
+    },
+    {
+      "id": "node-syntax:smoke.mjs",
+      "passed": true
+    },
+    {
+      "id": "node-syntax:judge.mjs",
+      "passed": true
+    },
+    {
+      "id": "python-syntax:prepare.py",
+      "passed": true
+    },
+    {
+      "id": "python-syntax:check.py",
+      "passed": true
+    },
+    {
+      "id": "public-tests-on-original",
+      "passed": true
+    },
+    {
+      "id": "node-denies-secret-network-child-worker-addons",
+      "passed": true
+    }
+  ],
+  "passed": 59,
+  "total": 59,
+  "success": true
+}
