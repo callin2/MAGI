@@ -1,0 +1,54 @@
+{
+  "id": "inventory-luna-G-0",
+  "phase": "screen",
+  "domain": "inventory",
+  "family": "luna",
+  "model_id": "gpt-6-luna",
+  "arm": "G",
+  "repetition": 0,
+  "status": "executed",
+  "valid": true,
+  "task_success": true,
+  "package_complete": true,
+  "behavior_passed": 27,
+  "behavior_total": 27,
+  "axes": {
+    "boundary": {
+      "passed": 12,
+      "total": 12
+    },
+    "counterexample": {
+      "passed": 4,
+      "total": 4
+    },
+    "normal": {
+      "passed": 2,
+      "total": 2
+    },
+    "regression": {
+      "passed": 9,
+      "total": 9
+    }
+  },
+  "schema_valid": true,
+  "artifacts_present": true,
+  "successful_worker_test": true,
+  "response_models": [
+    "gpt-6-luna"
+  ],
+  "elapsed_seconds": 28.161137957999998,
+  "model_calls": 6,
+  "tool_calls": 7,
+  "tool_errors": 0,
+  "stop": "settled",
+  "usage": {
+    "input": 16860,
+    "output": 2441,
+    "cacheRead": 0,
+    "cacheWrite": 0,
+    "totalTokens": 19301
+  },
+  "user_corrections": 0,
+  "cash_cost_usd": null,
+  "human_time_saving": null
+}

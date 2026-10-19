@@ -1,0 +1,54 @@
+{
+  "id": "calendar-luna-G-0",
+  "phase": "screen",
+  "domain": "calendar",
+  "family": "luna",
+  "model_id": "gpt-6-luna",
+  "arm": "G",
+  "repetition": 0,
+  "status": "executed",
+  "valid": true,
+  "task_success": true,
+  "package_complete": true,
+  "behavior_passed": 24,
+  "behavior_total": 24,
+  "axes": {
+    "boundary": {
+      "passed": 12,
+      "total": 12
+    },
+    "counterexample": {
+      "passed": 6,
+      "total": 6
+    },
+    "normal": {
+      "passed": 2,
+      "total": 2
+    },
+    "regression": {
+      "passed": 4,
+      "total": 4
+    }
+  },
+  "schema_valid": true,
+  "artifacts_present": true,
+  "successful_worker_test": true,
+  "response_models": [
+    "gpt-6-luna"
+  ],
+  "elapsed_seconds": 26.295453707999997,
+  "model_calls": 6,
+  "tool_calls": 7,
+  "tool_errors": 0,
+  "stop": "settled",
+  "usage": {
+    "input": 15308,
+    "output": 2329,
+    "cacheRead": 0,
+    "cacheWrite": 0,
+    "totalTokens": 17637
+  },
+  "user_corrections": 0,
+  "cash_cost_usd": null,
+  "human_time_saving": null
+}

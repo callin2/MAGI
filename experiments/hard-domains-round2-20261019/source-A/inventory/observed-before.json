@@ -1,0 +1,1150 @@
+{
+  "domain": "inventory",
+  "cases": [
+    {
+      "id": "empty",
+      "axis": "normal",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "simple-reserve",
+      "axis": "normal",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "commit-consumes-once",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "cancel-releases-once",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "duplicate-receipt",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "now": 2,
+        "on_hand": {
+          "s": 10
+        },
+        "available": {
+          "s": 7
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 3,
+            "expires_at": 10,
+            "state": "reserved"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          }
+        ]
+      },
+      "actual": {
+        "now": 2,
+        "on_hand": {
+          "s": 10
+        },
+        "available": {
+          "s": 4
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 3,
+            "expires_at": 12,
+            "state": "reserved"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          }
+        ]
+      }
+    },
+    {
+      "id": "duplicate-business-new-receipt",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "now": 2,
+        "on_hand": {
+          "s": 10
+        },
+        "available": {
+          "s": 7
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 3,
+            "expires_at": 10,
+            "state": "reserved"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "r2",
+            "status": "reserved"
+          }
+        ]
+      },
+      "actual": {
+        "now": 2,
+        "on_hand": {
+          "s": 10
+        },
+        "available": {
+          "s": 4
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 3,
+            "expires_at": 12,
+            "state": "reserved"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "r2",
+            "status": "reserved"
+          }
+        ]
+      }
+    },
+    {
+      "id": "double-cancel",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "now": 2,
+        "on_hand": {
+          "s": 10
+        },
+        "available": {
+          "s": 10
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 3,
+            "expires_at": 10,
+            "state": "cancelled"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "c1",
+            "status": "cancelled"
+          },
+          {
+            "request_id": "c2",
+            "status": "cancelled"
+          }
+        ]
+      },
+      "actual": {
+        "now": 2,
+        "on_hand": {
+          "s": 10
+        },
+        "available": {
+          "s": 13
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 3,
+            "expires_at": 10,
+            "state": "cancelled"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "c1",
+            "status": "cancelled"
+          },
+          {
+            "request_id": "c2",
+            "status": "cancelled"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cancel-after-commit",
+      "axis": "regression",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "now": 2,
+        "on_hand": {
+          "s": 7
+        },
+        "available": {
+          "s": 7
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 3,
+            "expires_at": 10,
+            "state": "committed"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "c1",
+            "status": "committed"
+          },
+          {
+            "request_id": "c2",
+            "status": "committed"
+          }
+        ]
+      },
+      "actual": {
+        "now": 2,
+        "on_hand": {
+          "s": 7
+        },
+        "available": {
+          "s": 10
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 3,
+            "expires_at": 10,
+            "state": "cancelled"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "c1",
+            "status": "committed"
+          },
+          {
+            "request_id": "c2",
+            "status": "cancelled"
+          }
+        ]
+      }
+    },
+    {
+      "id": "commit-after-cancel",
+      "axis": "regression",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "now": 2,
+        "on_hand": {
+          "s": 10
+        },
+        "available": {
+          "s": 10
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 3,
+            "expires_at": 10,
+            "state": "cancelled"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "c1",
+            "status": "cancelled"
+          },
+          {
+            "request_id": "k2",
+            "status": "cancelled"
+          }
+        ]
+      },
+      "actual": {
+        "now": 2,
+        "on_hand": {
+          "s": 7
+        },
+        "available": {
+          "s": 10
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 3,
+            "expires_at": 10,
+            "state": "committed"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "c1",
+            "status": "cancelled"
+          },
+          {
+            "request_id": "k2",
+            "status": "committed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "unknown-cancel-tombstone",
+      "axis": "counterexample",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "now": 2,
+        "on_hand": {
+          "s": 10
+        },
+        "available": {
+          "s": 10
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": null,
+            "quantity": 0,
+            "expires_at": null,
+            "state": "cancelled"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "c1",
+            "status": "cancelled"
+          },
+          {
+            "request_id": "r1",
+            "status": "cancelled"
+          }
+        ]
+      },
+      "actual": {
+        "now": 2,
+        "on_hand": {
+          "s": 10
+        },
+        "available": {
+          "s": 7
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 3,
+            "expires_at": 12,
+            "state": "reserved"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "c1",
+            "status": "missing"
+          },
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          }
+        ]
+      }
+    },
+    {
+      "id": "unknown-commit-not-tombstone",
+      "axis": "counterexample",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "expiry-exact-boundary",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "now": 10,
+        "on_hand": {
+          "s": 10
+        },
+        "available": {
+          "s": 10
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 3,
+            "expires_at": 10,
+            "state": "expired"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "c1",
+            "status": "expired"
+          }
+        ]
+      },
+      "actual": {
+        "now": 10,
+        "on_hand": {
+          "s": 7
+        },
+        "available": {
+          "s": 7
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 3,
+            "expires_at": 10,
+            "state": "committed"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "c1",
+            "status": "committed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "just-before-expiry",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "replay-does-not-renew",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "now": 10,
+        "on_hand": {
+          "s": 10
+        },
+        "available": {
+          "s": 10
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 3,
+            "expires_at": 10,
+            "state": "expired"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "c1",
+            "status": "expired"
+          }
+        ]
+      },
+      "actual": {
+        "now": 10,
+        "on_hand": {
+          "s": 7
+        },
+        "available": {
+          "s": 4
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 3,
+            "expires_at": 18,
+            "state": "committed"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "c1",
+            "status": "committed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "late-replay-original-outcome",
+      "axis": "counterexample",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "now": 12,
+        "on_hand": {
+          "s": 10
+        },
+        "available": {
+          "s": 10
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 3,
+            "expires_at": 10,
+            "state": "expired"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "c1",
+            "status": "expired"
+          },
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          }
+        ]
+      },
+      "actual": {
+        "now": 12,
+        "on_hand": {
+          "s": 10
+        },
+        "available": {
+          "s": 7
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 3,
+            "expires_at": 22,
+            "state": "reserved"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "c1",
+            "status": "cancelled"
+          },
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          }
+        ]
+      }
+    },
+    {
+      "id": "new-receipt-after-expired",
+      "axis": "regression",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "now": 12,
+        "on_hand": {
+          "s": 10
+        },
+        "available": {
+          "s": 10
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 3,
+            "expires_at": 10,
+            "state": "expired"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "j1",
+            "status": "adjusted"
+          },
+          {
+            "request_id": "r2",
+            "status": "expired"
+          }
+        ]
+      },
+      "actual": {
+        "now": 12,
+        "on_hand": {
+          "s": 10
+        },
+        "available": {
+          "s": 4
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 3,
+            "expires_at": 22,
+            "state": "reserved"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "j1",
+            "status": "adjusted"
+          },
+          {
+            "request_id": "r2",
+            "status": "reserved"
+          }
+        ]
+      }
+    },
+    {
+      "id": "receipt-clock-never-rewinds",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "now": 20,
+        "on_hand": {
+          "s": 10
+        },
+        "available": {
+          "s": 7
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 3,
+            "expires_at": 30,
+            "state": "reserved"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "j1",
+            "status": "adjusted"
+          },
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          }
+        ]
+      },
+      "actual": {
+        "now": 5,
+        "on_hand": {
+          "s": 10
+        },
+        "available": {
+          "s": 7
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 3,
+            "expires_at": 15,
+            "state": "reserved"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "j1",
+            "status": "adjusted"
+          },
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rejected-reserve-retry",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "now": 3,
+        "on_hand": {
+          "s": 15
+        },
+        "available": {
+          "s": 4
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 11,
+            "expires_at": 13,
+            "state": "reserved"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "r1",
+            "status": "insufficient"
+          },
+          {
+            "request_id": "j1",
+            "status": "adjusted"
+          },
+          {
+            "request_id": "r1",
+            "status": "insufficient"
+          },
+          {
+            "request_id": "r2",
+            "status": "reserved"
+          }
+        ]
+      },
+      "actual": {
+        "now": 3,
+        "on_hand": {
+          "s": 15
+        },
+        "available": {
+          "s": 4
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 11,
+            "expires_at": 12,
+            "state": "reserved"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "r1",
+            "status": "insufficient"
+          },
+          {
+            "request_id": "j1",
+            "status": "adjusted"
+          },
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "r2",
+            "status": "insufficient"
+          }
+        ]
+      }
+    },
+    {
+      "id": "adjust-cannot-steal-held",
+      "axis": "regression",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "now": 1,
+        "on_hand": {
+          "s": 10
+        },
+        "available": {
+          "s": 2
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 8,
+            "expires_at": 10,
+            "state": "reserved"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "j1",
+            "status": "rejected"
+          }
+        ]
+      },
+      "actual": {
+        "now": 1,
+        "on_hand": {
+          "s": 7
+        },
+        "available": {
+          "s": -1
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 8,
+            "expires_at": 10,
+            "state": "reserved"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "j1",
+            "status": "adjusted"
+          }
+        ]
+      }
+    },
+    {
+      "id": "adjust-to-held-floor",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "negative-stock-rejected",
+      "axis": "regression",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "now": 1,
+        "on_hand": {
+          "s": 10
+        },
+        "available": {
+          "s": 10
+        },
+        "reservations": [],
+        "outcomes": [
+          {
+            "request_id": "j1",
+            "status": "rejected"
+          }
+        ]
+      },
+      "actual": {
+        "now": 1,
+        "on_hand": {
+          "s": -1
+        },
+        "available": {
+          "s": -1
+        },
+        "reservations": [],
+        "outcomes": [
+          {
+            "request_id": "j1",
+            "status": "adjusted"
+          }
+        ]
+      }
+    },
+    {
+      "id": "same-quantity-distinct-identities",
+      "axis": "counterexample",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "expiry-releases-for-second",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "now": 10,
+        "on_hand": {
+          "s": 10
+        },
+        "available": {
+          "s": 2
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 8,
+            "expires_at": 10,
+            "state": "expired"
+          },
+          {
+            "id": "b",
+            "sku": "s",
+            "quantity": 8,
+            "expires_at": 20,
+            "state": "reserved"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "r2",
+            "status": "reserved"
+          }
+        ]
+      },
+      "actual": {
+        "now": 10,
+        "on_hand": {
+          "s": 10
+        },
+        "available": {
+          "s": 2
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 8,
+            "expires_at": 10,
+            "state": "reserved"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "r2",
+            "status": "insufficient"
+          }
+        ]
+      }
+    },
+    {
+      "id": "commit-then-replenish",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "transport-conflict",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "throws": true
+      },
+      "actual": {
+        "now": 0,
+        "on_hand": {
+          "s": 10
+        },
+        "available": {
+          "s": 5
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 2,
+            "expires_at": 10,
+            "state": "reserved"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          }
+        ]
+      }
+    },
+    {
+      "id": "business-conflict-after-terminal",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "throws": true
+      },
+      "actual": {
+        "now": 2,
+        "on_hand": {
+          "s": 10
+        },
+        "available": {
+          "s": 8
+        },
+        "reservations": [
+          {
+            "id": "a",
+            "sku": "s",
+            "quantity": 2,
+            "expires_at": 12,
+            "state": "reserved"
+          }
+        ],
+        "outcomes": [
+          {
+            "request_id": "r1",
+            "status": "reserved"
+          },
+          {
+            "request_id": "c1",
+            "status": "cancelled"
+          },
+          {
+            "request_id": "r2",
+            "status": "reserved"
+          }
+        ]
+      }
+    },
+    {
+      "id": "two-skus-independent",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    }
+  ],
+  "passed": 10,
+  "total": 27,
+  "success": false
+}

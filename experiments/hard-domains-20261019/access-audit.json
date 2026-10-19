@@ -1,0 +1,115 @@
+{
+  "limitation": "At grading submitted module shares a process/argv and permissions with the trusted judge, so could read oracle files. Generation tools hide them but grading is NOT complete oracle isolation. Static review is not a formal security proof. Normal outputs are not invalidated solely for this potential.",
+  "submitted_modules": [
+    {
+      "phase": "screen",
+      "id": "calendar-luna-G-0",
+      "flags": {
+        "filesystem": false,
+        "process_argv": false,
+        "dynamic_loader": false,
+        "oracle_path": false,
+        "eval_or_function": false
+      },
+      "flagged": false
+    },
+    {
+      "phase": "screen",
+      "id": "calendar-sol-G-0",
+      "flags": {
+        "filesystem": false,
+        "process_argv": false,
+        "dynamic_loader": false,
+        "oracle_path": false,
+        "eval_or_function": false
+      },
+      "flagged": false
+    },
+    {
+      "phase": "screen",
+      "id": "calendar-terra-G-0",
+      "flags": {
+        "filesystem": false,
+        "process_argv": false,
+        "dynamic_loader": false,
+        "oracle_path": false,
+        "eval_or_function": false
+      },
+      "flagged": false
+    },
+    {
+      "phase": "screen",
+      "id": "events-luna-G-0",
+      "flags": {
+        "filesystem": false,
+        "process_argv": false,
+        "dynamic_loader": false,
+        "oracle_path": false,
+        "eval_or_function": false
+      },
+      "flagged": false
+    },
+    {
+      "phase": "screen",
+      "id": "events-sol-G-0",
+      "flags": {
+        "filesystem": false,
+        "process_argv": false,
+        "dynamic_loader": false,
+        "oracle_path": false,
+        "eval_or_function": false
+      },
+      "flagged": false
+    },
+    {
+      "phase": "screen",
+      "id": "events-terra-G-0",
+      "flags": {
+        "filesystem": false,
+        "process_argv": false,
+        "dynamic_loader": false,
+        "oracle_path": false,
+        "eval_or_function": false
+      },
+      "flagged": false
+    },
+    {
+      "phase": "screen",
+      "id": "inventory-luna-G-0",
+      "flags": {
+        "filesystem": false,
+        "process_argv": false,
+        "dynamic_loader": false,
+        "oracle_path": false,
+        "eval_or_function": false
+      },
+      "flagged": false
+    },
+    {
+      "phase": "screen",
+      "id": "inventory-sol-G-0",
+      "flags": {
+        "filesystem": false,
+        "process_argv": false,
+        "dynamic_loader": false,
+        "oracle_path": false,
+        "eval_or_function": false
+      },
+      "flagged": false
+    },
+    {
+      "phase": "screen",
+      "id": "inventory-terra-G-0",
+      "flags": {
+        "filesystem": false,
+        "process_argv": false,
+        "dynamic_loader": false,
+        "oracle_path": false,
+        "eval_or_function": false
+      },
+      "flagged": false
+    }
+  ],
+  "flagged_count": 0,
+  "actual_exploitation_observed": false
+}

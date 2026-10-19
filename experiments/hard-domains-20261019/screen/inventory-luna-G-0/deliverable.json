@@ -1,0 +1,1 @@
+{"schema_version":1,"summary":"Implemented deterministic warehouse reservation replay with request deduplication, monotonic receipt time, expiry, tombstones, terminal-state handling, and stock adjustment validation.","tests_run":["node test runner via provided tests tool: public.test.mjs and candidate.test.mjs (5 passed, 0 failed)"],"limitations":[]}

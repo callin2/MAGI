@@ -1,0 +1,5 @@
+Implemented replay logic in solution.mjs. Receipt time is monotonic, active holds expire before each receipt's command, and request identities retain both command fingerprints and original statuses. Reservation business identities enforce terms for established reservations, preserve terminal states, and represent unknown cancellation as a tombstone. Adjustments are checked against nonnegative on-hand stock and active holds.
+
+Validation run: provided test tool executed public.test.mjs and candidate.test.mjs; 5 tests passed, 0 failed. Candidate coverage includes duplicate delivery with expiry, cancellation tombstone behavior, terminal reservation non-resurrection, rejected adjustment, and request-ID conflict.
+
+Limits: implementation assumes the contract's well-formed input and known-SKU guarantees; it performs in-memory replay only and makes no external calls.

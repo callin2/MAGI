@@ -1,0 +1,139 @@
+{
+  "id": "calendar-actual-first-bundle-repair",
+  "rule": "Resolve civil labels under explicit zone/fold policy before comparing actual half-open intervals; elapsed duration and local labels differ. Preserve occurrence identity instead of collapsing equal clock strings. In this weekly availability source both-fold means two independent returned occurrences, not a universal policy for other booking consumers.",
+  "conditions": {
+    "source": "synthetic weekly availability repaired in actual G screen",
+    "scope": "five supported IANA zones, rule-local exclusions and independent occurrences; no universal interval boundary assumptions beyond the contract"
+  },
+  "provenance": "Newly acquired from actual successful Sol G screen on the synthetic first bundle, all three models passed that task; coordinator extracted this scoped lesson. Not autonomous memory extraction or a historical product incident.",
+  "source_run": "experiments/hard-domains-20261019/screen/calendar-sol-G-0",
+  "source_model": "gpt-6.1-sol",
+  "source_task_sha256": "dc807cbdac1100affdd2a0ffd469a6f38e0268e3ded57aaafcab16da784c12a6",
+  "before_passed": 10,
+  "after_passed": 24,
+  "total": 24,
+  "observed_checks": [
+    {
+      "id": "empty",
+      "axis": "normal",
+      "passed": true
+    },
+    {
+      "id": "simple-utc",
+      "axis": "normal",
+      "passed": true
+    },
+    {
+      "id": "winter-new-york",
+      "axis": "regression",
+      "passed": true
+    },
+    {
+      "id": "summer-new-york",
+      "axis": "boundary",
+      "passed": true
+    },
+    {
+      "id": "new-york-fold-earlier",
+      "axis": "boundary",
+      "passed": true
+    },
+    {
+      "id": "new-york-fold-later",
+      "axis": "counterexample",
+      "passed": true
+    },
+    {
+      "id": "new-york-fold-both",
+      "axis": "counterexample",
+      "passed": true
+    },
+    {
+      "id": "new-york-gap",
+      "axis": "boundary",
+      "passed": true
+    },
+    {
+      "id": "berlin-gap",
+      "axis": "boundary",
+      "passed": true
+    },
+    {
+      "id": "berlin-fold-both",
+      "axis": "counterexample",
+      "passed": true
+    },
+    {
+      "id": "lord-howe-half-hour-fold",
+      "axis": "counterexample",
+      "passed": true
+    },
+    {
+      "id": "kathmandu-quarter-offset",
+      "axis": "boundary",
+      "passed": true
+    },
+    {
+      "id": "adjacent-busy-allowed",
+      "axis": "regression",
+      "passed": true
+    },
+    {
+      "id": "one-minute-overlap",
+      "axis": "boundary",
+      "passed": true
+    },
+    {
+      "id": "busy-with-offset",
+      "axis": "boundary",
+      "passed": true
+    },
+    {
+      "id": "exclude-one-identity",
+      "axis": "counterexample",
+      "passed": true
+    },
+    {
+      "id": "same-label-distinct-rules",
+      "axis": "regression",
+      "passed": true
+    },
+    {
+      "id": "inclusive-local-effective-dates",
+      "axis": "boundary",
+      "passed": true
+    },
+    {
+      "id": "local-date-before-utc-date",
+      "axis": "boundary",
+      "passed": true
+    },
+    {
+      "id": "midnight-elapsed-duration",
+      "axis": "boundary",
+      "passed": true
+    },
+    {
+      "id": "range-end-equality",
+      "axis": "regression",
+      "passed": true
+    },
+    {
+      "id": "range-clip-whole-slot",
+      "axis": "boundary",
+      "passed": true
+    },
+    {
+      "id": "fold-duration-is-elapsed",
+      "axis": "boundary",
+      "passed": true
+    },
+    {
+      "id": "busy-one-fold-instant",
+      "axis": "counterexample",
+      "passed": true
+    }
+  ],
+  "worker_notes": "# Repair and validation\n\nThe module enumerates absolute minutes and obtains local labels through Intl.DateTimeFormat with the requested zone and a 00–23 hour cycle. Missing local times therefore never appear, while repeated times remain distinct absolute instants. Occurrences are grouped independently by rule and local date, then fold selection happens before containment or busy filtering. A day of padding ensures that the other side of a fold is considered even when outside the query.\n\nDurations are elapsed milliseconds. Busy conflicts use strict half-open overlap inequalities. Exclusions are keyed by rule ID and local date. Results retain distinct rules and resolved instants and sort by UTC start followed by ASCII ID comparison. Input arrays and objects are not modified.\n\n## Actual validation\n\nRan functions.tests after writing solution.mjs and candidate.test.mjs. Both public tests and nine candidate tests passed: 11 total, 0 failures. Tests cover New York fold modes and gap, fold selection before range/busy filtering, Berlin gap and fold, Lord Howe half-hour changes, Kathmandu's fractional offset and local date, explicit offset query and busy endpoints, elapsed duration across a fold, midnight crossing, inclusive rule dates, range equality, adjacent busy intervals versus true overlap, per-rule exclusions, ASCII ordering, frozen inputs, and a fourteen-day query crossing a year boundary.\n\n## Limits\n\nInputs are assumed well formed as contracted; there is no added validation for invalid IDs, dates, zones, or ranges. Minute enumeration and one-day padding target the specified five zones in 2024–2026 and at most fourteen elapsed days. Those zones have minute-aligned offsets and folds no larger than one hour in this period. This is not a general resolver for historical sub-minute offsets or multi-day date-line changes. Timezone rules come from the installed Node Intl database. No live calendar, network, or third-party package was accessed. No additional test suites or exhaustive transition matrix were run.\n",
+  "falsifier": "The same source contract still fails its frozen cases, or its explicit source-only policy is imposed unchanged on a different contract."
+}
