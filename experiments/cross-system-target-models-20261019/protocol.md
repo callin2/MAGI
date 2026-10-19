@@ -1,0 +1,17 @@
+# Three requested model families — separate fixed cross-system cohort
+
+User restriction: invoke only the explicitly selected luna, terra and sol IDs. No additional model generation. Previous GPT-4.1 Mini six-run results remain separate and are not pooled or reclassified.
+
+The exact version selection is required because the existing live Codex model list exposes multiple luna and sol versions. Inventory is read-only, using the existing unexpired Codex account credential in its original store. No key copies, OAuth refresh, new credentials, permission expansion or persistent configuration edits. selected-models.json records the user's explicit version resolution; no similar-model fallback.
+
+For each selected model reuse the exact six prior task/memory/public-test seeds (G/F/E × two repetitions), same E/G/F/G/F/E order, original source A and original historical defect B. This gives 18 fresh independent tool conversations. Original task/judge/fixed protocol bytes are preserved, including the counterexample instructions. Do not add the observed GPT-4.1 failures, a reference fix or hidden tests to model input. This is supplied-experience transfer, not autonomous retrieval. Different model/backend cohort, not a causal comparison with the earlier model.
+
+All selected models use the same medium reasoning request and original 16-call/60-tool/300-second per-run protocol. Preserve the old requested 8192 max output token parameter if the existing backend supports it; preflight must establish what is actually sent/accepted before scored task responses. No new account/model-selection spending limits are added. Provider input/output/cache usage is raw evidence; cash charges, coordinator/experience-creation cost and human time saving remain unknown.
+
+Use the installed Pi Codex Responses protocol adapter with the exact live model ID. Its transport template is never a generated substitute model. Instrument SSE metadata to retain both requested model and server-reported response model and raw usage without retaining reasoning text or auth headers. Abort on HTTP errors rather than retry a denied credential. Preserve unsuccessful preflights and any unstarted/uncertain task state.
+
+Same allowlisted worker files/tests, same Node permission boundary and same hidden exported-function/real-CLI behavioral checks as the original frozen task. Total success includes all 26 behavioral checks plus deliverable schema, artifacts, actual successful tests tool and seed integrity. Also report partial 0–26 behavioral scores per run and repair/regression/counterexample/integration axes; integrity checks never count as task success. Failures and inconclusive comparisons remain results, not replacement candidates.
+
+The coordinator has seen prior failures and the archived reference; the worker has not. This is not blinded task selection or a test of spontaneous discovery of a boundary explicitly stated in the current instructions. One target system/repair task, three models and only two repetitions per arm do not establish generality, significance or model-family-wide superiority.
+
+Provenance qualification: the pre-existing local farm_studio_api Git objects for source and archived fix match copied bytes exactly (local-reference-provenance.json). An independent remote lookup of fix ec21d3f5 returned404; independent public retrievability is not established. Treat the corrected reference as locally archived, not verified public upstream availability. Task/judge are not changed in response.

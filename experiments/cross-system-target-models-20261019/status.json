@@ -1,0 +1,17 @@
+{
+  "recorded_at": "2026-10-19T01:20:14.101634+00:00",
+  "status": "pending_exact_model_versions",
+  "actual_generation_calls_after_restriction": 0,
+  "planned_models": 3,
+  "planned_arms": [
+    "G",
+    "F",
+    "E"
+  ],
+  "planned_repetitions": 2,
+  "planned_runs": 18,
+  "previous_gpt41_results_pooled": false,
+  "missing": "Exact requested luna/terra/sol version combination; live inventory has multiple versions for luna and sol. Clarification question pending.",
+  "existing_inventory_status": 200,
+  "new_credentials_or_settings_changes": false
+}

@@ -1,0 +1,34 @@
+{
+  "verification": "Local pre-existing git objects only; public GitHub availability not established. Independent reviewer reported HTTP404 for upstream fix commit. Treat reference as locally archived provenance, not independently retrievable upstream proof.",
+  "source_repo_remote": "https://github.com/callin2/farm_studio_api.git",
+  "artifacts": [
+    {
+      "commit": "95b2388f8c233b60007aa2b0df8f82a80d7efbf9",
+      "parents": [
+        "58205a5747d81f4367d49d87ca0e695cfe966400"
+      ],
+      "tree": "0d38d14c027a1bd1832df813fb70781fef6944c5",
+      "committed_at": "2026-10-16T11:47:37+09:00",
+      "subject": "Remove abandoned language prototypes and stale API guidance (#196)",
+      "file": "tools/ghostflow-cli-ten-verdict.mjs",
+      "git_blob_id": "c64f94b1f20d3968c813e119f5e03e8ae5a47ca9",
+      "copied_bytes_sha256": "4477382ee51f6ee895a2de45b4adf0730a4dd2141525ff927957a60207d5a487",
+      "local_object_bytes_sha256": "4477382ee51f6ee895a2de45b4adf0730a4dd2141525ff927957a60207d5a487",
+      "local_object_matches_archived_file": true
+    },
+    {
+      "commit": "ec21d3f5b6921d4a62d7f74782caa6bc9cba4856",
+      "parents": [
+        "95b2388f8c233b60007aa2b0df8f82a80d7efbf9"
+      ],
+      "tree": "7f154df21819cc4955e8e9e7b99236a733b8c4cc",
+      "committed_at": "2026-10-16T13:13:55+09:00",
+      "subject": "fix: corroborate CLI verdicts with stored evidence",
+      "file": "tools/ghostflow-cli-ten-verdict.mjs",
+      "git_blob_id": "38504049fc4e6fa2939ebc5505e47344d0996143",
+      "copied_bytes_sha256": "5b389aa397b560255a6b28c7b7b7d5c7d482e78388ded376edffc79f301e1010",
+      "local_object_bytes_sha256": "5b389aa397b560255a6b28c7b7b7d5c7d482e78388ded376edffc79f301e1010",
+      "local_object_matches_archived_file": true
+    }
+  ]
+}
