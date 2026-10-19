@@ -1,0 +1,1 @@
+export function latest(readings){const state=new Map();for(const r of readings){const old=state.get(r.device);if(!old||r.observed_ms>old.observed_ms||(r.observed_ms===old.observed_ms&&r.reading_id>old.reading_id))state.set(r.device,r);}return Object.fromEntries([...state].map(([k,v])=>[k,v.value]));}

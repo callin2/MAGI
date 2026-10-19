@@ -1,0 +1,1 @@
+Synthetic reversible reward-credit consumer: duplicate delivery of a receipt is not a second credit; void reverses the original recorded credit once; unknown void has no effect; distinct receipts are distinct business effects.

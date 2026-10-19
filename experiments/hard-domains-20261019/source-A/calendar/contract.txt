@@ -1,0 +1,1 @@
+Synthetic single civil-time alarm: use the named IANA zone; nonexistent local times produce null; this source chooses the earlier occurrence at a fold. Alarm windows use half-open overlap.
