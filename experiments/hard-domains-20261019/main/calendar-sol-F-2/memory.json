@@ -1,0 +1,9 @@
+[
+  {
+    "rule": "Resolve civil-time labels under the named zone and the source ambiguity policy before reasoning about elapsed instants. Local labels can have zero or multiple instants; fixed offsets and inclusive interval ends can misclassify them. The earlier-fold choice belongs to this alarm source, not all future consumers.",
+    "conditions": {
+      "source_system": "synthetic single civil-time alarm",
+      "scope": "minute precision; earlier-fold policy only in this source; half-open intervals"
+    }
+  }
+]

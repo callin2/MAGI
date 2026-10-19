@@ -1,0 +1,9 @@
+[
+  {
+    "rule": "Choose ordering and identity from the business contract rather than arrival position, and test replay/permutation. In this unversioned snapshot source greatest observed time and its reading-id tie-break select one value. That policy is not a universal command to discard every late arrival in other consumers.",
+    "conditions": {
+      "source_system": "synthetic unversioned telemetry snapshot",
+      "scope": "one latest value per device; timestamp/id ordering is this source policy"
+    }
+  }
+]

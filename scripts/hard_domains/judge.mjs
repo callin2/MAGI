@@ -1,0 +1,6 @@
+// Coordinator-only golden cases from separately implemented Python oracles.
+import {readFileSync} from 'node:fs';import {pathToFileURL} from 'node:url';import {resolve} from 'node:path';import {isDeepStrictEqual} from 'node:util';
+const domain=process.argv[2],target=resolve(process.argv[3]),cases=JSON.parse(readFileSync(process.argv[4],'utf8'));let mod,loadError;try{mod=await import(pathToFileURL(target).href);}catch(e){loadError=e.message;}
+const fn={inventory:'replay',calendar:'plan',events:'aggregate'}[domain];const out=[];
+for(const c of cases){const input=structuredClone(c.input),before=structuredClone(input);let actual,error;try{if(loadError)throw Error(loadError);actual=await mod[fn](input);}catch(e){error=e.message;}const behavior=c.throws?error!==undefined:error===undefined&&isDeepStrictEqual(actual,c.value);out.push({id:c.id,axis:c.axis,passed:behavior&&isDeepStrictEqual(input,before),behavior_passed:behavior,input_preserved:isDeepStrictEqual(input,before),...(behavior?{}:{expected:c.throws?{throws:true}:c.value,actual,error})});}
+console.log(JSON.stringify({domain,cases:out,passed:out.filter(c=>c.passed).length,total:out.length,success:out.every(c=>c.passed)},null,2));process.exitCode=out.every(c=>c.passed)?0:1;

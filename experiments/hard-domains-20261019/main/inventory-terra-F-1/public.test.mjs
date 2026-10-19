@@ -1,0 +1,3 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {replay} from './solution.mjs';
+test("empty",async()=>assert.deepEqual(await replay({"stock": {"s": 10}, "operations": []}),{"now": 0, "on_hand": {"s": 10}, "available": {"s": 10}, "reservations": [], "outcomes": []}));
+test("simple-reserve",async()=>assert.deepEqual(await replay({"stock": {"s": 10}, "operations": [{"request_id": "r1", "type": "reserve", "at": 0, "reservation_id": "a", "sku": "s", "quantity": 3, "ttl_ms": 10}]}),{"now": 0, "on_hand": {"s": 10}, "available": {"s": 7}, "reservations": [{"id": "a", "sku": "s", "quantity": 3, "expires_at": 10, "state": "reserved"}], "outcomes": [{"request_id": "r1", "status": "reserved"}]}));
