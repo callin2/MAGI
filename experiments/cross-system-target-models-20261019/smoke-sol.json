@@ -1,0 +1,105 @@
+{
+  "family": "sol",
+  "provider": "openai-codex",
+  "requested_model": "gpt-6.1-sol",
+  "elapsed_seconds": 3.425,
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "toolCall",
+        "id": "call_1c801a4a81f342079bfcb933a9e782e0|fc_0dddbdf979702cba016ad570eda1388191a2bb9d9275250d03",
+        "name": "acknowledge",
+        "arguments": {
+          "text": "transport smoke OK"
+        }
+      }
+    ],
+    "provider": "openai-codex",
+    "model": "gpt-6.1-sol",
+    "usage": {
+      "input": 65,
+      "output": 22,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 87,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    "stopReason": "toolUse",
+    "timestamp": 1792372970503
+  },
+  "transport": {
+    "requested_model": "gpt-6.1-sol",
+    "response_models": [
+      "gpt-6.1-sol"
+    ],
+    "response_event_types": [
+      "response.created",
+      "response.completed"
+    ],
+    "http_statuses": [
+      200
+    ],
+    "raw_provider_usage": {
+      "input_tokens": 65,
+      "input_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 22,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 87,
+      "attribution": {
+        "items": {
+          "fc_0dddbdf979702cba016ad570eda1388191a2bb9d9275250d03": {
+            "input_tokens": 2,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "output_tokens": 22
+          },
+          "msg_0dddbdf979702cba016ad570ebdc748191b6480137c2a4c256": {
+            "input_tokens": 12,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "output_tokens": 0,
+            "content": [
+              {
+                "input_tokens": 12,
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "output_tokens": 0
+              }
+            ]
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "input_tokens": 17,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "output_tokens": 0
+          },
+          "tools": {
+            "input_tokens": 34,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    "request_payload": {
+      "model": "gpt-6.1-sol",
+      "reasoning": "medium",
+      "max_output_tokens": 256
+    }
+  }
+}

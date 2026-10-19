@@ -1,0 +1,24 @@
+{
+  "hostname": "callin-macmini.local",
+  "os": "macOS-15.6-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "node": "v25.2.1",
+  "provider": "existing-codex-chatgpt",
+  "models": [
+    {
+      "family": "luna",
+      "id": "gpt-6-luna"
+    },
+    {
+      "family": "terra",
+      "id": "gpt-5.6-terra"
+    },
+    {
+      "family": "sol",
+      "id": "gpt-6.1-sol"
+    }
+  ],
+  "auth_refresh": false,
+  "credential_relocation": false,
+  "settings_changed": false
+}

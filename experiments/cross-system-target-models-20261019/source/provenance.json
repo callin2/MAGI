@@ -1,0 +1,16 @@
+{
+  "source_A": {
+    "repository": "https://github.com/callin2/MAGI",
+    "commit": "d2769ab01c185ec8fff71cd31ad7b7dd4b0856d0",
+    "file": "experiments/effectiveness-20261018/runs/r005/memory.json",
+    "file_sha256": "5659a1d38d79f620df3bff4e04a5b10e012e6c2ace280a54477ae86e636bb88f",
+    "selected_id": "observed-integration-failures-evidence-gate"
+  },
+  "target_B": {
+    "repository": "https://github.com/callin2/farm_studio_api",
+    "defect_commit": "95b2388f8c233b60007aa2b0df8f82a80d7efbf9",
+    "upstream_fix_commit": "ec21d3f5b6921d4a62d7f74782caa6bc9cba4856",
+    "file": "tools/ghostflow-cli-ten-verdict.mjs",
+    "selection": "Historical real defect, not injected mutation. Coordinator saw upstream fix; workers cannot read it. Selection/author knowledge limits are disclosed."
+  }
+}

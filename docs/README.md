@@ -15,7 +15,7 @@ issue: https://github.com/callin2/MAGI/issues/26
 
 | 질문 | 기준 문서 | 읽을 내용 |
 |---|---|---|
-| luna·terra·sol 비교는 어디까지 왔나? | [세 모델 검증](cross-system-three-models-20261019.md) | 실시간 기존 목록 확인, 정확한 버전 지정 대기, 과제·판정 재사용 |
+| luna·terra·sol 비교는 어디까지 왔나? | [세 모델 검증](cross-system-three-models-20261019.md) | 세 정확한 ID·실제 연결 확인·18회 입력 사전 고정, 기존 과제·판정 재사용 |
 | 다른 시스템 전이는 실행됐나? | [2026-10-19 실제 전이 비교](cross-system-transfer-20261019.md) | 다른 실제 코드베이스·실제 모델 6회, G/F/E 전체 성공 0/2씩, 반례·회귀 실패 |
 | MAGI가 실제 업무에 도움이 됐나? | [실제 효과 비교](effectiveness-verification-20261018.md) | 22회 실행, 경험 전달과 정제의 차이, 비용·미입증 범위 |
 | 자동 채점 실패는 실제 오류였나? | [판정과 내용 검토](effectiveness-semantic-review-20261018.md) | 원점수와 사후 해석의 차이, 실제 코드·완료 실패 |

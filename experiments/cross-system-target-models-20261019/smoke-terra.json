@@ -1,0 +1,111 @@
+{
+  "family": "terra",
+  "provider": "openai-codex",
+  "requested_model": "gpt-5.6-terra",
+  "elapsed_seconds": 2.172,
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "toolCall",
+        "id": "call_a8798ed1ac87418782c03181f429e8a3|fc_070f5846d35c6adc016ad570ed9e748191bff53dee00515940",
+        "name": "acknowledge",
+        "arguments": {
+          "text": "transport smoke OK"
+        }
+      }
+    ],
+    "provider": "openai-codex",
+    "model": "gpt-5.6-terra",
+    "usage": {
+      "input": 65,
+      "output": 34,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 99,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    "stopReason": "toolUse",
+    "timestamp": 1792372971787
+  },
+  "transport": {
+    "requested_model": "gpt-5.6-terra",
+    "response_models": [
+      "gpt-5.6-terra"
+    ],
+    "response_event_types": [
+      "response.created",
+      "response.completed"
+    ],
+    "http_statuses": [
+      200
+    ],
+    "raw_provider_usage": {
+      "input_tokens": 65,
+      "input_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 34,
+      "output_tokens_details": {
+        "reasoning_tokens": 10
+      },
+      "total_tokens": 99,
+      "attribution": {
+        "items": {
+          "fc_070f5846d35c6adc016ad570ed9e748191bff53dee00515940": {
+            "input_tokens": 0,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "output_tokens": 24
+          },
+          "msg_070f5846d35c6adc016ad570ec740c8191b926148433e9355f": {
+            "input_tokens": 12,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "output_tokens": 0,
+            "content": [
+              {
+                "input_tokens": 12,
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "output_tokens": 0
+              }
+            ]
+          },
+          "rs_070f5846d35c6adc016ad570ecff98819191e241813350fada": {
+            "input_tokens": 2,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "output_tokens": 10
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "input_tokens": 17,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "output_tokens": 0
+          },
+          "tools": {
+            "input_tokens": 34,
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    "request_payload": {
+      "model": "gpt-5.6-terra",
+      "reasoning": "medium",
+      "max_output_tokens": 256
+    }
+  }
+}
