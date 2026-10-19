@@ -1,0 +1,36 @@
+{
+  "provider": "openrouter",
+  "model": "openai/gpt-4.1-mini",
+  "elapsed_seconds": 1.506,
+  "response": {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "toolCall",
+        "id": "call_w9lSFNN0CohVXdFon1ylL4qk",
+        "name": "acknowledge",
+        "arguments": {
+          "text": "transport smoke OK"
+        }
+      }
+    ],
+    "provider": "openrouter",
+    "model": "openai/gpt-4.1-mini",
+    "usage": {
+      "input": 60,
+      "output": 19,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 79,
+      "cost": {
+        "input": 0.000024,
+        "output": 0.0000304,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0.0000544
+      }
+    },
+    "stopReason": "toolUse",
+    "timestamp": 1792371584290
+  }
+}

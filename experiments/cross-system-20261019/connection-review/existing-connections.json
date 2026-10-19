@@ -1,0 +1,50 @@
+{
+  "existing_configured_providers": [
+    "openai",
+    "openrouter",
+    "ollama-cloud",
+    "lmstudio",
+    "ollama",
+    "github-copilot",
+    "zai-coding-plan"
+  ],
+  "configured_custom_providers": [
+    "openwebui",
+    "lmstudio",
+    "zai-coding-plan"
+  ],
+  "not_attempted": [
+    "zai (prior authentication denied; not retried)",
+    "OpenAI/GitHub OAuth (no token refresh or alternate credential use attempted)"
+  ],
+  "probes": [
+    {
+      "provider": "lmstudio",
+      "checked_at": "2026-10-19T00:58:34.000989+00:00",
+      "read_only": true,
+      "status": 200,
+      "models": [
+        "lobo-qwen3.8-27b-gsq-rco-mtp",
+        "qwen/qwen3.8-27b",
+        "text-embedding-nomic-embed-text-v1.5",
+        "text-embedding-qwen3-embedding-0.6b"
+      ]
+    },
+    {
+      "provider": "openwebui",
+      "checked_at": "2026-10-19T00:58:34.321684+00:00",
+      "read_only": true,
+      "status": null,
+      "error": "URLError"
+    },
+    {
+      "provider": "openrouter",
+      "checked_at": "2026-10-19T00:58:46.326019+00:00",
+      "read_only": true,
+      "status": 200,
+      "authenticated_read_succeeded": true
+    }
+  ],
+  "credential_values_output": false,
+  "config_changed": false
+}
