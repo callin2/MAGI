@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "summary": "Hardened verdict classification and CLI evidence loading so process captures, the saved source digest, and the real fixed-holdout output are required for success.",
+  "tests_run": [
+    "functions.tests (public.test.mjs and candidate.test.mjs): 7 passing"
+  ],
+  "limitations": [
+    "CLI behavior was validated through the classifier test suites; no separate end-to-end CLI fixture was run.",
+    "Unreadable non-ENOENT evidence files still surface as filesystem errors rather than being silently treated as absent."
+  ]
+}

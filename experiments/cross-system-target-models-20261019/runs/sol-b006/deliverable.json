@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "summary": "Hardened the historical farm_studio_api verdict classifier and CLI evidence loader. Completion now checks real turn captures; final candidates require matching stored-source SHA-256 and saved-candidate claims; fixed holdout success requires both report claims and a successful actual holdout capture. Added regression tests and preserved historical verdict overwrite protection.",
+  "tests_run": [
+    "functions.tests: public.test.mjs and candidate.test.mjs, 6 tests passed, 0 failed",
+    "Regression tests exercised the real runCli file-loading and output-writing path using temporary workspace fixtures, including missing and malformed evidence and overwrite refusal"
+  ],
+  "limitations": [
+    "No child-process CLI invocation was run; the exported runCli implementation used by the CLI was tested directly under the provided tool permissions.",
+    "Source and capture files are treated as supplied evidence; this standalone verifier does not rerun the compiler or holdout and does not authenticate capture provenance.",
+    "Multi-file verdict publication is protected against overwriting existing files but is not an atomic transaction."
+  ]
+}

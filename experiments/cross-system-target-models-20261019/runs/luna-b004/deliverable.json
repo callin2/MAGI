@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "summary": "Hardened farm_studio_api verdict classification and CLI evidence loading so process captures, source bytes, and fixed-holdout output must substantiate success.",
+  "tests_run": [
+    "functions.tests: public.test.mjs and candidate.test.mjs (6 tests passed)"
+  ],
+  "limitations": [
+    "CLI file-loading behavior was updated but not exercised end-to-end by the provided tests."
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "started_at": "2026-10-19T01:32:13.536Z",
+  "ended_at": "2026-10-19T01:34:21.378Z",
+  "elapsed_seconds": 127.84287095900008,
+  "model_calls": 6,
+  "tool_calls": 8,
+  "tool_errors": 1,
+  "stop": "settled",
+  "provider_error": false,
+  "provider": "openai-codex",
+  "configured_model": "gpt-5.6-terra",
+  "family": "terra",
+  "usage": [
+    {
+      "input": 620,
+      "output": 81,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 701,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 2094,
+      "output": 3001,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 5095,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 5153,
+      "output": 719,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 5872,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 4396,
+      "output": 23,
+      "cacheRead": 1536,
+      "cacheWrite": 0,
+      "totalTokens": 5955,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 6123,
+      "output": 623,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 6746,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 2258,
+      "output": 649,
+      "cacheRead": 4608,
+      "cacheWrite": 0,
+      "totalTokens": 7515,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    }
+  ],
+  "fresh_conversation": true,
+  "history_messages_at_start": 1,
+  "user_corrections": 0,
+  "api_cost_usd": null,
+  "human_time_saving": null
+}

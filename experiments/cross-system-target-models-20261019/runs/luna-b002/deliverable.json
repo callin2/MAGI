@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "summary": "Hardened the farm_studio_api verdict classifier and CLI evidence loading so success requires real turn captures, candidate source bytes, and fixed-holdout output.",
+  "tests_run": ["functions.tests: public.test.mjs and candidate.test.mjs (5 tests passed)", "Node test runner via functions.tests"],
+  "limitations": ["CLI file-loading behavior was not independently exercised by a filesystem integration test; validation covered the classifier through the supplied test runner."]
+}

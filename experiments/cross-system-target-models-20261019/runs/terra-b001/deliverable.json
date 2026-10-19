@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "summary": "Hardened verdict classification and CLI evidence loading so completion uses actual turn captures, final candidates require matching saved source bytes, and fixed holdout success requires both report claim and actual successful holdout output.",
+  "tests_run": [
+    "functions.tests: public.test.mjs and candidate.test.mjs (6 passing tests)"
+  ],
+  "limitations": [
+    "The CLI end-to-end filesystem path was reviewed but not exercised by a separate CLI integration test.",
+    "Only files available in the assigned workspace were used."
+  ]
+}

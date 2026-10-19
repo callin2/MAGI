@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "summary": "Hardened the standalone farm_studio_api verdict classifier and CLI to verify actual turn exits, saved-source SHA-256, and fixed-holdout output while preserving independent completion, final-candidate, and holdout statuses and historical verdict overwrite protections.",
+  "tests_run": [
+    "Ran the provided tests tool against public.test.mjs and candidate.test.mjs: 9 tests passed, 0 failed.",
+    "Regression tests exercised source strings and Buffers, missing or changed sources, missing or unsuccessful numeric process exits, report/capture holdout disagreement, clarification and answer completion, compiler pin and response-kind protections, saved/final hash checks, real CLI artifact loading, and historical output overwrite refusal."
+  ],
+  "limitations": [
+    "CLI regression tests imported the CLI module in-process with temporary argv settings; no child processes or external systems were used.",
+    "The classifier verifies supplied captures and source bytes; it does not rerun the compiler or holdout, authenticate artifact provenance, or independently verify the reported compiler pin."
+  ]
+}

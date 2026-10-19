@@ -1,4 +1,6 @@
-import { readFile, writeFile, stat } from 'node:fs/promises';
+import { readFile, writeFile, stat, readdir } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
 export function observedKind(stdout) {
@@ -13,41 +15,64 @@ export function observedKind(stdout) {
   } catch { return null; }
 }
 
-export function classifyCase(report, captures) {
-  const turns = report.turns.map((turn, index) => ({
+export function classifyCase(report, captures, evidence = {}) {
+  const turns = (Array.isArray(report.turns) ? report.turns : []).map((turn, index) => ({
     ...turn,
-    observedKind: observedKind(captures[index]?.stdout),
-    persistedCandidate: /^[a-f0-9]{64}$/.test(turn.sourceSha256 ?? '') && captures[index]?.stdout?.split('\n').some(line =>
-      line.startsWith('Saved ') && /SHA-256 ([a-f0-9]{64})\.$/.exec(line)?.[1] === turn.sourceSha256) === true,
+    observedKind: observedKind(captures?.[index]?.stdout),
+    persistedCandidate: typeof turn.sourceSha256 === 'string' && /^[a-f0-9]{64}$/.test(turn.sourceSha256)
+      && typeof captures?.[index]?.stdout === 'string' && captures[index].stdout.split('\n').some(line =>
+        line.startsWith('Saved ') && /SHA-256 ([a-f0-9]{64})\.$/.exec(line.replace(/\r$/, ''))?.[1] === turn.sourceSha256),
   }));
-  const kindMismatchTurns = turns.filter(turn => turn.expectedKind !== turn.observedKind).map(turn => turn.turn);
-  const complete = report.identity.currentPinParity === true && turns.length === report.identity.scriptedTurns && kindMismatchTurns.length === 0
-    && turns.every(turn => turn.exitCode === 0 && (turn.observedKind !== 'candidate' || turn.persistedCandidate));
-  const finalCandidate = complete && turns.at(-1)?.observedKind === 'candidate'
-    && turns.at(-1)?.sourceSha256 === report.finalSourceSha256;
-  return { ...report, turns, complete, finalCandidate,
-    fixedHoldoutPass: Boolean(finalCandidate && report.holdout?.exitCode === 0 && report.holdout.fixedExpectationsPassed),
+  const kindMismatchTurns = turns.filter(turn => turn.expectedKind !== turn.observedKind || turn.observedKind === null).map(turn => turn.turn);
+  const complete = report.identity?.currentPinParity === true && turns.length > 0
+    && turns.length === report.identity.scriptedTurns && kindMismatchTurns.length === 0
+    && turns.every((turn, index) => turn.exitCode === 0 && captures?.[index]?.exitCode === 0);
+  const source = evidence?.source;
+  const sourceSha256 = typeof source === 'string' || Buffer.isBuffer(source)
+    ? createHash('sha256').update(source).digest('hex') : null;
+  const finalTurn = turns.at(-1);
+  const finalCandidate = Boolean(complete && finalTurn?.observedKind === 'candidate'
+    && finalTurn.persistedCandidate && finalTurn.sourceSha256 === report.finalSourceSha256
+    && sourceSha256 === report.finalSourceSha256);
+  const fixedHoldoutPass = Boolean(finalCandidate && report.holdout?.exitCode === 0
+    && report.holdout.fixedExpectationsPassed === true && evidence?.holdout?.exitCode === 0
+    && typeof evidence.holdout.stdout === 'string'
+    && evidence.holdout.stdout.split('\n').some(line => line.startsWith('User expectations passed:')));
+  return { ...report, turns, complete, finalCandidate, fixedHoldoutPass,
     expectedCandidateTurns: turns.filter(turn => turn.expectedKind === 'candidate').length,
     observedCandidateTurns: turns.filter(turn => turn.observedKind === 'candidate').length,
     kindMismatchTurns,
   };
 }
 
-if (process.argv[1] === new URL(import.meta.url).pathname) {
+// Missing artifacts are absence of evidence, not synthetic successful captures.
+async function optionalRead(filename, json = false) {
+  try {
+    const contents = await readFile(filename);
+    return json ? JSON.parse(contents.toString('utf8')) : contents;
+  } catch (error) {
+    if (error.code === 'ENOENT' || (json && error instanceof SyntaxError)) return undefined;
+    throw error;
+  }
+}
+
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const directory = process.argv[2];
-  if (!directory) throw new Error('Usage: node tools/ghostflow-cli-ten-verdict.mjs PRIVATE_RUN_DIR');
-  const { readdir } = await import('node:fs/promises');
+  if (!directory) throw new Error('Usage: node verdict.mjs PRIVATE_RUN_DIR');
   const reports = [];
   const reportDirs = [];
   for (const name of (await readdir(directory)).sort()) {
-    if (!(await stat(path.join(directory, name))).isDirectory()) continue;
+    const dir = path.join(directory, name);
+    if (!(await stat(dir)).isDirectory()) continue;
     let report;
-    try { report = JSON.parse(await readFile(path.join(directory, name, 'report.json'), 'utf8')); }
+    try { report = JSON.parse(await readFile(path.join(dir, 'report.json'), 'utf8')); }
     catch (error) { if (error.code === 'ENOENT') continue; throw error; }
-    const captures = await Promise.all(report.turns.map(turn => readFile(path.join(directory, name, `turn-${turn.turn}.json`), 'utf8').then(JSON.parse)));
-    const verdict = classifyCase(report, captures);
-    reports.push(verdict);
-    reportDirs.push(path.join(directory, name));
+    const captures = await Promise.all((Array.isArray(report.turns) ? report.turns : []).map(turn =>
+      optionalRead(path.join(dir, `turn-${turn.turn}.json`), true)));
+    const source = await optionalRead(path.join(dir, `${name}.ghost.md`));
+    const holdout = await optionalRead(path.join(dir, 'holdout-result.json'), true);
+    reports.push(classifyCase(report, captures, { source, holdout }));
+    reportDirs.push(dir);
   }
   const outputs = [path.join(directory, 'verdict-summary.json'), ...reportDirs.map(dir => path.join(dir, 'verdict.json'))];
   for (const output of outputs) {
@@ -58,6 +83,6 @@ if (process.argv[1] === new URL(import.meta.url).pathname) {
     await writeFile(path.join(dir, 'verdict.json'), JSON.stringify(reports[index], null, 2) + '\n', { mode: 0o600, flag: 'wx' });
   }
   await writeFile(path.join(directory, 'verdict-summary.json'), JSON.stringify(reports, null, 2) + '\n', { mode: 0o600, flag: 'wx' });
-  for (const row of reports) process.stdout.write(`${row.identity.case}: completed=${row.complete} finalCandidate=${row.finalCandidate} holdoutPass=${row.fixedHoldoutPass} kindMismatchTurns=${row.kindMismatchTurns.join(',')}\n`);
+  for (const row of reports) process.stdout.write(`${row.identity?.case}: completed=${row.complete} finalCandidate=${row.finalCandidate} holdoutPass=${row.fixedHoldoutPass} kindMismatchTurns=${row.kindMismatchTurns.join(',')}\n`);
   if (reports.length === 0 || reports.some(row => !row.fixedHoldoutPass)) process.exitCode = 1;
 }

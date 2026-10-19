@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "summary": "Hardened verdict classification and CLI evidence loading so final candidates require matching stored source bytes and holdouts require an actual passing capture.",
+  "tests_run": [
+    "functions.tests (public.test.mjs and candidate.test.mjs): 5 passing"
+  ],
+  "limitations": [
+    "The CLI evaluates only files in the supplied run directory and does not execute candidate or holdout processes itself.",
+    "A malformed or missing evidence file is treated as unavailable and therefore cannot produce finalCandidate or fixedHoldoutPass."
+  ]
+}

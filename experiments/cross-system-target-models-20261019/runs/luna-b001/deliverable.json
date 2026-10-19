@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "summary": "Hardened the farm_studio_api verdict classifier and CLI evidence loading so completion, saved-candidate, and fixed-holdout status depend on real captures and source bytes.",
+  "tests_run": [
+    "node test runner via supplied tests tool: public.test.mjs and candidate.test.mjs (6 passed, 0 failed)"
+  ],
+  "limitations": [
+    "CLI file-loading behavior was reviewed and implemented but not exercised by a dedicated end-to-end filesystem test."
+  ]
+}

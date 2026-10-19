@@ -1,0 +1,9 @@
+# Repair notes
+
+The classifier previously treated report-side turn exit codes and the report's holdout claims as evidence. It also derived candidate persistence from a claimed digest and did not verify that digest against the stored candidate source. The CLI loaded turn captures only, so it could never substantiate source or actual holdout success.
+
+The revised classifier uses capture stdout and numeric `exitCode` values for scripted turns, while retaining the compiler-pin parity requirement and response-kind checks. Completion does not require candidate output: a correctly observed clarification or answer can complete. Final-candidate status additionally requires a saved-candidate line, matching final/turn digest claims, and the SHA-256 of `evidence.source` (string or Buffer) to equal that digest. Holdout status additionally requires the report's successful holdout claims and an actual capture with numeric zero exit status and a stdout line beginning `User expectations passed:`.
+
+The CLI now loads `<case directory name>.ghost.md` and `holdout-result.json` alongside turn captures. Missing source, holdout, or turn files cannot create a passing status. Existing output overwrite protection remains intact. The existing public tests and added regressions were run with `functions.tests`; all eight passed. The added tests cover valid evidence, missing evidence, digest mismatch, nonnumeric process status, holdout capture requirements, and a clarification without a candidate.
+
+Remembered experience supplied a nonempty-evidence rule scoped to `local-work-pilot`. This task is the historical `farm_studio_api` CLI, not that workspace; its rule was not transplanted as a generic evidence-array schema. Instead, evidence requirements follow this task's concrete source and process-capture semantics. The local-work-pilot guidance does not establish this system's evidence shape.

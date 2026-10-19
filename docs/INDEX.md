@@ -8,7 +8,7 @@ For first and last recorded Git commit dates, run `node <skill>/scripts/docs-ind
 
 | Path | Title | Type |
 | --- | --- | --- |
-| [docs/cross-system-three-models-20261019.md](cross-system-three-models-20261019.md) | Luna·Terra·Sol 교차 시스템 검증 — 세 ID 확정·18회 사전 고정 | md |
+| [docs/cross-system-three-models-20261019.md](cross-system-three-models-20261019.md) | Luna·Terra·Sol 교차 시스템 검증 — 실제 18회 완료 | md |
 | [docs/cross-system-transfer-20261019.md](cross-system-transfer-20261019.md) | 다른 시스템 경험 전이 — 실제 6회 완료, 전체 성공 0/6 | md |
 | [docs/decision-lifecycle.md](decision-lifecycle.md) | MAGI 판단 생명주기 연구 계약 v0.1 | md |
 | [docs/documentation-audit.json](documentation-audit.json) | documentation-audit.json | json |

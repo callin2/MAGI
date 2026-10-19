@@ -1,0 +1,1229 @@
+{
+  "purpose": "Explanatory post-score reproduction only; original judgments and scores unchanged",
+  "runs": [
+    {
+      "id": "luna-b001",
+      "family": "luna",
+      "arm": "E",
+      "statuses": [
+        {
+          "id": "valid",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "tampered-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "failed-process-capture",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "missing-process-exit",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-process-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "reported-holdout-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "nonboolean-claimed-pass",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-clarification",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-answer",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        }
+      ],
+      "scoring_changed": false
+    },
+    {
+      "id": "luna-b002",
+      "family": "luna",
+      "arm": "G",
+      "statuses": [
+        {
+          "id": "valid",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "tampered-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "failed-process-capture",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "missing-process-exit",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-process-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "reported-holdout-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "nonboolean-claimed-pass",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-clarification",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-answer",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        }
+      ],
+      "scoring_changed": false
+    },
+    {
+      "id": "luna-b003",
+      "family": "luna",
+      "arm": "F",
+      "statuses": [
+        {
+          "id": "valid",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "tampered-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "failed-process-capture",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "missing-process-exit",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-process-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "reported-holdout-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "nonboolean-claimed-pass",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-clarification",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-answer",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        }
+      ],
+      "scoring_changed": false
+    },
+    {
+      "id": "luna-b004",
+      "family": "luna",
+      "arm": "G",
+      "statuses": [
+        {
+          "id": "valid",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "tampered-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "failed-process-capture",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "missing-process-exit",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-process-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "reported-holdout-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "nonboolean-claimed-pass",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-clarification",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-answer",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        }
+      ],
+      "scoring_changed": false
+    },
+    {
+      "id": "luna-b005",
+      "family": "luna",
+      "arm": "F",
+      "statuses": [
+        {
+          "id": "valid",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "tampered-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "failed-process-capture",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "missing-process-exit",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-process-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "reported-holdout-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "nonboolean-claimed-pass",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-clarification",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-answer",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        }
+      ],
+      "scoring_changed": false
+    },
+    {
+      "id": "luna-b006",
+      "family": "luna",
+      "arm": "E",
+      "statuses": [
+        {
+          "id": "valid",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "tampered-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "failed-process-capture",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "missing-process-exit",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-process-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "reported-holdout-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "nonboolean-claimed-pass",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-clarification",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-answer",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        }
+      ],
+      "scoring_changed": false
+    },
+    {
+      "id": "terra-b001",
+      "family": "terra",
+      "arm": "E",
+      "statuses": [
+        {
+          "id": "valid",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "tampered-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "failed-process-capture",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "missing-process-exit",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-process-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "reported-holdout-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "nonboolean-claimed-pass",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-clarification",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-answer",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        }
+      ],
+      "scoring_changed": false
+    },
+    {
+      "id": "terra-b002",
+      "family": "terra",
+      "arm": "G",
+      "statuses": [
+        {
+          "id": "valid",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "tampered-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "failed-process-capture",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "missing-process-exit",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-process-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "reported-holdout-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "nonboolean-claimed-pass",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-clarification",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-answer",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        }
+      ],
+      "scoring_changed": false
+    },
+    {
+      "id": "terra-b003",
+      "family": "terra",
+      "arm": "F",
+      "statuses": [
+        {
+          "id": "valid",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "tampered-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "failed-process-capture",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "missing-process-exit",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-process-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "reported-holdout-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "nonboolean-claimed-pass",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-clarification",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-answer",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        }
+      ],
+      "scoring_changed": false
+    },
+    {
+      "id": "terra-b004",
+      "family": "terra",
+      "arm": "G",
+      "statuses": [
+        {
+          "id": "valid",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "tampered-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "failed-process-capture",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "missing-process-exit",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-process-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "reported-holdout-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "nonboolean-claimed-pass",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-clarification",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-answer",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        }
+      ],
+      "scoring_changed": false
+    },
+    {
+      "id": "terra-b005",
+      "family": "terra",
+      "arm": "F",
+      "statuses": [
+        {
+          "id": "valid",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "tampered-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "failed-process-capture",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "missing-process-exit",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-process-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "reported-holdout-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "nonboolean-claimed-pass",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-clarification",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-answer",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        }
+      ],
+      "scoring_changed": false
+    },
+    {
+      "id": "terra-b006",
+      "family": "terra",
+      "arm": "E",
+      "statuses": [
+        {
+          "id": "valid",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "tampered-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "failed-process-capture",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "missing-process-exit",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-process-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "reported-holdout-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "nonboolean-claimed-pass",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-clarification",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-answer",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        }
+      ],
+      "scoring_changed": false
+    },
+    {
+      "id": "sol-b001",
+      "family": "sol",
+      "arm": "E",
+      "statuses": [
+        {
+          "id": "valid",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "tampered-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "failed-process-capture",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "missing-process-exit",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-process-failure",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-holdout-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "nonboolean-claimed-pass",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-clarification",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-answer",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        }
+      ],
+      "scoring_changed": false
+    },
+    {
+      "id": "sol-b002",
+      "family": "sol",
+      "arm": "G",
+      "statuses": [
+        {
+          "id": "valid",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "tampered-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "failed-process-capture",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "missing-process-exit",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-process-failure",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-holdout-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "nonboolean-claimed-pass",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-clarification",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-answer",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        }
+      ],
+      "scoring_changed": false
+    },
+    {
+      "id": "sol-b003",
+      "family": "sol",
+      "arm": "F",
+      "statuses": [
+        {
+          "id": "valid",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "tampered-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "failed-process-capture",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "missing-process-exit",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-process-failure",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-holdout-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "nonboolean-claimed-pass",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-clarification",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-answer",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        }
+      ],
+      "scoring_changed": false
+    },
+    {
+      "id": "sol-b004",
+      "family": "sol",
+      "arm": "G",
+      "statuses": [
+        {
+          "id": "valid",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "tampered-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "failed-process-capture",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "missing-process-exit",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-process-failure",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-holdout-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "nonboolean-claimed-pass",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-clarification",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-answer",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        }
+      ],
+      "scoring_changed": false
+    },
+    {
+      "id": "sol-b005",
+      "family": "sol",
+      "arm": "F",
+      "statuses": [
+        {
+          "id": "valid",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "tampered-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "failed-process-capture",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "missing-process-exit",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-process-failure",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-holdout-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "nonboolean-claimed-pass",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-clarification",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-answer",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        }
+      ],
+      "scoring_changed": false
+    },
+    {
+      "id": "sol-b006",
+      "family": "sol",
+      "arm": "E",
+      "statuses": [
+        {
+          "id": "valid",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "tampered-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "failed-process-capture",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "missing-process-exit",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-process-failure",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-holdout-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "nonboolean-claimed-pass",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-clarification",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-answer",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        }
+      ],
+      "scoring_changed": false
+    }
+  ]
+}

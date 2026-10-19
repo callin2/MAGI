@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "summary": "Hardened verdict classification and CLI evidence loading so completion uses real turn captures, final candidates require matching saved-source bytes, and holdout passes require both report and real holdout proof.",
+  "tests_run": [
+    "functions.tests (public.test.mjs and candidate.test.mjs): 7 passing"
+  ],
+  "limitations": [
+    "The CLI can only assess evidence files present in each supplied case directory.",
+    "No external systems or processes were accessed."
+  ]
+}

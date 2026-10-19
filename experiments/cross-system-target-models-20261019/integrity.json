@@ -1,0 +1,1303 @@
+{
+  "checks": [
+    {
+      "id": "new-frozen:scripts/cross_system/target_models/run.mjs",
+      "passed": true
+    },
+    {
+      "id": "new-frozen:scripts/cross_system/target_models/smoke.mjs",
+      "passed": true
+    },
+    {
+      "id": "new-frozen:scripts/cross_system/target_models/provider.mjs",
+      "passed": true
+    },
+    {
+      "id": "new-frozen:scripts/cross_system/target_models/evaluate.py",
+      "passed": true
+    },
+    {
+      "id": "new-frozen:scripts/cross_system/target_models/verify.py",
+      "passed": true
+    },
+    {
+      "id": "new-frozen:scripts/cross_system/target_models/prepare.py",
+      "passed": true
+    },
+    {
+      "id": "new-frozen:scripts/cross_system/target_models/inventory.py",
+      "passed": true
+    },
+    {
+      "id": "new-frozen:experiments/cross-system-target-models-20261019/source/public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "new-frozen:experiments/cross-system-target-models-20261019/source/preregistration.md",
+      "passed": true
+    },
+    {
+      "id": "new-frozen:experiments/cross-system-target-models-20261019/source/verdict-before.mjs",
+      "passed": true
+    },
+    {
+      "id": "new-frozen:experiments/cross-system-target-models-20261019/source/verdict-upstream-reference.mjs",
+      "passed": true
+    },
+    {
+      "id": "new-frozen:experiments/cross-system-target-models-20261019/source/provenance.json",
+      "passed": true
+    },
+    {
+      "id": "new-frozen:experiments/cross-system-target-models-20261019/source/experience-A.json",
+      "passed": true
+    },
+    {
+      "id": "new-frozen:experiments/cross-system-target-models-20261019/source/task.md",
+      "passed": true
+    },
+    {
+      "id": "new-frozen:experiments/cross-system-target-models-20261019/selected-models.json",
+      "passed": true
+    },
+    {
+      "id": "new-frozen:experiments/cross-system-target-models-20261019/protocol.md",
+      "passed": true
+    },
+    {
+      "id": "original-frozen:experiments/cross-system-20261019/source/experience-A.json",
+      "passed": true
+    },
+    {
+      "id": "original-frozen:experiments/cross-system-20261019/source/preregistration.md",
+      "passed": true
+    },
+    {
+      "id": "original-frozen:experiments/cross-system-20261019/source/provenance.json",
+      "passed": true
+    },
+    {
+      "id": "original-frozen:experiments/cross-system-20261019/source/public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "original-frozen:experiments/cross-system-20261019/source/task.md",
+      "passed": true
+    },
+    {
+      "id": "original-frozen:experiments/cross-system-20261019/source/verdict-before.mjs",
+      "passed": true
+    },
+    {
+      "id": "original-frozen:experiments/cross-system-20261019/source/verdict-upstream-reference.mjs",
+      "passed": true
+    },
+    {
+      "id": "original-frozen:scripts/cross_system/check.py",
+      "passed": true
+    },
+    {
+      "id": "original-frozen:scripts/cross_system/judge.mjs",
+      "passed": true
+    },
+    {
+      "id": "original-frozen:scripts/cross_system/prepare.py",
+      "passed": true
+    },
+    {
+      "id": "original-frozen:scripts/cross_system/provider.mjs",
+      "passed": true
+    },
+    {
+      "id": "original-frozen:scripts/cross_system/run.mjs",
+      "passed": true
+    },
+    {
+      "id": "original-frozen:scripts/cross_system/smoke.mjs",
+      "passed": true
+    },
+    {
+      "id": "manifest",
+      "passed": true
+    },
+    {
+      "id": "original-freeze",
+      "passed": true
+    },
+    {
+      "id": "judge",
+      "passed": true
+    },
+    {
+      "id": "checker",
+      "passed": true
+    },
+    {
+      "id": "luna-b001:seed:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "luna-b001:seed:memory.json",
+      "passed": true
+    },
+    {
+      "id": "luna-b001:seed:task.md",
+      "passed": true
+    },
+    {
+      "id": "luna-b001:exact-prompt",
+      "passed": true
+    },
+    {
+      "id": "luna-b001:fresh",
+      "passed": true
+    },
+    {
+      "id": "luna-b001:client-model",
+      "passed": true
+    },
+    {
+      "id": "luna-b001:server-model",
+      "passed": true
+    },
+    {
+      "id": "luna-b001:reasoning-and-output",
+      "passed": true
+    },
+    {
+      "id": "luna-b001:usage-present",
+      "passed": true
+    },
+    {
+      "id": "luna-b001:successful-http",
+      "passed": true
+    },
+    {
+      "id": "luna-b001:calls",
+      "passed": true
+    },
+    {
+      "id": "luna-b001:tools",
+      "passed": true
+    },
+    {
+      "id": "luna-b001:bounds",
+      "passed": true
+    },
+    {
+      "id": "luna-b001:output-bounds",
+      "passed": true
+    },
+    {
+      "id": "luna-b001:provider-ok",
+      "passed": true
+    },
+    {
+      "id": "luna-b001:no-correction",
+      "passed": true
+    },
+    {
+      "id": "luna-b002:seed:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "luna-b002:seed:memory.json",
+      "passed": true
+    },
+    {
+      "id": "luna-b002:seed:task.md",
+      "passed": true
+    },
+    {
+      "id": "luna-b002:exact-prompt",
+      "passed": true
+    },
+    {
+      "id": "luna-b002:fresh",
+      "passed": true
+    },
+    {
+      "id": "luna-b002:client-model",
+      "passed": true
+    },
+    {
+      "id": "luna-b002:server-model",
+      "passed": true
+    },
+    {
+      "id": "luna-b002:reasoning-and-output",
+      "passed": true
+    },
+    {
+      "id": "luna-b002:usage-present",
+      "passed": true
+    },
+    {
+      "id": "luna-b002:successful-http",
+      "passed": true
+    },
+    {
+      "id": "luna-b002:calls",
+      "passed": true
+    },
+    {
+      "id": "luna-b002:tools",
+      "passed": true
+    },
+    {
+      "id": "luna-b002:bounds",
+      "passed": true
+    },
+    {
+      "id": "luna-b002:output-bounds",
+      "passed": true
+    },
+    {
+      "id": "luna-b002:provider-ok",
+      "passed": true
+    },
+    {
+      "id": "luna-b002:no-correction",
+      "passed": true
+    },
+    {
+      "id": "luna-b003:seed:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "luna-b003:seed:memory.json",
+      "passed": true
+    },
+    {
+      "id": "luna-b003:seed:task.md",
+      "passed": true
+    },
+    {
+      "id": "luna-b003:exact-prompt",
+      "passed": true
+    },
+    {
+      "id": "luna-b003:fresh",
+      "passed": true
+    },
+    {
+      "id": "luna-b003:client-model",
+      "passed": true
+    },
+    {
+      "id": "luna-b003:server-model",
+      "passed": true
+    },
+    {
+      "id": "luna-b003:reasoning-and-output",
+      "passed": true
+    },
+    {
+      "id": "luna-b003:usage-present",
+      "passed": true
+    },
+    {
+      "id": "luna-b003:successful-http",
+      "passed": true
+    },
+    {
+      "id": "luna-b003:calls",
+      "passed": true
+    },
+    {
+      "id": "luna-b003:tools",
+      "passed": true
+    },
+    {
+      "id": "luna-b003:bounds",
+      "passed": true
+    },
+    {
+      "id": "luna-b003:output-bounds",
+      "passed": true
+    },
+    {
+      "id": "luna-b003:provider-ok",
+      "passed": true
+    },
+    {
+      "id": "luna-b003:no-correction",
+      "passed": true
+    },
+    {
+      "id": "luna-b004:seed:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "luna-b004:seed:memory.json",
+      "passed": true
+    },
+    {
+      "id": "luna-b004:seed:task.md",
+      "passed": true
+    },
+    {
+      "id": "luna-b004:exact-prompt",
+      "passed": true
+    },
+    {
+      "id": "luna-b004:fresh",
+      "passed": true
+    },
+    {
+      "id": "luna-b004:client-model",
+      "passed": true
+    },
+    {
+      "id": "luna-b004:server-model",
+      "passed": true
+    },
+    {
+      "id": "luna-b004:reasoning-and-output",
+      "passed": true
+    },
+    {
+      "id": "luna-b004:usage-present",
+      "passed": true
+    },
+    {
+      "id": "luna-b004:successful-http",
+      "passed": true
+    },
+    {
+      "id": "luna-b004:calls",
+      "passed": true
+    },
+    {
+      "id": "luna-b004:tools",
+      "passed": true
+    },
+    {
+      "id": "luna-b004:bounds",
+      "passed": true
+    },
+    {
+      "id": "luna-b004:output-bounds",
+      "passed": true
+    },
+    {
+      "id": "luna-b004:provider-ok",
+      "passed": true
+    },
+    {
+      "id": "luna-b004:no-correction",
+      "passed": true
+    },
+    {
+      "id": "luna-b005:seed:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "luna-b005:seed:memory.json",
+      "passed": true
+    },
+    {
+      "id": "luna-b005:seed:task.md",
+      "passed": true
+    },
+    {
+      "id": "luna-b005:exact-prompt",
+      "passed": true
+    },
+    {
+      "id": "luna-b005:fresh",
+      "passed": true
+    },
+    {
+      "id": "luna-b005:client-model",
+      "passed": true
+    },
+    {
+      "id": "luna-b005:server-model",
+      "passed": true
+    },
+    {
+      "id": "luna-b005:reasoning-and-output",
+      "passed": true
+    },
+    {
+      "id": "luna-b005:usage-present",
+      "passed": true
+    },
+    {
+      "id": "luna-b005:successful-http",
+      "passed": true
+    },
+    {
+      "id": "luna-b005:calls",
+      "passed": true
+    },
+    {
+      "id": "luna-b005:tools",
+      "passed": true
+    },
+    {
+      "id": "luna-b005:bounds",
+      "passed": true
+    },
+    {
+      "id": "luna-b005:output-bounds",
+      "passed": true
+    },
+    {
+      "id": "luna-b005:provider-ok",
+      "passed": true
+    },
+    {
+      "id": "luna-b005:no-correction",
+      "passed": true
+    },
+    {
+      "id": "luna-b006:seed:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "luna-b006:seed:memory.json",
+      "passed": true
+    },
+    {
+      "id": "luna-b006:seed:task.md",
+      "passed": true
+    },
+    {
+      "id": "luna-b006:exact-prompt",
+      "passed": true
+    },
+    {
+      "id": "luna-b006:fresh",
+      "passed": true
+    },
+    {
+      "id": "luna-b006:client-model",
+      "passed": true
+    },
+    {
+      "id": "luna-b006:server-model",
+      "passed": true
+    },
+    {
+      "id": "luna-b006:reasoning-and-output",
+      "passed": true
+    },
+    {
+      "id": "luna-b006:usage-present",
+      "passed": true
+    },
+    {
+      "id": "luna-b006:successful-http",
+      "passed": true
+    },
+    {
+      "id": "luna-b006:calls",
+      "passed": true
+    },
+    {
+      "id": "luna-b006:tools",
+      "passed": true
+    },
+    {
+      "id": "luna-b006:bounds",
+      "passed": true
+    },
+    {
+      "id": "luna-b006:output-bounds",
+      "passed": true
+    },
+    {
+      "id": "luna-b006:provider-ok",
+      "passed": true
+    },
+    {
+      "id": "luna-b006:no-correction",
+      "passed": true
+    },
+    {
+      "id": "terra-b001:seed:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "terra-b001:seed:memory.json",
+      "passed": true
+    },
+    {
+      "id": "terra-b001:seed:task.md",
+      "passed": true
+    },
+    {
+      "id": "terra-b001:exact-prompt",
+      "passed": true
+    },
+    {
+      "id": "terra-b001:fresh",
+      "passed": true
+    },
+    {
+      "id": "terra-b001:client-model",
+      "passed": true
+    },
+    {
+      "id": "terra-b001:server-model",
+      "passed": true
+    },
+    {
+      "id": "terra-b001:reasoning-and-output",
+      "passed": true
+    },
+    {
+      "id": "terra-b001:usage-present",
+      "passed": true
+    },
+    {
+      "id": "terra-b001:successful-http",
+      "passed": true
+    },
+    {
+      "id": "terra-b001:calls",
+      "passed": true
+    },
+    {
+      "id": "terra-b001:tools",
+      "passed": true
+    },
+    {
+      "id": "terra-b001:bounds",
+      "passed": true
+    },
+    {
+      "id": "terra-b001:output-bounds",
+      "passed": true
+    },
+    {
+      "id": "terra-b001:provider-ok",
+      "passed": true
+    },
+    {
+      "id": "terra-b001:no-correction",
+      "passed": true
+    },
+    {
+      "id": "terra-b002:seed:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "terra-b002:seed:memory.json",
+      "passed": true
+    },
+    {
+      "id": "terra-b002:seed:task.md",
+      "passed": true
+    },
+    {
+      "id": "terra-b002:exact-prompt",
+      "passed": true
+    },
+    {
+      "id": "terra-b002:fresh",
+      "passed": true
+    },
+    {
+      "id": "terra-b002:client-model",
+      "passed": true
+    },
+    {
+      "id": "terra-b002:server-model",
+      "passed": true
+    },
+    {
+      "id": "terra-b002:reasoning-and-output",
+      "passed": true
+    },
+    {
+      "id": "terra-b002:usage-present",
+      "passed": true
+    },
+    {
+      "id": "terra-b002:successful-http",
+      "passed": true
+    },
+    {
+      "id": "terra-b002:calls",
+      "passed": true
+    },
+    {
+      "id": "terra-b002:tools",
+      "passed": true
+    },
+    {
+      "id": "terra-b002:bounds",
+      "passed": true
+    },
+    {
+      "id": "terra-b002:output-bounds",
+      "passed": true
+    },
+    {
+      "id": "terra-b002:provider-ok",
+      "passed": true
+    },
+    {
+      "id": "terra-b002:no-correction",
+      "passed": true
+    },
+    {
+      "id": "terra-b003:seed:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "terra-b003:seed:memory.json",
+      "passed": true
+    },
+    {
+      "id": "terra-b003:seed:task.md",
+      "passed": true
+    },
+    {
+      "id": "terra-b003:exact-prompt",
+      "passed": true
+    },
+    {
+      "id": "terra-b003:fresh",
+      "passed": true
+    },
+    {
+      "id": "terra-b003:client-model",
+      "passed": true
+    },
+    {
+      "id": "terra-b003:server-model",
+      "passed": true
+    },
+    {
+      "id": "terra-b003:reasoning-and-output",
+      "passed": true
+    },
+    {
+      "id": "terra-b003:usage-present",
+      "passed": true
+    },
+    {
+      "id": "terra-b003:successful-http",
+      "passed": true
+    },
+    {
+      "id": "terra-b003:calls",
+      "passed": true
+    },
+    {
+      "id": "terra-b003:tools",
+      "passed": true
+    },
+    {
+      "id": "terra-b003:bounds",
+      "passed": true
+    },
+    {
+      "id": "terra-b003:output-bounds",
+      "passed": true
+    },
+    {
+      "id": "terra-b003:provider-ok",
+      "passed": true
+    },
+    {
+      "id": "terra-b003:no-correction",
+      "passed": true
+    },
+    {
+      "id": "terra-b004:seed:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "terra-b004:seed:memory.json",
+      "passed": true
+    },
+    {
+      "id": "terra-b004:seed:task.md",
+      "passed": true
+    },
+    {
+      "id": "terra-b004:exact-prompt",
+      "passed": true
+    },
+    {
+      "id": "terra-b004:fresh",
+      "passed": true
+    },
+    {
+      "id": "terra-b004:client-model",
+      "passed": true
+    },
+    {
+      "id": "terra-b004:server-model",
+      "passed": true
+    },
+    {
+      "id": "terra-b004:reasoning-and-output",
+      "passed": true
+    },
+    {
+      "id": "terra-b004:usage-present",
+      "passed": true
+    },
+    {
+      "id": "terra-b004:successful-http",
+      "passed": true
+    },
+    {
+      "id": "terra-b004:calls",
+      "passed": true
+    },
+    {
+      "id": "terra-b004:tools",
+      "passed": true
+    },
+    {
+      "id": "terra-b004:bounds",
+      "passed": true
+    },
+    {
+      "id": "terra-b004:output-bounds",
+      "passed": true
+    },
+    {
+      "id": "terra-b004:provider-ok",
+      "passed": true
+    },
+    {
+      "id": "terra-b004:no-correction",
+      "passed": true
+    },
+    {
+      "id": "terra-b005:seed:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "terra-b005:seed:memory.json",
+      "passed": true
+    },
+    {
+      "id": "terra-b005:seed:task.md",
+      "passed": true
+    },
+    {
+      "id": "terra-b005:exact-prompt",
+      "passed": true
+    },
+    {
+      "id": "terra-b005:fresh",
+      "passed": true
+    },
+    {
+      "id": "terra-b005:client-model",
+      "passed": true
+    },
+    {
+      "id": "terra-b005:server-model",
+      "passed": true
+    },
+    {
+      "id": "terra-b005:reasoning-and-output",
+      "passed": true
+    },
+    {
+      "id": "terra-b005:usage-present",
+      "passed": true
+    },
+    {
+      "id": "terra-b005:successful-http",
+      "passed": true
+    },
+    {
+      "id": "terra-b005:calls",
+      "passed": true
+    },
+    {
+      "id": "terra-b005:tools",
+      "passed": true
+    },
+    {
+      "id": "terra-b005:bounds",
+      "passed": true
+    },
+    {
+      "id": "terra-b005:output-bounds",
+      "passed": true
+    },
+    {
+      "id": "terra-b005:provider-ok",
+      "passed": true
+    },
+    {
+      "id": "terra-b005:no-correction",
+      "passed": true
+    },
+    {
+      "id": "terra-b006:seed:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "terra-b006:seed:memory.json",
+      "passed": true
+    },
+    {
+      "id": "terra-b006:seed:task.md",
+      "passed": true
+    },
+    {
+      "id": "terra-b006:exact-prompt",
+      "passed": true
+    },
+    {
+      "id": "terra-b006:fresh",
+      "passed": true
+    },
+    {
+      "id": "terra-b006:client-model",
+      "passed": true
+    },
+    {
+      "id": "terra-b006:server-model",
+      "passed": true
+    },
+    {
+      "id": "terra-b006:reasoning-and-output",
+      "passed": true
+    },
+    {
+      "id": "terra-b006:usage-present",
+      "passed": true
+    },
+    {
+      "id": "terra-b006:successful-http",
+      "passed": true
+    },
+    {
+      "id": "terra-b006:calls",
+      "passed": true
+    },
+    {
+      "id": "terra-b006:tools",
+      "passed": true
+    },
+    {
+      "id": "terra-b006:bounds",
+      "passed": true
+    },
+    {
+      "id": "terra-b006:output-bounds",
+      "passed": true
+    },
+    {
+      "id": "terra-b006:provider-ok",
+      "passed": true
+    },
+    {
+      "id": "terra-b006:no-correction",
+      "passed": true
+    },
+    {
+      "id": "sol-b001:seed:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "sol-b001:seed:memory.json",
+      "passed": true
+    },
+    {
+      "id": "sol-b001:seed:task.md",
+      "passed": true
+    },
+    {
+      "id": "sol-b001:exact-prompt",
+      "passed": true
+    },
+    {
+      "id": "sol-b001:fresh",
+      "passed": true
+    },
+    {
+      "id": "sol-b001:client-model",
+      "passed": true
+    },
+    {
+      "id": "sol-b001:server-model",
+      "passed": true
+    },
+    {
+      "id": "sol-b001:reasoning-and-output",
+      "passed": true
+    },
+    {
+      "id": "sol-b001:usage-present",
+      "passed": true
+    },
+    {
+      "id": "sol-b001:successful-http",
+      "passed": true
+    },
+    {
+      "id": "sol-b001:calls",
+      "passed": true
+    },
+    {
+      "id": "sol-b001:tools",
+      "passed": true
+    },
+    {
+      "id": "sol-b001:bounds",
+      "passed": true
+    },
+    {
+      "id": "sol-b001:output-bounds",
+      "passed": true
+    },
+    {
+      "id": "sol-b001:provider-ok",
+      "passed": true
+    },
+    {
+      "id": "sol-b001:no-correction",
+      "passed": true
+    },
+    {
+      "id": "sol-b002:seed:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "sol-b002:seed:memory.json",
+      "passed": true
+    },
+    {
+      "id": "sol-b002:seed:task.md",
+      "passed": true
+    },
+    {
+      "id": "sol-b002:exact-prompt",
+      "passed": true
+    },
+    {
+      "id": "sol-b002:fresh",
+      "passed": true
+    },
+    {
+      "id": "sol-b002:client-model",
+      "passed": true
+    },
+    {
+      "id": "sol-b002:server-model",
+      "passed": true
+    },
+    {
+      "id": "sol-b002:reasoning-and-output",
+      "passed": true
+    },
+    {
+      "id": "sol-b002:usage-present",
+      "passed": true
+    },
+    {
+      "id": "sol-b002:successful-http",
+      "passed": true
+    },
+    {
+      "id": "sol-b002:calls",
+      "passed": true
+    },
+    {
+      "id": "sol-b002:tools",
+      "passed": true
+    },
+    {
+      "id": "sol-b002:bounds",
+      "passed": true
+    },
+    {
+      "id": "sol-b002:output-bounds",
+      "passed": true
+    },
+    {
+      "id": "sol-b002:provider-ok",
+      "passed": true
+    },
+    {
+      "id": "sol-b002:no-correction",
+      "passed": true
+    },
+    {
+      "id": "sol-b003:seed:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "sol-b003:seed:memory.json",
+      "passed": true
+    },
+    {
+      "id": "sol-b003:seed:task.md",
+      "passed": true
+    },
+    {
+      "id": "sol-b003:exact-prompt",
+      "passed": true
+    },
+    {
+      "id": "sol-b003:fresh",
+      "passed": true
+    },
+    {
+      "id": "sol-b003:client-model",
+      "passed": true
+    },
+    {
+      "id": "sol-b003:server-model",
+      "passed": true
+    },
+    {
+      "id": "sol-b003:reasoning-and-output",
+      "passed": true
+    },
+    {
+      "id": "sol-b003:usage-present",
+      "passed": true
+    },
+    {
+      "id": "sol-b003:successful-http",
+      "passed": true
+    },
+    {
+      "id": "sol-b003:calls",
+      "passed": true
+    },
+    {
+      "id": "sol-b003:tools",
+      "passed": true
+    },
+    {
+      "id": "sol-b003:bounds",
+      "passed": true
+    },
+    {
+      "id": "sol-b003:output-bounds",
+      "passed": true
+    },
+    {
+      "id": "sol-b003:provider-ok",
+      "passed": true
+    },
+    {
+      "id": "sol-b003:no-correction",
+      "passed": true
+    },
+    {
+      "id": "sol-b004:seed:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "sol-b004:seed:memory.json",
+      "passed": true
+    },
+    {
+      "id": "sol-b004:seed:task.md",
+      "passed": true
+    },
+    {
+      "id": "sol-b004:exact-prompt",
+      "passed": true
+    },
+    {
+      "id": "sol-b004:fresh",
+      "passed": true
+    },
+    {
+      "id": "sol-b004:client-model",
+      "passed": true
+    },
+    {
+      "id": "sol-b004:server-model",
+      "passed": true
+    },
+    {
+      "id": "sol-b004:reasoning-and-output",
+      "passed": true
+    },
+    {
+      "id": "sol-b004:usage-present",
+      "passed": true
+    },
+    {
+      "id": "sol-b004:successful-http",
+      "passed": true
+    },
+    {
+      "id": "sol-b004:calls",
+      "passed": true
+    },
+    {
+      "id": "sol-b004:tools",
+      "passed": true
+    },
+    {
+      "id": "sol-b004:bounds",
+      "passed": true
+    },
+    {
+      "id": "sol-b004:output-bounds",
+      "passed": true
+    },
+    {
+      "id": "sol-b004:provider-ok",
+      "passed": true
+    },
+    {
+      "id": "sol-b004:no-correction",
+      "passed": true
+    },
+    {
+      "id": "sol-b005:seed:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "sol-b005:seed:memory.json",
+      "passed": true
+    },
+    {
+      "id": "sol-b005:seed:task.md",
+      "passed": true
+    },
+    {
+      "id": "sol-b005:exact-prompt",
+      "passed": true
+    },
+    {
+      "id": "sol-b005:fresh",
+      "passed": true
+    },
+    {
+      "id": "sol-b005:client-model",
+      "passed": true
+    },
+    {
+      "id": "sol-b005:server-model",
+      "passed": true
+    },
+    {
+      "id": "sol-b005:reasoning-and-output",
+      "passed": true
+    },
+    {
+      "id": "sol-b005:usage-present",
+      "passed": true
+    },
+    {
+      "id": "sol-b005:successful-http",
+      "passed": true
+    },
+    {
+      "id": "sol-b005:calls",
+      "passed": true
+    },
+    {
+      "id": "sol-b005:tools",
+      "passed": true
+    },
+    {
+      "id": "sol-b005:bounds",
+      "passed": true
+    },
+    {
+      "id": "sol-b005:output-bounds",
+      "passed": true
+    },
+    {
+      "id": "sol-b005:provider-ok",
+      "passed": true
+    },
+    {
+      "id": "sol-b005:no-correction",
+      "passed": true
+    },
+    {
+      "id": "sol-b006:seed:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "sol-b006:seed:memory.json",
+      "passed": true
+    },
+    {
+      "id": "sol-b006:seed:task.md",
+      "passed": true
+    },
+    {
+      "id": "sol-b006:exact-prompt",
+      "passed": true
+    },
+    {
+      "id": "sol-b006:fresh",
+      "passed": true
+    },
+    {
+      "id": "sol-b006:client-model",
+      "passed": true
+    },
+    {
+      "id": "sol-b006:server-model",
+      "passed": true
+    },
+    {
+      "id": "sol-b006:reasoning-and-output",
+      "passed": true
+    },
+    {
+      "id": "sol-b006:usage-present",
+      "passed": true
+    },
+    {
+      "id": "sol-b006:successful-http",
+      "passed": true
+    },
+    {
+      "id": "sol-b006:calls",
+      "passed": true
+    },
+    {
+      "id": "sol-b006:tools",
+      "passed": true
+    },
+    {
+      "id": "sol-b006:bounds",
+      "passed": true
+    },
+    {
+      "id": "sol-b006:output-bounds",
+      "passed": true
+    },
+    {
+      "id": "sol-b006:provider-ok",
+      "passed": true
+    },
+    {
+      "id": "sol-b006:no-correction",
+      "passed": true
+    },
+    {
+      "id": "identical-system",
+      "passed": true
+    },
+    {
+      "id": "gpt41-raw-cohort-unchanged",
+      "passed": true
+    },
+    {
+      "id": "no-credential-values",
+      "passed": true
+    }
+  ],
+  "passed": 324,
+  "total": 324,
+  "success": true
+}

@@ -1,0 +1,156 @@
+{
+  "target": "/Users/callin/Documents/Codex/2026-10-19/task/magi-cross-system/experiments/cross-system-target-models-20261019/runs/terra-b002/verdict.mjs",
+  "cases": [
+    {
+      "id": "valid-final-candidate",
+      "axis": "regression",
+      "passed": true
+    },
+    {
+      "id": "missing-source",
+      "axis": "repair",
+      "passed": true
+    },
+    {
+      "id": "tampered-source",
+      "axis": "repair",
+      "passed": true
+    },
+    {
+      "id": "missing-holdout",
+      "axis": "repair",
+      "passed": true
+    },
+    {
+      "id": "failed-holdout-capture",
+      "axis": "repair",
+      "passed": true
+    },
+    {
+      "id": "holdout-success-word-alone",
+      "axis": "repair",
+      "passed": true
+    },
+    {
+      "id": "failed-process-capture",
+      "axis": "repair",
+      "passed": true
+    },
+    {
+      "id": "missing-process-exit",
+      "axis": "repair",
+      "passed": true
+    },
+    {
+      "id": "missing-evidence-argument",
+      "axis": "repair",
+      "passed": true
+    },
+    {
+      "id": "artifact-free-clarification",
+      "axis": "counterexample",
+      "passed": true
+    },
+    {
+      "id": "artifact-free-answer",
+      "axis": "counterexample",
+      "passed": true
+    },
+    {
+      "id": "mixed-conversation",
+      "axis": "regression",
+      "passed": true
+    },
+    {
+      "id": "unexpected-kind",
+      "axis": "regression",
+      "passed": true
+    },
+    {
+      "id": "duplicate-machine-response",
+      "axis": "regression",
+      "passed": true
+    },
+    {
+      "id": "no-machine-response",
+      "axis": "regression",
+      "passed": true
+    },
+    {
+      "id": "wrong-saved-digest",
+      "axis": "regression",
+      "passed": true
+    },
+    {
+      "id": "wrong-final-digest",
+      "axis": "regression",
+      "passed": true
+    },
+    {
+      "id": "reported-process-failure",
+      "axis": "regression",
+      "passed": false,
+      "error": "behavioral assertion failed"
+    },
+    {
+      "id": "reported-holdout-failure",
+      "axis": "regression",
+      "passed": true
+    },
+    {
+      "id": "nonboolean-claimed-pass",
+      "axis": "repair",
+      "passed": true
+    },
+    {
+      "id": "pin-mismatch",
+      "axis": "regression",
+      "passed": true
+    },
+    {
+      "id": "turn-count-mismatch",
+      "axis": "regression",
+      "passed": true
+    },
+    {
+      "id": "cli-valid",
+      "axis": "integration",
+      "passed": true,
+      "exit_code": 0,
+      "stdout": "case: completed=true finalCandidate=true holdoutPass=true kindMismatchTurns=\n",
+      "stderr": ""
+    },
+    {
+      "id": "cli-tampered",
+      "axis": "integration",
+      "passed": true,
+      "exit_code": 1,
+      "stdout": "case: completed=true finalCandidate=false holdoutPass=false kindMismatchTurns=\n",
+      "stderr": ""
+    },
+    {
+      "id": "cli-missing-holdout",
+      "axis": "integration",
+      "passed": true,
+      "exit_code": 1,
+      "stdout": "case: completed=true finalCandidate=true holdoutPass=false kindMismatchTurns=\n",
+      "stderr": ""
+    },
+    {
+      "id": "cli-existing-verdict",
+      "axis": "integration",
+      "passed": true,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "file:///Users/callin/Documents/Codex/2026-10-19/task/magi-cross-system/experiments/cross-system-target-models-20261019/runs/terra-b002/verdict.mjs:126\n    try { await stat(output); throw new Error(`Existing verdict evidence: ${output}`); }\n                                    ^\n\nError: Existing verdict evidence: /var/folders/bt/lvx6vmp905n753cfmj6s5sdw0000gn/T/magi-transfer-mrydsyz_/existing-verdict/case/verdict.json\n    at file:///Users/callin/Documents/Codex/2026-10-19/task/magi-cross-system/experiments/cross-system-target-models-20261019/runs/terra-b002/verdict.mjs:126:37\n\nNode.js v25.2.1\n"
+    }
+  ],
+  "passed": 25,
+  "total": 26,
+  "success": false,
+  "library_raw": {
+    "exit_code": 1,
+    "stdout": "{\n  \"target\": \"/Users/callin/Documents/Codex/2026-10-19/task/magi-cross-system/experiments/cross-system-target-models-20261019/runs/terra-b002/verdict.mjs\",\n  \"cases\": [\n    {\n      \"id\": \"valid-final-candidate\",\n      \"axis\": \"regression\",\n      \"passed\": true\n    },\n    {\n      \"id\": \"missing-source\",\n      \"axis\": \"repair\",\n      \"passed\": true\n    },\n    {\n      \"id\": \"tampered-source\",\n      \"axis\": \"repair\",\n      \"passed\": true\n    },\n    {\n      \"id\": \"missing-holdout\",\n      \"axis\": \"repair\",\n      \"passed\": true\n    },\n    {\n      \"id\": \"failed-holdout-capture\",\n      \"axis\": \"repair\",\n      \"passed\": true\n    },\n    {\n      \"id\": \"holdout-success-word-alone\",\n      \"axis\": \"repair\",\n      \"passed\": true\n    },\n    {\n      \"id\": \"failed-process-capture\",\n      \"axis\": \"repair\",\n      \"passed\": true\n    },\n    {\n      \"id\": \"missing-process-exit\",\n      \"axis\": \"repair\",\n      \"passed\": true\n    },\n    {\n      \"id\": \"missing-evidence-argument\",\n      \"axis\": \"repair\",\n      \"passed\": true\n    },\n    {\n      \"id\": \"artifact-free-clarification\",\n      \"axis\": \"counterexample\",\n      \"passed\": true\n    },\n    {\n      \"id\": \"artifact-free-answer\",\n      \"axis\": \"counterexample\",\n      \"passed\": true\n    },\n    {\n      \"id\": \"mixed-conversation\",\n      \"axis\": \"regression\",\n      \"passed\": true\n    },\n    {\n      \"id\": \"unexpected-kind\",\n      \"axis\": \"regression\",\n      \"passed\": true\n    },\n    {\n      \"id\": \"duplicate-machine-response\",\n      \"axis\": \"regression\",\n      \"passed\": true\n    },\n    {\n      \"id\": \"no-machine-response\",\n      \"axis\": \"regression\",\n      \"passed\": true\n    },\n    {\n      \"id\": \"wrong-saved-digest\",\n      \"axis\": \"regression\",\n      \"passed\": true\n    },\n    {\n      \"id\": \"wrong-final-digest\",\n      \"axis\": \"regression\",\n      \"passed\": true\n    },\n    {\n      \"id\": \"reported-process-failure\",\n      \"axis\": \"regression\",\n      \"passed\": false,\n      \"error\": \"behavioral assertion failed\"\n    },\n    {\n      \"id\": \"reported-holdout-failure\",\n      \"axis\": \"regression\",\n      \"passed\": true\n    },\n    {\n      \"id\": \"nonboolean-claimed-pass\",\n      \"axis\": \"repair\",\n      \"passed\": true\n    },\n    {\n      \"id\": \"pin-mismatch\",\n      \"axis\": \"regression\",\n      \"passed\": true\n    },\n    {\n      \"id\": \"turn-count-mismatch\",\n      \"axis\": \"regression\",\n      \"passed\": true\n    }\n  ],\n  \"passed\": 21,\n  \"total\": 22,\n  \"success\": false\n}\n",
+    "stderr": ""
+  }
+}

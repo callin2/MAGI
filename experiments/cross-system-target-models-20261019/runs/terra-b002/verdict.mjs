@@ -1,4 +1,5 @@
 import { readFile, writeFile, stat } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import path from 'node:path';
 
 export function observedKind(stdout) {
@@ -8,29 +9,93 @@ export function observedKind(stdout) {
   if (lines.length !== 1) return null;
   try {
     const response = JSON.parse(lines[0].slice(resultPrefix.length));
-    return response && Object.keys(response).length === 1 && ['candidate', 'clarification', 'answer'].includes(response.kind)
-      ? response.kind : null;
+    return response && Object.keys(response).length === 1 &&
+      ['candidate', 'clarification', 'answer'].includes(response.kind) ? response.kind : null;
   } catch { return null; }
 }
 
-export function classifyCase(report, captures) {
-  const turns = report.turns.map((turn, index) => ({
-    ...turn,
-    observedKind: observedKind(captures[index]?.stdout),
-    persistedCandidate: /^[a-f0-9]{64}$/.test(turn.sourceSha256 ?? '') && captures[index]?.stdout?.split('\n').some(line =>
-      line.startsWith('Saved ') && /SHA-256 ([a-f0-9]{64})\.$/.exec(line)?.[1] === turn.sourceSha256) === true,
-  }));
-  const kindMismatchTurns = turns.filter(turn => turn.expectedKind !== turn.observedKind).map(turn => turn.turn);
-  const complete = report.identity.currentPinParity === true && turns.length === report.identity.scriptedTurns && kindMismatchTurns.length === 0
-    && turns.every(turn => turn.exitCode === 0 && (turn.observedKind !== 'candidate' || turn.persistedCandidate));
-  const finalCandidate = complete && turns.at(-1)?.observedKind === 'candidate'
-    && turns.at(-1)?.sourceSha256 === report.finalSourceSha256;
-  return { ...report, turns, complete, finalCandidate,
-    fixedHoldoutPass: Boolean(finalCandidate && report.holdout?.exitCode === 0 && report.holdout.fixedExpectationsPassed),
+function isSha256(value) {
+  return typeof value === 'string' && /^[a-f0-9]{64}$/.test(value);
+}
+
+function sourceSha256(source) {
+  if (typeof source !== 'string' && !Buffer.isBuffer(source)) return null;
+  return createHash('sha256').update(source).digest('hex');
+}
+
+function savedSha256(stdout) {
+  if (typeof stdout !== 'string') return null;
+  const saved = stdout.split('\n').filter(line => line.startsWith('Saved '));
+  if (saved.length !== 1) return null;
+  return /SHA-256 ([a-f0-9]{64})\.$/.exec(saved[0])?.[1] ?? null;
+}
+
+/**
+ * Classify a report using captures actually produced by the process.  Evidence
+ * is deliberately separate from the report: report fields are claims, not
+ * proof of a saved source file or of the fixed holdout execution.
+ */
+export function classifyCase(report, captures, evidence = {}) {
+  const inputTurns = Array.isArray(report?.turns) ? report.turns : [];
+  const inputCaptures = Array.isArray(captures) ? captures : [];
+  const turns = inputTurns.map((turn, index) => {
+    const capture = inputCaptures[index];
+    const observed = observedKind(capture?.stdout);
+    const claimedSha = turn?.sourceSha256;
+    return {
+      ...turn,
+      observedKind: observed,
+      // This records a process claim only.  Source-file corroboration is
+      // required below before it can establish finalCandidate.
+      persistedCandidate: isSha256(claimedSha) && savedSha256(capture?.stdout) === claimedSha,
+    };
+  });
+  const kindMismatchTurns = turns
+    .filter(turn => turn.expectedKind !== turn.observedKind)
+    .map(turn => turn.turn);
+  const expectedTurns = report?.identity?.scriptedTurns;
+  const complete = report?.identity?.currentPinParity === true &&
+    Number.isInteger(expectedTurns) && turns.length === expectedTurns &&
+    kindMismatchTurns.length === 0 &&
+    turns.every((turn, index) => inputCaptures[index]?.exitCode === 0);
+
+  const finalTurn = turns.at(-1);
+  const claimedFinalSha = report?.finalSourceSha256;
+  const actualSourceSha = sourceSha256(evidence?.source);
+  const finalCandidate = complete && finalTurn?.observedKind === 'candidate' &&
+    isSha256(claimedFinalSha) && finalTurn.sourceSha256 === claimedFinalSha &&
+    finalTurn.persistedCandidate === true && actualSourceSha === claimedFinalSha;
+
+  const actualHoldout = evidence?.holdout;
+  const holdoutOutputPassed = typeof actualHoldout?.stdout === 'string' &&
+    actualHoldout.stdout.split('\n').some(line => line.startsWith('User expectations passed:'));
+  const fixedHoldoutPass = Boolean(finalCandidate &&
+    report?.holdout?.exitCode === 0 && report?.holdout?.fixedExpectationsPassed === true &&
+    actualHoldout?.exitCode === 0 && holdoutOutputPassed);
+
+  return {
+    ...report,
+    turns,
+    complete,
+    finalCandidate,
+    fixedHoldoutPass,
     expectedCandidateTurns: turns.filter(turn => turn.expectedKind === 'candidate').length,
     observedCandidateTurns: turns.filter(turn => turn.observedKind === 'candidate').length,
     kindMismatchTurns,
   };
+}
+
+async function readOptional(file, parseJson = false) {
+  try {
+    const value = await readFile(file, parseJson ? 'utf8' : undefined);
+    return parseJson ? JSON.parse(value) : value;
+  } catch (error) {
+    // An unavailable artifact is insufficient evidence, rather than a reason
+    // to turn report assertions into a passing verdict.  Invalid JSON is not
+    // treated as missing, since that is an operational error worth surfacing.
+    if (error?.code === 'ENOENT') return undefined;
+    throw error;
+  }
 }
 
 if (process.argv[1] === new URL(import.meta.url).pathname) {
@@ -40,14 +105,21 @@ if (process.argv[1] === new URL(import.meta.url).pathname) {
   const reports = [];
   const reportDirs = [];
   for (const name of (await readdir(directory)).sort()) {
-    if (!(await stat(path.join(directory, name))).isDirectory()) continue;
+    const caseDir = path.join(directory, name);
+    if (!(await stat(caseDir)).isDirectory()) continue;
     let report;
-    try { report = JSON.parse(await readFile(path.join(directory, name, 'report.json'), 'utf8')); }
+    try { report = JSON.parse(await readFile(path.join(caseDir, 'report.json'), 'utf8')); }
     catch (error) { if (error.code === 'ENOENT') continue; throw error; }
-    const captures = await Promise.all(report.turns.map(turn => readFile(path.join(directory, name, `turn-${turn.turn}.json`), 'utf8').then(JSON.parse)));
-    const verdict = classifyCase(report, captures);
-    reports.push(verdict);
-    reportDirs.push(path.join(directory, name));
+    const caseName = report?.identity?.case;
+    const safeCaseName = typeof caseName === 'string' && path.basename(caseName) === caseName;
+    const captures = await Promise.all((Array.isArray(report?.turns) ? report.turns : []).map(turn =>
+      readOptional(path.join(caseDir, `turn-${turn?.turn}.json`), true)));
+    const evidence = {
+      source: safeCaseName ? await readOptional(path.join(caseDir, `${caseName}.ghost.md`)) : undefined,
+      holdout: await readOptional(path.join(caseDir, 'holdout-result.json'), true),
+    };
+    reports.push(classifyCase(report, captures, evidence));
+    reportDirs.push(caseDir);
   }
   const outputs = [path.join(directory, 'verdict-summary.json'), ...reportDirs.map(dir => path.join(dir, 'verdict.json'))];
   for (const output of outputs) {

@@ -1,0 +1,104 @@
+{
+  "started_at": "2026-10-19T01:25:06.708Z",
+  "ended_at": "2026-10-19T01:26:47.132Z",
+  "elapsed_seconds": 100.42286312499999,
+  "model_calls": 6,
+  "tool_calls": 7,
+  "tool_errors": 0,
+  "stop": "settled",
+  "provider_error": false,
+  "provider": "openai-codex",
+  "configured_model": "gpt-6.1-sol",
+  "family": "sol",
+  "usage": [
+    {
+      "input": 956,
+      "output": 54,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 1010,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 2334,
+      "output": 1645,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 3979,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 4038,
+      "output": 2398,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 6436,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 6497,
+      "output": 13,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 6510,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 6870,
+      "output": 1207,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 8077,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 8195,
+      "output": 116,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 8311,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    }
+  ],
+  "fresh_conversation": true,
+  "history_messages_at_start": 1,
+  "user_corrections": 0,
+  "api_cost_usd": null,
+  "human_time_saving": null
+}

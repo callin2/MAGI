@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "summary": "Hardened farm_studio_api verdict classification to rely on real turn, source, and holdout evidence; added regression tests.",
+  "tests_run": [
+    "node test runner via functions.tests: public.test.mjs and candidate.test.mjs (8 passed, 0 failed)"
+  ],
+  "limitations": [
+    "CLI file-loading behavior was updated but not separately exercised by an end-to-end filesystem test.",
+    "A missing or malformed turn capture is treated as unsuccessful; malformed report JSON remains a CLI error."
+  ]
+}

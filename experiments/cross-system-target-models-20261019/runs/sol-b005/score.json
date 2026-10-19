@@ -1,0 +1,54 @@
+{
+  "id": "sol-b005",
+  "family": "sol",
+  "model_id": "gpt-6.1-sol",
+  "response_models": [
+    "gpt-6.1-sol"
+  ],
+  "arm": "F",
+  "repetition": 1,
+  "status": "executed",
+  "success": true,
+  "behavior_success": true,
+  "behavior_passed": 26,
+  "behavior_total": 26,
+  "axes": {
+    "counterexample": {
+      "passed": 2,
+      "total": 2
+    },
+    "integration": {
+      "passed": 4,
+      "total": 4
+    },
+    "regression": {
+      "passed": 11,
+      "total": 11
+    },
+    "repair": {
+      "passed": 9,
+      "total": 9
+    }
+  },
+  "wrong_analogy_counterexample_failure": false,
+  "new_regression_count": 0,
+  "schema_valid": true,
+  "artifacts_present": true,
+  "successful_worker_test_call": true,
+  "immutable_inputs_preserved": true,
+  "elapsed_seconds": 127.840441666,
+  "model_calls": 10,
+  "tool_calls": 10,
+  "tool_errors": 0,
+  "stop": "settled",
+  "usage": {
+    "input": 67989,
+    "output": 8556,
+    "cacheRead": 0,
+    "cacheWrite": 0,
+    "totalTokens": 76545
+  },
+  "user_corrections": 0,
+  "cash_cost_usd": null,
+  "human_time_saving": null
+}
