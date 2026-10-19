@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "summary": "Repaired the farm_studio_api CLI verdict to enforce confirmation of source SHA and fixed holdout capture for final candidate success. Added missing evidence guards rejecting fabricated success. Extended CLI to load and verify source and holdout-result.json. Maintained observedKind and classifyCase interfaces. Added regression candidate tests covering these validations.",
+  "tests_run": ["public.test.mjs", "candidate.test.mjs"],
+  "limitations": ["External file loading correctness depends on file presence and format.", "Source and holdout verification assumes specific output line formats as per spec.", "No tests cover multi-directory CLI execution but public tests verify classifyCase logic."]
+}

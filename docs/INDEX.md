@@ -8,7 +8,7 @@ For first and last recorded Git commit dates, run `node <skill>/scripts/docs-ind
 
 | Path | Title | Type |
 | --- | --- | --- |
-| [docs/cross-system-transfer-20261019.md](cross-system-transfer-20261019.md) | 다른 시스템 경험 전이 — 준비 완료, 모델 인증 차단 | md |
+| [docs/cross-system-transfer-20261019.md](cross-system-transfer-20261019.md) | 다른 시스템 경험 전이 — 실제 6회 완료, 전체 성공 0/6 | md |
 | [docs/decision-lifecycle.md](decision-lifecycle.md) | MAGI 판단 생명주기 연구 계약 v0.1 | md |
 | [docs/documentation-audit.json](documentation-audit.json) | documentation-audit.json | json |
 | [docs/documentation-organization.md](documentation-organization.md) | 문서 정리 기록 | md |

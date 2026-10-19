@@ -15,7 +15,7 @@ issue: https://github.com/callin2/MAGI/issues/26
 
 | 질문 | 기준 문서 | 읽을 내용 |
 |---|---|---|
-| 다른 시스템 전이는 실행됐나? | [2026-10-19 전이 준비·인증 차단](cross-system-transfer-20261019.md) | 별도 실제 코드베이스, 6회 입력 고정, 결정론적 대조, 실제 모델 API 401·본 실험 미실행 |
+| 다른 시스템 전이는 실행됐나? | [2026-10-19 실제 전이 비교](cross-system-transfer-20261019.md) | 다른 실제 코드베이스·실제 모델 6회, G/F/E 전체 성공 0/2씩, 반례·회귀 실패 |
 | MAGI가 실제 업무에 도움이 됐나? | [실제 효과 비교](effectiveness-verification-20261018.md) | 22회 실행, 경험 전달과 정제의 차이, 비용·미입증 범위 |
 | 자동 채점 실패는 실제 오류였나? | [판정과 내용 검토](effectiveness-semantic-review-20261018.md) | 원점수와 사후 해석의 차이, 실제 코드·완료 실패 |
 | 로컬에서 무엇을 실행하나? | [실행·검증 안내](verification.md) | 도구 시험, 자료 검사, 결과를 덮어쓰는 명령 |
@@ -48,7 +48,7 @@ issue: https://github.com/callin2/MAGI/issues/26
 | 실제 업무에서 학습을 검증할 초기 계획 | [학습 입증 계획](learning-proof-plan.md) | 아래 실제 업무·효과 비교로 일부 실행. 최초 제안과 실행 조건은 다름 |
 | 업무 분해·실패·복구·새 세션 실행 | [재귀 업무 파일럿](recursive-work-pilot.md) | [행동 전이 #19](https://github.com/callin2/MAGI/issues/19) |
 | 실제 코드·인계 업무의 경험 전달 비교 | [2026-10-18 효과 비교](effectiveness-verification-20261018.md) | [판정·비용·확대 검증 #18](https://github.com/callin2/MAGI/issues/18) |
-| 다른 시스템 경험 전이의 준비·인증 차단 | [2026-10-19 기록](cross-system-transfer-20261019.md) | [확대 검증 #18](https://github.com/callin2/MAGI/issues/18), 실제 모델 비교 미실행 |
+| 다른 코드베이스의 실제 경험 전이 비교 | [2026-10-19 기록](cross-system-transfer-20261019.md) | [확대 검증 #18](https://github.com/callin2/MAGI/issues/18), 실제 6회 완료, 전체 성공 0/6 |
 
 미완료 업무의 진행 상태는 연결된 이슈에서 관리한다. 문서 정리를 이유로 연구 이슈를 완료 처리하지 않는다.
 

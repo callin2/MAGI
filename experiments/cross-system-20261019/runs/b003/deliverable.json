@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "summary": "Repaired farm_studio_api verdict.mjs to harden classification under supplied evidence constraints per specification. Added candidate.test.mjs with regression tests validating behavior on source evidence presence, holdout evidence, final candidate conditions, and observed kind detection. Fixed source evidence mismatch handling to yield failed verdict, enforcing complete=false when evidence mismatches or missing. Verified all tests pass, ensuring CLI and classifyCase correctly distinguish complete, finalCandidate, and fixedHoldoutPass statuses with proper file loading and checks.",
+  "tests_run": ["public.test.mjs","candidate.test.mjs"],
+  "limitations": ["Does not validate ghost.md content correctness beyond SHA-256 match.","Assumes well-formed JSON captures per stored files.","Does not impose old evidence array schema; keeps new object schema only."]
+}

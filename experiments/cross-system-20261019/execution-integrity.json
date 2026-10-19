@@ -1,0 +1,419 @@
+{
+  "checks": [
+    {
+      "id": "original-frozen:experiments/cross-system-20261019/source/experience-A.json",
+      "passed": true
+    },
+    {
+      "id": "original-frozen:experiments/cross-system-20261019/source/preregistration.md",
+      "passed": true
+    },
+    {
+      "id": "original-frozen:experiments/cross-system-20261019/source/provenance.json",
+      "passed": true
+    },
+    {
+      "id": "original-frozen:experiments/cross-system-20261019/source/public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "original-frozen:experiments/cross-system-20261019/source/task.md",
+      "passed": true
+    },
+    {
+      "id": "original-frozen:experiments/cross-system-20261019/source/verdict-before.mjs",
+      "passed": true
+    },
+    {
+      "id": "original-frozen:experiments/cross-system-20261019/source/verdict-upstream-reference.mjs",
+      "passed": true
+    },
+    {
+      "id": "original-frozen:scripts/cross_system/check.py",
+      "passed": true
+    },
+    {
+      "id": "original-frozen:scripts/cross_system/judge.mjs",
+      "passed": true
+    },
+    {
+      "id": "original-frozen:scripts/cross_system/prepare.py",
+      "passed": true
+    },
+    {
+      "id": "original-frozen:scripts/cross_system/provider.mjs",
+      "passed": true
+    },
+    {
+      "id": "original-frozen:scripts/cross_system/run.mjs",
+      "passed": true
+    },
+    {
+      "id": "original-frozen:scripts/cross_system/smoke.mjs",
+      "passed": true
+    },
+    {
+      "id": "amended-frozen:scripts/cross_system/resume/evaluate.py",
+      "passed": true
+    },
+    {
+      "id": "amended-frozen:scripts/cross_system/resume/inspect_connections.py",
+      "passed": true
+    },
+    {
+      "id": "amended-frozen:scripts/cross_system/resume/openrouter_inventory.py",
+      "passed": true
+    },
+    {
+      "id": "amended-frozen:scripts/cross_system/resume/provider.mjs",
+      "passed": true
+    },
+    {
+      "id": "amended-frozen:scripts/cross_system/resume/run.mjs",
+      "passed": true
+    },
+    {
+      "id": "amended-frozen:scripts/cross_system/resume/smoke.mjs",
+      "passed": true
+    },
+    {
+      "id": "amended-frozen:experiments/cross-system-20261019/connection-review/route-amendment.md",
+      "passed": true
+    },
+    {
+      "id": "original-freeze",
+      "passed": true
+    },
+    {
+      "id": "manifest",
+      "passed": true
+    },
+    {
+      "id": "b001:seed:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "b001:seed:memory.json",
+      "passed": true
+    },
+    {
+      "id": "b001:seed:task.md",
+      "passed": true
+    },
+    {
+      "id": "b001:exact-input",
+      "passed": true
+    },
+    {
+      "id": "b001:fresh",
+      "passed": true
+    },
+    {
+      "id": "b001:route",
+      "passed": true
+    },
+    {
+      "id": "b001:calls",
+      "passed": true
+    },
+    {
+      "id": "b001:tools",
+      "passed": true
+    },
+    {
+      "id": "b001:bounds",
+      "passed": true
+    },
+    {
+      "id": "b001:provider-ok",
+      "passed": true
+    },
+    {
+      "id": "b001:nonzero-provider-usage",
+      "passed": true
+    },
+    {
+      "id": "b001:no-human-correction",
+      "passed": true
+    },
+    {
+      "id": "b001:allowlisted-tools",
+      "passed": true
+    },
+    {
+      "id": "b002:seed:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "b002:seed:memory.json",
+      "passed": true
+    },
+    {
+      "id": "b002:seed:task.md",
+      "passed": true
+    },
+    {
+      "id": "b002:exact-input",
+      "passed": true
+    },
+    {
+      "id": "b002:fresh",
+      "passed": true
+    },
+    {
+      "id": "b002:route",
+      "passed": true
+    },
+    {
+      "id": "b002:calls",
+      "passed": true
+    },
+    {
+      "id": "b002:tools",
+      "passed": true
+    },
+    {
+      "id": "b002:bounds",
+      "passed": true
+    },
+    {
+      "id": "b002:provider-ok",
+      "passed": true
+    },
+    {
+      "id": "b002:nonzero-provider-usage",
+      "passed": true
+    },
+    {
+      "id": "b002:no-human-correction",
+      "passed": true
+    },
+    {
+      "id": "b002:allowlisted-tools",
+      "passed": true
+    },
+    {
+      "id": "b003:seed:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "b003:seed:memory.json",
+      "passed": true
+    },
+    {
+      "id": "b003:seed:task.md",
+      "passed": true
+    },
+    {
+      "id": "b003:exact-input",
+      "passed": true
+    },
+    {
+      "id": "b003:fresh",
+      "passed": true
+    },
+    {
+      "id": "b003:route",
+      "passed": true
+    },
+    {
+      "id": "b003:calls",
+      "passed": true
+    },
+    {
+      "id": "b003:tools",
+      "passed": true
+    },
+    {
+      "id": "b003:bounds",
+      "passed": true
+    },
+    {
+      "id": "b003:provider-ok",
+      "passed": true
+    },
+    {
+      "id": "b003:nonzero-provider-usage",
+      "passed": true
+    },
+    {
+      "id": "b003:no-human-correction",
+      "passed": true
+    },
+    {
+      "id": "b003:allowlisted-tools",
+      "passed": true
+    },
+    {
+      "id": "b004:seed:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "b004:seed:memory.json",
+      "passed": true
+    },
+    {
+      "id": "b004:seed:task.md",
+      "passed": true
+    },
+    {
+      "id": "b004:exact-input",
+      "passed": true
+    },
+    {
+      "id": "b004:fresh",
+      "passed": true
+    },
+    {
+      "id": "b004:route",
+      "passed": true
+    },
+    {
+      "id": "b004:calls",
+      "passed": true
+    },
+    {
+      "id": "b004:tools",
+      "passed": true
+    },
+    {
+      "id": "b004:bounds",
+      "passed": true
+    },
+    {
+      "id": "b004:provider-ok",
+      "passed": true
+    },
+    {
+      "id": "b004:nonzero-provider-usage",
+      "passed": true
+    },
+    {
+      "id": "b004:no-human-correction",
+      "passed": true
+    },
+    {
+      "id": "b004:allowlisted-tools",
+      "passed": true
+    },
+    {
+      "id": "b005:seed:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "b005:seed:memory.json",
+      "passed": true
+    },
+    {
+      "id": "b005:seed:task.md",
+      "passed": true
+    },
+    {
+      "id": "b005:exact-input",
+      "passed": true
+    },
+    {
+      "id": "b005:fresh",
+      "passed": true
+    },
+    {
+      "id": "b005:route",
+      "passed": true
+    },
+    {
+      "id": "b005:calls",
+      "passed": true
+    },
+    {
+      "id": "b005:tools",
+      "passed": true
+    },
+    {
+      "id": "b005:bounds",
+      "passed": true
+    },
+    {
+      "id": "b005:provider-ok",
+      "passed": true
+    },
+    {
+      "id": "b005:nonzero-provider-usage",
+      "passed": true
+    },
+    {
+      "id": "b005:no-human-correction",
+      "passed": true
+    },
+    {
+      "id": "b005:allowlisted-tools",
+      "passed": true
+    },
+    {
+      "id": "b006:seed:public.test.mjs",
+      "passed": true
+    },
+    {
+      "id": "b006:seed:memory.json",
+      "passed": true
+    },
+    {
+      "id": "b006:seed:task.md",
+      "passed": true
+    },
+    {
+      "id": "b006:exact-input",
+      "passed": true
+    },
+    {
+      "id": "b006:fresh",
+      "passed": true
+    },
+    {
+      "id": "b006:route",
+      "passed": true
+    },
+    {
+      "id": "b006:calls",
+      "passed": true
+    },
+    {
+      "id": "b006:tools",
+      "passed": true
+    },
+    {
+      "id": "b006:bounds",
+      "passed": true
+    },
+    {
+      "id": "b006:provider-ok",
+      "passed": true
+    },
+    {
+      "id": "b006:nonzero-provider-usage",
+      "passed": true
+    },
+    {
+      "id": "b006:no-human-correction",
+      "passed": true
+    },
+    {
+      "id": "b006:allowlisted-tools",
+      "passed": true
+    },
+    {
+      "id": "identical-system",
+      "passed": true
+    },
+    {
+      "id": "original-666-files-exact",
+      "passed": true
+    },
+    {
+      "id": "no-credential-values-in-artifacts",
+      "passed": true
+    }
+  ],
+  "passed": 103,
+  "total": 103,
+  "success": true
+}

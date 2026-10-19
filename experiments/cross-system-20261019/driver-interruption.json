@@ -1,0 +1,21 @@
+{
+  "recorded_at": "2026-10-19T01:06:49.249534+00:00",
+  "driver_stdout": "Stopped: explicit provider denial; no automatic retry",
+  "cause": "Regex scanned all serialized events; digits 403 matched a normal timestamp 1792371940326, not an HTTP/provider error",
+  "minimal_reproduction": {
+    "legacy_raw_regex_matched": true,
+    "structured_provider_error_events": 0,
+    "b005_stop": "settled",
+    "b005_provider_error": false
+  },
+  "completed_runs_preserved": [
+    "b001",
+    "b002",
+    "b003",
+    "b004",
+    "b005"
+  ],
+  "b006_started_before_continuation": false,
+  "runner_changed": false,
+  "continuation": "Invoke same frozen resume/run.mjs b006. This is an unstarted run, not a retry of a provider denial or task outcome."
+}

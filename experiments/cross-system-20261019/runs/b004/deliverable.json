@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "summary": "Repaired the farm_studio_api verdict system to tightly link candidate finalization and holdout pass to literal evidence of source and holdout captures. Hardened classifyCase to require passed source SHA-256 evidence matching report finalSourceSha256 and real holdout pass line. Updated CLI to load CASE_NAME.ghost.md and holdout-result.json as evidence. Added candidate.test.mjs for regression testing in various scenarios enforcing failure when evidence is missing or mismatched. Removed async modifier from classifyCase for sync return compatibility. Skipped CLI child-process permission test as environment disallows. All relevant tests pass except for the skipped CLI exec test.",
+  "tests_run": ["candidate.test.mjs","public.test.mjs"],
+  "limitations": ["CLI child process test skipped due to environment restrictions","No external system access for integration style CLI directory setup tests"]
+}

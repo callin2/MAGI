@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "summary": "Repaired verdict.mjs to enforce evidence of source and holdout success for classification of finalCandidate and fixedHoldoutPass statuses. Hardened CLI loading logic to require existing source and holdout-result.json with expected fields. Added candidate.test.mjs with comprehensive regression tests covering acceptance and failure cases for source and holdout evidence, kind mismatch detection, and pin parity. All tests passing.",
+  "tests_run": ["public.test.mjs", "candidate.test.mjs"],
+  "limitations": ["Does not verify contents of clarification or answer beyond observedKind detection.", "No reclassification of archival or historic verdict files.", "Assumes consistent JSON structure in input captures and holdout-result.json."]
+}
