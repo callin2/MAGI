@@ -1,0 +1,3 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {allocate} from './solution.mjs';
+test("empty",async()=>assert.deepEqual(await allocate({"now": 10, "on_hand": {"s": 3}, "holds": [], "orders": []}),{"value": 0, "count": 0, "allocations": [], "remaining": {"s": 3}}));
+test("one-order",async()=>assert.deepEqual(await allocate({"now": 10, "on_hand": {"s": 3}, "holds": [], "orders": [{"id": "a", "value": 5, "group": null, "choices": [{"id": "a", "items": {"s": 1}}]}]}),{"value": 5, "count": 1, "allocations": [{"order_id": "a", "choice_id": "a"}], "remaining": {"s": 2}}));

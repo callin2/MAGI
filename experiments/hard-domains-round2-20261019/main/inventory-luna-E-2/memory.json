@@ -1,0 +1,156 @@
+[
+  {
+    "id": "inventory-actual-first-bundle-repair",
+    "rule": "Separate immutable transport-replay results from current business state, and bind each business identity to its accepted terms. Expiry follows the source receipt clock; ended transitions must not repeat physical effects. The source policy for pre-creation cancellation and terminal reuse is local to that reservation API.",
+    "conditions": {
+      "source": "synthetic warehouse replay repaired in actual G screen",
+      "scope": "two identities, receipt-clock expiry, physical/held conservation; source-specific lifecycle policies"
+    },
+    "provenance": "Newly acquired from actual successful Sol G screen on the synthetic first bundle, all three models passed that task; coordinator extracted this scoped lesson. Not autonomous memory extraction or a historical product incident.",
+    "source_run": "experiments/hard-domains-20261019/screen/inventory-sol-G-0",
+    "source_model": "gpt-6.1-sol",
+    "source_task_sha256": "07ec0f7b53175762bd419a83b801dc52cf6a232b46c2ca0a7e687d6cfea083bd",
+    "before_passed": 10,
+    "after_passed": 27,
+    "total": 27,
+    "observed_checks": [
+      {
+        "id": "empty",
+        "axis": "normal",
+        "passed": true
+      },
+      {
+        "id": "simple-reserve",
+        "axis": "normal",
+        "passed": true
+      },
+      {
+        "id": "commit-consumes-once",
+        "axis": "regression",
+        "passed": true
+      },
+      {
+        "id": "cancel-releases-once",
+        "axis": "regression",
+        "passed": true
+      },
+      {
+        "id": "duplicate-receipt",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "duplicate-business-new-receipt",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "double-cancel",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "cancel-after-commit",
+        "axis": "regression",
+        "passed": true
+      },
+      {
+        "id": "commit-after-cancel",
+        "axis": "regression",
+        "passed": true
+      },
+      {
+        "id": "unknown-cancel-tombstone",
+        "axis": "counterexample",
+        "passed": true
+      },
+      {
+        "id": "unknown-commit-not-tombstone",
+        "axis": "counterexample",
+        "passed": true
+      },
+      {
+        "id": "expiry-exact-boundary",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "just-before-expiry",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "replay-does-not-renew",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "late-replay-original-outcome",
+        "axis": "counterexample",
+        "passed": true
+      },
+      {
+        "id": "new-receipt-after-expired",
+        "axis": "regression",
+        "passed": true
+      },
+      {
+        "id": "receipt-clock-never-rewinds",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "rejected-reserve-retry",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "adjust-cannot-steal-held",
+        "axis": "regression",
+        "passed": true
+      },
+      {
+        "id": "adjust-to-held-floor",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "negative-stock-rejected",
+        "axis": "regression",
+        "passed": true
+      },
+      {
+        "id": "same-quantity-distinct-identities",
+        "axis": "counterexample",
+        "passed": true
+      },
+      {
+        "id": "expiry-releases-for-second",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "commit-then-replenish",
+        "axis": "regression",
+        "passed": true
+      },
+      {
+        "id": "transport-conflict",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "business-conflict-after-terminal",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "two-skus-independent",
+        "axis": "regression",
+        "passed": true
+      }
+    ],
+    "worker_notes": "# Repair and validation\n\nImplemented replay in solution.mjs using separate transport request history and reservation business identities. Receipt time only increases; due holds expire before every receipt, including transport retries. Cached outcomes do not renew holds or repeat effects. Accepted reservations retain their original terms and deadline across terminal transitions. Unknown cancellations retain null-field tombstones, while unknown commits do not establish an identity. Adjustments cannot reduce stock below active holds or zero. Output records are sorted by ASCII ID and inputs are not mutated.\n\n## Checks actually run\n\nRan the provided tests tool once after writing solution.mjs and candidate.test.mjs. It ran public.test.mjs and candidate.test.mjs successfully: 11 tests passed, 0 failed, exit code 0.\n\nThe nine added tests cover repeated cancellation and commitment, terminal reserve retries, exact-boundary expiry on retried messages, out-of-order receipt times, cancellation before creation, missing commits, replayed insufficient/rejected outcomes, distinct transport IDs, request conflicts, business term conflicts after terminal transitions, safe adjustments, multiple SKUs, ASCII ordering, input preservation, and repeatability. The two public tests cover empty input and a basic reserve.\n\n## Limits\n\nOnly local synthetic tests were run; no warehouse, database, network, or external clock is used. Inputs are assumed well formed per contract. Arithmetic uses JavaScript Number with no extra overflow policy. Expiry scanning is linear in stored reservations per receipt and has not been performance-benchmarked. No hidden-test coverage is claimed.\n",
+    "falsifier": "The same source contract still fails its frozen cases, or its explicit source-only policy is imposed unchanged on a different contract."
+  }
+]

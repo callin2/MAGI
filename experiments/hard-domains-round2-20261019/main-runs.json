@@ -1,0 +1,812 @@
+[
+  {
+    "id": "events-luna-E-1",
+    "phase": "main",
+    "domain": "events",
+    "family": "luna",
+    "model_id": "gpt-6-luna",
+    "arm": "E",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "6ebf73749378b9ef7ca870ec5155b301e9ba0546a899c79f54a41bc166c16327",
+      "memory.json": "be7e5ac47deabf6afd77b700f4b6e88137e0f870b9a28be435c8fac55d6182d5",
+      "solution.mjs": "1d27bbe7160a8c1eae2aa3210b40cddbec39cadd3a6a902823a3a4a1d74acd70",
+      "task.md": "987a7bdba0252bb5fb7e64539a624ea00db3792e104451706cb794f71101e216"
+    }
+  },
+  {
+    "id": "inventory-luna-F-1",
+    "phase": "main",
+    "domain": "inventory",
+    "family": "luna",
+    "model_id": "gpt-6-luna",
+    "arm": "F",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "9c67975ed7a72af6146b42e9ed47fbfab90d3f7bb2c569347ebaad22aa0d29a5",
+      "memory.json": "dd34e4127accaea5f72542b855048ec2f16b985f523a67c36f0171746156f2e6",
+      "solution.mjs": "a52239c0d1bc81c39f76979e4f3effce263d6c37803834d6a36191bf33059555",
+      "task.md": "53dff4a19c27ec4a0623963e6b6c453a7456036bf28bf1ea141169712a7d4034"
+    }
+  },
+  {
+    "id": "events-luna-G-2",
+    "phase": "main",
+    "domain": "events",
+    "family": "luna",
+    "model_id": "gpt-6-luna",
+    "arm": "G",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "6ebf73749378b9ef7ca870ec5155b301e9ba0546a899c79f54a41bc166c16327",
+      "memory.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "solution.mjs": "1d27bbe7160a8c1eae2aa3210b40cddbec39cadd3a6a902823a3a4a1d74acd70",
+      "task.md": "987a7bdba0252bb5fb7e64539a624ea00db3792e104451706cb794f71101e216"
+    }
+  },
+  {
+    "id": "events-luna-F-2",
+    "phase": "main",
+    "domain": "events",
+    "family": "luna",
+    "model_id": "gpt-6-luna",
+    "arm": "F",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "6ebf73749378b9ef7ca870ec5155b301e9ba0546a899c79f54a41bc166c16327",
+      "memory.json": "ee01a1db043a433b6cd03d4eef1969c020784e4c06da013ab363a61b2a952614",
+      "solution.mjs": "1d27bbe7160a8c1eae2aa3210b40cddbec39cadd3a6a902823a3a4a1d74acd70",
+      "task.md": "987a7bdba0252bb5fb7e64539a624ea00db3792e104451706cb794f71101e216"
+    }
+  },
+  {
+    "id": "events-luna-F-1",
+    "phase": "main",
+    "domain": "events",
+    "family": "luna",
+    "model_id": "gpt-6-luna",
+    "arm": "F",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "6ebf73749378b9ef7ca870ec5155b301e9ba0546a899c79f54a41bc166c16327",
+      "memory.json": "ee01a1db043a433b6cd03d4eef1969c020784e4c06da013ab363a61b2a952614",
+      "solution.mjs": "1d27bbe7160a8c1eae2aa3210b40cddbec39cadd3a6a902823a3a4a1d74acd70",
+      "task.md": "987a7bdba0252bb5fb7e64539a624ea00db3792e104451706cb794f71101e216"
+    }
+  },
+  {
+    "id": "calendar-luna-E-2",
+    "phase": "main",
+    "domain": "calendar",
+    "family": "luna",
+    "model_id": "gpt-6-luna",
+    "arm": "E",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "43060a92a4ce7a407865d88cf0c42a20a4497b96fb51adff06c68f03adc45cb8",
+      "memory.json": "f6085759db755cbfc478c196aacc8e8a62302374bbb5999f2e17db0be310f406",
+      "solution.mjs": "c48e77e2ab9664b81abff1921711c275520a3c09440d0d22158db3a26cc040f3",
+      "task.md": "183590b25113d3f48eb78c7739f8b5dd7270024683eec9dc547616ddc614cee5"
+    }
+  },
+  {
+    "id": "calendar-luna-G-2",
+    "phase": "main",
+    "domain": "calendar",
+    "family": "luna",
+    "model_id": "gpt-6-luna",
+    "arm": "G",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "43060a92a4ce7a407865d88cf0c42a20a4497b96fb51adff06c68f03adc45cb8",
+      "memory.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "solution.mjs": "c48e77e2ab9664b81abff1921711c275520a3c09440d0d22158db3a26cc040f3",
+      "task.md": "183590b25113d3f48eb78c7739f8b5dd7270024683eec9dc547616ddc614cee5"
+    }
+  },
+  {
+    "id": "events-luna-E-2",
+    "phase": "main",
+    "domain": "events",
+    "family": "luna",
+    "model_id": "gpt-6-luna",
+    "arm": "E",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "6ebf73749378b9ef7ca870ec5155b301e9ba0546a899c79f54a41bc166c16327",
+      "memory.json": "be7e5ac47deabf6afd77b700f4b6e88137e0f870b9a28be435c8fac55d6182d5",
+      "solution.mjs": "1d27bbe7160a8c1eae2aa3210b40cddbec39cadd3a6a902823a3a4a1d74acd70",
+      "task.md": "987a7bdba0252bb5fb7e64539a624ea00db3792e104451706cb794f71101e216"
+    }
+  },
+  {
+    "id": "inventory-luna-E-1",
+    "phase": "main",
+    "domain": "inventory",
+    "family": "luna",
+    "model_id": "gpt-6-luna",
+    "arm": "E",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "9c67975ed7a72af6146b42e9ed47fbfab90d3f7bb2c569347ebaad22aa0d29a5",
+      "memory.json": "620ee8ea29b2a36671adc7f8b8b9921bbc72f8e99b07f80675fa3e30b590b254",
+      "solution.mjs": "a52239c0d1bc81c39f76979e4f3effce263d6c37803834d6a36191bf33059555",
+      "task.md": "53dff4a19c27ec4a0623963e6b6c453a7456036bf28bf1ea141169712a7d4034"
+    }
+  },
+  {
+    "id": "inventory-luna-E-2",
+    "phase": "main",
+    "domain": "inventory",
+    "family": "luna",
+    "model_id": "gpt-6-luna",
+    "arm": "E",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "9c67975ed7a72af6146b42e9ed47fbfab90d3f7bb2c569347ebaad22aa0d29a5",
+      "memory.json": "620ee8ea29b2a36671adc7f8b8b9921bbc72f8e99b07f80675fa3e30b590b254",
+      "solution.mjs": "a52239c0d1bc81c39f76979e4f3effce263d6c37803834d6a36191bf33059555",
+      "task.md": "53dff4a19c27ec4a0623963e6b6c453a7456036bf28bf1ea141169712a7d4034"
+    }
+  },
+  {
+    "id": "inventory-luna-G-1",
+    "phase": "main",
+    "domain": "inventory",
+    "family": "luna",
+    "model_id": "gpt-6-luna",
+    "arm": "G",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "9c67975ed7a72af6146b42e9ed47fbfab90d3f7bb2c569347ebaad22aa0d29a5",
+      "memory.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "solution.mjs": "a52239c0d1bc81c39f76979e4f3effce263d6c37803834d6a36191bf33059555",
+      "task.md": "53dff4a19c27ec4a0623963e6b6c453a7456036bf28bf1ea141169712a7d4034"
+    }
+  },
+  {
+    "id": "events-luna-G-1",
+    "phase": "main",
+    "domain": "events",
+    "family": "luna",
+    "model_id": "gpt-6-luna",
+    "arm": "G",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "6ebf73749378b9ef7ca870ec5155b301e9ba0546a899c79f54a41bc166c16327",
+      "memory.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "solution.mjs": "1d27bbe7160a8c1eae2aa3210b40cddbec39cadd3a6a902823a3a4a1d74acd70",
+      "task.md": "987a7bdba0252bb5fb7e64539a624ea00db3792e104451706cb794f71101e216"
+    }
+  },
+  {
+    "id": "inventory-luna-F-2",
+    "phase": "main",
+    "domain": "inventory",
+    "family": "luna",
+    "model_id": "gpt-6-luna",
+    "arm": "F",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "9c67975ed7a72af6146b42e9ed47fbfab90d3f7bb2c569347ebaad22aa0d29a5",
+      "memory.json": "dd34e4127accaea5f72542b855048ec2f16b985f523a67c36f0171746156f2e6",
+      "solution.mjs": "a52239c0d1bc81c39f76979e4f3effce263d6c37803834d6a36191bf33059555",
+      "task.md": "53dff4a19c27ec4a0623963e6b6c453a7456036bf28bf1ea141169712a7d4034"
+    }
+  },
+  {
+    "id": "calendar-luna-E-1",
+    "phase": "main",
+    "domain": "calendar",
+    "family": "luna",
+    "model_id": "gpt-6-luna",
+    "arm": "E",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "43060a92a4ce7a407865d88cf0c42a20a4497b96fb51adff06c68f03adc45cb8",
+      "memory.json": "f6085759db755cbfc478c196aacc8e8a62302374bbb5999f2e17db0be310f406",
+      "solution.mjs": "c48e77e2ab9664b81abff1921711c275520a3c09440d0d22158db3a26cc040f3",
+      "task.md": "183590b25113d3f48eb78c7739f8b5dd7270024683eec9dc547616ddc614cee5"
+    }
+  },
+  {
+    "id": "calendar-luna-F-1",
+    "phase": "main",
+    "domain": "calendar",
+    "family": "luna",
+    "model_id": "gpt-6-luna",
+    "arm": "F",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "43060a92a4ce7a407865d88cf0c42a20a4497b96fb51adff06c68f03adc45cb8",
+      "memory.json": "d908d1a1ca2e51efc3e542e00b15cd9c50d9ed6db28670f76110325f91ac0484",
+      "solution.mjs": "c48e77e2ab9664b81abff1921711c275520a3c09440d0d22158db3a26cc040f3",
+      "task.md": "183590b25113d3f48eb78c7739f8b5dd7270024683eec9dc547616ddc614cee5"
+    }
+  },
+  {
+    "id": "calendar-luna-G-1",
+    "phase": "main",
+    "domain": "calendar",
+    "family": "luna",
+    "model_id": "gpt-6-luna",
+    "arm": "G",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "43060a92a4ce7a407865d88cf0c42a20a4497b96fb51adff06c68f03adc45cb8",
+      "memory.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "solution.mjs": "c48e77e2ab9664b81abff1921711c275520a3c09440d0d22158db3a26cc040f3",
+      "task.md": "183590b25113d3f48eb78c7739f8b5dd7270024683eec9dc547616ddc614cee5"
+    }
+  },
+  {
+    "id": "inventory-luna-G-2",
+    "phase": "main",
+    "domain": "inventory",
+    "family": "luna",
+    "model_id": "gpt-6-luna",
+    "arm": "G",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "9c67975ed7a72af6146b42e9ed47fbfab90d3f7bb2c569347ebaad22aa0d29a5",
+      "memory.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "solution.mjs": "a52239c0d1bc81c39f76979e4f3effce263d6c37803834d6a36191bf33059555",
+      "task.md": "53dff4a19c27ec4a0623963e6b6c453a7456036bf28bf1ea141169712a7d4034"
+    }
+  },
+  {
+    "id": "calendar-luna-F-2",
+    "phase": "main",
+    "domain": "calendar",
+    "family": "luna",
+    "model_id": "gpt-6-luna",
+    "arm": "F",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "43060a92a4ce7a407865d88cf0c42a20a4497b96fb51adff06c68f03adc45cb8",
+      "memory.json": "d908d1a1ca2e51efc3e542e00b15cd9c50d9ed6db28670f76110325f91ac0484",
+      "solution.mjs": "c48e77e2ab9664b81abff1921711c275520a3c09440d0d22158db3a26cc040f3",
+      "task.md": "183590b25113d3f48eb78c7739f8b5dd7270024683eec9dc547616ddc614cee5"
+    }
+  },
+  {
+    "id": "events-terra-E-1",
+    "phase": "main",
+    "domain": "events",
+    "family": "terra",
+    "model_id": "gpt-5.6-terra",
+    "arm": "E",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "6ebf73749378b9ef7ca870ec5155b301e9ba0546a899c79f54a41bc166c16327",
+      "memory.json": "be7e5ac47deabf6afd77b700f4b6e88137e0f870b9a28be435c8fac55d6182d5",
+      "solution.mjs": "1d27bbe7160a8c1eae2aa3210b40cddbec39cadd3a6a902823a3a4a1d74acd70",
+      "task.md": "987a7bdba0252bb5fb7e64539a624ea00db3792e104451706cb794f71101e216"
+    }
+  },
+  {
+    "id": "inventory-terra-F-1",
+    "phase": "main",
+    "domain": "inventory",
+    "family": "terra",
+    "model_id": "gpt-5.6-terra",
+    "arm": "F",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "9c67975ed7a72af6146b42e9ed47fbfab90d3f7bb2c569347ebaad22aa0d29a5",
+      "memory.json": "dd34e4127accaea5f72542b855048ec2f16b985f523a67c36f0171746156f2e6",
+      "solution.mjs": "a52239c0d1bc81c39f76979e4f3effce263d6c37803834d6a36191bf33059555",
+      "task.md": "53dff4a19c27ec4a0623963e6b6c453a7456036bf28bf1ea141169712a7d4034"
+    }
+  },
+  {
+    "id": "events-terra-G-2",
+    "phase": "main",
+    "domain": "events",
+    "family": "terra",
+    "model_id": "gpt-5.6-terra",
+    "arm": "G",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "6ebf73749378b9ef7ca870ec5155b301e9ba0546a899c79f54a41bc166c16327",
+      "memory.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "solution.mjs": "1d27bbe7160a8c1eae2aa3210b40cddbec39cadd3a6a902823a3a4a1d74acd70",
+      "task.md": "987a7bdba0252bb5fb7e64539a624ea00db3792e104451706cb794f71101e216"
+    }
+  },
+  {
+    "id": "events-terra-F-2",
+    "phase": "main",
+    "domain": "events",
+    "family": "terra",
+    "model_id": "gpt-5.6-terra",
+    "arm": "F",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "6ebf73749378b9ef7ca870ec5155b301e9ba0546a899c79f54a41bc166c16327",
+      "memory.json": "ee01a1db043a433b6cd03d4eef1969c020784e4c06da013ab363a61b2a952614",
+      "solution.mjs": "1d27bbe7160a8c1eae2aa3210b40cddbec39cadd3a6a902823a3a4a1d74acd70",
+      "task.md": "987a7bdba0252bb5fb7e64539a624ea00db3792e104451706cb794f71101e216"
+    }
+  },
+  {
+    "id": "events-terra-F-1",
+    "phase": "main",
+    "domain": "events",
+    "family": "terra",
+    "model_id": "gpt-5.6-terra",
+    "arm": "F",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "6ebf73749378b9ef7ca870ec5155b301e9ba0546a899c79f54a41bc166c16327",
+      "memory.json": "ee01a1db043a433b6cd03d4eef1969c020784e4c06da013ab363a61b2a952614",
+      "solution.mjs": "1d27bbe7160a8c1eae2aa3210b40cddbec39cadd3a6a902823a3a4a1d74acd70",
+      "task.md": "987a7bdba0252bb5fb7e64539a624ea00db3792e104451706cb794f71101e216"
+    }
+  },
+  {
+    "id": "calendar-terra-E-2",
+    "phase": "main",
+    "domain": "calendar",
+    "family": "terra",
+    "model_id": "gpt-5.6-terra",
+    "arm": "E",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "43060a92a4ce7a407865d88cf0c42a20a4497b96fb51adff06c68f03adc45cb8",
+      "memory.json": "f6085759db755cbfc478c196aacc8e8a62302374bbb5999f2e17db0be310f406",
+      "solution.mjs": "c48e77e2ab9664b81abff1921711c275520a3c09440d0d22158db3a26cc040f3",
+      "task.md": "183590b25113d3f48eb78c7739f8b5dd7270024683eec9dc547616ddc614cee5"
+    }
+  },
+  {
+    "id": "calendar-terra-G-2",
+    "phase": "main",
+    "domain": "calendar",
+    "family": "terra",
+    "model_id": "gpt-5.6-terra",
+    "arm": "G",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "43060a92a4ce7a407865d88cf0c42a20a4497b96fb51adff06c68f03adc45cb8",
+      "memory.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "solution.mjs": "c48e77e2ab9664b81abff1921711c275520a3c09440d0d22158db3a26cc040f3",
+      "task.md": "183590b25113d3f48eb78c7739f8b5dd7270024683eec9dc547616ddc614cee5"
+    }
+  },
+  {
+    "id": "events-terra-E-2",
+    "phase": "main",
+    "domain": "events",
+    "family": "terra",
+    "model_id": "gpt-5.6-terra",
+    "arm": "E",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "6ebf73749378b9ef7ca870ec5155b301e9ba0546a899c79f54a41bc166c16327",
+      "memory.json": "be7e5ac47deabf6afd77b700f4b6e88137e0f870b9a28be435c8fac55d6182d5",
+      "solution.mjs": "1d27bbe7160a8c1eae2aa3210b40cddbec39cadd3a6a902823a3a4a1d74acd70",
+      "task.md": "987a7bdba0252bb5fb7e64539a624ea00db3792e104451706cb794f71101e216"
+    }
+  },
+  {
+    "id": "inventory-terra-E-1",
+    "phase": "main",
+    "domain": "inventory",
+    "family": "terra",
+    "model_id": "gpt-5.6-terra",
+    "arm": "E",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "9c67975ed7a72af6146b42e9ed47fbfab90d3f7bb2c569347ebaad22aa0d29a5",
+      "memory.json": "620ee8ea29b2a36671adc7f8b8b9921bbc72f8e99b07f80675fa3e30b590b254",
+      "solution.mjs": "a52239c0d1bc81c39f76979e4f3effce263d6c37803834d6a36191bf33059555",
+      "task.md": "53dff4a19c27ec4a0623963e6b6c453a7456036bf28bf1ea141169712a7d4034"
+    }
+  },
+  {
+    "id": "inventory-terra-E-2",
+    "phase": "main",
+    "domain": "inventory",
+    "family": "terra",
+    "model_id": "gpt-5.6-terra",
+    "arm": "E",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "9c67975ed7a72af6146b42e9ed47fbfab90d3f7bb2c569347ebaad22aa0d29a5",
+      "memory.json": "620ee8ea29b2a36671adc7f8b8b9921bbc72f8e99b07f80675fa3e30b590b254",
+      "solution.mjs": "a52239c0d1bc81c39f76979e4f3effce263d6c37803834d6a36191bf33059555",
+      "task.md": "53dff4a19c27ec4a0623963e6b6c453a7456036bf28bf1ea141169712a7d4034"
+    }
+  },
+  {
+    "id": "inventory-terra-G-1",
+    "phase": "main",
+    "domain": "inventory",
+    "family": "terra",
+    "model_id": "gpt-5.6-terra",
+    "arm": "G",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "9c67975ed7a72af6146b42e9ed47fbfab90d3f7bb2c569347ebaad22aa0d29a5",
+      "memory.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "solution.mjs": "a52239c0d1bc81c39f76979e4f3effce263d6c37803834d6a36191bf33059555",
+      "task.md": "53dff4a19c27ec4a0623963e6b6c453a7456036bf28bf1ea141169712a7d4034"
+    }
+  },
+  {
+    "id": "events-terra-G-1",
+    "phase": "main",
+    "domain": "events",
+    "family": "terra",
+    "model_id": "gpt-5.6-terra",
+    "arm": "G",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "6ebf73749378b9ef7ca870ec5155b301e9ba0546a899c79f54a41bc166c16327",
+      "memory.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "solution.mjs": "1d27bbe7160a8c1eae2aa3210b40cddbec39cadd3a6a902823a3a4a1d74acd70",
+      "task.md": "987a7bdba0252bb5fb7e64539a624ea00db3792e104451706cb794f71101e216"
+    }
+  },
+  {
+    "id": "inventory-terra-F-2",
+    "phase": "main",
+    "domain": "inventory",
+    "family": "terra",
+    "model_id": "gpt-5.6-terra",
+    "arm": "F",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "9c67975ed7a72af6146b42e9ed47fbfab90d3f7bb2c569347ebaad22aa0d29a5",
+      "memory.json": "dd34e4127accaea5f72542b855048ec2f16b985f523a67c36f0171746156f2e6",
+      "solution.mjs": "a52239c0d1bc81c39f76979e4f3effce263d6c37803834d6a36191bf33059555",
+      "task.md": "53dff4a19c27ec4a0623963e6b6c453a7456036bf28bf1ea141169712a7d4034"
+    }
+  },
+  {
+    "id": "calendar-terra-E-1",
+    "phase": "main",
+    "domain": "calendar",
+    "family": "terra",
+    "model_id": "gpt-5.6-terra",
+    "arm": "E",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "43060a92a4ce7a407865d88cf0c42a20a4497b96fb51adff06c68f03adc45cb8",
+      "memory.json": "f6085759db755cbfc478c196aacc8e8a62302374bbb5999f2e17db0be310f406",
+      "solution.mjs": "c48e77e2ab9664b81abff1921711c275520a3c09440d0d22158db3a26cc040f3",
+      "task.md": "183590b25113d3f48eb78c7739f8b5dd7270024683eec9dc547616ddc614cee5"
+    }
+  },
+  {
+    "id": "calendar-terra-F-1",
+    "phase": "main",
+    "domain": "calendar",
+    "family": "terra",
+    "model_id": "gpt-5.6-terra",
+    "arm": "F",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "43060a92a4ce7a407865d88cf0c42a20a4497b96fb51adff06c68f03adc45cb8",
+      "memory.json": "d908d1a1ca2e51efc3e542e00b15cd9c50d9ed6db28670f76110325f91ac0484",
+      "solution.mjs": "c48e77e2ab9664b81abff1921711c275520a3c09440d0d22158db3a26cc040f3",
+      "task.md": "183590b25113d3f48eb78c7739f8b5dd7270024683eec9dc547616ddc614cee5"
+    }
+  },
+  {
+    "id": "calendar-terra-G-1",
+    "phase": "main",
+    "domain": "calendar",
+    "family": "terra",
+    "model_id": "gpt-5.6-terra",
+    "arm": "G",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "43060a92a4ce7a407865d88cf0c42a20a4497b96fb51adff06c68f03adc45cb8",
+      "memory.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "solution.mjs": "c48e77e2ab9664b81abff1921711c275520a3c09440d0d22158db3a26cc040f3",
+      "task.md": "183590b25113d3f48eb78c7739f8b5dd7270024683eec9dc547616ddc614cee5"
+    }
+  },
+  {
+    "id": "inventory-terra-G-2",
+    "phase": "main",
+    "domain": "inventory",
+    "family": "terra",
+    "model_id": "gpt-5.6-terra",
+    "arm": "G",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "9c67975ed7a72af6146b42e9ed47fbfab90d3f7bb2c569347ebaad22aa0d29a5",
+      "memory.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "solution.mjs": "a52239c0d1bc81c39f76979e4f3effce263d6c37803834d6a36191bf33059555",
+      "task.md": "53dff4a19c27ec4a0623963e6b6c453a7456036bf28bf1ea141169712a7d4034"
+    }
+  },
+  {
+    "id": "calendar-terra-F-2",
+    "phase": "main",
+    "domain": "calendar",
+    "family": "terra",
+    "model_id": "gpt-5.6-terra",
+    "arm": "F",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "43060a92a4ce7a407865d88cf0c42a20a4497b96fb51adff06c68f03adc45cb8",
+      "memory.json": "d908d1a1ca2e51efc3e542e00b15cd9c50d9ed6db28670f76110325f91ac0484",
+      "solution.mjs": "c48e77e2ab9664b81abff1921711c275520a3c09440d0d22158db3a26cc040f3",
+      "task.md": "183590b25113d3f48eb78c7739f8b5dd7270024683eec9dc547616ddc614cee5"
+    }
+  },
+  {
+    "id": "events-sol-E-1",
+    "phase": "main",
+    "domain": "events",
+    "family": "sol",
+    "model_id": "gpt-6.1-sol",
+    "arm": "E",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "6ebf73749378b9ef7ca870ec5155b301e9ba0546a899c79f54a41bc166c16327",
+      "memory.json": "be7e5ac47deabf6afd77b700f4b6e88137e0f870b9a28be435c8fac55d6182d5",
+      "solution.mjs": "1d27bbe7160a8c1eae2aa3210b40cddbec39cadd3a6a902823a3a4a1d74acd70",
+      "task.md": "987a7bdba0252bb5fb7e64539a624ea00db3792e104451706cb794f71101e216"
+    }
+  },
+  {
+    "id": "inventory-sol-F-1",
+    "phase": "main",
+    "domain": "inventory",
+    "family": "sol",
+    "model_id": "gpt-6.1-sol",
+    "arm": "F",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "9c67975ed7a72af6146b42e9ed47fbfab90d3f7bb2c569347ebaad22aa0d29a5",
+      "memory.json": "dd34e4127accaea5f72542b855048ec2f16b985f523a67c36f0171746156f2e6",
+      "solution.mjs": "a52239c0d1bc81c39f76979e4f3effce263d6c37803834d6a36191bf33059555",
+      "task.md": "53dff4a19c27ec4a0623963e6b6c453a7456036bf28bf1ea141169712a7d4034"
+    }
+  },
+  {
+    "id": "events-sol-G-2",
+    "phase": "main",
+    "domain": "events",
+    "family": "sol",
+    "model_id": "gpt-6.1-sol",
+    "arm": "G",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "6ebf73749378b9ef7ca870ec5155b301e9ba0546a899c79f54a41bc166c16327",
+      "memory.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "solution.mjs": "1d27bbe7160a8c1eae2aa3210b40cddbec39cadd3a6a902823a3a4a1d74acd70",
+      "task.md": "987a7bdba0252bb5fb7e64539a624ea00db3792e104451706cb794f71101e216"
+    }
+  },
+  {
+    "id": "events-sol-F-2",
+    "phase": "main",
+    "domain": "events",
+    "family": "sol",
+    "model_id": "gpt-6.1-sol",
+    "arm": "F",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "6ebf73749378b9ef7ca870ec5155b301e9ba0546a899c79f54a41bc166c16327",
+      "memory.json": "ee01a1db043a433b6cd03d4eef1969c020784e4c06da013ab363a61b2a952614",
+      "solution.mjs": "1d27bbe7160a8c1eae2aa3210b40cddbec39cadd3a6a902823a3a4a1d74acd70",
+      "task.md": "987a7bdba0252bb5fb7e64539a624ea00db3792e104451706cb794f71101e216"
+    }
+  },
+  {
+    "id": "events-sol-F-1",
+    "phase": "main",
+    "domain": "events",
+    "family": "sol",
+    "model_id": "gpt-6.1-sol",
+    "arm": "F",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "6ebf73749378b9ef7ca870ec5155b301e9ba0546a899c79f54a41bc166c16327",
+      "memory.json": "ee01a1db043a433b6cd03d4eef1969c020784e4c06da013ab363a61b2a952614",
+      "solution.mjs": "1d27bbe7160a8c1eae2aa3210b40cddbec39cadd3a6a902823a3a4a1d74acd70",
+      "task.md": "987a7bdba0252bb5fb7e64539a624ea00db3792e104451706cb794f71101e216"
+    }
+  },
+  {
+    "id": "calendar-sol-E-2",
+    "phase": "main",
+    "domain": "calendar",
+    "family": "sol",
+    "model_id": "gpt-6.1-sol",
+    "arm": "E",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "43060a92a4ce7a407865d88cf0c42a20a4497b96fb51adff06c68f03adc45cb8",
+      "memory.json": "f6085759db755cbfc478c196aacc8e8a62302374bbb5999f2e17db0be310f406",
+      "solution.mjs": "c48e77e2ab9664b81abff1921711c275520a3c09440d0d22158db3a26cc040f3",
+      "task.md": "183590b25113d3f48eb78c7739f8b5dd7270024683eec9dc547616ddc614cee5"
+    }
+  },
+  {
+    "id": "calendar-sol-G-2",
+    "phase": "main",
+    "domain": "calendar",
+    "family": "sol",
+    "model_id": "gpt-6.1-sol",
+    "arm": "G",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "43060a92a4ce7a407865d88cf0c42a20a4497b96fb51adff06c68f03adc45cb8",
+      "memory.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "solution.mjs": "c48e77e2ab9664b81abff1921711c275520a3c09440d0d22158db3a26cc040f3",
+      "task.md": "183590b25113d3f48eb78c7739f8b5dd7270024683eec9dc547616ddc614cee5"
+    }
+  },
+  {
+    "id": "events-sol-E-2",
+    "phase": "main",
+    "domain": "events",
+    "family": "sol",
+    "model_id": "gpt-6.1-sol",
+    "arm": "E",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "6ebf73749378b9ef7ca870ec5155b301e9ba0546a899c79f54a41bc166c16327",
+      "memory.json": "be7e5ac47deabf6afd77b700f4b6e88137e0f870b9a28be435c8fac55d6182d5",
+      "solution.mjs": "1d27bbe7160a8c1eae2aa3210b40cddbec39cadd3a6a902823a3a4a1d74acd70",
+      "task.md": "987a7bdba0252bb5fb7e64539a624ea00db3792e104451706cb794f71101e216"
+    }
+  },
+  {
+    "id": "inventory-sol-E-1",
+    "phase": "main",
+    "domain": "inventory",
+    "family": "sol",
+    "model_id": "gpt-6.1-sol",
+    "arm": "E",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "9c67975ed7a72af6146b42e9ed47fbfab90d3f7bb2c569347ebaad22aa0d29a5",
+      "memory.json": "620ee8ea29b2a36671adc7f8b8b9921bbc72f8e99b07f80675fa3e30b590b254",
+      "solution.mjs": "a52239c0d1bc81c39f76979e4f3effce263d6c37803834d6a36191bf33059555",
+      "task.md": "53dff4a19c27ec4a0623963e6b6c453a7456036bf28bf1ea141169712a7d4034"
+    }
+  },
+  {
+    "id": "inventory-sol-E-2",
+    "phase": "main",
+    "domain": "inventory",
+    "family": "sol",
+    "model_id": "gpt-6.1-sol",
+    "arm": "E",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "9c67975ed7a72af6146b42e9ed47fbfab90d3f7bb2c569347ebaad22aa0d29a5",
+      "memory.json": "620ee8ea29b2a36671adc7f8b8b9921bbc72f8e99b07f80675fa3e30b590b254",
+      "solution.mjs": "a52239c0d1bc81c39f76979e4f3effce263d6c37803834d6a36191bf33059555",
+      "task.md": "53dff4a19c27ec4a0623963e6b6c453a7456036bf28bf1ea141169712a7d4034"
+    }
+  },
+  {
+    "id": "inventory-sol-G-1",
+    "phase": "main",
+    "domain": "inventory",
+    "family": "sol",
+    "model_id": "gpt-6.1-sol",
+    "arm": "G",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "9c67975ed7a72af6146b42e9ed47fbfab90d3f7bb2c569347ebaad22aa0d29a5",
+      "memory.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "solution.mjs": "a52239c0d1bc81c39f76979e4f3effce263d6c37803834d6a36191bf33059555",
+      "task.md": "53dff4a19c27ec4a0623963e6b6c453a7456036bf28bf1ea141169712a7d4034"
+    }
+  },
+  {
+    "id": "events-sol-G-1",
+    "phase": "main",
+    "domain": "events",
+    "family": "sol",
+    "model_id": "gpt-6.1-sol",
+    "arm": "G",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "6ebf73749378b9ef7ca870ec5155b301e9ba0546a899c79f54a41bc166c16327",
+      "memory.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "solution.mjs": "1d27bbe7160a8c1eae2aa3210b40cddbec39cadd3a6a902823a3a4a1d74acd70",
+      "task.md": "987a7bdba0252bb5fb7e64539a624ea00db3792e104451706cb794f71101e216"
+    }
+  },
+  {
+    "id": "inventory-sol-F-2",
+    "phase": "main",
+    "domain": "inventory",
+    "family": "sol",
+    "model_id": "gpt-6.1-sol",
+    "arm": "F",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "9c67975ed7a72af6146b42e9ed47fbfab90d3f7bb2c569347ebaad22aa0d29a5",
+      "memory.json": "dd34e4127accaea5f72542b855048ec2f16b985f523a67c36f0171746156f2e6",
+      "solution.mjs": "a52239c0d1bc81c39f76979e4f3effce263d6c37803834d6a36191bf33059555",
+      "task.md": "53dff4a19c27ec4a0623963e6b6c453a7456036bf28bf1ea141169712a7d4034"
+    }
+  },
+  {
+    "id": "calendar-sol-E-1",
+    "phase": "main",
+    "domain": "calendar",
+    "family": "sol",
+    "model_id": "gpt-6.1-sol",
+    "arm": "E",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "43060a92a4ce7a407865d88cf0c42a20a4497b96fb51adff06c68f03adc45cb8",
+      "memory.json": "f6085759db755cbfc478c196aacc8e8a62302374bbb5999f2e17db0be310f406",
+      "solution.mjs": "c48e77e2ab9664b81abff1921711c275520a3c09440d0d22158db3a26cc040f3",
+      "task.md": "183590b25113d3f48eb78c7739f8b5dd7270024683eec9dc547616ddc614cee5"
+    }
+  },
+  {
+    "id": "calendar-sol-F-1",
+    "phase": "main",
+    "domain": "calendar",
+    "family": "sol",
+    "model_id": "gpt-6.1-sol",
+    "arm": "F",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "43060a92a4ce7a407865d88cf0c42a20a4497b96fb51adff06c68f03adc45cb8",
+      "memory.json": "d908d1a1ca2e51efc3e542e00b15cd9c50d9ed6db28670f76110325f91ac0484",
+      "solution.mjs": "c48e77e2ab9664b81abff1921711c275520a3c09440d0d22158db3a26cc040f3",
+      "task.md": "183590b25113d3f48eb78c7739f8b5dd7270024683eec9dc547616ddc614cee5"
+    }
+  },
+  {
+    "id": "calendar-sol-G-1",
+    "phase": "main",
+    "domain": "calendar",
+    "family": "sol",
+    "model_id": "gpt-6.1-sol",
+    "arm": "G",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "43060a92a4ce7a407865d88cf0c42a20a4497b96fb51adff06c68f03adc45cb8",
+      "memory.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "solution.mjs": "c48e77e2ab9664b81abff1921711c275520a3c09440d0d22158db3a26cc040f3",
+      "task.md": "183590b25113d3f48eb78c7739f8b5dd7270024683eec9dc547616ddc614cee5"
+    }
+  },
+  {
+    "id": "inventory-sol-G-2",
+    "phase": "main",
+    "domain": "inventory",
+    "family": "sol",
+    "model_id": "gpt-6.1-sol",
+    "arm": "G",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "9c67975ed7a72af6146b42e9ed47fbfab90d3f7bb2c569347ebaad22aa0d29a5",
+      "memory.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "solution.mjs": "a52239c0d1bc81c39f76979e4f3effce263d6c37803834d6a36191bf33059555",
+      "task.md": "53dff4a19c27ec4a0623963e6b6c453a7456036bf28bf1ea141169712a7d4034"
+    }
+  },
+  {
+    "id": "calendar-sol-F-2",
+    "phase": "main",
+    "domain": "calendar",
+    "family": "sol",
+    "model_id": "gpt-6.1-sol",
+    "arm": "F",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "43060a92a4ce7a407865d88cf0c42a20a4497b96fb51adff06c68f03adc45cb8",
+      "memory.json": "d908d1a1ca2e51efc3e542e00b15cd9c50d9ed6db28670f76110325f91ac0484",
+      "solution.mjs": "c48e77e2ab9664b81abff1921711c275520a3c09440d0d22158db3a26cc040f3",
+      "task.md": "183590b25113d3f48eb78c7739f8b5dd7270024683eec9dc547616ddc614cee5"
+    }
+  }
+]

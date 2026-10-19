@@ -1,0 +1,3885 @@
+[
+  {
+    "id": "empty",
+    "axis": "normal",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 3
+      },
+      "holds": [],
+      "orders": []
+    },
+    "value": {
+      "value": 0,
+      "count": 0,
+      "allocations": [],
+      "remaining": {
+        "s": 3
+      }
+    }
+  },
+  {
+    "id": "one-order",
+    "axis": "normal",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 3
+      },
+      "holds": [],
+      "orders": [
+        {
+          "id": "a",
+          "value": 5,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 5,
+      "count": 1,
+      "allocations": [
+        {
+          "order_id": "a",
+          "choice_id": "a"
+        }
+      ],
+      "remaining": {
+        "s": 2
+      }
+    }
+  },
+  {
+    "id": "greedy-is-suboptimal",
+    "axis": "boundary",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 3
+      },
+      "holds": [],
+      "orders": [
+        {
+          "id": "a",
+          "value": 8,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "value": 5,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "c",
+          "value": 4,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 9,
+      "count": 2,
+      "allocations": [
+        {
+          "order_id": "b",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "c",
+          "choice_id": "a"
+        }
+      ],
+      "remaining": {
+        "s": 0
+      }
+    }
+  },
+  {
+    "id": "global-alternative-choice",
+    "axis": "boundary",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 2,
+        "t": 2
+      },
+      "holds": [],
+      "orders": [
+        {
+          "id": "a",
+          "value": 6,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "value": 5,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 11,
+      "count": 2,
+      "allocations": [
+        {
+          "order_id": "a",
+          "choice_id": "b"
+        },
+        {
+          "order_id": "b",
+          "choice_id": "a"
+        }
+      ],
+      "remaining": {
+        "s": 0,
+        "t": 0
+      }
+    }
+  },
+  {
+    "id": "value-tie-prefers-count",
+    "axis": "boundary",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 2
+      },
+      "holds": [],
+      "orders": [
+        {
+          "id": "a",
+          "value": 10,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "value": 5,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "c",
+          "value": 5,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 10,
+      "count": 2,
+      "allocations": [
+        {
+          "order_id": "b",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "c",
+          "choice_id": "a"
+        }
+      ],
+      "remaining": {
+        "s": 0
+      }
+    }
+  },
+  {
+    "id": "lex-selected-identities",
+    "axis": "regression",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 2
+      },
+      "holds": [],
+      "orders": [
+        {
+          "id": "c",
+          "value": 5,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "value": 5,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "a",
+          "value": 5,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 10,
+      "count": 2,
+      "allocations": [
+        {
+          "order_id": "a",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "b",
+          "choice_id": "a"
+        }
+      ],
+      "remaining": {
+        "s": 0
+      }
+    }
+  },
+  {
+    "id": "lex-choice-identity",
+    "axis": "regression",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 3
+      },
+      "holds": [],
+      "orders": [
+        {
+          "id": "a",
+          "value": 5,
+          "group": null,
+          "choices": [
+            {
+              "id": "z",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 5,
+      "count": 1,
+      "allocations": [
+        {
+          "order_id": "a",
+          "choice_id": "a"
+        }
+      ],
+      "remaining": {
+        "s": 2
+      }
+    }
+  },
+  {
+    "id": "group-competition",
+    "axis": "boundary",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 3
+      },
+      "holds": [],
+      "orders": [
+        {
+          "id": "a",
+          "value": 6,
+          "group": "g",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "value": 5,
+          "group": "g",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "c",
+          "value": 4,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 10,
+      "count": 2,
+      "allocations": [
+        {
+          "order_id": "a",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "c",
+          "choice_id": "a"
+        }
+      ],
+      "remaining": {
+        "s": 1
+      }
+    }
+  },
+  {
+    "id": "zero-value-count-objective",
+    "axis": "boundary",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 3
+      },
+      "holds": [],
+      "orders": [
+        {
+          "id": "a",
+          "value": 0,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "value": 0,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 0,
+      "count": 2,
+      "allocations": [
+        {
+          "order_id": "a",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "b",
+          "choice_id": "a"
+        }
+      ],
+      "remaining": {
+        "s": 1
+      }
+    }
+  },
+  {
+    "id": "active-hold-capacity",
+    "axis": "regression",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 3
+      },
+      "holds": [
+        {
+          "id": "h",
+          "order_id": "z",
+          "sku": "s",
+          "quantity": 2,
+          "state": "reserved",
+          "expires_at": 20
+        }
+      ],
+      "orders": [
+        {
+          "id": "a",
+          "value": 6,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "value": 5,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 5,
+      "count": 1,
+      "allocations": [
+        {
+          "order_id": "b",
+          "choice_id": "a"
+        }
+      ],
+      "remaining": {
+        "s": 0
+      }
+    }
+  },
+  {
+    "id": "existing-expired8",
+    "axis": "counterexample",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 3
+      },
+      "holds": [
+        {
+          "id": "h",
+          "order_id": "a",
+          "sku": "s",
+          "quantity": 2,
+          "state": "expired",
+          "expires_at": 8
+        }
+      ],
+      "orders": [
+        {
+          "id": "a",
+          "value": 5,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 5,
+      "count": 1,
+      "allocations": [
+        {
+          "order_id": "a",
+          "choice_id": "a"
+        }
+      ],
+      "remaining": {
+        "s": 2
+      }
+    }
+  },
+  {
+    "id": "existing-reserved10",
+    "axis": "counterexample",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 3
+      },
+      "holds": [
+        {
+          "id": "h",
+          "order_id": "a",
+          "sku": "s",
+          "quantity": 2,
+          "state": "reserved",
+          "expires_at": 10
+        }
+      ],
+      "orders": [
+        {
+          "id": "a",
+          "value": 5,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 5,
+      "count": 1,
+      "allocations": [
+        {
+          "order_id": "a",
+          "choice_id": "a"
+        }
+      ],
+      "remaining": {
+        "s": 2
+      }
+    }
+  },
+  {
+    "id": "existing-committed8",
+    "axis": "counterexample",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 3
+      },
+      "holds": [
+        {
+          "id": "h",
+          "order_id": "a",
+          "sku": "s",
+          "quantity": 2,
+          "state": "committed",
+          "expires_at": 8
+        }
+      ],
+      "orders": [
+        {
+          "id": "a",
+          "value": 5,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 0,
+      "count": 0,
+      "allocations": [],
+      "remaining": {
+        "s": 3
+      }
+    }
+  },
+  {
+    "id": "existing-cancelled8",
+    "axis": "counterexample",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 3
+      },
+      "holds": [
+        {
+          "id": "h",
+          "order_id": "a",
+          "sku": "s",
+          "quantity": 2,
+          "state": "cancelled",
+          "expires_at": 8
+        }
+      ],
+      "orders": [
+        {
+          "id": "a",
+          "value": 5,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 0,
+      "count": 0,
+      "allocations": [],
+      "remaining": {
+        "s": 3
+      }
+    }
+  },
+  {
+    "id": "commit-already-in-snapshot",
+    "axis": "counterexample",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 2
+      },
+      "holds": [
+        {
+          "id": "h",
+          "order_id": "z",
+          "sku": "s",
+          "quantity": 7,
+          "state": "committed",
+          "expires_at": 20
+        }
+      ],
+      "orders": [
+        {
+          "id": "a",
+          "value": 5,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 5,
+      "count": 1,
+      "allocations": [
+        {
+          "order_id": "a",
+          "choice_id": "a"
+        }
+      ],
+      "remaining": {
+        "s": 0
+      }
+    }
+  },
+  {
+    "id": "duplicate-orders-once",
+    "axis": "regression",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 3
+      },
+      "holds": [],
+      "orders": [
+        {
+          "id": "a",
+          "value": 5,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "a",
+          "value": 5,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 5,
+      "count": 1,
+      "allocations": [
+        {
+          "order_id": "a",
+          "choice_id": "a"
+        }
+      ],
+      "remaining": {
+        "s": 2
+      }
+    }
+  },
+  {
+    "id": "canonical-duplicate-order",
+    "axis": "boundary",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 3,
+        "t": 2
+      },
+      "holds": [],
+      "orders": [
+        {
+          "id": "a",
+          "value": 5,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1,
+                "t": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "a",
+          "value": 5,
+          "group": null,
+          "choices": [
+            {
+              "id": "b",
+              "items": {
+                "s": 2
+              }
+            },
+            {
+              "id": "a",
+              "items": {
+                "t": 1,
+                "s": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 5,
+      "count": 1,
+      "allocations": [
+        {
+          "order_id": "a",
+          "choice_id": "a"
+        }
+      ],
+      "remaining": {
+        "s": 2,
+        "t": 1
+      }
+    }
+  },
+  {
+    "id": "duplicate-conflict",
+    "axis": "boundary",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 3
+      },
+      "holds": [],
+      "orders": [
+        {
+          "id": "a",
+          "value": 5,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "a",
+          "value": 6,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "throws": true
+  },
+  {
+    "id": "symmetric-bounded-search",
+    "axis": "boundary",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 12
+      },
+      "holds": [],
+      "orders": [
+        {
+          "id": "o00",
+          "value": 0,
+          "group": null,
+          "choices": [
+            {
+              "id": "z",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "o01",
+          "value": 1,
+          "group": null,
+          "choices": [
+            {
+              "id": "z",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "o02",
+          "value": 2,
+          "group": null,
+          "choices": [
+            {
+              "id": "z",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "o03",
+          "value": 3,
+          "group": null,
+          "choices": [
+            {
+              "id": "z",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "o04",
+          "value": 0,
+          "group": null,
+          "choices": [
+            {
+              "id": "z",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "o05",
+          "value": 1,
+          "group": null,
+          "choices": [
+            {
+              "id": "z",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "o06",
+          "value": 2,
+          "group": null,
+          "choices": [
+            {
+              "id": "z",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "o07",
+          "value": 3,
+          "group": null,
+          "choices": [
+            {
+              "id": "z",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "o08",
+          "value": 0,
+          "group": null,
+          "choices": [
+            {
+              "id": "z",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "o09",
+          "value": 1,
+          "group": null,
+          "choices": [
+            {
+              "id": "z",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "o10",
+          "value": 2,
+          "group": null,
+          "choices": [
+            {
+              "id": "z",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "o11",
+          "value": 3,
+          "group": null,
+          "choices": [
+            {
+              "id": "z",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "o12",
+          "value": 0,
+          "group": null,
+          "choices": [
+            {
+              "id": "z",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "o13",
+          "value": 1,
+          "group": null,
+          "choices": [
+            {
+              "id": "z",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "o14",
+          "value": 2,
+          "group": null,
+          "choices": [
+            {
+              "id": "z",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "o15",
+          "value": 3,
+          "group": null,
+          "choices": [
+            {
+              "id": "z",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "o16",
+          "value": 0,
+          "group": null,
+          "choices": [
+            {
+              "id": "z",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "o17",
+          "value": 1,
+          "group": null,
+          "choices": [
+            {
+              "id": "z",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 24,
+      "count": 12,
+      "allocations": [
+        {
+          "order_id": "o01",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "o02",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "o03",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "o05",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "o06",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "o07",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "o09",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "o10",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "o11",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "o13",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "o14",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "o15",
+          "choice_id": "a"
+        }
+      ],
+      "remaining": {
+        "s": 0
+      }
+    }
+  },
+  {
+    "id": "mixed-capacity-0",
+    "axis": "boundary",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 5,
+        "t": 7,
+        "u": 7
+      },
+      "holds": [],
+      "orders": [
+        {
+          "id": "a",
+          "value": 8,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1,
+                "t": 3
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 1,
+                "u": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "value": 10,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "c",
+          "value": 11,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "d",
+          "value": 1,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 2,
+                "u": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 2,
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "e",
+          "value": 4,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "u": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 2,
+                "t": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "f",
+          "value": 6,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 3,
+                "u": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "g",
+          "value": 10,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 3
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 3,
+                "t": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "h",
+          "value": 5,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 3,
+                "s": 3
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 34,
+      "count": 4,
+      "allocations": [
+        {
+          "order_id": "a",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "c",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "g",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "h",
+          "choice_id": "b"
+        }
+      ],
+      "remaining": {
+        "s": 0,
+        "t": 2,
+        "u": 7
+      }
+    }
+  },
+  {
+    "id": "mixed-capacity-1",
+    "axis": "boundary",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 5,
+        "t": 5,
+        "u": 5
+      },
+      "holds": [],
+      "orders": [
+        {
+          "id": "a",
+          "value": 1,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "value": 10,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "c",
+          "value": 10,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "u": 3,
+                "t": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 2,
+                "t": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "d",
+          "value": 4,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "u": 2,
+                "s": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 3,
+                "t": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "e",
+          "value": 7,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 2,
+                "u": 3
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 1,
+                "t": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "f",
+          "value": 6,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 2,
+                "t": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "g",
+          "value": 1,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "u": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 3,
+                "t": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "h",
+          "value": 11,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 1,
+                "s": 3
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 39,
+      "count": 5,
+      "allocations": [
+        {
+          "order_id": "b",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "c",
+          "choice_id": "b"
+        },
+        {
+          "order_id": "e",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "g",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "h",
+          "choice_id": "a"
+        }
+      ],
+      "remaining": {
+        "s": 0,
+        "t": 2,
+        "u": 0
+      }
+    }
+  },
+  {
+    "id": "mixed-capacity-2",
+    "axis": "boundary",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 4,
+        "t": 7,
+        "u": 5
+      },
+      "holds": [],
+      "orders": [
+        {
+          "id": "a",
+          "value": 7,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 3
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 2,
+                "u": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "value": 10,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "u": 3,
+                "t": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "c",
+          "value": 0,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "u": 1,
+                "s": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 3,
+                "u": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "d",
+          "value": 1,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "u": 2,
+                "s": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "e",
+          "value": 9,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "f",
+          "value": 2,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 3,
+                "u": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "g",
+          "value": 3,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 3,
+                "t": 3
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "h",
+          "value": 9,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 2,
+                "t": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 1,
+                "t": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 30,
+      "count": 5,
+      "allocations": [
+        {
+          "order_id": "a",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "e",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "f",
+          "choice_id": "b"
+        },
+        {
+          "order_id": "g",
+          "choice_id": "b"
+        },
+        {
+          "order_id": "h",
+          "choice_id": "b"
+        }
+      ],
+      "remaining": {
+        "s": 0,
+        "t": 4,
+        "u": 1
+      }
+    }
+  },
+  {
+    "id": "mixed-capacity-3",
+    "axis": "boundary",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 2,
+        "t": 2,
+        "u": 4
+      },
+      "holds": [],
+      "orders": [
+        {
+          "id": "a",
+          "value": 9,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 3
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "value": 9,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "u": 1,
+                "t": 3
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "c",
+          "value": 12,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 1,
+                "u": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "d",
+          "value": 4,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 3
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 2,
+                "t": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "e",
+          "value": 8,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 2,
+                "u": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "f",
+          "value": 5,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 2,
+                "t": 3
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 1,
+                "t": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "g",
+          "value": 9,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 2,
+                "t": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "h",
+          "value": 7,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "u": 1,
+                "s": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 3,
+                "u": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 29,
+      "count": 3,
+      "allocations": [
+        {
+          "order_id": "b",
+          "choice_id": "b"
+        },
+        {
+          "order_id": "c",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "e",
+          "choice_id": "b"
+        }
+      ],
+      "remaining": {
+        "s": 1,
+        "t": 0,
+        "u": 3
+      }
+    }
+  },
+  {
+    "id": "mixed-capacity-4",
+    "axis": "boundary",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 5,
+        "t": 6,
+        "u": 4
+      },
+      "holds": [],
+      "orders": [
+        {
+          "id": "a",
+          "value": 4,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 3,
+                "s": 3
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "value": 1,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 3,
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 3,
+                "u": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "c",
+          "value": 4,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 2,
+                "u": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 3,
+                "s": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "d",
+          "value": 2,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 1,
+                "s": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "e",
+          "value": 2,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 3
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "f",
+          "value": 5,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "g",
+          "value": 12,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "u": 3,
+                "s": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 1,
+                "s": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "h",
+          "value": 8,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 1,
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 3
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 25,
+      "count": 3,
+      "allocations": [
+        {
+          "order_id": "f",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "g",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "h",
+          "choice_id": "a"
+        }
+      ],
+      "remaining": {
+        "s": 0,
+        "t": 5,
+        "u": 1
+      }
+    }
+  },
+  {
+    "id": "mixed-capacity-5",
+    "axis": "boundary",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 6,
+        "t": 2,
+        "u": 7
+      },
+      "holds": [],
+      "orders": [
+        {
+          "id": "a",
+          "value": 5,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "u": 3,
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "value": 9,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "c",
+          "value": 1,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "d",
+          "value": 0,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 2,
+                "s": 3
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "e",
+          "value": 0,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1,
+                "u": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 1,
+                "t": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "f",
+          "value": 0,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "g",
+          "value": 3,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "h",
+          "value": 11,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 3
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 19,
+      "count": 3,
+      "allocations": [
+        {
+          "order_id": "a",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "g",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "h",
+          "choice_id": "a"
+        }
+      ],
+      "remaining": {
+        "s": 0,
+        "t": 2,
+        "u": 4
+      }
+    }
+  },
+  {
+    "id": "mixed-capacity-6",
+    "axis": "boundary",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 5,
+        "t": 2,
+        "u": 5
+      },
+      "holds": [],
+      "orders": [
+        {
+          "id": "a",
+          "value": 3,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 2,
+                "u": 3
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 3,
+                "s": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "value": 6,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "c",
+          "value": 11,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 3,
+                "u": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 2,
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "d",
+          "value": 5,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1,
+                "t": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "e",
+          "value": 12,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 3,
+                "u": 3
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "f",
+          "value": 5,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 1,
+                "t": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "g",
+          "value": 12,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1,
+                "u": 3
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "h",
+          "value": 10,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 2,
+                "u": 3
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 45,
+      "count": 5,
+      "allocations": [
+        {
+          "order_id": "c",
+          "choice_id": "b"
+        },
+        {
+          "order_id": "d",
+          "choice_id": "b"
+        },
+        {
+          "order_id": "e",
+          "choice_id": "b"
+        },
+        {
+          "order_id": "f",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "g",
+          "choice_id": "b"
+        }
+      ],
+      "remaining": {
+        "s": 1,
+        "t": 0,
+        "u": 2
+      }
+    }
+  },
+  {
+    "id": "mixed-capacity-7",
+    "axis": "boundary",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 4,
+        "t": 7,
+        "u": 3
+      },
+      "holds": [],
+      "orders": [
+        {
+          "id": "a",
+          "value": 12,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "u": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "value": 4,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 1,
+                "u": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 3,
+                "u": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "c",
+          "value": 1,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 2,
+                "u": 3
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "d",
+          "value": 0,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1,
+                "t": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "e",
+          "value": 6,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1,
+                "t": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "f",
+          "value": 8,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "u": 3,
+                "t": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "g",
+          "value": 11,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 3,
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 2,
+                "u": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "h",
+          "value": 0,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 3,
+                "t": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 23,
+      "count": 4,
+      "allocations": [
+        {
+          "order_id": "a",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "d",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "g",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "h",
+          "choice_id": "a"
+        }
+      ],
+      "remaining": {
+        "s": 0,
+        "t": 3,
+        "u": 2
+      }
+    }
+  },
+  {
+    "id": "mixed-capacity-8",
+    "axis": "boundary",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 5,
+        "t": 2,
+        "u": 4
+      },
+      "holds": [],
+      "orders": [
+        {
+          "id": "a",
+          "value": 2,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "u": 3
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "value": 7,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "u": 3
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 1,
+                "t": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "c",
+          "value": 5,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "u": 1,
+                "t": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 2,
+                "t": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "d",
+          "value": 1,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 1,
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "e",
+          "value": 1,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 3
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "f",
+          "value": 3,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 2,
+                "t": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "g",
+          "value": 3,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 2,
+                "u": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "h",
+          "value": 11,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "u": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 24,
+      "count": 4,
+      "allocations": [
+        {
+          "order_id": "b",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "c",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "d",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "h",
+          "choice_id": "b"
+        }
+      ],
+      "remaining": {
+        "s": 2,
+        "t": 0,
+        "u": 0
+      }
+    }
+  },
+  {
+    "id": "mixed-capacity-9",
+    "axis": "boundary",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 7,
+        "t": 7,
+        "u": 6
+      },
+      "holds": [],
+      "orders": [
+        {
+          "id": "a",
+          "value": 0,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "u": 1,
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "value": 0,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "c",
+          "value": 9,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "u": 2,
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 3,
+                "t": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "d",
+          "value": 5,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "u": 3,
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 1,
+                "s": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "e",
+          "value": 7,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "u": 3,
+                "t": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "f",
+          "value": 3,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 3,
+                "u": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 3,
+                "s": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "g",
+          "value": 9,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1,
+                "t": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 2,
+                "s": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "h",
+          "value": 5,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 3
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 2,
+                "s": 3
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 16,
+      "count": 2,
+      "allocations": [
+        {
+          "order_id": "c",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "e",
+          "choice_id": "a"
+        }
+      ],
+      "remaining": {
+        "s": 6,
+        "t": 6,
+        "u": 1
+      }
+    }
+  },
+  {
+    "id": "mixed-capacity-10",
+    "axis": "boundary",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 6,
+        "t": 4,
+        "u": 2
+      },
+      "holds": [],
+      "orders": [
+        {
+          "id": "a",
+          "value": 2,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 2,
+                "s": 3
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "value": 2,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "c",
+          "value": 6,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "d",
+          "value": 2,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "e",
+          "value": 9,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 3,
+                "u": 3
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "f",
+          "value": 10,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "u": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 3,
+                "s": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "g",
+          "value": 8,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 2,
+                "s": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 2,
+                "t": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "h",
+          "value": 8,
+          "group": "g2",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "u": 2,
+                "t": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 3
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 35,
+      "count": 4,
+      "allocations": [
+        {
+          "order_id": "e",
+          "choice_id": "b"
+        },
+        {
+          "order_id": "f",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "g",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "h",
+          "choice_id": "b"
+        }
+      ],
+      "remaining": {
+        "s": 2,
+        "t": 0,
+        "u": 1
+      }
+    }
+  },
+  {
+    "id": "mixed-capacity-11",
+    "axis": "boundary",
+    "input": {
+      "now": 10,
+      "on_hand": {
+        "s": 2,
+        "t": 4,
+        "u": 2
+      },
+      "holds": [],
+      "orders": [
+        {
+          "id": "a",
+          "value": 6,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "u": 1,
+                "t": 3
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "value": 9,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 2,
+                "u": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "c",
+          "value": 2,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 2,
+                "t": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "d",
+          "value": 6,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "t": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "s": 3,
+                "u": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "e",
+          "value": 2,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "u": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "f",
+          "value": 10,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 3
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "t": 2,
+                "u": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "g",
+          "value": 9,
+          "group": null,
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "u": 1
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 2,
+                "t": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "h",
+          "value": 12,
+          "group": "g1",
+          "choices": [
+            {
+              "id": "a",
+              "items": {
+                "s": 1,
+                "u": 2
+              }
+            },
+            {
+              "id": "b",
+              "items": {
+                "u": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "value": {
+      "value": 28,
+      "count": 3,
+      "allocations": [
+        {
+          "order_id": "b",
+          "choice_id": "a"
+        },
+        {
+          "order_id": "f",
+          "choice_id": "b"
+        },
+        {
+          "order_id": "g",
+          "choice_id": "a"
+        }
+      ],
+      "remaining": {
+        "s": 2,
+        "t": 0,
+        "u": 0
+      }
+    }
+  }
+]
