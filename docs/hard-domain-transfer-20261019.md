@@ -11,7 +11,7 @@ issue: https://github.com/callin2/MAGI/issues/18
 
 [문서 목차](README.md) · 관련 [#18](https://github.com/callin2/MAGI/issues/18), [#19](https://github.com/callin2/MAGI/issues/19).
 
-새 선별18회와 본 비교36회(선별과 별도)를 Mac mini에서 실제 완료·채점했다. 첫 묶음은 세 모델이 모두 성공해 세 과제 전부 제외했다. 마지막 추가 묶음에서 일정·이벤트를 선정했고 재고는 평가 timeout으로 미선정했다. 본 비교36회 중29회가 유효하며7회는 provider 과부하 무효다. **일부 이벤트 실행에 개선 신호는 있으나 경험 전이의 일반 효과나 상세 E의 추가 이득을 입증하지 못했다.** 이벤트 거부 계약의 모호함, 불균형한 표본 손실, Sol의 G부터 전체 성공, 조건당2회의 한계가 크다. [이전18회](cross-system-three-models-20261019.md)와 원본은 별도로 보존했다.
+새 선별18회와 본 비교36회(선별과 별도)를 Mac mini에서 실제 완료·채점했다. 첫 묶음은 세 모델이 모두 성공해 세 과제 전부 제외했다. 마지막 추가 묶음에서 일정·이벤트를 선정했고 재고는 평가 timeout으로 미선정했다. 본 비교36회 중29회가 유효하며7회는 provider 과부하 무효다. **일부 이벤트 실행에 개선 신호는 있으나 경험 전이의 일반 효과나 상세 E의 추가 이득을 입증하지 못했다.** 이벤트 거부 처리와 sealed 경계 문구의 두 해석 모호함, 불균형한 표본 손실, Sol의 G부터 전체 성공, 조건당2회의 한계가 크다. [이전18회](cross-system-three-models-20261019.md)와 원본은 별도로 보존했다.
 
 모든 새 과제는 합성 벤치마크다. 역사적 제품 결함이라고 주장하지 않는다. 실행 장치는 callin-macmini.local, 모델은 기존 Codex의 gpt-6-luna/gpt-5.6-terra/gpt-6.1-sol만 medium으로 사용한다. 새 인증/키 이동/OAuth refresh/설정·권한 변경, 운영 서비스·장비·DB·제품 데이터 변경은 없다.
 
@@ -60,7 +60,7 @@ A2는 추가 과제의 identity/time/state 하위 계약에 관련된 경험이�
 
 본 시험 진행 중, 결과 집계 전에 [별도 기록](https://github.com/callin2/MAGI/issues/18#issuecomment-6261134754)했다. 대본은 같은 accepted revision의 다른 payload에는 Error를 명시하지만, 늦거나 finalized 상태를 바꾸는 요청의 rejected atomically가 레코드를 건너뛰고 계속하는지 호출 전체를 throw하는지 명시하지 않는다. Oracle은 충돌 외 거부를 건너뛰고 최종 상태를 반환한다. 선별 Luna/Terra22/40은 이 구간에서 throw해 배치 전체가 중단된18개 사례와 관련된다. 잘못된 상태 변경18개라고 표현하지 않는다.
 
-이 차이는 실제 거부 판단·세션 상태 오류와 구별해서 해석해야 한다. 동결 대본·oracle·선정·원점수는 수정하지 않았고 조건을 재생성하지 않았다. 해당 사례를 삭제해 새로운 성공 점수를 만들지도 않는다. 오류 정책을 바꾸었을 때 다른 논리까지 맞는다고 증명한 것이 아니다. 원천 교훈이 해석 선택에 영향을 주었을 가능성을 경험 일반화의 입증과 구별한다.
+이 차이는 실제 반환 차이와 대본의 다른 해석 가능성을 구별해서 해석해야 한다. 동결 대본·oracle·선정·원점수는 수정하지 않았고 조건을 재생성하지 않았다. 해당 사례를 삭제해 새로운 성공 점수를 만들지도 않는다. 오류 정책을 바꾸었을 때 다른 논리까지 맞는다고 증명한 것이 아니다. 원천 교훈이 해석 선택에 영향을 주었을 가능성을 경험 일반화의 입증과 구별한다.
 
 ## 실행 중 서버 실패와 재개
 
@@ -87,18 +87,22 @@ A2는 추가 과제의 identity/time/state 하위 계약에 관련된 경험이�
 
 - 일정 Luna는 유효한 G1회25/26, F1회25/26, E2회25/26씩으로 전체 성공이 없었다. 세 후보는 전환 시간의 분→밀리초 환산을 누락했고, 다른 E 후보는 비연속 일정 쌍에도 전환을 강제했다.
 - 일정 Terra는 유효 G1회26/26, F1회25/26으로 조건 간 악화가 관찰됐다. E는 두 실행 모두 provider 무효여서 비교할 수 없다. F의 비연속 쌍 과잉 제약을 기억이 유발했다고 단정할 수 없다. Sol은 양 분야의 G/F/E 모두2/2로 기본 성공부터 천장에 가까웠다.
-- 이벤트 Luna G는39/40·22/40, F는39/40·40/40, E는40/40·22/40이었다. F/E에 각각 전체 성공1회가 있었으나 E 추가 이득은 없었다. 39/40의 G/F는 같은 sealed 범위 과잉 확장 오류였다. 22/40은 거부 시 throw/skip 해석 차이가 포함된다.
+- 이벤트 Luna G는39/40·22/40, F는39/40·40/40, E는40/40·22/40이었다. F/E에 각각 전체 성공1회가 있었으나 E 추가 이득은 없었다. 39/40의 G/F는 같은 sealed 경계 해석으로 의도한 oracle과 불일치했다. 아래에 설명한 대본의 추가 모호함 때문에 이를 명백한 모델 결함으로 단정하지 않는다. 22/40은 거부 시 throw/skip 해석 차이가 포함된다.
 - 이벤트 Terra는 유효 G1회22/40, F2회22/40씩, E는40/40·22/40이었다. E의 성공1회를 전이 입증으로 부르지 않는다. G 유효 표본이 한 개이며 거부/throw 계약 해석만으로도 차이 일부가 생길 수 있다.
 
 본 비교29개 유효 실행 중 업무 전체 성공16회이며 제출 전체 성공도16회다. 이는 분야별 비교를 대체하는 가중 성능 지표가 아닌 기록 확인용 건수다. schema·notes/자체 시험 산출물·성공한 worker test 호출은 각각30/36에 있었다. 형식이나 자체 시험 통과를 숨겨진 업무 성공으로 세지 않았다. Provider 무효7회는 일부 코드가 검사26/26을 통과하더라도 유효 성공으로 올리지 않았다. 본 평가 timeout은0회다.
 
-## 실제 오류와 반례 검토
+## 반환 차이와 반례 검토
 
-[동결 판정의 실패 목록](../experiments/hard-domains-round2-20261019/failure-analysis.json)과 [실제 함수로 재현한 네 사례](../experiments/hard-domains-round2-20261019/semantic-review.json)를 보존한다. 후자는 기존 두 일정 사례와 이벤트 혼합 이력의 최소 재현 두 개이며 사후 진단이다. 새 채점 assertion이나 새 모델 실행이 아니다.
+[동결 판정의 실패 목록](../experiments/hard-domains-round2-20261019/failure-analysis.json)과 [실제 함수로 재현한 네 반환 차이](../experiments/hard-domains-round2-20261019/semantic-review.json)를 보존한다. 후자는 기존 두 일정 사례와 이벤트 혼합 이력의 최소 재현 두 개이며 사후 진단이다. 새 채점 assertion이나 새 모델 실행이 아니다. 이 진단 파일의 이벤트 explanation에 있는 state/acceptance error 단정은 당시 해석 기록이며, 아래 후속 감사 정정으로 철회한다. 입력·실제 반환값·의도한 oracle 값·matches 필드는 수정하지 않는다.
 
 일정의 directed-setup-boundary는 같은 참석자가 a방09:00–09:30 뒤 b방09:35에 가려면10분이 필요한데 Luna가 둘을 배정했다. 코드가 밀리초 시각에10을 그대로 더했다. consecutive-not-all-pairs에서는 a→c 직접 전환50분이어도 중간 b방 일정이 있으면 연속 전환 a→b→c는 각각0분이라 세 일정을 모두 배정할 수 있다. Terra F2는 비연속 a/c 쌍으로 미리 가지치기해 값15 대신10을 반환했다.
 
-이벤트의 최소 재현은 gap10, lateness10에서 e(time3)와 watermark28로 end13의 e가 final이 되고, c(time34)를 time15로 옮기는 것이다. e와15의 거리는12라 연결되지 않으며 새 c의 end25는 cutoff18보다 커 수락해야 한다. Luna G1/F1는 이미 gap이 더해진 sealed end13에 gap을 다시 더한23까지 거부해 c를34에 남겼다. 이는 throw/skip 해석과 별개인 실제 상태 오류다. G와 F 모두에서 나타나므로 기억의 부작용이라고 단정하지 않는다.
+이벤트의 최소 재현은 gap10, lateness10에서 e(time3)와 watermark28로 end13의 e가 final이 되고, c(time34)를 time15로 옮기는 것이다. 의도한 oracle은 마지막 이벤트3과15의 거리가12라 연결되지 않고 새 c의 end25가 cutoff18보다 크므로 이동을 수락한다. Luna G1/F1는 sealed end13에 gap을 더한23까지 거부해 c를34에 남겼다. 이 실제 반환 차이는 보존한다.
+
+그러나 동결 대본의 “lies within gap_ms of any finalized session … including equality to its boundary”와 session end=last_event_time+gap_ms를 함께 읽으면, finalized session의 [start,end] 구간에서 gap만큼의 거리, 즉 오른쪽 end+gap까지 거부하는 의미로 읽을 여지가 있다. Oracle의 의도는 마지막 이벤트를 기준으로 한 거리였지만 대본이 그것만을 유일하게 명확히 규정하지 않았다. 따라서 이 G1/F1 차이는 **의도한 oracle과의 불일치이며 sealed boundary 문구의 추가 해석 모호성이 있는 사례**다. throw/skip과는 별개의 모호함이며, 명백한 실제 상태 오류나 모델 결함이라는 앞선 단정을 철회한다. G와 F 모두에서 나타나며 기억의 부작용이나 일반화 실패의 확정 근거로 삼지 않는다.
+
+이 정정은 결과 커밋282bacb 이후 독립 감사에 따른 문서 해석 보완이다. 동결 task/oracle/후보/원점수/실제 반환/usage와 성공·유효 분모는 그대로다. 새 생성·실험·채점·후보 확장은 하지 않았다. 기존 evidence-manifest.json은282bacb 당시 스냅샷이며 당시 보고서 hash도 보존한다. 후속 해석 정정의 문서 버전은 이 후속 Git 커밋으로 추적한다.
 
 Source의 both-fold/고정 window 정책을 새 목표의 선택형 booking/session 계약에 무조건 적용하면 틀리는 반례도 원래 판정에 유지했다. 그러나 관측 실패를 모두 source 오적용으로 분류하지 않는다. 특히 source A2는 전환 시간의 단위·전역 최적화·session 전체 알고리즘을 가르치는 자료가 아니며, 대상의 독립 요구에서 난 오류도 있다. 관련 기억은 직접 제공했다. 자율 검색이나 MAGI 기억 시스템 전체, 자연 발생 제품 결함의 장기 학습 효과는 시험하지 않았다.
 
@@ -122,6 +126,6 @@ Source의 both-fold/고정 window 정책을 새 목표의 선택형 booking/sess
 
 [무결성2699/2699](../experiments/hard-domains-round2-20261019/integrity.json)는 고정 파일/모델 route·예산·prompt·새 대화·F/E 투영·기록 일치·기존 인증값 유출 검사다. 행동 성공 수가 아니다. 이전 실험/scripts1002개는 c57848d와 바이트가 같다. [추가 보존 확인](../experiments/hard-domains-round2-20261019/preservation.json)에서 첫 묶음370개와 두 번째 선별99개도 각각55fc025/b694aa1 그대로다. A2 freeze55fc025에는 B2 파일이 없고 B2 동결e08292b가 이후다. 최초54개 본 seed와 추가 재고18개 본 seed는 미실행으로 남는다.
 
-읽기 전용 개별 재현은 `python3 scripts/hard_domains2/check.py calendar experiments/hard-domains-round2-20261019/main/calendar-luna-G-2/solution.mjs`처럼 실행한다. score.py/finalize.py/review_failures.py는 write-once 자료를 생성하므로 완료 디렉터리에서 재실행하지 않는다. 원점수·후보·실패를 삭제하지 않는다. [evidence manifest](../experiments/hard-domains-round2-20261019/evidence-manifest.json)에 파일 hash를 둔다. 문서 인덱스 생성/현재성·관련 문서 검색, 실제 의미 오류4개 재현, provider 실패·timeout 분류와 provenance 검사를 완료했다. 기존 결과를 덮어쓰는 과거 실험 check 스크립트는 실행하지 않았다.
+읽기 전용 개별 재현은 `python3 scripts/hard_domains2/check.py calendar experiments/hard-domains-round2-20261019/main/calendar-luna-G-2/solution.mjs`처럼 실행한다. score.py/finalize.py/review_failures.py는 write-once 자료를 생성하므로 완료 디렉터리에서 재실행하지 않는다. 원점수·후보·실패를 삭제하지 않는다. [evidence manifest](../experiments/hard-domains-round2-20261019/evidence-manifest.json)에 파일 hash를 둔다. 문서 인덱스 생성/현재성·관련 문서 검색, 기존 함수의 oracle 대비 반환 차이4개 재현(이벤트 두 사례는 위 해석 정정 적용), provider 실패·timeout 분류와 provenance 검사를 완료했다. 기존 결과를 덮어쓰는 과거 실험 check 스크립트는 실행하지 않았다.
 
-이번 유한 묶음은 실행/채점/기록을 완료했으나, 복수 분야에서 경험 전이의 일반 효과를 신뢰성 있게 입증한 시험은 아니다. 첫3과제가 모두 쉬워 제외됐고, 추가 재고는 인프라 무효, 이벤트는 계약 해석 한계가 있다. 유효한 어려움의 단일 G 선별·작은 표본·선정 편향·합성 모듈·원천 경험의 수동 추출·모델 기본 지식 및 사전노출 가능성·server missingness를 남은 한계로 유지한다. A→B는 같은/인접 분야의 구조 이동이며 모두 먼 분야 간 전이라고 부르지 않는다. 새 인증/refresh/키 이동/설정·권한 변경, 운영 서비스/장비/DB/실제품 변경, Git main 병합·배포는 하지 않았다. #18/#19를 완료로 닫지 않는다.
+이번 유한 묶음은 실행/채점/기록을 완료했으나, 복수 분야에서 경험 전이의 일반 효과를 신뢰성 있게 입증한 시험은 아니다. 첫3과제가 모두 쉬워 제외됐고, 추가 재고는 인프라 무효, 이벤트는 거부 처리와 sealed 경계의 두 계약 해석 한계가 있다. 유효한 어려움의 단일 G 선별·작은 표본·선정 편향·합성 모듈·원천 경험의 수동 추출·모델 기본 지식 및 사전노출 가능성·server missingness를 남은 한계로 유지한다. A→B는 같은/인접 분야의 구조 이동이며 모두 먼 분야 간 전이라고 부르지 않는다. 새 인증/refresh/키 이동/설정·권한 변경, 운영 서비스/장비/DB/실제품 변경, Git main 병합·배포는 하지 않았다. #18/#19를 완료로 닫지 않는다.
