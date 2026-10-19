@@ -1,0 +1,54 @@
+{
+  "id": "calendar-sol-E-2",
+  "phase": "main",
+  "domain": "calendar",
+  "family": "sol",
+  "model_id": "gpt-6.1-sol",
+  "arm": "E",
+  "repetition": 2,
+  "status": "executed",
+  "valid": true,
+  "task_success": true,
+  "package_complete": true,
+  "behavior_passed": 26,
+  "behavior_total": 26,
+  "axes": {
+    "boundary": {
+      "passed": 16,
+      "total": 16
+    },
+    "counterexample": {
+      "passed": 3,
+      "total": 3
+    },
+    "normal": {
+      "passed": 2,
+      "total": 2
+    },
+    "regression": {
+      "passed": 5,
+      "total": 5
+    }
+  },
+  "schema_valid": true,
+  "artifacts_present": true,
+  "successful_worker_test": true,
+  "response_models": [
+    "gpt-6.1-sol"
+  ],
+  "elapsed_seconds": 124.014355042,
+  "model_calls": 8,
+  "tool_calls": 7,
+  "tool_errors": 0,
+  "stop": "settled",
+  "usage": {
+    "input": 44759,
+    "output": 5596,
+    "cacheRead": 0,
+    "cacheWrite": 0,
+    "totalTokens": 50355
+  },
+  "user_corrections": 0,
+  "cash_cost_usd": null,
+  "human_time_saving": null
+}

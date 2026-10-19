@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {sessions} from './solution.mjs';
+const u=(id,rev,key,t,amount=1)=>({kind:'upsert',id,rev,key,event_time:t,amount});
+const d=(id,rev)=>({kind:'delete',id,rev});
+const run=records=>sessions({gap_ms:10,lateness_ms:0,records});
+test('late bridge merges event-time components independent of epoch windows',()=>{const x=run([u('a',1,'k',-100,2),u('b',1,'k',-80,3),u('bridge',1,'k',-90,4)]);assert.deepEqual(x.sessions,[{key:'k',start:-100,end:-70,total:9,count:3,ids:['a','b','bridge'],final:false}]);});
+test('retraction splits a component and resulting old component finalizes',()=>{const x=run([u('a',1,'k',0),u('bridge',1,'k',10),u('z',1,'k',20),d('bridge',2),{kind:'watermark',time:10}]);assert.deepEqual(x.sessions,[{key:'k',start:0,end:10,total:1,count:1,ids:['a'],final:true},{key:'k',start:20,end:30,total:1,count:1,ids:['z'],final:false}]);});
+test('finalized membership stable; attempted rewrite rejected',()=>{const x=run([u('a',1,'k',0,5),{kind:'watermark',time:10},u('a',2,'k',40,8),u('b',1,'other',20,2)]);assert.deepEqual(x.sessions,[{key:'k',start:0,end:10,total:5,count:1,ids:['a'],final:true},{key:'other',start:20,end:30,total:2,count:1,ids:['b'],final:false}]);});
+test('rejected changes establish no version; accepted replay conflict throws',()=>{const y=run([u('a',1,'k',0),{kind:'watermark',time:100},u('b',1,'k',0),u('b',1,'k',50)]);assert.equal(y.sessions.length,1);assert.equal(y.sessions[0].count,1);assert.throws(()=>run([u('x',1,'q',4),u('x',1,'q',5)]),/conflicting/);});
+test('tombstones, lower revisions, zero totals, ordering and independent calls',()=>{const r=[u('b',1,'z',5,0),u('a',1,'a',5,0),u('b',1,'z',5,0),d('unknown',1),u('b',0,'z',7,2)];const first=run(r);assert.deepEqual(first.sessions.map(s=>s.key),['a','z']);assert.equal(first.sessions[1].total,0);first.sessions.length=0;assert.equal(run(r).sessions.length,2);});

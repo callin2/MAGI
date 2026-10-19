@@ -1,0 +1,7 @@
+# Validation notes
+
+Implemented `sessions` in `solution.mjs`. Components are built per key from sorted live events using consecutive event-time gaps (including equality); accepted updates are evaluated against a proposed complete live state before committing. Revisions are tracked separately from live contributions, so accepted replay/conflict and stale-revision behavior survives deletion/finalization, while rejected revisions do not consume a version. Watermarks advance monotonically, and eligible components are snapshotted and removed from mutable state. Finalized identities and nearby proposed events are protected from mutation/contact.
+
+Validation: ran the provided test runner (`public.test.mjs` plus `candidate.test.mjs`): 7 tests passed, 0 failed. Candidate tests cover negative event times and bridge merge, split-induced finalization, sealed contribution protection, rejected proposal retry behavior, revision conflict, tombstone/lower-revision behavior, zero-total sessions, ordering, and call independence.
+
+Limits: arithmetic follows JavaScript `Number`; exact behavior is assured for safe-integer inputs, while unsafe integer magnitudes cannot be represented exactly. No broker or live service was accessed.

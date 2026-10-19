@@ -1,0 +1,13 @@
+{
+  "scope": "Synthetic positive control for diagnostic tracing only; not a candidate, worker, or behavioral score. No model calls.",
+  "exit_code": 0,
+  "observed_apis": [
+    "fs.openSync",
+    "fs.promises.readFile",
+    "fs.readFileSync",
+    "fs.readSync"
+  ],
+  "passed": true,
+  "first_attempt": "Temporary symlink path produced no trace; resolved path used for this successful control.",
+  "limitation": "Public APIs only; does not prove coverage of native, obfuscated, or hostile bypasses."
+}

@@ -1,0 +1,70 @@
+{
+  "scope": "Instrumented re-execution for public fs calls; original scores and model generations unchanged. Native/obfuscated bypasses not formally excluded. Same-process oracle-access limitation remains.",
+  "runs": [
+    {
+      "phase": "screen",
+      "id": "calendar-luna-G-0",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "screen",
+      "id": "calendar-sol-G-0",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "screen",
+      "id": "calendar-terra-G-0",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "screen",
+      "id": "events-luna-G-0",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "screen",
+      "id": "events-sol-G-0",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "screen",
+      "id": "events-terra-G-0",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "screen",
+      "id": "inventory-luna-G-0",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "screen",
+      "id": "inventory-sol-G-0",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "screen",
+      "id": "inventory-terra-G-0",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    }
+  ],
+  "access_call_count": 0,
+  "inconclusive": 0
+}

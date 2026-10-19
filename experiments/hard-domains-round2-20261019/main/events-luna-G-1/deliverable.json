@@ -1,0 +1,1 @@
+{"schema_version":1,"summary":"Repaired the revisable activity-session aggregator with dynamic gap-connected sessions, revision checks, atomic rejection, watermark finalization, and sealed-session stability.","tests_run":["node public.test.mjs and candidate.test.mjs via functions.tests (3 tests passed)"],"limitations":[]}

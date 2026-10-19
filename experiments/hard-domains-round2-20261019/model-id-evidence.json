@@ -1,0 +1,6878 @@
+{
+  "scope": "Exact requested and server response model IDs per SDK call. Unique HTTP request IDs and response object UUIDs were not captured by the frozen adapter.",
+  "runs": [
+    {
+      "cohort": "hard-domains-20261019",
+      "phase": "screen",
+      "run": "inventory-luna-G-0",
+      "calls": [
+        {
+          "event_at": "2026-10-19T05:50:47.530Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:50:56.871Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:51:03.407Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:51:05.563Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:51:10.764Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:51:12.519Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-20261019",
+      "phase": "screen",
+      "run": "calendar-luna-G-0",
+      "calls": [
+        {
+          "event_at": "2026-10-19T05:51:14.064Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:51:22.422Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:51:29.103Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:51:30.495Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:51:35.185Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:51:38.818Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-20261019",
+      "phase": "screen",
+      "run": "events-luna-G-0",
+      "calls": [
+        {
+          "event_at": "2026-10-19T05:51:42.170Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:51:49.941Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:51:57.046Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:51:59.923Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:52:05.430Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:52:07.186Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-20261019",
+      "phase": "screen",
+      "run": "inventory-terra-G-0",
+      "calls": [
+        {
+          "event_at": "2026-10-19T05:50:56.139Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:51:17.877Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:51:53.304Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:51:56.433Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:52:19.048Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:52:30.081Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-20261019",
+      "phase": "screen",
+      "run": "calendar-terra-G-0",
+      "calls": [
+        {
+          "event_at": "2026-10-19T05:52:33.809Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:52:55.027Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:53:17.053Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:53:19.125Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:53:28.952Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:53:40.818Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:53:43.556Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-20261019",
+      "phase": "screen",
+      "run": "events-terra-G-0",
+      "calls": [
+        {
+          "event_at": "2026-10-19T05:53:45.760Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:54:40.448Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:55:06.156Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:55:07.952Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:55:33.426Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:55:45.641Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-20261019",
+      "phase": "screen",
+      "run": "inventory-sol-G-0",
+      "calls": [
+        {
+          "event_at": "2026-10-19T05:50:46.503Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:50:49.818Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:51:06.909Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:51:29.172Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:51:31.127Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:51:37.266Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:51:45.348Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:51:49.868Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-20261019",
+      "phase": "screen",
+      "run": "calendar-sol-G-0",
+      "calls": [
+        {
+          "event_at": "2026-10-19T05:51:53.934Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:51:55.726Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:52:23.565Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:52:52.094Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:52:54.491Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:53:00.273Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:53:10.594Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:53:14.158Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-20261019",
+      "phase": "screen",
+      "run": "events-sol-G-0",
+      "calls": [
+        {
+          "event_at": "2026-10-19T05:53:16.321Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:53:18.102Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:53:33.186Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:53:57.691Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:54:00.390Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:54:05.485Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:54:14.454Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T05:54:17.250Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "screen",
+      "run": "inventory-luna-G-0",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:10:09.287Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:10:20.504Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:10:28.021Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:10:30.201Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:10:39.679Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:10:41.106Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:10:45.509Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:10:51.172Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:10:53.189Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "screen",
+      "run": "calendar-luna-G-0",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:10:54.330Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:11:03.582Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:11:12.235Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:11:22.294Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:11:25.791Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:11:34.049Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:11:35.509Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:11:44.589Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:11:46.846Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:11:52.723Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:12:00.020Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:12:02.965Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "screen",
+      "run": "events-luna-G-0",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:12:06.390Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:12:16.942Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:12:24.011Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:12:27.190Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:12:31.805Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:12:35.059Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:12:39.443Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "screen",
+      "run": "inventory-terra-G-0",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:10:10.938Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:11:15.782Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:11:57.412Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:12:05.443Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:13:35.095Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:13:39.984Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:14:00.916Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:14:05.301Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "screen",
+      "run": "calendar-terra-G-0",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:14:07.907Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:15:50.881Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:16:15.742Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:16:21.891Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:16:49.733Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:16:51.614Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:17:22.608Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:17:25.902Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:17:44.839Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:17:47.135Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "screen",
+      "run": "events-terra-G-0",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:17:48.961Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:18:17.937Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:18:51.324Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:18:53.817Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:19:00.338Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:19:04.218Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "screen",
+      "run": "inventory-sol-G-0",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:10:12.443Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:10:14.628Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:10:50.131Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:11:24.512Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:11:26.701Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:11:34.424Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:11:47.958Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:11:51.842Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "screen",
+      "run": "calendar-sol-G-0",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:11:54.193Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:11:55.793Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:12:37.149Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:13:09.171Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:13:11.644Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:13:23.458Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:13:29.296Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:13:35.227Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "screen",
+      "run": "events-sol-G-0",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:13:37.724Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:13:40.184Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:13:59.263Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:14:26.742Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:14:28.894Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:14:50.930Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:14:54.050Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:15:00.970Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:15:15.941Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:15:20.438Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-luna-E-1",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:26:13.158Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:26:19.217Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:26:32.453Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:26:40.125Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:26:43.922Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:26:54.328Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:26:58.529Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:27:04.357Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-luna-G-2",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:27:08.762Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:27:23.700Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:27:30.697Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:27:34.855Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:27:44.903Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:27:46.243Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:27:53.365Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:27:56.686Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:28:04.438Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-luna-F-2",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:28:08.368Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:28:19.652Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:28:31.263Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:28:34.239Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:28:45.318Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:28:47.830Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:28:53.263Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:28:56.989Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:29:02.298Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-luna-F-1",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:29:06.220Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:29:16.619Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:29:23.893Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:29:28.205Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:29:36.993Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:29:40.278Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:29:42.554Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:29:45.974Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:29:50.166Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-luna-E-2",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:29:54.915Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:30:06.936Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:30:17.333Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:30:23.625Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:30:24.988Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:30:33.778Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:30:35.212Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:30:41.924Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:30:45.004Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:30:46.721Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-luna-G-2",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:30:49.107Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:31:02.110Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:31:08.815Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:31:16.564Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:31:18.287Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:31:22.604Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:31:28.374Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:31:32.667Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:31:37.907Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:31:39.643Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:31:46.634Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:31:49.638Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:31:54.506Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-luna-E-2",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:31:55.939Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:32:00.726Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:32:11.104Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:32:18.411Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:32:19.877Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:32:27.620Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:32:32.484Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:32:38.472Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:32:42.830Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:32:44.408Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-luna-G-1",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:32:46.476Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:32:56.525Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:33:07.324Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:33:11.394Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:33:17.879Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:33:24.302Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:33:26.798Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:33:30.692Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:33:32.285Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-luna-E-1",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:33:37.154Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:33:45.437Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:33:53.907Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:33:57.458Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:34:06.761Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:34:12.815Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:34:23.033Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:34:24.573Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:34:31.596Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:34:35.807Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:34:43.870Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:34:48.336Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:34:53.528Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:34:56.726Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:35:02.018Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-luna-F-1",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:35:07.540Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:35:20.965Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:35:30.639Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:35:32.370Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:35:38.732Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:35:40.865Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:35:48.553Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:35:50.590Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:35:52.752Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-luna-G-1",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:35:55.162Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:35:56.496Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-luna-F-2",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:37:35.855Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:37:47.310Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:37:58.665Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:38:04.354Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:38:06.377Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:38:13.919Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:38:18.623Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:38:24.367Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:38:25.733Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:38:34.460Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:38:36.052Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:38:42.496Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:38:45.865Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:38:48.415Z",
+          "requested_model": "gpt-6-luna",
+          "server_models": [
+            "gpt-6-luna"
+          ],
+          "request_payload": {
+            "model": "gpt-6-luna",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-terra-E-1",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:26:13.886Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:27:30.673Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:27:59.142Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:28:01.471Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:28:46.751Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:28:49.421Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:29:10.752Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:29:32.181Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-terra-G-2",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:29:34.882Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:30:50.284Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:30:51.436Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-terra-F-2",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:31:06.505Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:33:15.740Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:33:25.624Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:33:33.286Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:33:35.960Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:33:48.944Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:34:05.462Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-terra-F-1",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:34:09.303Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:35:17.271Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:35:58.283Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:36:26.059Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:36:27.944Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:36:31.763Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:37:06.659Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:37:08.826Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:37:30.151Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:37:32.392Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-terra-E-2",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:37:34.010Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:39:56.578Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:40:18.368Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:40:29.230Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:40:55.309Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:40:56.546Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-terra-G-2",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:40:58.641Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:40:59.657Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-terra-E-2",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:42:03.241Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:43:32.140Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:44:03.994Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:44:08.619Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:44:48.403Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:45:16.795Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:45:19.166Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-terra-G-1",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:45:20.802Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:46:45.979Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:47:08.180Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:47:12.580Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:47:36.237Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:47:38.662Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-terra-E-1",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:47:40.708Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:48:18.183Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:48:27.154Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:48:55.955Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:48:57.709Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:49:18.912Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:49:21.064Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:50:15.779Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:50:17.453Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:50:43.742Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:50:44.881Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-terra-F-1",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:50:57.815Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:50:59.463Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-terra-G-1",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:52:26.122Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:54:18.814Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:54:43.358Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:54:50.270Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:54:54.209Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:55:00.845Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:55:20.986Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:55:22.813Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:55:55.621Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:56:04.276Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-terra-F-2",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:56:07.339Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:57:47.605Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:58:10.476Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:58:11.800Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:58:29.694Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:58:32.409Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:58:55.479Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:59:01.316Z",
+          "requested_model": "gpt-5.6-terra",
+          "server_models": [
+            "gpt-5.6-terra"
+          ],
+          "request_payload": {
+            "model": "gpt-5.6-terra",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-sol-E-1",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:26:15.376Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:26:17.180Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:26:39.372Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:27:11.128Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:27:13.313Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:27:20.169Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:27:32.041Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:27:37.708Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-sol-G-2",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:27:40.003Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:27:42.252Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:28:04.101Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:28:33.690Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:28:36.467Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:28:42.673Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:28:54.692Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:28:58.801Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-sol-F-2",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:29:00.638Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:29:02.806Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:29:22.770Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:29:57.127Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:29:59.419Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:30:04.899Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:30:16.242Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:30:20.415Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-sol-F-1",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:30:22.740Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:30:26.437Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:30:49.641Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:31:23.776Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:31:26.205Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:31:33.321Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:31:44.509Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:31:48.084Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-sol-E-2",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:31:51.202Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:31:53.668Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:32:41.572Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:33:20.980Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:33:23.762Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:33:33.233Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:33:46.910Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:33:52.098Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-sol-G-2",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:33:54.706Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:33:56.680Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:34:40.596Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:35:16.780Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:35:19.183Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:35:25.123Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:35:37.087Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:35:40.603Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-sol-E-2",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:35:43.272Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:35:49.639Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:36:10.590Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:36:41.476Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:37:07.249Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:37:10.282Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:37:17.488Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:37:29.923Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:37:33.712Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-sol-G-1",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:37:35.859Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:37:38.480Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:37:59.687Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:38:30.097Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:38:32.903Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:38:38.649Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:38:48.896Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:38:52.829Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-sol-E-1",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:38:55.444Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:38:57.659Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:39:41.033Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:40:09.632Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:40:12.607Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:40:26.252Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:40:32.143Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:40:38.133Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-sol-F-1",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:40:41.512Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:40:43.874Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:41:25.343Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:42:10.384Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:42:12.247Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:42:29.833Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:42:34.076Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:42:37.564Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-sol-G-1",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:42:39.594Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:42:42.117Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:43:28.839Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:44:08.708Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:44:11.172Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:44:22.146Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:44:41.050Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:44:45.257Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-sol-F-2",
+      "calls": [
+        {
+          "event_at": "2026-10-19T06:44:47.671Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:44:49.984Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:45:34.614Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:46:16.582Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:46:19.523Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:46:33.777Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:46:40.608Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_at": "2026-10-19T06:46:45.670Z",
+          "requested_model": "gpt-6.1-sol",
+          "server_models": [
+            "gpt-6.1-sol"
+          ],
+          "request_payload": {
+            "model": "gpt-6.1-sol",
+            "reasoning": "medium",
+            "max_output_tokens": 8192
+          },
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    }
+  ]
+}

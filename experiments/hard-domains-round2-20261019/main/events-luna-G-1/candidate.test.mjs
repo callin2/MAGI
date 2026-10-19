@@ -1,0 +1,11 @@
+import { strict as assert } from 'node:assert';
+import { sessions } from './solution.mjs';
+const run=(records,gap_ms=10,lateness_ms=0)=>sessions({gap_ms,lateness_ms,records});
+let x=run([{kind:'upsert',id:'a',rev:1,key:'k',event_time:0,amount:2},{kind:'upsert',id:'c',rev:1,key:'k',event_time:20,amount:4},{kind:'upsert',id:'b',rev:1,key:'k',event_time:10,amount:0}]);
+assert.equal(x.sessions.length,1);assert.deepEqual(x.sessions[0].ids,['a','b','c']);assert.equal(x.sessions[0].total,6);
+x=run([{kind:'upsert',id:'a',rev:1,key:'k',event_time:0,amount:2},{kind:'upsert',id:'c',rev:1,key:'k',event_time:20,amount:4},{kind:'upsert',id:'b',rev:1,key:'k',event_time:10,amount:0},{kind:'delete',id:'b',rev:2}]);assert.equal(x.sessions.length,2);
+x=run([{kind:'upsert',id:'a',rev:1,key:'k',event_time:0,amount:1},{kind:'watermark',time:10},{kind:'upsert',id:'a',rev:2,key:'k',event_time:100,amount:9}],10,0);assert.equal(x.sessions.length,1);assert.deepEqual(x.sessions[0].ids,['a']);assert.equal(x.sessions[0].final,true);assert.equal(x.sessions[0].total,1);
+x=run([{kind:'upsert',id:'a',rev:1,key:'k',event_time:10,amount:1},{kind:'watermark',time:5},{kind:'upsert',id:'b',rev:1,key:'k',event_time:0,amount:2}],10,0);assert.equal(x.sessions.length,1);assert.equal(x.sessions[0].final,false);assert.equal(x.sessions[0].count,2);
+assert.throws(()=>run([{kind:'delete',id:'z',rev:1},{kind:'delete',id:'z',rev:1},{kind:'upsert',id:'z',rev:1,key:'k',event_time:2,amount:0}]));
+assert.equal(run([{kind:'upsert',id:'z',rev:2,key:'k',event_time:2,amount:0},{kind:'upsert',id:'z',rev:1,key:'k',event_time:3,amount:8}]).sessions[0].total,0);
+assert.deepEqual(run([]),{watermark:null,sessions:[]});

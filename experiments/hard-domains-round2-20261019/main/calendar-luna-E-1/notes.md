@@ -1,0 +1,3 @@
+# Validation and limits
+
+Implemented exhaustive subset/room/instant search and meeting constraints. `functions.tests` was run repeatedly; the latest run did not pass: public tests passed (2), candidate tests failed (New York fold assertion). Candidate suite includes requirement ordering, directed setup schedule, DST fold/gap checks. Do not treat this as fully validated. Time resolution scans minute instants within ±15 hours and uses Node Intl; it is limited to the contract's zones and dates.

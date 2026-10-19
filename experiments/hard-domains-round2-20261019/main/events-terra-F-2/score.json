@@ -1,0 +1,54 @@
+{
+  "id": "events-terra-F-2",
+  "phase": "main",
+  "domain": "events",
+  "family": "terra",
+  "model_id": "gpt-5.6-terra",
+  "arm": "F",
+  "repetition": 2,
+  "status": "executed",
+  "valid": true,
+  "task_success": false,
+  "package_complete": false,
+  "behavior_passed": 22,
+  "behavior_total": 40,
+  "axes": {
+    "boundary": {
+      "passed": 13,
+      "total": 27
+    },
+    "counterexample": {
+      "passed": 2,
+      "total": 5
+    },
+    "normal": {
+      "passed": 2,
+      "total": 2
+    },
+    "regression": {
+      "passed": 5,
+      "total": 6
+    }
+  },
+  "schema_valid": true,
+  "artifacts_present": true,
+  "successful_worker_test": true,
+  "response_models": [
+    "gpt-5.6-terra"
+  ],
+  "elapsed_seconds": 194.02905137500005,
+  "model_calls": 7,
+  "tool_calls": 8,
+  "tool_errors": 0,
+  "stop": "settled",
+  "usage": {
+    "input": 29113,
+    "output": 6559,
+    "cacheRead": 5632,
+    "cacheWrite": 0,
+    "totalTokens": 41304
+  },
+  "user_corrections": 0,
+  "cash_cost_usd": null,
+  "human_time_saving": null
+}

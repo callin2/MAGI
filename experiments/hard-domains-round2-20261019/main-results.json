@@ -1,0 +1,1955 @@
+{
+  "phase": "main",
+  "screen_and_main_pooled": false,
+  "runs": [
+    {
+      "id": "events-luna-E-1",
+      "phase": "main",
+      "domain": "events",
+      "family": "luna",
+      "model_id": "gpt-6-luna",
+      "arm": "E",
+      "repetition": 1,
+      "status": "executed",
+      "valid": true,
+      "task_success": true,
+      "package_complete": true,
+      "behavior_passed": 40,
+      "behavior_total": 40,
+      "axes": {
+        "boundary": {
+          "passed": 27,
+          "total": 27
+        },
+        "counterexample": {
+          "passed": 5,
+          "total": 5
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 6,
+          "total": 6
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-6-luna"
+      ],
+      "elapsed_seconds": 52.71158916700001,
+      "model_calls": 8,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "stop": "settled",
+      "usage": {
+        "input": 27918,
+        "output": 2181,
+        "cacheRead": 2560,
+        "cacheWrite": 0,
+        "totalTokens": 32659
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "events-luna-G-2",
+      "phase": "main",
+      "domain": "events",
+      "family": "luna",
+      "model_id": "gpt-6-luna",
+      "arm": "G",
+      "repetition": 2,
+      "status": "executed",
+      "valid": true,
+      "task_success": false,
+      "package_complete": false,
+      "behavior_passed": 22,
+      "behavior_total": 40,
+      "axes": {
+        "boundary": {
+          "passed": 13,
+          "total": 27
+        },
+        "counterexample": {
+          "passed": 2,
+          "total": 5
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 5,
+          "total": 6
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-6-luna"
+      ],
+      "elapsed_seconds": 60.077542333,
+      "model_calls": 9,
+      "tool_calls": 8,
+      "tool_errors": 1,
+      "stop": "settled",
+      "usage": {
+        "input": 24277,
+        "output": 3024,
+        "cacheRead": 7808,
+        "cacheWrite": 0,
+        "totalTokens": 35109
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "events-luna-F-2",
+      "phase": "main",
+      "domain": "events",
+      "family": "luna",
+      "model_id": "gpt-6-luna",
+      "arm": "F",
+      "repetition": 2,
+      "status": "executed",
+      "valid": true,
+      "task_success": true,
+      "package_complete": true,
+      "behavior_passed": 40,
+      "behavior_total": 40,
+      "axes": {
+        "boundary": {
+          "passed": 27,
+          "total": 27
+        },
+        "counterexample": {
+          "passed": 5,
+          "total": 5
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 6,
+          "total": 6
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-6-luna"
+      ],
+      "elapsed_seconds": 57.85901175000002,
+      "model_calls": 9,
+      "tool_calls": 9,
+      "tool_errors": 1,
+      "stop": "settled",
+      "usage": {
+        "input": 27913,
+        "output": 3351,
+        "cacheRead": 7680,
+        "cacheWrite": 0,
+        "totalTokens": 38944
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "events-luna-F-1",
+      "phase": "main",
+      "domain": "events",
+      "family": "luna",
+      "model_id": "gpt-6-luna",
+      "arm": "F",
+      "repetition": 1,
+      "status": "executed",
+      "valid": true,
+      "task_success": false,
+      "package_complete": false,
+      "behavior_passed": 39,
+      "behavior_total": 40,
+      "axes": {
+        "boundary": {
+          "passed": 26,
+          "total": 27
+        },
+        "counterexample": {
+          "passed": 5,
+          "total": 5
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 6,
+          "total": 6
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-6-luna"
+      ],
+      "elapsed_seconds": 47.86592695900001,
+      "model_calls": 9,
+      "tool_calls": 8,
+      "tool_errors": 1,
+      "stop": "settled",
+      "usage": {
+        "input": 23983,
+        "output": 2549,
+        "cacheRead": 4224,
+        "cacheWrite": 0,
+        "totalTokens": 30756
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "calendar-luna-E-2",
+      "phase": "main",
+      "domain": "calendar",
+      "family": "luna",
+      "model_id": "gpt-6-luna",
+      "arm": "E",
+      "repetition": 2,
+      "status": "executed",
+      "valid": true,
+      "task_success": false,
+      "package_complete": false,
+      "behavior_passed": 25,
+      "behavior_total": 26,
+      "axes": {
+        "boundary": {
+          "passed": 16,
+          "total": 16
+        },
+        "counterexample": {
+          "passed": 2,
+          "total": 3
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 5,
+          "total": 5
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-6-luna"
+      ],
+      "elapsed_seconds": 56.550924624999986,
+      "model_calls": 10,
+      "tool_calls": 9,
+      "tool_errors": 1,
+      "stop": "settled",
+      "usage": {
+        "input": 44869,
+        "output": 3965,
+        "cacheRead": 9472,
+        "cacheWrite": 0,
+        "totalTokens": 58306
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "calendar-luna-G-2",
+      "phase": "main",
+      "domain": "calendar",
+      "family": "luna",
+      "model_id": "gpt-6-luna",
+      "arm": "G",
+      "repetition": 2,
+      "status": "executed",
+      "valid": true,
+      "task_success": false,
+      "package_complete": false,
+      "behavior_passed": 25,
+      "behavior_total": 26,
+      "axes": {
+        "boundary": {
+          "passed": 15,
+          "total": 16
+        },
+        "counterexample": {
+          "passed": 3,
+          "total": 3
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 5,
+          "total": 5
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-6-luna"
+      ],
+      "elapsed_seconds": 67.78392754200001,
+      "model_calls": 13,
+      "tool_calls": 12,
+      "tool_errors": 2,
+      "stop": "settled",
+      "usage": {
+        "input": 54525,
+        "output": 4288,
+        "cacheRead": 7936,
+        "cacheWrite": 0,
+        "totalTokens": 66749
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "events-luna-E-2",
+      "phase": "main",
+      "domain": "events",
+      "family": "luna",
+      "model_id": "gpt-6-luna",
+      "arm": "E",
+      "repetition": 2,
+      "status": "executed",
+      "valid": true,
+      "task_success": false,
+      "package_complete": false,
+      "behavior_passed": 22,
+      "behavior_total": 40,
+      "axes": {
+        "boundary": {
+          "passed": 13,
+          "total": 27
+        },
+        "counterexample": {
+          "passed": 2,
+          "total": 5
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 5,
+          "total": 6
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-6-luna"
+      ],
+      "elapsed_seconds": 49.89884841600002,
+      "model_calls": 10,
+      "tool_calls": 9,
+      "tool_errors": 1,
+      "stop": "settled",
+      "usage": {
+        "input": 37424,
+        "output": 2962,
+        "cacheRead": 8448,
+        "cacheWrite": 0,
+        "totalTokens": 48834
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "events-luna-G-1",
+      "phase": "main",
+      "domain": "events",
+      "family": "luna",
+      "model_id": "gpt-6-luna",
+      "arm": "G",
+      "repetition": 1,
+      "status": "executed",
+      "valid": true,
+      "task_success": false,
+      "package_complete": false,
+      "behavior_passed": 39,
+      "behavior_total": 40,
+      "axes": {
+        "boundary": {
+          "passed": 26,
+          "total": 27
+        },
+        "counterexample": {
+          "passed": 5,
+          "total": 5
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 6,
+          "total": 6
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-6-luna"
+      ],
+      "elapsed_seconds": 47.87379879199999,
+      "model_calls": 9,
+      "tool_calls": 8,
+      "tool_errors": 1,
+      "stop": "settled",
+      "usage": {
+        "input": 25899,
+        "output": 3057,
+        "cacheRead": 2944,
+        "cacheWrite": 0,
+        "totalTokens": 31900
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "calendar-luna-E-1",
+      "phase": "main",
+      "domain": "calendar",
+      "family": "luna",
+      "model_id": "gpt-6-luna",
+      "arm": "E",
+      "repetition": 1,
+      "status": "executed",
+      "valid": true,
+      "task_success": false,
+      "package_complete": false,
+      "behavior_passed": 25,
+      "behavior_total": 26,
+      "axes": {
+        "boundary": {
+          "passed": 15,
+          "total": 16
+        },
+        "counterexample": {
+          "passed": 3,
+          "total": 3
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 5,
+          "total": 5
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": false,
+      "response_models": [
+        "gpt-6-luna"
+      ],
+      "elapsed_seconds": 89.73229320800002,
+      "model_calls": 15,
+      "tool_calls": 14,
+      "tool_errors": 5,
+      "stop": "settled",
+      "usage": {
+        "input": 75147,
+        "output": 4771,
+        "cacheRead": 19328,
+        "cacheWrite": 0,
+        "totalTokens": 99246
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "calendar-luna-F-1",
+      "phase": "main",
+      "domain": "calendar",
+      "family": "luna",
+      "model_id": "gpt-6-luna",
+      "arm": "F",
+      "repetition": 1,
+      "status": "executed",
+      "valid": false,
+      "task_success": false,
+      "package_complete": false,
+      "behavior_passed": 24,
+      "behavior_total": 26,
+      "axes": {
+        "boundary": {
+          "passed": 15,
+          "total": 16
+        },
+        "counterexample": {
+          "passed": 2,
+          "total": 3
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 5,
+          "total": 5
+        }
+      },
+      "schema_valid": false,
+      "artifacts_present": false,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-6-luna"
+      ],
+      "elapsed_seconds": 50.7319314590001,
+      "model_calls": 9,
+      "tool_calls": 9,
+      "tool_errors": 1,
+      "stop": "error",
+      "usage": {
+        "input": 26867,
+        "output": 3663,
+        "cacheRead": 3200,
+        "cacheWrite": 0,
+        "totalTokens": 33730
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "calendar-luna-G-1",
+      "phase": "main",
+      "domain": "calendar",
+      "family": "luna",
+      "model_id": "gpt-6-luna",
+      "arm": "G",
+      "repetition": 1,
+      "status": "executed",
+      "valid": false,
+      "task_success": false,
+      "package_complete": false,
+      "behavior_passed": 6,
+      "behavior_total": 26,
+      "axes": {
+        "boundary": {
+          "passed": 1,
+          "total": 16
+        },
+        "counterexample": {
+          "passed": 1,
+          "total": 3
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 2,
+          "total": 5
+        }
+      },
+      "schema_valid": false,
+      "artifacts_present": false,
+      "successful_worker_test": false,
+      "response_models": [
+        "gpt-6-luna"
+      ],
+      "elapsed_seconds": 3.7393421670000535,
+      "model_calls": 2,
+      "tool_calls": 1,
+      "tool_errors": 0,
+      "stop": "error",
+      "usage": {
+        "input": 848,
+        "output": 20,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 868
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "calendar-luna-F-2",
+      "phase": "main",
+      "domain": "calendar",
+      "family": "luna",
+      "model_id": "gpt-6-luna",
+      "arm": "F",
+      "repetition": 2,
+      "status": "executed",
+      "valid": true,
+      "task_success": false,
+      "package_complete": false,
+      "behavior_passed": 25,
+      "behavior_total": 26,
+      "axes": {
+        "boundary": {
+          "passed": 15,
+          "total": 16
+        },
+        "counterexample": {
+          "passed": 3,
+          "total": 3
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 5,
+          "total": 5
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-6-luna"
+      ],
+      "elapsed_seconds": 74.456527417,
+      "model_calls": 14,
+      "tool_calls": 14,
+      "tool_errors": 3,
+      "stop": "settled",
+      "usage": {
+        "input": 71885,
+        "output": 5023,
+        "cacheRead": 6784,
+        "cacheWrite": 0,
+        "totalTokens": 83692
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "events-terra-E-1",
+      "phase": "main",
+      "domain": "events",
+      "family": "terra",
+      "model_id": "gpt-5.6-terra",
+      "arm": "E",
+      "repetition": 1,
+      "status": "executed",
+      "valid": true,
+      "task_success": true,
+      "package_complete": true,
+      "behavior_passed": 40,
+      "behavior_total": 40,
+      "axes": {
+        "boundary": {
+          "passed": 27,
+          "total": 27
+        },
+        "counterexample": {
+          "passed": 5,
+          "total": 5
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 6,
+          "total": 6
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-5.6-terra"
+      ],
+      "elapsed_seconds": 201.017510125,
+      "model_calls": 8,
+      "tool_calls": 9,
+      "tool_errors": 0,
+      "stop": "settled",
+      "usage": {
+        "input": 48281,
+        "output": 6634,
+        "cacheRead": 2560,
+        "cacheWrite": 0,
+        "totalTokens": 57475
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "events-terra-G-2",
+      "phase": "main",
+      "domain": "events",
+      "family": "terra",
+      "model_id": "gpt-5.6-terra",
+      "arm": "G",
+      "repetition": 2,
+      "status": "executed",
+      "valid": false,
+      "task_success": false,
+      "package_complete": false,
+      "behavior_passed": 22,
+      "behavior_total": 40,
+      "axes": {
+        "boundary": {
+          "passed": 13,
+          "total": 27
+        },
+        "counterexample": {
+          "passed": 2,
+          "total": 5
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 5,
+          "total": 6
+        }
+      },
+      "schema_valid": false,
+      "artifacts_present": false,
+      "successful_worker_test": false,
+      "response_models": [
+        "gpt-5.6-terra"
+      ],
+      "elapsed_seconds": 79.251705958,
+      "model_calls": 3,
+      "tool_calls": 3,
+      "tool_errors": 0,
+      "stop": "error",
+      "usage": {
+        "input": 2201,
+        "output": 2545,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 4746
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "events-terra-F-2",
+      "phase": "main",
+      "domain": "events",
+      "family": "terra",
+      "model_id": "gpt-5.6-terra",
+      "arm": "F",
+      "repetition": 2,
+      "status": "executed",
+      "valid": true,
+      "task_success": false,
+      "package_complete": false,
+      "behavior_passed": 22,
+      "behavior_total": 40,
+      "axes": {
+        "boundary": {
+          "passed": 13,
+          "total": 27
+        },
+        "counterexample": {
+          "passed": 2,
+          "total": 5
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 5,
+          "total": 6
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-5.6-terra"
+      ],
+      "elapsed_seconds": 194.02905137500005,
+      "model_calls": 7,
+      "tool_calls": 8,
+      "tool_errors": 0,
+      "stop": "settled",
+      "usage": {
+        "input": 29113,
+        "output": 6559,
+        "cacheRead": 5632,
+        "cacheWrite": 0,
+        "totalTokens": 41304
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "events-terra-F-1",
+      "phase": "main",
+      "domain": "events",
+      "family": "terra",
+      "model_id": "gpt-5.6-terra",
+      "arm": "F",
+      "repetition": 1,
+      "status": "executed",
+      "valid": true,
+      "task_success": false,
+      "package_complete": false,
+      "behavior_passed": 22,
+      "behavior_total": 40,
+      "axes": {
+        "boundary": {
+          "passed": 13,
+          "total": 27
+        },
+        "counterexample": {
+          "passed": 2,
+          "total": 5
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 5,
+          "total": 6
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-5.6-terra"
+      ],
+      "elapsed_seconds": 206.930983666,
+      "model_calls": 10,
+      "tool_calls": 11,
+      "tool_errors": 1,
+      "stop": "settled",
+      "usage": {
+        "input": 62339,
+        "output": 7067,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 69406
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "calendar-terra-E-2",
+      "phase": "main",
+      "domain": "calendar",
+      "family": "terra",
+      "model_id": "gpt-5.6-terra",
+      "arm": "E",
+      "repetition": 2,
+      "status": "executed",
+      "valid": false,
+      "task_success": false,
+      "package_complete": false,
+      "behavior_passed": 26,
+      "behavior_total": 26,
+      "axes": {
+        "boundary": {
+          "passed": 16,
+          "total": 16
+        },
+        "counterexample": {
+          "passed": 3,
+          "total": 3
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 5,
+          "total": 5
+        }
+      },
+      "schema_valid": false,
+      "artifacts_present": false,
+      "successful_worker_test": false,
+      "response_models": [
+        "gpt-5.6-terra"
+      ],
+      "elapsed_seconds": 204.04015058300004,
+      "model_calls": 6,
+      "tool_calls": 6,
+      "tool_errors": 1,
+      "stop": "error",
+      "usage": {
+        "input": 27626,
+        "output": 5632,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 33258
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "calendar-terra-G-2",
+      "phase": "main",
+      "domain": "calendar",
+      "family": "terra",
+      "model_id": "gpt-5.6-terra",
+      "arm": "G",
+      "repetition": 2,
+      "status": "executed",
+      "valid": false,
+      "task_success": false,
+      "package_complete": false,
+      "behavior_passed": 6,
+      "behavior_total": 26,
+      "axes": {
+        "boundary": {
+          "passed": 1,
+          "total": 16
+        },
+        "counterexample": {
+          "passed": 1,
+          "total": 3
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 2,
+          "total": 5
+        }
+      },
+      "schema_valid": false,
+      "artifacts_present": false,
+      "successful_worker_test": false,
+      "response_models": [
+        "gpt-5.6-terra"
+      ],
+      "elapsed_seconds": 3.10691404199996,
+      "model_calls": 2,
+      "tool_calls": 2,
+      "tool_errors": 0,
+      "stop": "error",
+      "usage": {
+        "input": 848,
+        "output": 64,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 912
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "events-terra-E-2",
+      "phase": "main",
+      "domain": "events",
+      "family": "terra",
+      "model_id": "gpt-5.6-terra",
+      "arm": "E",
+      "repetition": 2,
+      "status": "executed",
+      "valid": true,
+      "task_success": false,
+      "package_complete": false,
+      "behavior_passed": 22,
+      "behavior_total": 40,
+      "axes": {
+        "boundary": {
+          "passed": 13,
+          "total": 27
+        },
+        "counterexample": {
+          "passed": 2,
+          "total": 5
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 5,
+          "total": 6
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-5.6-terra"
+      ],
+      "elapsed_seconds": 203.20821924999998,
+      "model_calls": 7,
+      "tool_calls": 9,
+      "tool_errors": 0,
+      "stop": "settled",
+      "usage": {
+        "input": 40764,
+        "output": 6379,
+        "cacheRead": 1536,
+        "cacheWrite": 0,
+        "totalTokens": 48679
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "events-terra-G-1",
+      "phase": "main",
+      "domain": "events",
+      "family": "terra",
+      "model_id": "gpt-5.6-terra",
+      "arm": "G",
+      "repetition": 1,
+      "status": "executed",
+      "valid": true,
+      "task_success": false,
+      "package_complete": false,
+      "behavior_passed": 22,
+      "behavior_total": 40,
+      "axes": {
+        "boundary": {
+          "passed": 13,
+          "total": 27
+        },
+        "counterexample": {
+          "passed": 2,
+          "total": 5
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 5,
+          "total": 6
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-5.6-terra"
+      ],
+      "elapsed_seconds": 139.49089066700003,
+      "model_calls": 6,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "stop": "settled",
+      "usage": {
+        "input": 23158,
+        "output": 4627,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 27785
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "calendar-terra-E-1",
+      "phase": "main",
+      "domain": "calendar",
+      "family": "terra",
+      "model_id": "gpt-5.6-terra",
+      "arm": "E",
+      "repetition": 1,
+      "status": "executed",
+      "valid": false,
+      "task_success": false,
+      "package_complete": false,
+      "behavior_passed": 25,
+      "behavior_total": 26,
+      "axes": {
+        "boundary": {
+          "passed": 16,
+          "total": 16
+        },
+        "counterexample": {
+          "passed": 2,
+          "total": 3
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 5,
+          "total": 5
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-5.6-terra"
+      ],
+      "elapsed_seconds": 186.21542912499996,
+      "model_calls": 11,
+      "tool_calls": 11,
+      "tool_errors": 1,
+      "stop": "error",
+      "usage": {
+        "input": 66637,
+        "output": 9766,
+        "cacheRead": 13312,
+        "cacheWrite": 0,
+        "totalTokens": 89715
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "calendar-terra-F-1",
+      "phase": "main",
+      "domain": "calendar",
+      "family": "terra",
+      "model_id": "gpt-5.6-terra",
+      "arm": "F",
+      "repetition": 1,
+      "status": "executed",
+      "valid": false,
+      "task_success": false,
+      "package_complete": false,
+      "behavior_passed": 6,
+      "behavior_total": 26,
+      "axes": {
+        "boundary": {
+          "passed": 1,
+          "total": 16
+        },
+        "counterexample": {
+          "passed": 1,
+          "total": 3
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 2,
+          "total": 5
+        }
+      },
+      "schema_valid": false,
+      "artifacts_present": false,
+      "successful_worker_test": false,
+      "response_models": [
+        "gpt-5.6-terra"
+      ],
+      "elapsed_seconds": 14.575668791999924,
+      "model_calls": 2,
+      "tool_calls": 2,
+      "tool_errors": 0,
+      "stop": "error",
+      "usage": {
+        "input": 962,
+        "output": 63,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 1025
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "calendar-terra-G-1",
+      "phase": "main",
+      "domain": "calendar",
+      "family": "terra",
+      "model_id": "gpt-5.6-terra",
+      "arm": "G",
+      "repetition": 1,
+      "status": "executed",
+      "valid": true,
+      "task_success": true,
+      "package_complete": true,
+      "behavior_passed": 26,
+      "behavior_total": 26,
+      "axes": {
+        "boundary": {
+          "passed": 16,
+          "total": 16
+        },
+        "counterexample": {
+          "passed": 3,
+          "total": 3
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 5,
+          "total": 5
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-5.6-terra"
+      ],
+      "elapsed_seconds": 223.908020917,
+      "model_calls": 10,
+      "tool_calls": 11,
+      "tool_errors": 1,
+      "stop": "settled",
+      "usage": {
+        "input": 61235,
+        "output": 7617,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 68852
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "calendar-terra-F-2",
+      "phase": "main",
+      "domain": "calendar",
+      "family": "terra",
+      "model_id": "gpt-5.6-terra",
+      "arm": "F",
+      "repetition": 2,
+      "status": "executed",
+      "valid": true,
+      "task_success": false,
+      "package_complete": false,
+      "behavior_passed": 25,
+      "behavior_total": 26,
+      "axes": {
+        "boundary": {
+          "passed": 16,
+          "total": 16
+        },
+        "counterexample": {
+          "passed": 2,
+          "total": 3
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 5,
+          "total": 5
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-5.6-terra"
+      ],
+      "elapsed_seconds": 177.033928083,
+      "model_calls": 8,
+      "tool_calls": 9,
+      "tool_errors": 1,
+      "stop": "settled",
+      "usage": {
+        "input": 35439,
+        "output": 5247,
+        "cacheRead": 3584,
+        "cacheWrite": 0,
+        "totalTokens": 44270
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "events-sol-E-1",
+      "phase": "main",
+      "domain": "events",
+      "family": "sol",
+      "model_id": "gpt-6.1-sol",
+      "arm": "E",
+      "repetition": 1,
+      "status": "executed",
+      "valid": true,
+      "task_success": true,
+      "package_complete": true,
+      "behavior_passed": 40,
+      "behavior_total": 40,
+      "axes": {
+        "boundary": {
+          "passed": 27,
+          "total": 27
+        },
+        "counterexample": {
+          "passed": 5,
+          "total": 5
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 6,
+          "total": 6
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-6.1-sol"
+      ],
+      "elapsed_seconds": 86.159795292,
+      "model_calls": 8,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "stop": "settled",
+      "usage": {
+        "input": 36212,
+        "output": 3605,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 39817
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "events-sol-G-2",
+      "phase": "main",
+      "domain": "events",
+      "family": "sol",
+      "model_id": "gpt-6.1-sol",
+      "arm": "G",
+      "repetition": 2,
+      "status": "executed",
+      "valid": true,
+      "task_success": true,
+      "package_complete": true,
+      "behavior_passed": 40,
+      "behavior_total": 40,
+      "axes": {
+        "boundary": {
+          "passed": 27,
+          "total": 27
+        },
+        "counterexample": {
+          "passed": 5,
+          "total": 5
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 6,
+          "total": 6
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-6.1-sol"
+      ],
+      "elapsed_seconds": 81.089212291,
+      "model_calls": 8,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "stop": "settled",
+      "usage": {
+        "input": 24326,
+        "output": 3533,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 27859
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "events-sol-F-2",
+      "phase": "main",
+      "domain": "events",
+      "family": "sol",
+      "model_id": "gpt-6.1-sol",
+      "arm": "F",
+      "repetition": 2,
+      "status": "executed",
+      "valid": true,
+      "task_success": true,
+      "package_complete": true,
+      "behavior_passed": 40,
+      "behavior_total": 40,
+      "axes": {
+        "boundary": {
+          "passed": 27,
+          "total": 27
+        },
+        "counterexample": {
+          "passed": 5,
+          "total": 5
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 6,
+          "total": 6
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-6.1-sol"
+      ],
+      "elapsed_seconds": 81.61391875000001,
+      "model_calls": 8,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "stop": "settled",
+      "usage": {
+        "input": 25177,
+        "output": 3459,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 28636
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "events-sol-F-1",
+      "phase": "main",
+      "domain": "events",
+      "family": "sol",
+      "model_id": "gpt-6.1-sol",
+      "arm": "F",
+      "repetition": 1,
+      "status": "executed",
+      "valid": true,
+      "task_success": true,
+      "package_complete": true,
+      "behavior_passed": 40,
+      "behavior_total": 40,
+      "axes": {
+        "boundary": {
+          "passed": 27,
+          "total": 27
+        },
+        "counterexample": {
+          "passed": 5,
+          "total": 5
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 6,
+          "total": 6
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-6.1-sol"
+      ],
+      "elapsed_seconds": 87.666301042,
+      "model_calls": 8,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "stop": "settled",
+      "usage": {
+        "input": 26151,
+        "output": 3694,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 29845
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "calendar-sol-E-2",
+      "phase": "main",
+      "domain": "calendar",
+      "family": "sol",
+      "model_id": "gpt-6.1-sol",
+      "arm": "E",
+      "repetition": 2,
+      "status": "executed",
+      "valid": true,
+      "task_success": true,
+      "package_complete": true,
+      "behavior_passed": 26,
+      "behavior_total": 26,
+      "axes": {
+        "boundary": {
+          "passed": 16,
+          "total": 16
+        },
+        "counterexample": {
+          "passed": 3,
+          "total": 3
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 5,
+          "total": 5
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-6.1-sol"
+      ],
+      "elapsed_seconds": 124.014355042,
+      "model_calls": 8,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "stop": "settled",
+      "usage": {
+        "input": 44759,
+        "output": 5596,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 50355
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "calendar-sol-G-2",
+      "phase": "main",
+      "domain": "calendar",
+      "family": "sol",
+      "model_id": "gpt-6.1-sol",
+      "arm": "G",
+      "repetition": 2,
+      "status": "executed",
+      "valid": true,
+      "task_success": true,
+      "package_complete": true,
+      "behavior_passed": 26,
+      "behavior_total": 26,
+      "axes": {
+        "boundary": {
+          "passed": 16,
+          "total": 16
+        },
+        "counterexample": {
+          "passed": 3,
+          "total": 3
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 5,
+          "total": 5
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-6.1-sol"
+      ],
+      "elapsed_seconds": 108.502278084,
+      "model_calls": 8,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "stop": "settled",
+      "usage": {
+        "input": 31993,
+        "output": 5105,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 37098
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "events-sol-E-2",
+      "phase": "main",
+      "domain": "events",
+      "family": "sol",
+      "model_id": "gpt-6.1-sol",
+      "arm": "E",
+      "repetition": 2,
+      "status": "executed",
+      "valid": true,
+      "task_success": true,
+      "package_complete": true,
+      "behavior_passed": 40,
+      "behavior_total": 40,
+      "axes": {
+        "boundary": {
+          "passed": 27,
+          "total": 27
+        },
+        "counterexample": {
+          "passed": 5,
+          "total": 5
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 6,
+          "total": 6
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-6.1-sol"
+      ],
+      "elapsed_seconds": 113.10865787500003,
+      "model_calls": 9,
+      "tool_calls": 8,
+      "tool_errors": 0,
+      "stop": "settled",
+      "usage": {
+        "input": 49588,
+        "output": 5457,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 55045
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "events-sol-G-1",
+      "phase": "main",
+      "domain": "events",
+      "family": "sol",
+      "model_id": "gpt-6.1-sol",
+      "arm": "G",
+      "repetition": 1,
+      "status": "executed",
+      "valid": true,
+      "task_success": true,
+      "package_complete": true,
+      "behavior_passed": 40,
+      "behavior_total": 40,
+      "axes": {
+        "boundary": {
+          "passed": 27,
+          "total": 27
+        },
+        "counterexample": {
+          "passed": 5,
+          "total": 5
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 6,
+          "total": 6
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-6.1-sol"
+      ],
+      "elapsed_seconds": 79.11589245799999,
+      "model_calls": 8,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "stop": "settled",
+      "usage": {
+        "input": 23968,
+        "output": 3374,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 27342
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "calendar-sol-E-1",
+      "phase": "main",
+      "domain": "calendar",
+      "family": "sol",
+      "model_id": "gpt-6.1-sol",
+      "arm": "E",
+      "repetition": 1,
+      "status": "executed",
+      "valid": true,
+      "task_success": true,
+      "package_complete": true,
+      "behavior_passed": 26,
+      "behavior_total": 26,
+      "axes": {
+        "boundary": {
+          "passed": 16,
+          "total": 16
+        },
+        "counterexample": {
+          "passed": 3,
+          "total": 3
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 5,
+          "total": 5
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-6.1-sol"
+      ],
+      "elapsed_seconds": 105.18976325000007,
+      "model_calls": 8,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "stop": "settled",
+      "usage": {
+        "input": 40010,
+        "output": 4755,
+        "cacheRead": 2048,
+        "cacheWrite": 0,
+        "totalTokens": 46813
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "calendar-sol-F-1",
+      "phase": "main",
+      "domain": "calendar",
+      "family": "sol",
+      "model_id": "gpt-6.1-sol",
+      "arm": "F",
+      "repetition": 1,
+      "status": "executed",
+      "valid": true,
+      "task_success": true,
+      "package_complete": true,
+      "behavior_passed": 26,
+      "behavior_total": 26,
+      "axes": {
+        "boundary": {
+          "passed": 16,
+          "total": 16
+        },
+        "counterexample": {
+          "passed": 3,
+          "total": 3
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 5,
+          "total": 5
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-6.1-sol"
+      ],
+      "elapsed_seconds": 119.42747374999989,
+      "model_calls": 8,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "stop": "settled",
+      "usage": {
+        "input": 34851,
+        "output": 5621,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 40472
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "calendar-sol-G-1",
+      "phase": "main",
+      "domain": "calendar",
+      "family": "sol",
+      "model_id": "gpt-6.1-sol",
+      "arm": "G",
+      "repetition": 1,
+      "status": "executed",
+      "valid": true,
+      "task_success": true,
+      "package_complete": true,
+      "behavior_passed": 26,
+      "behavior_total": 26,
+      "axes": {
+        "boundary": {
+          "passed": 16,
+          "total": 16
+        },
+        "counterexample": {
+          "passed": 3,
+          "total": 3
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 5,
+          "total": 5
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-6.1-sol"
+      ],
+      "elapsed_seconds": 127.68886029199989,
+      "model_calls": 8,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "stop": "settled",
+      "usage": {
+        "input": 31707,
+        "output": 5479,
+        "cacheRead": 1280,
+        "cacheWrite": 0,
+        "totalTokens": 38466
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "calendar-sol-F-2",
+      "phase": "main",
+      "domain": "calendar",
+      "family": "sol",
+      "model_id": "gpt-6.1-sol",
+      "arm": "F",
+      "repetition": 2,
+      "status": "executed",
+      "valid": true,
+      "task_success": true,
+      "package_complete": true,
+      "behavior_passed": 26,
+      "behavior_total": 26,
+      "axes": {
+        "boundary": {
+          "passed": 16,
+          "total": 16
+        },
+        "counterexample": {
+          "passed": 3,
+          "total": 3
+        },
+        "normal": {
+          "passed": 2,
+          "total": 2
+        },
+        "regression": {
+          "passed": 5,
+          "total": 5
+        }
+      },
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test": true,
+      "response_models": [
+        "gpt-6.1-sol"
+      ],
+      "elapsed_seconds": 120.40788862500014,
+      "model_calls": 8,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "stop": "settled",
+      "usage": {
+        "input": 34826,
+        "output": 5559,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 40385
+      },
+      "user_corrections": 0,
+      "cash_cost_usd": null,
+      "human_time_saving": null
+    }
+  ],
+  "domains": [
+    "calendar",
+    "events"
+  ],
+  "primary": "per-domain full semantic business-contract success; package/schema separate"
+}

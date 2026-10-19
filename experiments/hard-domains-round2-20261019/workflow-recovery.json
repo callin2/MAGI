@@ -1,0 +1,62 @@
+{
+  "recorded_at": "2026-10-19T06:30:22.477289+00:00",
+  "mistake": "A completion reply incorrectly returned to the old issue-comment-check task before the active harder-domain experiment was complete.",
+  "recovery": "User-directed continuation checked existing files and processes. Round2 screening9 complete and scored, main0 started, no matching active runner/judge. Existing screening was preserved; selection committed b694aa1 before main started. No duplicate generation or candidate regeneration.",
+  "main_requested": 36,
+  "progress_comment": "https://github.com/callin2/MAGI/issues/18#issuecomment-6261096677",
+  "rejection_policy_limit_recorded": "https://github.com/callin2/MAGI/issues/18#issuecomment-6261134754",
+  "provider_queue_pause": {
+    "family": "luna",
+    "reason": "Two consecutive server_is_overloaded SSE errors; runner stopped as configured.",
+    "failed_runs_not_retried": [
+      "calendar-luna-F-1",
+      "calendar-luna-G-1"
+    ],
+    "remaining_unstarted": [
+      "calendar-luna-F-2"
+    ],
+    "healthy_existing_response_after_errors": [
+      "events-sol-E-2 2026-10-19T06:37:17.488Z toolUse",
+      "events-terra-F-1 2026-10-19T06:37:08.826Z toolUse"
+    ],
+    "resumed_at": "2026-10-19T06:37:33.829390+00:00",
+    "scope": "Only the previously unstarted fixed manifest row; not a regenerated failed outcome."
+  },
+  "additional_provider_queue_pauses": [
+    {
+      "family": "terra",
+      "reason": "Two consecutive server_is_overloaded SSE errors; configured queue pause.",
+      "failed_runs_not_retried": [
+        "calendar-terra-E-2",
+        "calendar-terra-G-2"
+      ],
+      "remaining_unstarted": [
+        "events-terra-E-2",
+        "events-terra-G-1",
+        "calendar-terra-E-1",
+        "calendar-terra-F-1",
+        "calendar-terra-G-1",
+        "calendar-terra-F-2"
+      ],
+      "healthy_existing_response_after_errors": "calendar-sol-F-1 2026-10-19T06:41:25.343Z toolUse HTTP200",
+      "resumed_at": "2026-10-19T06:41:55.829366+00:00",
+      "scope": "Only remaining previously unstarted fixed manifest rows; completed runs skipped by frozen runner."
+    },
+    {
+      "family": "terra",
+      "reason": "Two further transient server_is_overloaded errors, not auth/permission denial.",
+      "failed_runs_not_retried": [
+        "calendar-terra-E-1",
+        "calendar-terra-F-1"
+      ],
+      "remaining_unstarted": [
+        "calendar-terra-G-1",
+        "calendar-terra-F-2"
+      ],
+      "resumed_at": "2026-10-19T06:52:20.181255+00:00",
+      "cooldown_seconds_since_last_error": 80.718255,
+      "health_after_error": "No new same-provider health assertion: other model queues already finished. Waited more than60sec in response to transient server message asking to try later.",
+      "scope": "First attempts of the last two fixed manifest rows only; no regeneration or replacement of failed conversations."
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "calendar-terra-G-2",
+  "phase": "main",
+  "domain": "calendar",
+  "family": "terra",
+  "model_id": "gpt-5.6-terra",
+  "arm": "G",
+  "repetition": 2,
+  "status": "executed",
+  "valid": false,
+  "task_success": false,
+  "package_complete": false,
+  "behavior_passed": 6,
+  "behavior_total": 26,
+  "axes": {
+    "boundary": {
+      "passed": 1,
+      "total": 16
+    },
+    "counterexample": {
+      "passed": 1,
+      "total": 3
+    },
+    "normal": {
+      "passed": 2,
+      "total": 2
+    },
+    "regression": {
+      "passed": 2,
+      "total": 5
+    }
+  },
+  "schema_valid": false,
+  "artifacts_present": false,
+  "successful_worker_test": false,
+  "response_models": [
+    "gpt-5.6-terra"
+  ],
+  "elapsed_seconds": 3.10691404199996,
+  "model_calls": 2,
+  "tool_calls": 2,
+  "tool_errors": 0,
+  "stop": "error",
+  "usage": {
+    "input": 848,
+    "output": 64,
+    "cacheRead": 0,
+    "cacheWrite": 0,
+    "totalTokens": 912
+  },
+  "user_corrections": 0,
+  "cash_cost_usd": null,
+  "human_time_saving": null
+}

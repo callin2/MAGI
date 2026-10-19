@@ -1,0 +1,1189 @@
+{
+  "cohorts": [
+    {
+      "name": "hard-domains-20261019",
+      "phase": "screen",
+      "conversations": 9,
+      "valid_conversations": 9,
+      "provider_errors": 0,
+      "first_started_at": "2026-10-19T05:50:44.360Z",
+      "last_ended_at": "2026-10-19T05:55:45.642Z",
+      "phase_wall_span_seconds": 301.282,
+      "worker_elapsed_sum_seconds": 596.415569875,
+      "groups": [
+        {
+          "domain": "calendar",
+          "family": "luna",
+          "arm": "G",
+          "n": 1,
+          "valid": 1,
+          "task_success": 1,
+          "package_complete": 1,
+          "partial_behavior": [
+            {
+              "id": "calendar-luna-G-0",
+              "valid": true,
+              "passed": 24,
+              "total": 24
+            }
+          ],
+          "elapsed_seconds": 26.295453707999997,
+          "model_calls": 6,
+          "tool_calls": 7,
+          "tool_errors": 0,
+          "usage": {
+            "input": 15308,
+            "output": 2329,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "totalTokens": 17637
+          }
+        },
+        {
+          "domain": "calendar",
+          "family": "sol",
+          "arm": "G",
+          "n": 1,
+          "valid": 1,
+          "task_success": 1,
+          "package_complete": 1,
+          "partial_behavior": [
+            {
+              "id": "calendar-sol-G-0",
+              "valid": true,
+              "passed": 24,
+              "total": 24
+            }
+          ],
+          "elapsed_seconds": 84.287605167,
+          "model_calls": 8,
+          "tool_calls": 7,
+          "tool_errors": 0,
+          "usage": {
+            "input": 26414,
+            "output": 3953,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "totalTokens": 30367
+          }
+        },
+        {
+          "domain": "calendar",
+          "family": "terra",
+          "arm": "G",
+          "n": 1,
+          "valid": 1,
+          "task_success": 1,
+          "package_complete": 1,
+          "partial_behavior": [
+            {
+              "id": "calendar-terra-G-0",
+              "valid": true,
+              "passed": 24,
+              "total": 24
+            }
+          ],
+          "elapsed_seconds": 73.47381466700001,
+          "model_calls": 7,
+          "tool_calls": 9,
+          "tool_errors": 0,
+          "usage": {
+            "input": 28982,
+            "output": 5284,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "totalTokens": 34266
+          }
+        },
+        {
+          "domain": "events",
+          "family": "luna",
+          "arm": "G",
+          "n": 1,
+          "valid": 1,
+          "task_success": 1,
+          "package_complete": 1,
+          "partial_behavior": [
+            {
+              "id": "events-luna-G-0",
+              "valid": true,
+              "passed": 29,
+              "total": 29
+            }
+          ],
+          "elapsed_seconds": 28.366298333,
+          "model_calls": 6,
+          "tool_calls": 7,
+          "tool_errors": 0,
+          "usage": {
+            "input": 14363,
+            "output": 2126,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "totalTokens": 16489
+          }
+        },
+        {
+          "domain": "events",
+          "family": "sol",
+          "arm": "G",
+          "n": 1,
+          "valid": 1,
+          "task_success": 1,
+          "package_complete": 1,
+          "partial_behavior": [
+            {
+              "id": "events-sol-G-0",
+              "valid": true,
+              "passed": 29,
+              "total": 29
+            }
+          ],
+          "elapsed_seconds": 63.090135209,
+          "model_calls": 8,
+          "tool_calls": 7,
+          "tool_errors": 0,
+          "usage": {
+            "input": 22132,
+            "output": 2967,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "totalTokens": 25099
+          }
+        },
+        {
+          "domain": "events",
+          "family": "terra",
+          "arm": "G",
+          "n": 1,
+          "valid": 1,
+          "task_success": 1,
+          "package_complete": 1,
+          "partial_behavior": [
+            {
+              "id": "events-terra-G-0",
+              "valid": true,
+              "passed": 29,
+              "total": 29
+            }
+          ],
+          "elapsed_seconds": 122.08616020799998,
+          "model_calls": 6,
+          "tool_calls": 9,
+          "tool_errors": 0,
+          "usage": {
+            "input": 20309,
+            "output": 4256,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "totalTokens": 24565
+          }
+        },
+        {
+          "domain": "inventory",
+          "family": "luna",
+          "arm": "G",
+          "n": 1,
+          "valid": 1,
+          "task_success": 1,
+          "package_complete": 1,
+          "partial_behavior": [
+            {
+              "id": "inventory-luna-G-0",
+              "valid": true,
+              "passed": 27,
+              "total": 27
+            }
+          ],
+          "elapsed_seconds": 28.161137957999998,
+          "model_calls": 6,
+          "tool_calls": 7,
+          "tool_errors": 0,
+          "usage": {
+            "input": 16860,
+            "output": 2441,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "totalTokens": 19301
+          }
+        },
+        {
+          "domain": "inventory",
+          "family": "sol",
+          "arm": "G",
+          "n": 1,
+          "valid": 1,
+          "task_success": 1,
+          "package_complete": 1,
+          "partial_behavior": [
+            {
+              "id": "inventory-sol-G-0",
+              "valid": true,
+              "passed": 27,
+              "total": 27
+            }
+          ],
+          "elapsed_seconds": 65.23042375,
+          "model_calls": 8,
+          "tool_calls": 7,
+          "tool_errors": 0,
+          "usage": {
+            "input": 24553,
+            "output": 3175,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "totalTokens": 27728
+          }
+        },
+        {
+          "domain": "inventory",
+          "family": "terra",
+          "arm": "G",
+          "n": 1,
+          "valid": 1,
+          "task_success": 1,
+          "package_complete": 1,
+          "partial_behavior": [
+            {
+              "id": "inventory-terra-G-0",
+              "valid": true,
+              "passed": 27,
+              "total": 27
+            }
+          ],
+          "elapsed_seconds": 105.424540875,
+          "model_calls": 6,
+          "tool_calls": 7,
+          "tool_errors": 0,
+          "usage": {
+            "input": 17957,
+            "output": 4356,
+            "cacheRead": 4608,
+            "cacheWrite": 0,
+            "totalTokens": 26921
+          }
+        }
+      ],
+      "raw_provider_usage": {
+        "input_tokens": 191486,
+        "output_tokens": 30887,
+        "total_tokens": 222373,
+        "cached_input_tokens": 4608,
+        "cache_write_tokens": 0,
+        "reasoning_output_tokens": 4982
+      }
+    },
+    {
+      "name": "hard-domains-round2-20261019",
+      "phase": "screen",
+      "conversations": 9,
+      "valid_conversations": 8,
+      "provider_errors": 0,
+      "first_started_at": "2026-10-19T06:10:06.720Z",
+      "last_ended_at": "2026-10-19T06:19:04.220Z",
+      "phase_wall_span_seconds": 537.5,
+      "worker_elapsed_sum_seconds": 999.364791667,
+      "groups": [
+        {
+          "domain": "calendar",
+          "family": "luna",
+          "arm": "G",
+          "n": 1,
+          "valid": 1,
+          "task_success": 1,
+          "package_complete": 1,
+          "partial_behavior": [
+            {
+              "id": "calendar-luna-G-0",
+              "valid": true,
+              "passed": 26,
+              "total": 26
+            }
+          ],
+          "elapsed_seconds": 69.77448566599999,
+          "model_calls": 12,
+          "tool_calls": 11,
+          "tool_errors": 2,
+          "usage": {
+            "input": 49754,
+            "output": 4951,
+            "cacheRead": 8576,
+            "cacheWrite": 0,
+            "totalTokens": 63281
+          }
+        },
+        {
+          "domain": "calendar",
+          "family": "sol",
+          "arm": "G",
+          "n": 1,
+          "valid": 1,
+          "task_success": 1,
+          "package_complete": 1,
+          "partial_behavior": [
+            {
+              "id": "calendar-sol-G-0",
+              "valid": true,
+              "passed": 26,
+              "total": 26
+            }
+          ],
+          "elapsed_seconds": 103.385313125,
+          "model_calls": 8,
+          "tool_calls": 7,
+          "tool_errors": 0,
+          "usage": {
+            "input": 31014,
+            "output": 4808,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "totalTokens": 35822
+          }
+        },
+        {
+          "domain": "calendar",
+          "family": "terra",
+          "arm": "G",
+          "n": 1,
+          "valid": 1,
+          "task_success": 0,
+          "package_complete": 0,
+          "partial_behavior": [
+            {
+              "id": "calendar-terra-G-0",
+              "valid": true,
+              "passed": 25,
+              "total": 26
+            }
+          ],
+          "elapsed_seconds": 221.834712834,
+          "model_calls": 10,
+          "tool_calls": 11,
+          "tool_errors": 2,
+          "usage": {
+            "input": 62637,
+            "output": 7998,
+            "cacheRead": 8704,
+            "cacheWrite": 0,
+            "totalTokens": 79339
+          }
+        },
+        {
+          "domain": "events",
+          "family": "luna",
+          "arm": "G",
+          "n": 1,
+          "valid": 1,
+          "task_success": 0,
+          "package_complete": 0,
+          "partial_behavior": [
+            {
+              "id": "events-luna-G-0",
+              "valid": true,
+              "passed": 22,
+              "total": 40
+            }
+          ],
+          "elapsed_seconds": 36.474445458000005,
+          "model_calls": 7,
+          "tool_calls": 6,
+          "tool_errors": 0,
+          "usage": {
+            "input": 13523,
+            "output": 2058,
+            "cacheRead": 2560,
+            "cacheWrite": 0,
+            "totalTokens": 18141
+          }
+        },
+        {
+          "domain": "events",
+          "family": "sol",
+          "arm": "G",
+          "n": 1,
+          "valid": 1,
+          "task_success": 1,
+          "package_complete": 1,
+          "partial_behavior": [
+            {
+              "id": "events-sol-G-0",
+              "valid": true,
+              "passed": 40,
+              "total": 40
+            }
+          ],
+          "elapsed_seconds": 105.21321183399999,
+          "model_calls": 10,
+          "tool_calls": 9,
+          "tool_errors": 1,
+          "usage": {
+            "input": 40554,
+            "output": 4855,
+            "cacheRead": 1152,
+            "cacheWrite": 0,
+            "totalTokens": 46561
+          }
+        },
+        {
+          "domain": "events",
+          "family": "terra",
+          "arm": "G",
+          "n": 1,
+          "valid": 1,
+          "task_success": 0,
+          "package_complete": 0,
+          "partial_behavior": [
+            {
+              "id": "events-terra-G-0",
+              "valid": true,
+              "passed": 22,
+              "total": 40
+            }
+          ],
+          "elapsed_seconds": 77.08303408299997,
+          "model_calls": 6,
+          "tool_calls": 7,
+          "tool_errors": 0,
+          "usage": {
+            "input": 24431,
+            "output": 4849,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "totalTokens": 29280
+          }
+        },
+        {
+          "domain": "inventory",
+          "family": "luna",
+          "arm": "G",
+          "n": 1,
+          "valid": 0,
+          "task_success": 0,
+          "package_complete": 0,
+          "partial_behavior": [
+            {
+              "id": "inventory-luna-G-0",
+              "valid": false,
+              "passed": null,
+              "total": 31
+            }
+          ],
+          "elapsed_seconds": 45.670449083,
+          "model_calls": 9,
+          "tool_calls": 9,
+          "tool_errors": 1,
+          "usage": {
+            "input": 23041,
+            "output": 3249,
+            "cacheRead": 8320,
+            "cacheWrite": 0,
+            "totalTokens": 34610
+          }
+        },
+        {
+          "domain": "inventory",
+          "family": "sol",
+          "arm": "G",
+          "n": 1,
+          "valid": 1,
+          "task_success": 1,
+          "package_complete": 1,
+          "partial_behavior": [
+            {
+              "id": "inventory-sol-G-0",
+              "valid": true,
+              "passed": 31,
+              "total": 31
+            }
+          ],
+          "elapsed_seconds": 101.34027975,
+          "model_calls": 8,
+          "tool_calls": 7,
+          "tool_errors": 0,
+          "usage": {
+            "input": 28507,
+            "output": 4801,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "totalTokens": 33308
+          }
+        },
+        {
+          "domain": "inventory",
+          "family": "terra",
+          "arm": "G",
+          "n": 1,
+          "valid": 1,
+          "task_success": 1,
+          "package_complete": 1,
+          "partial_behavior": [
+            {
+              "id": "inventory-terra-G-0",
+              "valid": true,
+              "passed": 31,
+              "total": 31
+            }
+          ],
+          "elapsed_seconds": 238.588859834,
+          "model_calls": 8,
+          "tool_calls": 10,
+          "tool_errors": 1,
+          "usage": {
+            "input": 38124,
+            "output": 7024,
+            "cacheRead": 2560,
+            "cacheWrite": 0,
+            "totalTokens": 47708
+          }
+        }
+      ],
+      "raw_provider_usage": {
+        "input_tokens": 343457,
+        "output_tokens": 44593,
+        "total_tokens": 388050,
+        "cached_input_tokens": 31872,
+        "cache_write_tokens": 0,
+        "reasoning_output_tokens": 8660
+      }
+    },
+    {
+      "name": "hard-domains-round2-20261019",
+      "phase": "main",
+      "conversations": 36,
+      "valid_conversations": 29,
+      "provider_errors": 7,
+      "first_started_at": "2026-10-19T06:26:11.170Z",
+      "last_ended_at": "2026-10-19T06:59:01.317Z",
+      "phase_wall_span_seconds": 1970.147,
+      "worker_elapsed_sum_seconds": 3726.074533169,
+      "groups": [
+        {
+          "domain": "calendar",
+          "family": "luna",
+          "arm": "E",
+          "n": 2,
+          "valid": 2,
+          "task_success": 0,
+          "package_complete": 0,
+          "partial_behavior": [
+            {
+              "id": "calendar-luna-E-2",
+              "valid": true,
+              "passed": 25,
+              "total": 26
+            },
+            {
+              "id": "calendar-luna-E-1",
+              "valid": true,
+              "passed": 25,
+              "total": 26
+            }
+          ],
+          "elapsed_seconds": 146.283217833,
+          "model_calls": 25,
+          "tool_calls": 23,
+          "tool_errors": 6,
+          "usage": {
+            "input": 120016,
+            "output": 8736,
+            "cacheRead": 28800,
+            "cacheWrite": 0,
+            "totalTokens": 157552
+          }
+        },
+        {
+          "domain": "calendar",
+          "family": "luna",
+          "arm": "F",
+          "n": 2,
+          "valid": 1,
+          "task_success": 0,
+          "package_complete": 0,
+          "partial_behavior": [
+            {
+              "id": "calendar-luna-F-1",
+              "valid": false,
+              "passed": null,
+              "total": 26
+            },
+            {
+              "id": "calendar-luna-F-2",
+              "valid": true,
+              "passed": 25,
+              "total": 26
+            }
+          ],
+          "elapsed_seconds": 125.18845887600011,
+          "model_calls": 23,
+          "tool_calls": 23,
+          "tool_errors": 4,
+          "usage": {
+            "input": 98752,
+            "output": 8686,
+            "cacheRead": 9984,
+            "cacheWrite": 0,
+            "totalTokens": 117422
+          }
+        },
+        {
+          "domain": "calendar",
+          "family": "luna",
+          "arm": "G",
+          "n": 2,
+          "valid": 1,
+          "task_success": 0,
+          "package_complete": 0,
+          "partial_behavior": [
+            {
+              "id": "calendar-luna-G-2",
+              "valid": true,
+              "passed": 25,
+              "total": 26
+            },
+            {
+              "id": "calendar-luna-G-1",
+              "valid": false,
+              "passed": null,
+              "total": 26
+            }
+          ],
+          "elapsed_seconds": 71.52326970900006,
+          "model_calls": 15,
+          "tool_calls": 13,
+          "tool_errors": 2,
+          "usage": {
+            "input": 55373,
+            "output": 4308,
+            "cacheRead": 7936,
+            "cacheWrite": 0,
+            "totalTokens": 67617
+          }
+        },
+        {
+          "domain": "calendar",
+          "family": "sol",
+          "arm": "E",
+          "n": 2,
+          "valid": 2,
+          "task_success": 2,
+          "package_complete": 2,
+          "partial_behavior": [
+            {
+              "id": "calendar-sol-E-2",
+              "valid": true,
+              "passed": 26,
+              "total": 26
+            },
+            {
+              "id": "calendar-sol-E-1",
+              "valid": true,
+              "passed": 26,
+              "total": 26
+            }
+          ],
+          "elapsed_seconds": 229.2041182920001,
+          "model_calls": 16,
+          "tool_calls": 14,
+          "tool_errors": 0,
+          "usage": {
+            "input": 84769,
+            "output": 10351,
+            "cacheRead": 2048,
+            "cacheWrite": 0,
+            "totalTokens": 97168
+          }
+        },
+        {
+          "domain": "calendar",
+          "family": "sol",
+          "arm": "F",
+          "n": 2,
+          "valid": 2,
+          "task_success": 2,
+          "package_complete": 2,
+          "partial_behavior": [
+            {
+              "id": "calendar-sol-F-1",
+              "valid": true,
+              "passed": 26,
+              "total": 26
+            },
+            {
+              "id": "calendar-sol-F-2",
+              "valid": true,
+              "passed": 26,
+              "total": 26
+            }
+          ],
+          "elapsed_seconds": 239.83536237500005,
+          "model_calls": 16,
+          "tool_calls": 14,
+          "tool_errors": 0,
+          "usage": {
+            "input": 69677,
+            "output": 11180,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "totalTokens": 80857
+          }
+        },
+        {
+          "domain": "calendar",
+          "family": "sol",
+          "arm": "G",
+          "n": 2,
+          "valid": 2,
+          "task_success": 2,
+          "package_complete": 2,
+          "partial_behavior": [
+            {
+              "id": "calendar-sol-G-2",
+              "valid": true,
+              "passed": 26,
+              "total": 26
+            },
+            {
+              "id": "calendar-sol-G-1",
+              "valid": true,
+              "passed": 26,
+              "total": 26
+            }
+          ],
+          "elapsed_seconds": 236.19113837599988,
+          "model_calls": 16,
+          "tool_calls": 14,
+          "tool_errors": 0,
+          "usage": {
+            "input": 63700,
+            "output": 10584,
+            "cacheRead": 1280,
+            "cacheWrite": 0,
+            "totalTokens": 75564
+          }
+        },
+        {
+          "domain": "calendar",
+          "family": "terra",
+          "arm": "E",
+          "n": 2,
+          "valid": 0,
+          "task_success": 0,
+          "package_complete": 0,
+          "partial_behavior": [
+            {
+              "id": "calendar-terra-E-2",
+              "valid": false,
+              "passed": null,
+              "total": 26
+            },
+            {
+              "id": "calendar-terra-E-1",
+              "valid": false,
+              "passed": null,
+              "total": 26
+            }
+          ],
+          "elapsed_seconds": 390.255579708,
+          "model_calls": 17,
+          "tool_calls": 17,
+          "tool_errors": 2,
+          "usage": {
+            "input": 94263,
+            "output": 15398,
+            "cacheRead": 13312,
+            "cacheWrite": 0,
+            "totalTokens": 122973
+          }
+        },
+        {
+          "domain": "calendar",
+          "family": "terra",
+          "arm": "F",
+          "n": 2,
+          "valid": 1,
+          "task_success": 0,
+          "package_complete": 0,
+          "partial_behavior": [
+            {
+              "id": "calendar-terra-F-1",
+              "valid": false,
+              "passed": null,
+              "total": 26
+            },
+            {
+              "id": "calendar-terra-F-2",
+              "valid": true,
+              "passed": 25,
+              "total": 26
+            }
+          ],
+          "elapsed_seconds": 191.60959687499994,
+          "model_calls": 10,
+          "tool_calls": 11,
+          "tool_errors": 1,
+          "usage": {
+            "input": 36401,
+            "output": 5310,
+            "cacheRead": 3584,
+            "cacheWrite": 0,
+            "totalTokens": 45295
+          }
+        },
+        {
+          "domain": "calendar",
+          "family": "terra",
+          "arm": "G",
+          "n": 2,
+          "valid": 1,
+          "task_success": 1,
+          "package_complete": 1,
+          "partial_behavior": [
+            {
+              "id": "calendar-terra-G-2",
+              "valid": false,
+              "passed": null,
+              "total": 26
+            },
+            {
+              "id": "calendar-terra-G-1",
+              "valid": true,
+              "passed": 26,
+              "total": 26
+            }
+          ],
+          "elapsed_seconds": 227.01493495899996,
+          "model_calls": 12,
+          "tool_calls": 13,
+          "tool_errors": 1,
+          "usage": {
+            "input": 62083,
+            "output": 7681,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "totalTokens": 69764
+          }
+        },
+        {
+          "domain": "events",
+          "family": "luna",
+          "arm": "E",
+          "n": 2,
+          "valid": 2,
+          "task_success": 1,
+          "package_complete": 1,
+          "partial_behavior": [
+            {
+              "id": "events-luna-E-1",
+              "valid": true,
+              "passed": 40,
+              "total": 40
+            },
+            {
+              "id": "events-luna-E-2",
+              "valid": true,
+              "passed": 22,
+              "total": 40
+            }
+          ],
+          "elapsed_seconds": 102.61043758300002,
+          "model_calls": 18,
+          "tool_calls": 16,
+          "tool_errors": 1,
+          "usage": {
+            "input": 65342,
+            "output": 5143,
+            "cacheRead": 11008,
+            "cacheWrite": 0,
+            "totalTokens": 81493
+          }
+        },
+        {
+          "domain": "events",
+          "family": "luna",
+          "arm": "F",
+          "n": 2,
+          "valid": 2,
+          "task_success": 1,
+          "package_complete": 1,
+          "partial_behavior": [
+            {
+              "id": "events-luna-F-2",
+              "valid": true,
+              "passed": 40,
+              "total": 40
+            },
+            {
+              "id": "events-luna-F-1",
+              "valid": true,
+              "passed": 39,
+              "total": 40
+            }
+          ],
+          "elapsed_seconds": 105.72493870900003,
+          "model_calls": 18,
+          "tool_calls": 17,
+          "tool_errors": 2,
+          "usage": {
+            "input": 51896,
+            "output": 5900,
+            "cacheRead": 11904,
+            "cacheWrite": 0,
+            "totalTokens": 69700
+          }
+        },
+        {
+          "domain": "events",
+          "family": "luna",
+          "arm": "G",
+          "n": 2,
+          "valid": 2,
+          "task_success": 0,
+          "package_complete": 0,
+          "partial_behavior": [
+            {
+              "id": "events-luna-G-2",
+              "valid": true,
+              "passed": 22,
+              "total": 40
+            },
+            {
+              "id": "events-luna-G-1",
+              "valid": true,
+              "passed": 39,
+              "total": 40
+            }
+          ],
+          "elapsed_seconds": 107.95134112499998,
+          "model_calls": 18,
+          "tool_calls": 16,
+          "tool_errors": 2,
+          "usage": {
+            "input": 50176,
+            "output": 6081,
+            "cacheRead": 10752,
+            "cacheWrite": 0,
+            "totalTokens": 67009
+          }
+        },
+        {
+          "domain": "events",
+          "family": "sol",
+          "arm": "E",
+          "n": 2,
+          "valid": 2,
+          "task_success": 2,
+          "package_complete": 2,
+          "partial_behavior": [
+            {
+              "id": "events-sol-E-1",
+              "valid": true,
+              "passed": 40,
+              "total": 40
+            },
+            {
+              "id": "events-sol-E-2",
+              "valid": true,
+              "passed": 40,
+              "total": 40
+            }
+          ],
+          "elapsed_seconds": 199.26845316700002,
+          "model_calls": 17,
+          "tool_calls": 15,
+          "tool_errors": 0,
+          "usage": {
+            "input": 85800,
+            "output": 9062,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "totalTokens": 94862
+          }
+        },
+        {
+          "domain": "events",
+          "family": "sol",
+          "arm": "F",
+          "n": 2,
+          "valid": 2,
+          "task_success": 2,
+          "package_complete": 2,
+          "partial_behavior": [
+            {
+              "id": "events-sol-F-2",
+              "valid": true,
+              "passed": 40,
+              "total": 40
+            },
+            {
+              "id": "events-sol-F-1",
+              "valid": true,
+              "passed": 40,
+              "total": 40
+            }
+          ],
+          "elapsed_seconds": 169.28021979200003,
+          "model_calls": 16,
+          "tool_calls": 14,
+          "tool_errors": 0,
+          "usage": {
+            "input": 51328,
+            "output": 7153,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "totalTokens": 58481
+          }
+        },
+        {
+          "domain": "events",
+          "family": "sol",
+          "arm": "G",
+          "n": 2,
+          "valid": 2,
+          "task_success": 2,
+          "package_complete": 2,
+          "partial_behavior": [
+            {
+              "id": "events-sol-G-2",
+              "valid": true,
+              "passed": 40,
+              "total": 40
+            },
+            {
+              "id": "events-sol-G-1",
+              "valid": true,
+              "passed": 40,
+              "total": 40
+            }
+          ],
+          "elapsed_seconds": 160.205104749,
+          "model_calls": 16,
+          "tool_calls": 14,
+          "tool_errors": 0,
+          "usage": {
+            "input": 48294,
+            "output": 6907,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "totalTokens": 55201
+          }
+        },
+        {
+          "domain": "events",
+          "family": "terra",
+          "arm": "E",
+          "n": 2,
+          "valid": 2,
+          "task_success": 1,
+          "package_complete": 1,
+          "partial_behavior": [
+            {
+              "id": "events-terra-E-1",
+              "valid": true,
+              "passed": 40,
+              "total": 40
+            },
+            {
+              "id": "events-terra-E-2",
+              "valid": true,
+              "passed": 22,
+              "total": 40
+            }
+          ],
+          "elapsed_seconds": 404.225729375,
+          "model_calls": 15,
+          "tool_calls": 18,
+          "tool_errors": 0,
+          "usage": {
+            "input": 89045,
+            "output": 13013,
+            "cacheRead": 4096,
+            "cacheWrite": 0,
+            "totalTokens": 106154
+          }
+        },
+        {
+          "domain": "events",
+          "family": "terra",
+          "arm": "F",
+          "n": 2,
+          "valid": 2,
+          "task_success": 0,
+          "package_complete": 0,
+          "partial_behavior": [
+            {
+              "id": "events-terra-F-2",
+              "valid": true,
+              "passed": 22,
+              "total": 40
+            },
+            {
+              "id": "events-terra-F-1",
+              "valid": true,
+              "passed": 22,
+              "total": 40
+            }
+          ],
+          "elapsed_seconds": 400.9600350410001,
+          "model_calls": 17,
+          "tool_calls": 19,
+          "tool_errors": 1,
+          "usage": {
+            "input": 91452,
+            "output": 13626,
+            "cacheRead": 5632,
+            "cacheWrite": 0,
+            "totalTokens": 110710
+          }
+        },
+        {
+          "domain": "events",
+          "family": "terra",
+          "arm": "G",
+          "n": 2,
+          "valid": 1,
+          "task_success": 0,
+          "package_complete": 0,
+          "partial_behavior": [
+            {
+              "id": "events-terra-G-2",
+              "valid": false,
+              "passed": null,
+              "total": 40
+            },
+            {
+              "id": "events-terra-G-1",
+              "valid": true,
+              "passed": 22,
+              "total": 40
+            }
+          ],
+          "elapsed_seconds": 218.74259662500003,
+          "model_calls": 9,
+          "tool_calls": 10,
+          "tool_errors": 0,
+          "usage": {
+            "input": 25359,
+            "output": 7172,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "totalTokens": 32531
+          }
+        }
+      ],
+      "raw_provider_usage": {
+        "input_tokens": 1354062,
+        "output_tokens": 156291,
+        "total_tokens": 1510353,
+        "cached_input_tokens": 110336,
+        "cache_write_tokens": 0,
+        "reasoning_output_tokens": 29291,
+        "calls_with_unknown_usage": 7
+      }
+    }
+  ],
+  "screen_main_pooled": false,
+  "primary": "Per-domain full business-contract success; no case-weighted global headline",
+  "cash_cost_usd": null,
+  "coordinator_cost": null,
+  "human_time_saving": null
+}

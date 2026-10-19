@@ -1,0 +1,205 @@
+{
+  "started_at": "2026-10-19T06:30:46.725Z",
+  "ended_at": "2026-10-19T06:31:54.507Z",
+  "elapsed_seconds": 67.78392754200001,
+  "model_calls": 13,
+  "tool_calls": 12,
+  "tool_errors": 2,
+  "stop": "settled",
+  "provider_error": false,
+  "provider": "openai-codex",
+  "configured_model": "gpt-6-luna",
+  "family": "luna",
+  "domain": "calendar",
+  "arm": "G",
+  "phase": "main",
+  "usage": [
+    {
+      "input": 848,
+      "output": 20,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 868,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 1028,
+      "output": 1123,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 2151,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 2212,
+      "output": 856,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 3068,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 3128,
+      "output": 452,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 3580,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 3641,
+      "output": 13,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 3654,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 4670,
+      "output": 125,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 4795,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 5159,
+      "output": 839,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 5998,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 6056,
+      "output": 13,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 6069,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 4441,
+      "output": 503,
+      "cacheRead": 2048,
+      "cacheWrite": 0,
+      "totalTokens": 6992,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 7052,
+      "output": 13,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 7065,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 1304,
+      "output": 145,
+      "cacheRead": 5888,
+      "cacheWrite": 0,
+      "totalTokens": 7337,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 7396,
+      "output": 136,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 7532,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 7590,
+      "output": 50,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 7640,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    }
+  ],
+  "fresh_conversation": true,
+  "history_messages_at_start": 1,
+  "user_corrections": 0,
+  "api_cost_usd": null,
+  "human_time_saving": null
+}

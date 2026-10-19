@@ -1,0 +1,795 @@
+{
+  "domain": "events",
+  "cases": [
+    {
+      "id": "empty",
+      "axis": "normal",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "simple",
+      "axis": "normal",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "bridge-merges",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "remove-bridge-splits",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "equal-gap-connects",
+      "axis": "counterexample",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "one-more-gap-separates",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "distinct-ids-count",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "signed-zero-total",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "replace-moves-session",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "seal-exact-boundary",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "new-touch-sealed-rejected",
+      "axis": "counterexample",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": true
+          }
+        ]
+      },
+      "error": "event is adjacent to finalized session"
+    },
+    {
+      "id": "old-left-touch-rejected",
+      "axis": "counterexample",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 30,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 20,
+            "end": 30,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": true
+          }
+        ]
+      },
+      "error": "event is adjacent to finalized session"
+    },
+    {
+      "id": "sealed-cannot-be-bridged",
+      "axis": "counterexample",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": true
+          },
+          {
+            "key": "x",
+            "start": 20,
+            "end": 30,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "error": "event is adjacent to finalized session"
+    },
+    {
+      "id": "old-event-joins-open",
+      "axis": "counterexample",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "isolated-old-rejected",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 20,
+        "sessions": []
+      },
+      "error": "proposed session is already final"
+    },
+    {
+      "id": "delete-split-finalizes",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "split-created-seal-protects",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 15,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": true
+          },
+          {
+            "key": "x",
+            "start": 20,
+            "end": 30,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "error": "event is adjacent to finalized session"
+    },
+    {
+      "id": "move-from-sealed-atomic",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": true
+          }
+        ]
+      },
+      "error": "event is finalized"
+    },
+    {
+      "id": "move-to-sealed-atomic",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": true
+          },
+          {
+            "key": "x",
+            "start": 40,
+            "end": 50,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "b"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "error": "event is adjacent to finalized session"
+    },
+    {
+      "id": "rejected-version-not-poison",
+      "axis": "regression",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": true
+          },
+          {
+            "key": "x",
+            "start": 40,
+            "end": 50,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "b"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "error": "event is adjacent to finalized session"
+    },
+    {
+      "id": "delete-sealed-keeps-version",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": true
+          }
+        ]
+      },
+      "error": "event is finalized"
+    },
+    {
+      "id": "unknown-delete-tombstone",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "replay-after-seal",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "lower-revision-ignored",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "explicit-lateness",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "watermark-monotone",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": true
+          }
+        ]
+      },
+      "error": "event is adjacent to finalized session"
+    },
+    {
+      "id": "negative-time",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "same-rev-conflict",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "sealed-conflict-still-throws",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "move-key-removes-old",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "mixed-session-history-0",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 39,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 4,
+            "end": 14,
+            "total": 2,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": true
+          },
+          {
+            "key": "y",
+            "start": 12,
+            "end": 24,
+            "total": -1,
+            "count": 2,
+            "ids": [
+              "c",
+              "e"
+            ],
+            "final": true
+          }
+        ]
+      },
+      "error": "event is finalized"
+    },
+    {
+      "id": "mixed-session-history-1",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 33,
+        "sessions": [
+          {
+            "key": "x",
+            "start": -4,
+            "end": 6,
+            "total": -2,
+            "count": 1,
+            "ids": [
+              "e"
+            ],
+            "final": true
+          },
+          {
+            "key": "y",
+            "start": 0,
+            "end": 10,
+            "total": 0,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": true
+          },
+          {
+            "key": "x",
+            "start": 25,
+            "end": 35,
+            "total": 5,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "error": "event is finalized"
+    },
+    {
+      "id": "mixed-session-history-2",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 30,
+        "sessions": [
+          {
+            "key": "y",
+            "start": 2,
+            "end": 12,
+            "total": 2,
+            "count": 1,
+            "ids": [
+              "e"
+            ],
+            "final": true
+          },
+          {
+            "key": "y",
+            "start": 29,
+            "end": 42,
+            "total": -3,
+            "count": 2,
+            "ids": [
+              "b",
+              "c"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "error": "proposed session is already final"
+    },
+    {
+      "id": "mixed-session-history-3",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 28,
+        "sessions": [
+          {
+            "key": "y",
+            "start": 3,
+            "end": 13,
+            "total": -1,
+            "count": 1,
+            "ids": [
+              "e"
+            ],
+            "final": true
+          },
+          {
+            "key": "y",
+            "start": 15,
+            "end": 25,
+            "total": 2,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 35,
+            "end": 45,
+            "total": -3,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "error": "event is adjacent to finalized session"
+    },
+    {
+      "id": "mixed-session-history-4",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "mixed-session-history-5",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 18,
+        "sessions": [
+          {
+            "key": "y",
+            "start": -2,
+            "end": 8,
+            "total": 4,
+            "count": 1,
+            "ids": [
+              "b"
+            ],
+            "final": true
+          },
+          {
+            "key": "y",
+            "start": 43,
+            "end": 53,
+            "total": 3,
+            "count": 1,
+            "ids": [
+              "d"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 45,
+            "end": 55,
+            "total": 3,
+            "count": 1,
+            "ids": [
+              "e"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "error": "proposed session is already final"
+    },
+    {
+      "id": "mixed-session-history-6",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 40,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 31,
+            "end": 41,
+            "total": 3,
+            "count": 1,
+            "ids": [
+              "d"
+            ],
+            "final": false
+          },
+          {
+            "key": "y",
+            "start": 32,
+            "end": 42,
+            "total": 0,
+            "count": 1,
+            "ids": [
+              "e"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 45,
+            "end": 55,
+            "total": 2,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "error": "proposed session is already final"
+    },
+    {
+      "id": "mixed-session-history-7",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 31,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 2,
+            "end": 21,
+            "total": 4,
+            "count": 2,
+            "ids": [
+              "b",
+              "c"
+            ],
+            "final": true
+          },
+          {
+            "key": "y",
+            "start": 22,
+            "end": 32,
+            "total": 0,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 31,
+            "end": 41,
+            "total": 2,
+            "count": 1,
+            "ids": [
+              "d"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "error": "proposed session is already final"
+    },
+    {
+      "id": "mixed-session-history-8",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 26,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 8,
+            "end": 18,
+            "total": 3,
+            "count": 2,
+            "ids": [
+              "a",
+              "b"
+            ],
+            "final": false
+          },
+          {
+            "key": "y",
+            "start": 9,
+            "end": 19,
+            "total": -1,
+            "count": 1,
+            "ids": [
+              "d"
+            ],
+            "final": false
+          },
+          {
+            "key": "y",
+            "start": 22,
+            "end": 32,
+            "total": -3,
+            "count": 1,
+            "ids": [
+              "e"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 45,
+            "end": 55,
+            "total": 5,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "error": "proposed session is already final"
+    },
+    {
+      "id": "mixed-session-history-9",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    }
+  ],
+  "passed": 22,
+  "total": 40,
+  "success": false
+}

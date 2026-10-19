@@ -11,7 +11,7 @@ def audit(experiment):
    if prior.exists() and json.loads(prior.read_text()).get('evaluation_timeout'):
     rows.append({'phase':phase,'id':identity,'calls':None,'skipped_known_evaluation_timeout':True});continue
    with tempfile.TemporaryDirectory(prefix='magi-access-') as tmp:
-    trace=Path(tmp)/'trace.json';cmd=['node','--permission',f'--allow-fs-read={target.parent}',f'--allow-fs-read={judge}',f'--allow-fs-read={cases}',f'--allow-fs-read={preload}',f'--allow-fs-write={trace}','--import',str(preload),str(judge),domain,str(target),str(cases)]
+    trace=Path(tmp).resolve()/'trace.json';cmd=['node','--permission',f'--allow-fs-read={target.parent}',f'--allow-fs-read={judge}',f'--allow-fs-read={cases}',f'--allow-fs-read={preload}',f'--allow-fs-write={trace}','--import',str(preload),str(judge),domain,str(target),str(cases)]
     env={'PATH':'/opt/homebrew/bin:/usr/bin:/bin','LANG':'en_US.UTF-8','MAGI_AUDIT_WORKSPACE':str(target.parent),'MAGI_AUDIT_OUTPUT':str(trace)}
     try:p=subprocess.run(cmd,capture_output=True,text=True,timeout=90,env=env);data=json.loads(trace.read_text()) if trace.exists() else {'calls':None,'missing_trace':True};rows.append({'phase':phase,'id':identity,'exit_code':p.returncode,**data})
     except subprocess.TimeoutExpired:rows.append({'phase':phase,'id':identity,'evaluation_timeout':True,'calls':None})
