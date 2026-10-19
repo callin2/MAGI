@@ -1,0 +1,10 @@
+import { strict as assert } from 'node:assert';
+import { sessions } from './solution.mjs';
+const run=records=>sessions({gap_ms:10,lateness_ms:0,records});
+assert.deepEqual(run([{kind:'upsert',id:'a',rev:1,key:'k',event_time:0,amount:2},{kind:'upsert',id:'b',rev:1,key:'k',event_time:20,amount:3}]).sessions.map(x=>[x.start,x.end,x.total,x.count]),[[0,10,2,1],[20,30,3,1]]);
+assert.equal(run([{kind:'upsert',id:'a',rev:1,key:'k',event_time:0,amount:1},{kind:'upsert',id:'b',rev:1,key:'k',event_time:20,amount:2},{kind:'upsert',id:'c',rev:1,key:'k',event_time:10,amount:4}]).sessions[0].count,3);
+const split=run([{kind:'upsert',id:'a',rev:1,key:'k',event_time:0,amount:1},{kind:'upsert',id:'b',rev:1,key:'k',event_time:10,amount:2},{kind:'upsert',id:'c',rev:1,key:'k',event_time:20,amount:3},{kind:'delete',id:'b',rev:2}]);assert.equal(split.sessions.length,2);
+const f=run([{kind:'upsert',id:'a',rev:1,key:'k',event_time:0,amount:1},{kind:'watermark',time:10}]);assert.equal(f.sessions[0].final,true);
+assert.throws(()=>run([{kind:'upsert',id:'a',rev:1,key:'k',event_time:0,amount:1},{kind:'watermark',time:10},{kind:'delete',id:'a',rev:2}]));
+assert.throws(()=>run([{kind:'upsert',id:'a',rev:1,key:'k',event_time:1,amount:1},{kind:'upsert',id:'a',rev:1,key:'k',event_time:1,amount:2}]));
+assert.equal(run([]).watermark,null);

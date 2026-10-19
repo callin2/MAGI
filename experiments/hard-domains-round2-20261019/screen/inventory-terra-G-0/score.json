@@ -1,0 +1,54 @@
+{
+  "id": "inventory-terra-G-0",
+  "phase": "screen",
+  "domain": "inventory",
+  "family": "terra",
+  "model_id": "gpt-5.6-terra",
+  "arm": "G",
+  "repetition": 0,
+  "status": "executed",
+  "valid": true,
+  "task_success": true,
+  "package_complete": true,
+  "behavior_passed": 31,
+  "behavior_total": 31,
+  "axes": {
+    "boundary": {
+      "passed": 20,
+      "total": 20
+    },
+    "counterexample": {
+      "passed": 5,
+      "total": 5
+    },
+    "normal": {
+      "passed": 2,
+      "total": 2
+    },
+    "regression": {
+      "passed": 4,
+      "total": 4
+    }
+  },
+  "schema_valid": true,
+  "artifacts_present": true,
+  "successful_worker_test": true,
+  "response_models": [
+    "gpt-5.6-terra"
+  ],
+  "elapsed_seconds": 238.588859834,
+  "model_calls": 8,
+  "tool_calls": 10,
+  "tool_errors": 1,
+  "stop": "settled",
+  "usage": {
+    "input": 38124,
+    "output": 7024,
+    "cacheRead": 2560,
+    "cacheWrite": 0,
+    "totalTokens": 47708
+  },
+  "user_corrections": 0,
+  "cash_cost_usd": null,
+  "human_time_saving": null
+}

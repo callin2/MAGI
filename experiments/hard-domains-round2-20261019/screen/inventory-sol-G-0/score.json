@@ -1,0 +1,54 @@
+{
+  "id": "inventory-sol-G-0",
+  "phase": "screen",
+  "domain": "inventory",
+  "family": "sol",
+  "model_id": "gpt-6.1-sol",
+  "arm": "G",
+  "repetition": 0,
+  "status": "executed",
+  "valid": true,
+  "task_success": true,
+  "package_complete": true,
+  "behavior_passed": 31,
+  "behavior_total": 31,
+  "axes": {
+    "boundary": {
+      "passed": 20,
+      "total": 20
+    },
+    "counterexample": {
+      "passed": 5,
+      "total": 5
+    },
+    "normal": {
+      "passed": 2,
+      "total": 2
+    },
+    "regression": {
+      "passed": 4,
+      "total": 4
+    }
+  },
+  "schema_valid": true,
+  "artifacts_present": true,
+  "successful_worker_test": true,
+  "response_models": [
+    "gpt-6.1-sol"
+  ],
+  "elapsed_seconds": 101.34027975,
+  "model_calls": 8,
+  "tool_calls": 7,
+  "tool_errors": 0,
+  "stop": "settled",
+  "usage": {
+    "input": 28507,
+    "output": 4801,
+    "cacheRead": 0,
+    "cacheWrite": 0,
+    "totalTokens": 33308
+  },
+  "user_corrections": 0,
+  "cash_cost_usd": null,
+  "human_time_saving": null
+}

@@ -1,0 +1,1 @@
+{"schema_version":1,"summary":"Implemented revision-aware, gap-connected activity session aggregation with watermark finalization, sealed-session protection, and atomic rejection checks.","tests_run":["functions.tests (public.test.mjs and candidate.test.mjs)"],"limitations":["Assumes the stated well-formed inputs and JavaScript-safe integer arithmetic."]}
