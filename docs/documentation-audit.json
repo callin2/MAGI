@@ -29,6 +29,40 @@
       "checkout_manifest_sha256": "a98db4ba85895d014847bfb8c31ccb236755ed9408c8d026ec1d1723765fbddd",
       "exact_long_duplicate_paragraph_groups": [],
       "errors": []
+    },
+    {
+      "observed_at": "2026-10-23T11:18:51.791824+00:00",
+      "base_commit": "017e18474d2482725a71f8c58cbee272e4750250",
+      "managed_documents": 21,
+      "unique_ids": 21,
+      "checked_files": 23,
+      "local_links": 222,
+      "anchors": 11,
+      "protected_files": 2008,
+      "protected_comparison": "Git blob bytes at base commit; checkout CRLF differences counted separately, never rewritten",
+      "exact_git_blob_bytes": 435,
+      "checkout_crlf_only_differences": 1573,
+      "initial_check": "Raw-byte assertion failed because core.autocrlf=true; inspected attributes and verified CRLF-to-LF equivalence before this check. No historical result regenerated.",
+      "checkout_manifest_sha256": "a98db4ba85895d014847bfb8c31ccb236755ed9408c8d026ec1d1723765fbddd",
+      "exact_long_duplicate_paragraph_groups": [],
+      "errors": []
+    },
+    {
+      "observed_at": "2026-10-23T11:19:38.789341+00:00",
+      "base_commit": "017e18474d2482725a71f8c58cbee272e4750250",
+      "managed_documents": 21,
+      "unique_ids": 21,
+      "checked_files": 23,
+      "local_links": 223,
+      "anchors": 12,
+      "protected_files": 2008,
+      "protected_comparison": "Git blob bytes at base commit; checkout CRLF differences counted separately, never rewritten",
+      "exact_git_blob_bytes": 435,
+      "checkout_crlf_only_differences": 1573,
+      "initial_check": "Raw-byte assertion failed because core.autocrlf=true; inspected attributes and verified CRLF-to-LF equivalence before this check. No historical result regenerated.",
+      "checkout_manifest_sha256": "a98db4ba85895d014847bfb8c31ccb236755ed9408c8d026ec1d1723765fbddd",
+      "exact_long_duplicate_paragraph_groups": [],
+      "errors": []
     }
   ]
 }

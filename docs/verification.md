@@ -13,6 +13,22 @@ issue: https://github.com/callin2/MAGI/issues/26
 
 저장소 루트에서 Python 3로 실행한다. 아래 Python 검사 도구는 표준 라이브러리를 사용한다. Windows에서는 아래처럼 `-X utf8`을 사용한다. 아래 Python 명령은 모델을 새로 호출하지 않는다. 보관 결과 확인, 소스 회귀 시험, 모델의 새 실행은 서로 다른 작업이다.
 
+## 다른 PC의 작업을 가져온 뒤 문서 확인
+
+저장소 루트에서 작업 트리와 fetch 범위를 먼저 확인한다. main만 가져오는 설정이면 다른 PC의 연구 브랜치가 갱신되지 않을 수 있다.
+
+```sh
+git status --short --branch
+git config --get-all remote.origin.fetch
+git fetch origin '+refs/heads/*:refs/remotes/origin/*' --prune
+git log -1 --format='%H %s' origin/main
+git for-each-ref --sort=-committerdate --format='%(refname:short) %(objectname:short)' refs/remotes/origin
+```
+
+fetch는 원격 추적 정보를 갱신하며 현재 문서를 병합하지 않는다. MAGI에는 이번 확인 시점에 dev가 없으므로 이름을 가정하지 말고 PR의 실제 기반 브랜치를 확인한다. 미커밋 작업을 보존한 뒤 선택한 기준과의 차이를 검토하고, fast-forward 가능한 경우에만 `git merge --ff-only <확인한 원격 브랜치>`로 반영한다. 서로 갈라진 연구를 날짜순으로 무조건 합치지 않는다. 최신 원격 기준과 문서 정리 PR의 관계는 [정리 기록](documentation-organization.md)에 남긴다.
+
+그다음 [문서 목차](README.md)의 질문별 링크와 후속 연구 연결을 갱신한다. 원문 결과를 새 목차에 복사하거나 보관 실험을 다시 실행할 필요는 없다.
+
 ## 소스 회귀 시험
 
 ```sh
