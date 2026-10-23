@@ -57,3 +57,5 @@ README는 최신 보관 연구로 연결하고, 주제별 목차에 후속 연�
 중앙 shared-context/work-status MCP는 이 세션에 제공되지 않았다. 중앙 보고·적용 완료를 주장하지 않는다. 검증 결과는 기존 [감사 파일](documentation-audit.json)에 후속 관측으로 추가하며 10월 18일 기록은 유지한다. 연구 #18/#19와 main 병합은 여전히 별도 미완료 범위다.
 
 검증 결과: 관리 문서 21개의 ID와 메타데이터, 관리 파일 23개의 로컬 링크 220개(헤딩 11개), 목차 연결이 통과했다. 긴 문단 완전 일치 중복은 0건이다. 보호 파일 2,008개 중 435개는 Git 원문 바이트와 같고, 1,573개는 기존 Windows checkout의 CRLF 변환만 다르다. Git 콘텐츠 변경은 없으며 checkout manifest hash를 보존했다. 최초 엄격한 바이트 검사의 실패와 줄바꿈 원인을 감사 파일에 남겼다. 실험 실행·채점·원본 파일 재작성은 하지 않았다.
+
+문서 변경은 [커밋 3377445](https://github.com/callin2/MAGI/commit/3377445bf31976c61b4bf8b5d88571c9865e27bd)로 push했다. [#26 검증 기록](https://github.com/callin2/MAGI/issues/26#issuecomment-6363047888)과 [후속 연구 브랜치 대상 PR27](https://github.com/callin2/MAGI/pull/27)에서 확인한다.
