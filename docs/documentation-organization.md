@@ -3,13 +3,23 @@ id: magi.documentation-organization
 type: change-record
 status: recorded
 owner: MAGI
-reviewed: 2026-10-23
+reviewed: 2026-10-24
 issue: https://github.com/callin2/MAGI/issues/26
 ---
 
 # 문서 정리 기록
 
 [문서 목차](README.md) · [이슈 #26](https://github.com/callin2/MAGI/issues/26)
+
+## 상태 안내 중복 정리 — 2026-10-24
+
+고객 결과는 다른 PC에서 공유한 연구까지 쉽게 찾고 같은 상태를 여러 곳에서 따로 갱신하지 않는 것이다. 전체 원격 heads를 fetch한 뒤 문서 HEAD `291a9a18d0cf5ef5fb1b33cd60214cfd51e8b1fd`가 기존 연구 기준 `017e18474d2482725a71f8c58cbee272e4750250`을 포함하며 원격 문서 브랜치와 일치함을 확인했다. main은 `244c7c76624e086331ccf463d4b71c2912ecaf9e`이고 [PR27](https://github.com/callin2/MAGI/pull/27)은 2026-10-24 조회 시 OPEN이다. 추가 병합할 upstream 변경은 없었다.
+
+확인한 결손은 목차의 “main 미병합” 문구가 이 기록과 별도로 낡을 수 있다는 점이다. 목차는 확인 당시 revision을 담은 이 기록과 PR로 안내하도록 바꿨다. 과거 관측, 연구 결과, 실패, 고정 실험 자료는 유지한다. 새 효과 실험이나 제품 구현은 이번 정리의 범위가 아니다. 메타데이터·목차·로컬 경로/헤딩·중복 문단 검사와 보호 자료의 Git 콘텐츠 비교 결과는 [기존 감사 파일](documentation-audit.json)의 마지막 관측에 남긴다. 문서 PR의 검토·병합과 연구 효과 검증은 별도로 남아 있다.
+
+검증 관측 `2026-10-23T18:02:29.509080+00:00`: 관리 문서 21개·고유 ID 21개·로컬 링크 224개·헤딩 11개가 통과했다. 긴 문단 완전 일치 중복은 0건이고 보호 자료 2,008개에 Git 콘텐츠 변경이 없다. 전체 의미 중복 부재나 검색 속도 개선을 뜻하지 않는다.
+
+중앙 shared-context/work-status 도구는 이번 세션에 제공되지 않아 중앙 보고를 주장하지 않는다. 변경 커밋과 검증 결과는 [이슈 #26](https://github.com/callin2/MAGI/issues/26)에 연결한다.
 
 ## 후속 동기화 확인 — 2026-10-23
 

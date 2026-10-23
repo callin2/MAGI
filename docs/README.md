@@ -3,7 +3,7 @@ id: magi.docs-index
 type: index
 status: active
 owner: MAGI
-reviewed: 2026-10-23
+reviewed: 2026-10-24
 issue: https://github.com/callin2/MAGI/issues/26
 ---
 
@@ -11,7 +11,7 @@ issue: https://github.com/callin2/MAGI/issues/26
 
 [프로젝트 소개](../README.md)에서 시작하거나 아래 질문으로 찾는다. 상세 결과와 운영 명령은 각각 연결된 원문에서 관리한다. `experiments/` 안의 문서는 당시 입력·응답·판정의 증거이며 현재 사용 안내와 구별한다.
 
-이 목차가 주제별 안내의 원문이다. 기존 [INDEX 경로](INDEX.md)도 여기로 안내한다. 2026-10-23에 GitHub의 후속 연구 브랜치까지 확인했다. 이 체크아웃에는 main 미병합 연구가 포함되며, 동기화한 기준과 검증 범위는 [정리 기록](documentation-organization.md#2026-10-23-github-동기화-후-갱신)에 있다. 동기화 날짜가 새 실험 날짜를 뜻하지 않는다.
+이 목차가 주제별 안내의 원문이다. 기존 [INDEX 경로](INDEX.md)도 여기로 안내한다. 확인한 브랜치·revision과 검증 범위는 [정리 기록](documentation-organization.md), 이후 병합 상태는 그 기록에 연결된 PR에서 확인한다. 목차에는 별도의 브랜치 상태표를 유지하지 않는다. 동기화 날짜가 새 실험 날짜를 뜻하지 않는다.
 
 ## 지금 필요한 문서
 
