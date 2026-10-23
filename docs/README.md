@@ -3,13 +3,15 @@ id: magi.docs-index
 type: index
 status: active
 owner: MAGI
-reviewed: 2026-10-18
+reviewed: 2026-10-23
 issue: https://github.com/callin2/MAGI/issues/26
 ---
 
 # MAGI 문서 목차
 
 [프로젝트 소개](../README.md)에서 시작하거나 아래 질문으로 찾는다. 상세 결과와 운영 명령은 각각 연결된 원문에서 관리한다. `experiments/` 안의 문서는 당시 입력·응답·판정의 증거이며 현재 사용 안내와 구별한다.
+
+이 목차가 주제별 안내의 원문이다. 기존 [INDEX 경로](INDEX.md)도 여기로 안내한다. 2026-10-23에 GitHub의 후속 연구 브랜치까지 확인했다. 이 체크아웃에는 main 미병합 연구가 포함되며, 동기화한 기준과 검증 범위는 [정리 기록](documentation-organization.md#2026-10-23-github-동기화-후-갱신)에 있다. 동기화 날짜가 새 실험 날짜를 뜻하지 않는다.
 
 ## 지금 필요한 문서
 
@@ -51,6 +53,8 @@ issue: https://github.com/callin2/MAGI/issues/26
 | 업무 분해·실패·복구·새 세션 실행 | [재귀 업무 파일럿](recursive-work-pilot.md) | [행동 전이 #19](https://github.com/callin2/MAGI/issues/19) |
 | 실제 코드·인계 업무의 경험 전달 비교 | [2026-10-18 효과 비교](effectiveness-verification-20261018.md) | [판정·비용·확대 검증 #18](https://github.com/callin2/MAGI/issues/18) |
 | 다른 코드베이스의 실제 경험 전이 비교 | [2026-10-19 기록](cross-system-transfer-20261019.md) | [확대 검증 #18](https://github.com/callin2/MAGI/issues/18), 실제 6회 완료, 전체 성공 0/6 |
+| 같은 과제의 세 모델 비교 | [Luna·Terra·Sol 기록](cross-system-three-models-20261019.md) | [다중 분야 후속](hard-domain-transfer-20261019.md). 모델별 원점수와 표본은 합산하지 않음 |
+| 새 분야 선별·전이와 판정 해석 정정 | [다중 분야 기록](hard-domain-transfer-20261019.md) | sealed 경계 해석의 사후 정정을 포함. 원점수·실제 반환값은 그대로 보존 |
 
 미완료 업무의 진행 상태는 연결된 이슈에서 관리한다. 문서 정리를 이유로 연구 이슈를 완료 처리하지 않는다.
 
@@ -64,7 +68,7 @@ issue: https://github.com/callin2/MAGI/issues/26
 
 ### 최소 front matter
 
-`docs/`의 관리 문서에는 다음 필드를 둔다. 고정 실험 자료에는 일괄 적용하지 않는다.
+`docs/`의 관리 Markdown에는 다음 필드를 둔다. 고정 실험 자료와 JSON 증거에는 일괄 적용하지 않는다.
 
 | 필드 | 의미 |
 |---|---|

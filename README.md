@@ -6,7 +6,7 @@
 
 | 알고 싶은 것 | 시작할 곳 |
 |---|---|
-| 실제 효과가 있었나? | [최근 비교 결과와 한계](docs/effectiveness-verification-20261018.md) |
+| 실제 효과가 있었나? | [최신 보관 비교와 해석 정정](docs/hard-domain-transfer-20261019.md) · [이전 연구 흐름](docs/README.md#연구-기록) |
 | 무엇을 실행하고 확인할 수 있나? | [실행·검증 안내](docs/verification.md) |
 | 판단과 기억의 계약은 무엇인가? | [계약 목록](docs/README.md#계약) |
 | 누가 무엇을 아는지 찾아 묻는 구조는? | [전문성·기억 검토 제안](docs/expertise-memory-review.md) |

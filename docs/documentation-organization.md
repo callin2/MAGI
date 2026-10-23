@@ -3,7 +3,7 @@ id: magi.documentation-organization
 type: change-record
 status: recorded
 owner: MAGI
-reviewed: 2026-10-18
+reviewed: 2026-10-23
 issue: https://github.com/callin2/MAGI/issues/26
 ---
 
@@ -42,3 +42,18 @@ issue: https://github.com/callin2/MAGI/issues/26
 이번 완료 범위는 MAGI 문서 정리다. 다른 저장소·다른 PC 문서 전체를 정리하거나 중앙 동기화한 것은 아니다. #23의 제안 검토와 #18/#19의 후속 효과 검증은 그대로 남는다. 변경은 [PR #25](https://github.com/callin2/MAGI/pull/25)에서 검토하며 main 병합 여부는 PR 상태를 따른다.
 
 정리와 검증은 [커밋 c886bd9](https://github.com/callin2/MAGI/commit/c886bd9e5277736e08ba95374574760f75d311fa)에 보존했다. 이슈 #26에 같은 커밋과 검증 결과를 연결한다.
+
+## 2026-10-23 GitHub 동기화 후 갱신
+
+- 고객 결과: 다른 PC에서 추가한 연구까지 같은 문서 입구에서 찾고, 결과 원본·후속 해석 정정·main 병합 상태를 구분한다.
+- 확인한 결손: 로컬 브랜치는 `d2769ab`에 머물렀고 README는 10월 18일 보고서를 최근 결과로 안내했다. 이후 두 비교가 연구 순서표에서 빠졌으며 별도 INDEX가 같은 파일 목록을 중복 관리했다.
+- 다음 행동과 이유: 전체 원격 브랜치를 가져와 기존 작업의 후손인 `017e18474d2482725a71f8c58cbee272e4750250`을 기준으로 `codex/docs-sync-20261023`을 만들었다. 기존 브랜치를 보존하고 목차·실행 안내만 갱신한다. 최신 보고서의 sealed 경계 해석 정정과 고정 원점수는 그대로 유지한다.
+- 통과 증거: 문서 ID·로컬 경로/헤딩·목차 연결 검사, 긴 문단 중복 검사, 기준 커밋 대비 experiments/scripts 및 세 후속 보고서의 Git 콘텐츠 무변경을 확인한다. Windows checkout의 줄바꿈 차이는 바이트 일치와 별도 계수하며 원본을 재작성하지 않는다. 과거 실험을 다시 생성하거나 채점하지 않는다.
+
+GitHub 확인 당시 MAGI에는 dev 브랜치가 없고 main은 `244c7c76624e086331ccf463d4b71c2912ecaf9e`다. 기존 PR #25는 열려 있다. 이후 연구는 `codex/cross-system-transfer-20261019`, `codex/cross-system-three-models-20261019`, `codex/hard-domain-transfer-20261019`에 있다. 이 동기화는 후속 연구 브랜치를 로컬에서 사용하는 것이며 main 병합이나 제품 배포가 아니다.
+
+README는 최신 보관 연구로 연결하고, 주제별 목차에 후속 연구 순서와 해석 정정을 추가했다. `docs/INDEX.md`는 호환 경로를 유지하는 안내로 줄여 두 목차를 따로 갱신하는 중복을 없앴다. 실행 안내에는 후속 실험의 원문 링크와 읽기/쓰기·플랫폼 경계를 추가했다. 결과 수치나 명령 전체를 다른 곳에 복제하지 않았다.
+
+중앙 shared-context/work-status MCP는 이 세션에 제공되지 않았다. 중앙 보고·적용 완료를 주장하지 않는다. 검증 결과는 기존 [감사 파일](documentation-audit.json)에 후속 관측으로 추가하며 10월 18일 기록은 유지한다. 연구 #18/#19와 main 병합은 여전히 별도 미완료 범위다.
+
+검증 결과: 관리 문서 21개의 ID와 메타데이터, 관리 파일 23개의 로컬 링크 220개(헤딩 11개), 목차 연결이 통과했다. 긴 문단 완전 일치 중복은 0건이다. 보호 파일 2,008개 중 435개는 Git 원문 바이트와 같고, 1,573개는 기존 Windows checkout의 CRLF 변환만 다르다. Git 콘텐츠 변경은 없으며 checkout manifest hash를 보존했다. 최초 엄격한 바이트 검사의 실패와 줄바꿈 원인을 감사 파일에 남겼다. 실험 실행·채점·원본 파일 재작성은 하지 않았다.

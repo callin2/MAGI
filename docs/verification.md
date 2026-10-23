@@ -3,7 +3,7 @@ id: magi.verification
 type: guide
 status: active
 owner: MAGI
-reviewed: 2026-10-18
+reviewed: 2026-10-23
 issue: https://github.com/callin2/MAGI/issues/26
 ---
 
@@ -35,6 +35,16 @@ python -X utf8 scripts/check_pilot_002.py --check
 
 ## 결과 파일을 다시 쓰는 검사
 
+2026-10-19 이후 실험의 원본 확인과 재현 방법은 아래에서 찾는다. 과거 실행 명령은 해당 보고서에 한 번만 보관한다. 먼저 결과 JSON과 보고서를 읽고, 재실행이 필요할 때만 명령을 사용한다.
+
+| 보관 실험 | 결과·한계·재현 원문 | 실행 전 확인 |
+|---|---|---|
+| 다른 코드베이스 6회 | [교차 시스템 기록](cross-system-transfer-20261019.md#재현과-한계) | `check.py`는 보관 파일을 읽고 임시 fixture에서 CLI를 시험한다. 원래 실패도 정상적인 재현 결과 |
+| Luna·Terra·Sol 18회 | [세 모델 기록](cross-system-three-models-20261019.md#재현과-변경-범위) | 같은 판정기 사용. 모델별 전체 성공과 부분 통과를 구분 |
+| 다중 분야 선별·후속 비교 | [감사·보존·재현](hard-domain-transfer-20261019.md#감사보존재현과-남은-한계) | 현재 `hard_domains`/`hard_domains2` 검사기는 Mac 실행 경로를 사용. Windows 검증 완료로 간주하지 않음 |
+
+후속 `evaluate.py`, `verify.py`, `score.py`, `finalize.py`, `review_failures.py`는 보고서·판정·무결성 파일을 생성하는 실행기다. write-once로 기존 파일을 거절하는 것도 읽기 전용 검사를 뜻하지 않는다. 이번 문서 정리에서는 실행하지 않았다. 특히 후속 검증기는 당시 장치의 인증 설정도 참조하므로 단순 문서 탐색 명령으로 실행하지 않는다.
+
 다음 명령에는 읽기 전용 모드가 없다. 보존된 평가를 다시 만들 목적이 있을 때 별도 작업 사본에서 실행하고 diff를 검토한다. 문서를 읽기 위해 실행할 필요는 없다.
 
 | 명령 | 쓰는 결과와 주의점 |
@@ -46,6 +56,8 @@ python -X utf8 scripts/check_pilot_002.py --check
 | `python -X utf8 scripts/effectiveness/summarize.py` | 기존 결과로 `summary.json` 재집계 |
 
 구형 재귀 업무 자료는 Windows checkout 줄바꿈으로 파일 hash가 달라져 실패한 기록이 있다. UTF-8 옵션은 인코딩만 다루며 줄바꿈 hash 문제를 해결하지 않는다. [기존 재검증 기록](../experiments/effectiveness-20261018/legacy-windows-recheck/)과 [바이트 보존 결정](../experiments/effectiveness-20261018/byte-storage-note.md)을 먼저 확인한다. 통과를 위해 과거 hash나 점수를 고치지 않는다.
+
+2026-10-23 동기화에서도 같은 차이를 확인했다. 이 Windows checkout의 `core.autocrlf=true`와 현재 `.gitattributes`는 후속 교차 시스템/다중 분야 자료 전체의 원문 바이트를 보장하지 않는다. [문서 감사](documentation-audit.json)는 Git 원문 바이트 일치와 CRLF만 다른 파일을 분리해 기록한다. 로컬 hash 차이를 실험 결과 변경으로 단정하거나 원본 manifest를 덮어쓰지 않는다.
 
 ## Tracker 사용
 
