@@ -1,0 +1,732 @@
+{
+  "domain": "events",
+  "cases": [
+    {
+      "id": "empty",
+      "axis": "normal",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "simple",
+      "axis": "normal",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "retransmission",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": null,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 3,
+            "count": 1,
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": null,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 6,
+            "count": 2,
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "same-payload-distinct-ids",
+      "axis": "counterexample",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "replace-not-add",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": null,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 8,
+            "count": 1,
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": null,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 11,
+            "count": 2,
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "older-time-higher-revision",
+      "axis": "counterexample",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": null,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 9,
+            "count": 1,
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": null,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 12,
+            "count": 2,
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "newer-time-lower-revision",
+      "axis": "counterexample",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": null,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 3,
+            "count": 1,
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": null,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 102,
+            "count": 2,
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "move-key-and-window",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": null,
+        "windows": [
+          {
+            "key": "y",
+            "start": 10,
+            "end": 20,
+            "total": 9,
+            "count": 1,
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": null,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 3,
+            "count": 1,
+            "final": false
+          },
+          {
+            "key": "y",
+            "start": 10,
+            "end": 20,
+            "total": 9,
+            "count": 1,
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "delete-removes",
+      "axis": "regression",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": null,
+        "windows": []
+      },
+      "actual": {
+        "watermark": null,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 3,
+            "count": 1,
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "unknown-delete-tombstone",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": null,
+        "windows": []
+      },
+      "actual": {
+        "watermark": null,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 3,
+            "count": 1,
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "resurrection-higher-revision",
+      "axis": "regression",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": null,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 7,
+            "count": 1,
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": null,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 10,
+            "count": 2,
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "zero-total-not-empty",
+      "axis": "counterexample",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "zero-amount-counts",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "negative-time-floor",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": null,
+        "windows": [
+          {
+            "key": "x",
+            "start": -10,
+            "end": 0,
+            "total": 3,
+            "count": 1,
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": null,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 3,
+            "count": 1,
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "exact-window-boundary",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "late-new-after-finalization",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 10,
+        "windows": []
+      },
+      "actual": {
+        "watermark": 10,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 3,
+            "count": 1,
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "allowed-lateness-open",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "exact-seal-with-lateness",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 11,
+        "windows": []
+      },
+      "actual": {
+        "watermark": 11,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 3,
+            "count": 1,
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "watermark-never-rewinds",
+      "axis": "regression",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 20,
+        "windows": []
+      },
+      "actual": {
+        "watermark": 0,
+        "windows": [
+          {
+            "key": "x",
+            "start": 10,
+            "end": 20,
+            "total": 3,
+            "count": 1,
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "duplicate-after-finalization",
+      "axis": "regression",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 10,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 3,
+            "count": 1,
+            "final": true
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 10,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 6,
+            "count": 2,
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "move-from-sealed-atomic",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 10,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 3,
+            "count": 1,
+            "final": true
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 10,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 3,
+            "count": 1,
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 10,
+            "end": 20,
+            "total": 8,
+            "count": 1,
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "move-to-sealed-atomic",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 10,
+        "windows": [
+          {
+            "key": "x",
+            "start": 10,
+            "end": 20,
+            "total": 3,
+            "count": 1,
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 10,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 8,
+            "count": 1,
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 10,
+            "end": 20,
+            "total": 3,
+            "count": 1,
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "rejected-version-does-not-poison",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 10,
+        "windows": [
+          {
+            "key": "x",
+            "start": 10,
+            "end": 20,
+            "total": 9,
+            "count": 1,
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 10,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 8,
+            "count": 1,
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 10,
+            "end": 20,
+            "total": 12,
+            "count": 2,
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "delete-sealed-rejected",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 10,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 3,
+            "count": 1,
+            "final": true
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 10,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 3,
+            "count": 1,
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "signed-watermark-zero",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 0,
+        "windows": [
+          {
+            "key": "x",
+            "start": -10,
+            "end": 0,
+            "total": 3,
+            "count": 1,
+            "final": true
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 0,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 3,
+            "count": 1,
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "conflicting-revision",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "throws": true
+      },
+      "actual": {
+        "watermark": null,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 11,
+            "count": 2,
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "delete-conflict-same-revision",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "throws": true
+      },
+      "actual": {
+        "watermark": null,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 3,
+            "count": 1,
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "lower-revision-different-payload",
+      "axis": "regression",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": null,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 3,
+            "count": 1,
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": null,
+        "windows": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 3,
+            "count": 1,
+            "final": false
+          },
+          {
+            "key": "y",
+            "start": 0,
+            "end": 10,
+            "total": 99,
+            "count": 1,
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "distinct-keys-with-separator",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    }
+  ],
+  "passed": 8,
+  "total": 29,
+  "success": false
+}

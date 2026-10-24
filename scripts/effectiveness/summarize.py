@@ -1,0 +1,12 @@
+"""Summarize frozen scores without turning proxy tokens into invented prices."""
+import json, statistics
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[2];EXP=ROOT/'experiments/effectiveness-20261018'
+def read(p):return json.loads(p.read_text(encoding='utf-8'))
+def aggregate(rows):
+    def median(field):return statistics.median(x[field] for x in rows) if rows else None
+    return {'runs':len(rows),'passed':sum(x['passed'] for x in rows),'median_seconds':median('seconds'),'median_model_calls':median('model_calls'),'median_tool_calls':median('tool_calls'),'tool_errors':sum(x['tool_errors'] for x in rows),'provider_reported_input_tokens':sum(x['input_tokens'] for x in rows),'provider_reported_output_tokens':sum(x['output_tokens'] for x in rows),'provider_reported_cache_read_tokens':sum(x['cache_read_tokens'] for x in rows),'provider_reported_total_tokens':sum(x['reported_total_tokens'] for x in rows),'median_reported_total_tokens':median('reported_total_tokens'),'failures':[{'id':x['id'],'task':x['task'],'checks':x['failed_checks'],'stop':x['stop']} for x in rows if not x['passed']]}
+rows=read(EXP/'results.json')
+summary={'planned_runs':22,'evaluated_runs':len(rows),'primary':{a:aggregate([x for x in rows if x['arm']==a]) for a in ('G','F','L','E')},'by_task':{t:{a:aggregate([x for x in rows if x['arm']==a and x['task']==t]) for a in ('G','F','L','E','A','C','R')} for t in ('code','handover')},'diagnostic_probes':{a:aggregate([x for x in rows if x['arm']==a]) for a in ('A','C','R')},'total':aggregate(rows),'measurement_limits':{'pricing_usd':None,'historical_training_and_review_tokens':None,'parent_orchestration_tokens':None,'human_time_saved':None,'full_lifecycle_cost':None,'provider_identity':'Configured/live-advertised model ID, not attested weights','counterfactual':'Same current task and mandatory instructions. G has less historical information. F/L/E share central rules but representations and surrounding information differ.','generality':'Two tasks, one repository, one provider/model, two repetitions per primary cell. No multi-agent coordination efficacy measured.','time':'Wall time contains provider, network and tool variance; not human effort.','zero_usage':'Provider error/aborted results can contain zero or partial usage, not proof of free execution.'}}
+(EXP/'summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+print(json.dumps(summary,ensure_ascii=False))

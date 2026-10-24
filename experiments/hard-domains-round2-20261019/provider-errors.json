@@ -1,0 +1,236 @@
+{
+  "scope": "Preserved failed conversations, not semantic model failures. Missing raw usage is unknown, not zero. No failed outcome regenerated.",
+  "runs": [
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-luna-F-1",
+      "valid": false,
+      "stop": "error",
+      "errors": [
+        {
+          "at": "2026-10-19T06:35:52.752Z",
+          "error": "Codex error: {\"type\":\"error\",\"sequence_number\":3,\"error\":{\"message\":\"Our servers are currently overloaded. Please try again later.\",\"type\":\"service_unavailable_error\",\"param\":null,\"code\":\"server_is_overloaded\"}}",
+          "transport": {
+            "requested_model": "gpt-6-luna",
+            "response_models": [
+              "gpt-6-luna"
+            ],
+            "response_event_types": [
+              "response.created",
+              "response.failed"
+            ],
+            "http_statuses": [
+              200
+            ],
+            "raw_provider_usage": null,
+            "request_payload": {
+              "model": "gpt-6-luna",
+              "reasoning": "medium",
+              "max_output_tokens": 8192
+            }
+          }
+        }
+      ],
+      "replacement_generated": false
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-luna-G-1",
+      "valid": false,
+      "stop": "error",
+      "errors": [
+        {
+          "at": "2026-10-19T06:35:56.496Z",
+          "error": "Codex error: {\"type\":\"error\",\"sequence_number\":3,\"error\":{\"message\":\"Our servers are currently overloaded. Please try again later.\",\"type\":\"service_unavailable_error\",\"param\":null,\"code\":\"server_is_overloaded\"}}",
+          "transport": {
+            "requested_model": "gpt-6-luna",
+            "response_models": [
+              "gpt-6-luna"
+            ],
+            "response_event_types": [
+              "response.created",
+              "response.failed"
+            ],
+            "http_statuses": [
+              200
+            ],
+            "raw_provider_usage": null,
+            "request_payload": {
+              "model": "gpt-6-luna",
+              "reasoning": "medium",
+              "max_output_tokens": 8192
+            }
+          }
+        }
+      ],
+      "replacement_generated": false
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-terra-G-2",
+      "valid": false,
+      "stop": "error",
+      "errors": [
+        {
+          "at": "2026-10-19T06:30:51.436Z",
+          "error": "Codex error: {\"type\":\"error\",\"sequence_number\":3,\"error\":{\"message\":\"Our servers are currently overloaded. Please try again later.\",\"type\":\"service_unavailable_error\",\"param\":null,\"code\":\"server_is_overloaded\"}}",
+          "transport": {
+            "requested_model": "gpt-5.6-terra",
+            "response_models": [
+              "gpt-5.6-terra"
+            ],
+            "response_event_types": [
+              "response.created",
+              "response.failed"
+            ],
+            "http_statuses": [
+              200
+            ],
+            "raw_provider_usage": null,
+            "request_payload": {
+              "model": "gpt-5.6-terra",
+              "reasoning": "medium",
+              "max_output_tokens": 8192
+            }
+          }
+        }
+      ],
+      "replacement_generated": false
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-terra-E-2",
+      "valid": false,
+      "stop": "error",
+      "errors": [
+        {
+          "at": "2026-10-19T06:40:56.546Z",
+          "error": "Codex error: {\"type\":\"error\",\"sequence_number\":3,\"error\":{\"message\":\"Our servers are currently overloaded. Please try again later.\",\"type\":\"service_unavailable_error\",\"param\":null,\"code\":\"server_is_overloaded\"}}",
+          "transport": {
+            "requested_model": "gpt-5.6-terra",
+            "response_models": [
+              "gpt-5.6-terra"
+            ],
+            "response_event_types": [
+              "response.created",
+              "response.failed"
+            ],
+            "http_statuses": [
+              200
+            ],
+            "raw_provider_usage": null,
+            "request_payload": {
+              "model": "gpt-5.6-terra",
+              "reasoning": "medium",
+              "max_output_tokens": 8192
+            }
+          }
+        }
+      ],
+      "replacement_generated": false
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-terra-G-2",
+      "valid": false,
+      "stop": "error",
+      "errors": [
+        {
+          "at": "2026-10-19T06:40:59.657Z",
+          "error": "Codex error: {\"type\":\"error\",\"sequence_number\":3,\"error\":{\"message\":\"Our servers are currently overloaded. Please try again later.\",\"type\":\"service_unavailable_error\",\"param\":null,\"code\":\"server_is_overloaded\"}}",
+          "transport": {
+            "requested_model": "gpt-5.6-terra",
+            "response_models": [
+              "gpt-5.6-terra"
+            ],
+            "response_event_types": [
+              "response.created",
+              "response.failed"
+            ],
+            "http_statuses": [
+              200
+            ],
+            "raw_provider_usage": null,
+            "request_payload": {
+              "model": "gpt-5.6-terra",
+              "reasoning": "medium",
+              "max_output_tokens": 8192
+            }
+          }
+        }
+      ],
+      "replacement_generated": false
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-terra-E-1",
+      "valid": false,
+      "stop": "error",
+      "errors": [
+        {
+          "at": "2026-10-19T06:50:44.881Z",
+          "error": "Codex error: {\"type\":\"error\",\"sequence_number\":3,\"error\":{\"message\":\"Our servers are currently overloaded. Please try again later.\",\"type\":\"service_unavailable_error\",\"param\":null,\"code\":\"server_is_overloaded\"}}",
+          "transport": {
+            "requested_model": "gpt-5.6-terra",
+            "response_models": [
+              "gpt-5.6-terra"
+            ],
+            "response_event_types": [
+              "response.created",
+              "response.failed"
+            ],
+            "http_statuses": [
+              200
+            ],
+            "raw_provider_usage": null,
+            "request_payload": {
+              "model": "gpt-5.6-terra",
+              "reasoning": "medium",
+              "max_output_tokens": 8192
+            }
+          }
+        }
+      ],
+      "replacement_generated": false
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-terra-F-1",
+      "valid": false,
+      "stop": "error",
+      "errors": [
+        {
+          "at": "2026-10-19T06:50:59.463Z",
+          "error": "Codex error: {\"type\":\"error\",\"sequence_number\":3,\"error\":{\"message\":\"Our servers are currently overloaded. Please try again later.\",\"type\":\"service_unavailable_error\",\"param\":null,\"code\":\"server_is_overloaded\"}}",
+          "transport": {
+            "requested_model": "gpt-5.6-terra",
+            "response_models": [
+              "gpt-5.6-terra"
+            ],
+            "response_event_types": [
+              "response.created",
+              "response.failed"
+            ],
+            "http_statuses": [
+              200
+            ],
+            "raw_provider_usage": null,
+            "request_payload": {
+              "model": "gpt-5.6-terra",
+              "reasoning": "medium",
+              "max_output_tokens": 8192
+            }
+          }
+        }
+      ],
+      "replacement_generated": false
+    }
+  ]
+}

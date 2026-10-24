@@ -1,0 +1,13 @@
+# Pre-execution route amendment, 2026-10-19
+
+No scored task response has been generated. Original frozen.json, source/preregistration.md, six inputs, hidden checks, source A and target B remain byte-for-byte unchanged. The initial zai denial and blocked results.json remain immutable historical evidence.
+
+The user's subsequent instruction authorizes read-only inspection of other existing usable provider connections and use of a normal existing connection, without key relocation, new credentials, access expansion or persistent setting changes. Do not generalize the failed default zai route to all providers. Do not retry the denied zai credential.
+
+Read-only inspection found the existing OpenCode OpenRouter API credential and its authenticated GET /api/v1/key succeeded. LM Studio also returned its actual model inventory. OpenWebUI returned a connection error. No OAuth refresh or other auth changes were attempted. The selected model openai/gpt-4.1-mini appears in OpenRouter's actual /models inventory with tools support; a real preflight returned an acknowledge toolCall and provider usage. Use this normal existing OpenRouter connection in place, reading its credential from its original store only in the controller. No Pi/OpenCode/auth file is edited and no key is copied into the repository, shell environment or another application config.
+
+All G/F/E runs will request openrouter/openai/gpt-4.1-mini. This differs from both the failed zai/glm-4.7 plan and prior Windows atomic-8317/gpt-6-luna, so do not compare their outcome differences as causal model-independent effects. GPT-4.1 Mini is nonreasoning; send no reasoning parameter. Other task/tool/oracle/usage collection and prior bounds remain unchanged. Record provider/model response metadata; do not claim independently verified weights or model-training novelty.
+
+The new resume runner is a copy of the frozen runner with its relative root, connection adapter and route/freeze verification updated. It does not change worker instructions, task seeds, tools or turn/time/output limits. The separate post-run evaluator codifies the already registered full-success artifact schema/test-call/integrity criteria and frozen behavioral check. Both are hashed in route-amendment.json before scored execution and committed/pushed before model task responses. Existing original runner/provider remain unchanged.
+
+Six conversations still use the previously shuffled manifest, source A projection, fresh state and hidden oracle. No replacement of failed task outcomes or amendment based on scored performance. Continue recording cash cost and human-time saving as unknown. Actual model responses, tool outcomes and provider usage—not simulated responses—will be saved in runs/b001..b006.

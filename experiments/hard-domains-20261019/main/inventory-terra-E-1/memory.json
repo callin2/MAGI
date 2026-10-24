@@ -1,0 +1,126 @@
+[
+  {
+    "id": "inventory-observed-source-A",
+    "rule": "Bind an effect to its stable business receipt and reverse the recorded effect at most once. Repeated delivery is not a new operation; equal amounts under distinct receipts remain distinct. Do not invent a reversal when no original effect exists.",
+    "conditions": {
+      "source_system": "synthetic reward-credit replay",
+      "scope": "receipt-scoped reversible effects; this source ignores unknown voids"
+    },
+    "provenance": "Coordinator-authored synthetic precursor with intentionally seeded defects; actually executed and repaired before target B construction. Not a historical product defect or autonomous worker-learned lesson.",
+    "observed_failures": [
+      {
+        "id": "retry-grant",
+        "input": [
+          {
+            "kind": "grant",
+            "receipt": "a",
+            "amount": 7
+          },
+          {
+            "kind": "grant",
+            "receipt": "a",
+            "amount": 7
+          }
+        ],
+        "expected": 7,
+        "actual": 14,
+        "passed": false
+      },
+      {
+        "id": "retry-void",
+        "input": [
+          {
+            "kind": "grant",
+            "receipt": "a",
+            "amount": 7
+          },
+          {
+            "kind": "void",
+            "receipt": "a",
+            "amount": 7
+          },
+          {
+            "kind": "void",
+            "receipt": "a",
+            "amount": 7
+          }
+        ],
+        "expected": 0,
+        "actual": -7,
+        "passed": false
+      },
+      {
+        "id": "reverse-recorded-effect",
+        "input": [
+          {
+            "kind": "grant",
+            "receipt": "a",
+            "amount": 7
+          },
+          {
+            "kind": "void",
+            "receipt": "a",
+            "amount": 99
+          }
+        ],
+        "expected": 0,
+        "actual": -92,
+        "passed": false
+      },
+      {
+        "id": "unknown-void-no-future-effect",
+        "input": [
+          {
+            "kind": "void",
+            "receipt": "a",
+            "amount": 7
+          },
+          {
+            "kind": "grant",
+            "receipt": "a",
+            "amount": 7
+          }
+        ],
+        "expected": 7,
+        "actual": 0,
+        "passed": false
+      },
+      {
+        "id": "retry-after-void",
+        "input": [
+          {
+            "kind": "grant",
+            "receipt": "a",
+            "amount": 7
+          },
+          {
+            "kind": "void",
+            "receipt": "a",
+            "amount": 7
+          },
+          {
+            "kind": "grant",
+            "receipt": "a",
+            "amount": 7
+          }
+        ],
+        "expected": 0,
+        "actual": 7,
+        "passed": false
+      }
+    ],
+    "observed_repair": {
+      "passed": 6,
+      "total": 6,
+      "repair_kind": "coordinator code repair; source A only"
+    },
+    "falsifier": "A change satisfying the source contract still reproduces these source-A failures, or this scoped lesson is forced on a consumer with a different explicit policy.",
+    "source_files": [
+      "experiments/hard-domains-20261019/source-A/inventory/contract.txt",
+      "experiments/hard-domains-20261019/source-A/inventory/before.mjs",
+      "experiments/hard-domains-20261019/source-A/inventory/after.mjs",
+      "experiments/hard-domains-20261019/source-A/inventory/before-observations.json",
+      "experiments/hard-domains-20261019/source-A/inventory/after-observations.json"
+    ]
+  }
+]

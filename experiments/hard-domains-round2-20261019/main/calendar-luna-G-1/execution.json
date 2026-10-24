@@ -1,0 +1,51 @@
+{
+  "started_at": "2026-10-19T06:35:52.757Z",
+  "ended_at": "2026-10-19T06:35:56.496Z",
+  "elapsed_seconds": 3.7393421670000535,
+  "model_calls": 2,
+  "tool_calls": 1,
+  "tool_errors": 0,
+  "stop": "error",
+  "provider_error": true,
+  "provider": "openai-codex",
+  "configured_model": "gpt-6-luna",
+  "family": "luna",
+  "domain": "calendar",
+  "arm": "G",
+  "phase": "main",
+  "usage": [
+    {
+      "input": 848,
+      "output": 20,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 868,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 0,
+      "output": 0,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 0,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    }
+  ],
+  "fresh_conversation": true,
+  "history_messages_at_start": 1,
+  "user_corrections": 0,
+  "api_cost_usd": null,
+  "human_time_saving": null
+}

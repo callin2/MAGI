@@ -1,0 +1,49 @@
+{
+  "started_at": "2026-10-18T10:41:43.002Z",
+  "ended_at": "2026-10-18T10:41:46.770Z",
+  "elapsed_seconds": 3.7674352,
+  "model_calls": 2,
+  "tool_calls": 1,
+  "tool_errors": 0,
+  "stop": "settled",
+  "provider_error": false,
+  "provider": "atomic-8317",
+  "configured_model": "gpt-6-luna",
+  "usage": [
+    {
+      "input": 543,
+      "output": 25,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 568,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 620,
+      "output": 4,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 624,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    }
+  ],
+  "api_cost_usd": null,
+  "reason_cost_unknown": "Configured proxy prices and upstream billing not independently verified",
+  "fresh_conversation": true,
+  "history_messages_at_start": 1,
+  "external_tools": false
+}

@@ -1,0 +1,32 @@
+{
+  "frozen_at": "2026-10-19T05:39:47.658780+00:00",
+  "target_B_not_constructed": true,
+  "synthetic_source": true,
+  "model_api_calls": 0,
+  "files": {
+    "experiments/hard-domains-20261019/source-A/calendar/after-observations.json": "53c5d893c769fee43546ae2f4ef654dc6861e22498dc4182ca2e6c9f21a2856e",
+    "experiments/hard-domains-20261019/source-A/calendar/after.mjs": "4d7bd49fa4b23e712ffa915413e98688a3d89d54769078cdc95ee2c4414355a7",
+    "experiments/hard-domains-20261019/source-A/calendar/before-observations.json": "9a4fbc8ff4d98ca600cd28a5ee4d42071dbdc9af51508df62bba1a2368030e6a",
+    "experiments/hard-domains-20261019/source-A/calendar/before.mjs": "7ed224b69d634d8a33dd9803c219ef0260e54e81bab2260d8c9e77031517b194",
+    "experiments/hard-domains-20261019/source-A/calendar/check-after.mjs": "1bd68ecea8d586f48852b7d0f8e40971b17dce6b6ef34b574576af52eec1ee7f",
+    "experiments/hard-domains-20261019/source-A/calendar/check-before.mjs": "45e0e3f7f6136aa59ef3ded37e9211d63bbf09450135c2a0702a60df17527035",
+    "experiments/hard-domains-20261019/source-A/calendar/contract.txt": "4a14f2c4b909ef7e512f1a1a2645095026f84575d32ff737f38e9acaf66a1a7e",
+    "experiments/hard-domains-20261019/source-A/calendar/experience.json": "5894150a18c70c76205887a5498c9b0ac218dd97afa320d773a3fde2585321f3",
+    "experiments/hard-domains-20261019/source-A/events/after-observations.json": "a752157ecb5ec882232ce013a05cee027ed38333f67820a4d0a03398785399f5",
+    "experiments/hard-domains-20261019/source-A/events/after.mjs": "a16b7268b97358b8ed3949ce6286948797d60432f33c5d1d950c6621ecf00989",
+    "experiments/hard-domains-20261019/source-A/events/before-observations.json": "4229dd3a690c5e8760c7fce6d6b6e200a21b792a5c3c64cae76c887e77dc74ce",
+    "experiments/hard-domains-20261019/source-A/events/before.mjs": "065fce5ef44ea395ee1e347113f70c2fdda19296074e8ca0567b282025e97b79",
+    "experiments/hard-domains-20261019/source-A/events/check-after.mjs": "410e023baf1c447c9e0863f3bef977d98e780cfefb676042c97f38d76e006ec4",
+    "experiments/hard-domains-20261019/source-A/events/check-before.mjs": "02fe5b1a030ccc9cd7b9bc48173e05c09de30235a44aaf20314f13a5f8d9034b",
+    "experiments/hard-domains-20261019/source-A/events/contract.txt": "af15b76d21b97c927bdc983331c869107cbdc5862ebfb96e1e7acb98f11d2667",
+    "experiments/hard-domains-20261019/source-A/events/experience.json": "ee915fc655552dcc9fae482acf1bc8aa73b8bdce847913491c27814c53f9f979",
+    "experiments/hard-domains-20261019/source-A/inventory/after-observations.json": "689aea1ea5020b2b5919132953ceb24b2e2b9d31ffaa6373548a963fc1acfba7",
+    "experiments/hard-domains-20261019/source-A/inventory/after.mjs": "8e3e3ecec73ecbc9f84bb9dbafc51c1e3ae8c87fab65f11c237d757414f8bc55",
+    "experiments/hard-domains-20261019/source-A/inventory/before-observations.json": "9b3cc63298858c571427f50920d270be43eb6bd2c800c3bc621f0c8ff7a65dee",
+    "experiments/hard-domains-20261019/source-A/inventory/before.mjs": "4a9a293f2b0dfabea86b1a0417afdbbea92c26f13f82862412b66e69804825d8",
+    "experiments/hard-domains-20261019/source-A/inventory/check-after.mjs": "0cb2f0ec0261e4fe41610b78c53200d5d53539095d22fffa02178b5604a83b35",
+    "experiments/hard-domains-20261019/source-A/inventory/check-before.mjs": "bd5136a29ce330b7b7ee60bfc042cb4c8aeb311857fe6ff2f441b2e575a8d601",
+    "experiments/hard-domains-20261019/source-A/inventory/contract.txt": "707dd446fa107dfb8b0096de1af7903c70583af0e967eb0ff02abdcc75b00469",
+    "experiments/hard-domains-20261019/source-A/inventory/experience.json": "bf9c77d3d6e593474f0fb308d51af30897ccdc04d421a08c6747eeccf2285856"
+  }
+}

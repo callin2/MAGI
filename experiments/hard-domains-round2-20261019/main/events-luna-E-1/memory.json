@@ -1,0 +1,166 @@
+[
+  {
+    "id": "events-actual-first-bundle-repair",
+    "rule": "Distinguish logical revision from event-time and arrival order. Apply replacement/retraction atomically, preserve rejected versions, and keep finalized contributions stable. In this source the affected footprint is fixed epoch windows; this is a scoped window policy, not a universal late-arrival cutoff for different aggregation models.",
+    "conditions": {
+      "source": "synthetic revised fixed-window consumer repaired in actual G screen",
+      "scope": "accepted-version identity, fixed-window watermarks and atomic old/new footprint"
+    },
+    "provenance": "Newly acquired from actual successful Sol G screen on the synthetic first bundle, all three models passed that task; coordinator extracted this scoped lesson. Not autonomous memory extraction or a historical product incident.",
+    "source_run": "experiments/hard-domains-20261019/screen/events-sol-G-0",
+    "source_model": "gpt-6.1-sol",
+    "source_task_sha256": "c2683f856307b6880a5b13f90c1010d289ca76f33f2b29dbbaf150f8c9fcde41",
+    "before_passed": 8,
+    "after_passed": 29,
+    "total": 29,
+    "observed_checks": [
+      {
+        "id": "empty",
+        "axis": "normal",
+        "passed": true
+      },
+      {
+        "id": "simple",
+        "axis": "normal",
+        "passed": true
+      },
+      {
+        "id": "retransmission",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "same-payload-distinct-ids",
+        "axis": "counterexample",
+        "passed": true
+      },
+      {
+        "id": "replace-not-add",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "older-time-higher-revision",
+        "axis": "counterexample",
+        "passed": true
+      },
+      {
+        "id": "newer-time-lower-revision",
+        "axis": "counterexample",
+        "passed": true
+      },
+      {
+        "id": "move-key-and-window",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "delete-removes",
+        "axis": "regression",
+        "passed": true
+      },
+      {
+        "id": "unknown-delete-tombstone",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "resurrection-higher-revision",
+        "axis": "regression",
+        "passed": true
+      },
+      {
+        "id": "zero-total-not-empty",
+        "axis": "counterexample",
+        "passed": true
+      },
+      {
+        "id": "zero-amount-counts",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "negative-time-floor",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "exact-window-boundary",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "late-new-after-finalization",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "allowed-lateness-open",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "exact-seal-with-lateness",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "watermark-never-rewinds",
+        "axis": "regression",
+        "passed": true
+      },
+      {
+        "id": "duplicate-after-finalization",
+        "axis": "regression",
+        "passed": true
+      },
+      {
+        "id": "move-from-sealed-atomic",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "move-to-sealed-atomic",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "rejected-version-does-not-poison",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "delete-sealed-rejected",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "signed-watermark-zero",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "conflicting-revision",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "delete-conflict-same-revision",
+        "axis": "boundary",
+        "passed": true
+      },
+      {
+        "id": "lower-revision-different-payload",
+        "axis": "regression",
+        "passed": true
+      },
+      {
+        "id": "distinct-keys-with-separator",
+        "axis": "regression",
+        "passed": true
+      }
+    ],
+    "worker_notes": "# Repair and validation\n\nInspected solution.mjs and public.test.mjs. Replaced delivery-based accumulation with per-ID accepted revision state. Duplicate/conflict and stale revision checks precede lateness checks. Rejected corrections retain both the old contribution and old revision. Tombstones persist even without contributions. Final windows remain represented and cannot be modified. Window starts use floor division for negative timestamps; output uses numeric start and ASCII lexical key order.\n\nOutput is materialized from accepted current upserts, so moves and deletes cannot leave previous contributions behind. Separate maps for start and key avoid delimiter collisions. All state is invocation-local and input objects are copied rather than modified.\n\nRan functions.tests after writing the implementation and candidate tests: 13 tests passed, 0 failed (11 candidate tests plus 2 public tests). Covered retransmission, distinct IDs with identical payloads, full replacement, stale revisions, tombstones, canonical conflicts, negative boundaries, sorting, explicit monotone watermarks, lateness equality, finalized source/target rejection, rejected revision reuse, zero totals, empty windows, frozen inputs, and call independence.\n\nLimits: tests are local synthetic checks, not an exhaustive proof. No broker, external service, production stream, or network was used. Arithmetic uses native JavaScript Numbers and does not provide arbitrary-precision integer handling. Inputs are assumed well formed as specified; no extra validation is imposed. Accepted state and tombstones are retained for the whole invocation, with memory proportional to distinct accepted IDs plus output groups.\n",
+    "falsifier": "The same source contract still fails its frozen cases, or its explicit source-only policy is imposed unchanged on a different contract."
+  }
+]

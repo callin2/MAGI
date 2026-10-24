@@ -1,0 +1,42 @@
+{
+  "retained": [],
+  "decisions": [
+    {
+      "domain": "inventory",
+      "valid_screens": true,
+      "excluded_as_easy": true,
+      "retained": false,
+      "reason": "all three valid G screens passed every business criterion",
+      "screen_ids": [
+        "inventory-luna-G-0",
+        "inventory-terra-G-0",
+        "inventory-sol-G-0"
+      ]
+    },
+    {
+      "domain": "calendar",
+      "valid_screens": true,
+      "excluded_as_easy": true,
+      "retained": false,
+      "reason": "all three valid G screens passed every business criterion",
+      "screen_ids": [
+        "calendar-luna-G-0",
+        "calendar-terra-G-0",
+        "calendar-sol-G-0"
+      ]
+    },
+    {
+      "domain": "events",
+      "valid_screens": true,
+      "excluded_as_easy": true,
+      "retained": false,
+      "reason": "all three valid G screens passed every business criterion",
+      "screen_ids": [
+        "events-luna-G-0",
+        "events-terra-G-0",
+        "events-sol-G-0"
+      ]
+    }
+  ],
+  "selection_bias": "Screen-selected task set, not general capability estimate. A single G success is only a heuristic. No assertions removed."
+}

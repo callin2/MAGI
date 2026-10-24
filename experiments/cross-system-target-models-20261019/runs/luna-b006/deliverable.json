@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "summary": "Hardened farm_studio_api verdict classification to require actual captures and source evidence for candidate and fixed-holdout claims, while allowing successful non-candidate conversations to complete.",
+  "tests_run": [
+    "functions.tests: public.test.mjs and candidate.test.mjs (6 tests passed)"
+  ],
+  "limitations": [
+    "CLI file-loading behavior was not exercised by an end-to-end CLI test; the supplied test runner runs classifier tests directly."
+  ]
+}

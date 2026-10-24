@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "summary": "Hardened verdict classification so process captures, saved source bytes, and fixed-holdout captures independently corroborate report claims; added regression coverage for missing and forged evidence.",
+  "tests_run": [
+    "functions.tests (public.test.mjs and candidate.test.mjs): 7 passing tests"
+  ],
+  "limitations": [
+    "CLI integration was implemented by inspection and covered indirectly through classifier regression tests; no subprocess CLI invocation was available through the supplied test tool.",
+    "The verifier can only assess artifacts supplied in each case directory and cannot establish provenance outside those files."
+  ]
+}

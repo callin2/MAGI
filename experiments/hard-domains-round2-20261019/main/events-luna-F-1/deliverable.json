@@ -1,0 +1,1 @@
+{"schema_version":1,"summary":"Implemented revisable event-time session aggregation with bridge merges/splits, atomic revisions, watermark finalization, and sealed-session protection.","tests_run":["node public.test.mjs and candidate.test.mjs via provided test runner (3 passed, 0 failed)"],"limitations":[]}

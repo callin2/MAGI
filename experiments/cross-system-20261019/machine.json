@@ -1,0 +1,12 @@
+{
+  "hostname": "callin-macmini.local",
+  "os": "macOS-15.6-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "python": "3.14.3",
+  "node": "v25.2.1",
+  "pi_version": "0.67.6",
+  "provider": "zai",
+  "model": "glm-4.7",
+  "existing_auth_only": true,
+  "central_shared_context": "No work_status/shared_context/fleet tools exposed. Open GitHub issues and PR25 read before preparation."
+}

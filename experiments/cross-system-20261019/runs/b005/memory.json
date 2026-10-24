@@ -1,0 +1,8 @@
+[
+  {
+    "rule": "When marking work done, reject the state unless evidence is nonempty and validate that condition in the recovery regression suite.",
+    "conditions": {
+      "workspace_type": "local-work-pilot"
+    }
+  }
+]

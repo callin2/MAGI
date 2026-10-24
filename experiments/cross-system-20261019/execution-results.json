@@ -1,0 +1,358 @@
+{
+  "provider": "openrouter",
+  "model": "openai/gpt-4.1-mini",
+  "status": "completed",
+  "executed": 6,
+  "planned": 6,
+  "runs": [
+    {
+      "id": "b001",
+      "arm": "E",
+      "repetition": 2,
+      "status": "executed",
+      "success": false,
+      "behavior_success": false,
+      "axes": {
+        "counterexample": {
+          "passed": 0,
+          "total": 2
+        },
+        "integration": {
+          "passed": 4,
+          "total": 4
+        },
+        "regression": {
+          "passed": 9,
+          "total": 11
+        },
+        "repair": {
+          "passed": 8,
+          "total": 9
+        }
+      },
+      "wrong_analogy_counterexample_failure": true,
+      "new_regression_count": 2,
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test_call": true,
+      "immutable_inputs_preserved": true,
+      "elapsed_seconds": 52.13975095799999,
+      "model_calls": 9,
+      "tool_calls": 10,
+      "tool_errors": 2,
+      "stop": "settled",
+      "usage": {
+        "input": 17020,
+        "output": 6173,
+        "cacheRead": 39936,
+        "cacheWrite": 0,
+        "totalTokens": 63129
+      },
+      "edited_lines": 156,
+      "user_corrections": 0,
+      "api_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "b002",
+      "arm": "G",
+      "repetition": 2,
+      "status": "executed",
+      "success": false,
+      "behavior_success": false,
+      "axes": {
+        "counterexample": {
+          "passed": 2,
+          "total": 2
+        },
+        "integration": {
+          "passed": 4,
+          "total": 4
+        },
+        "regression": {
+          "passed": 9,
+          "total": 11
+        },
+        "repair": {
+          "passed": 8,
+          "total": 9
+        }
+      },
+      "wrong_analogy_counterexample_failure": false,
+      "new_regression_count": 2,
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test_call": true,
+      "immutable_inputs_preserved": true,
+      "elapsed_seconds": 60.497490750000004,
+      "model_calls": 10,
+      "tool_calls": 11,
+      "tool_errors": 2,
+      "stop": "settled",
+      "usage": {
+        "input": 14025,
+        "output": 7937,
+        "cacheRead": 67456,
+        "cacheWrite": 0,
+        "totalTokens": 89418
+      },
+      "edited_lines": 231,
+      "user_corrections": 0,
+      "api_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "b003",
+      "arm": "F",
+      "repetition": 2,
+      "status": "executed",
+      "success": false,
+      "behavior_success": false,
+      "axes": {
+        "counterexample": {
+          "passed": 0,
+          "total": 2
+        },
+        "integration": {
+          "passed": 4,
+          "total": 4
+        },
+        "regression": {
+          "passed": 10,
+          "total": 11
+        },
+        "repair": {
+          "passed": 6,
+          "total": 9
+        }
+      },
+      "wrong_analogy_counterexample_failure": true,
+      "new_regression_count": 1,
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test_call": true,
+      "immutable_inputs_preserved": true,
+      "elapsed_seconds": 72.373078625,
+      "model_calls": 11,
+      "tool_calls": 12,
+      "tool_errors": 3,
+      "stop": "settled",
+      "usage": {
+        "input": 16246,
+        "output": 9546,
+        "cacheRead": 72320,
+        "cacheWrite": 0,
+        "totalTokens": 98112
+      },
+      "edited_lines": 235,
+      "user_corrections": 0,
+      "api_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "b004",
+      "arm": "G",
+      "repetition": 1,
+      "status": "executed",
+      "success": false,
+      "behavior_success": false,
+      "axes": {
+        "counterexample": {
+          "passed": 0,
+          "total": 2
+        },
+        "integration": {
+          "passed": 4,
+          "total": 4
+        },
+        "regression": {
+          "passed": 10,
+          "total": 11
+        },
+        "repair": {
+          "passed": 6,
+          "total": 9
+        }
+      },
+      "wrong_analogy_counterexample_failure": true,
+      "new_regression_count": 1,
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test_call": true,
+      "immutable_inputs_preserved": true,
+      "elapsed_seconds": 68.18097249999997,
+      "model_calls": 12,
+      "tool_calls": 13,
+      "tool_errors": 3,
+      "stop": "settled",
+      "usage": {
+        "input": 21509,
+        "output": 9103,
+        "cacheRead": 143616,
+        "cacheWrite": 0,
+        "totalTokens": 174228
+      },
+      "edited_lines": 182,
+      "user_corrections": 0,
+      "api_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "b005",
+      "arm": "F",
+      "repetition": 1,
+      "status": "executed",
+      "success": false,
+      "behavior_success": false,
+      "axes": {
+        "counterexample": {
+          "passed": 2,
+          "total": 2
+        },
+        "integration": {
+          "passed": 4,
+          "total": 4
+        },
+        "regression": {
+          "passed": 10,
+          "total": 11
+        },
+        "repair": {
+          "passed": 4,
+          "total": 9
+        }
+      },
+      "wrong_analogy_counterexample_failure": false,
+      "new_regression_count": 1,
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test_call": true,
+      "immutable_inputs_preserved": true,
+      "elapsed_seconds": 38.46898799999998,
+      "model_calls": 7,
+      "tool_calls": 8,
+      "tool_errors": 0,
+      "stop": "settled",
+      "usage": {
+        "input": 9072,
+        "output": 4869,
+        "cacheRead": 25216,
+        "cacheWrite": 0,
+        "totalTokens": 39157
+      },
+      "edited_lines": 193,
+      "user_corrections": 0,
+      "api_cost_usd": null,
+      "human_time_saving": null
+    },
+    {
+      "id": "b006",
+      "arm": "E",
+      "repetition": 1,
+      "status": "executed",
+      "success": false,
+      "behavior_success": false,
+      "axes": {
+        "counterexample": {
+          "passed": 2,
+          "total": 2
+        },
+        "integration": {
+          "passed": 4,
+          "total": 4
+        },
+        "regression": {
+          "passed": 11,
+          "total": 11
+        },
+        "repair": {
+          "passed": 6,
+          "total": 9
+        }
+      },
+      "wrong_analogy_counterexample_failure": false,
+      "new_regression_count": 0,
+      "schema_valid": true,
+      "artifacts_present": true,
+      "successful_worker_test_call": true,
+      "immutable_inputs_preserved": true,
+      "elapsed_seconds": 33.867948958,
+      "model_calls": 7,
+      "tool_calls": 8,
+      "tool_errors": 0,
+      "stop": "settled",
+      "usage": {
+        "input": 10747,
+        "output": 4097,
+        "cacheRead": 21376,
+        "cacheWrite": 0,
+        "totalTokens": 36220
+      },
+      "edited_lines": 164,
+      "user_corrections": 0,
+      "api_cost_usd": null,
+      "human_time_saving": null
+    }
+  ],
+  "summary": {
+    "G": {
+      "executed": 2,
+      "successes": 0,
+      "behavior_successes": 0,
+      "wrong_analogy_runs": 1,
+      "new_regressions": 3,
+      "elapsed_seconds": 128.67846324999996,
+      "model_calls": 22,
+      "tool_calls": 24,
+      "tool_errors": 5,
+      "usage": {
+        "input": 35534,
+        "output": 17040,
+        "cacheRead": 211072,
+        "cacheWrite": 0,
+        "totalTokens": 263646
+      }
+    },
+    "F": {
+      "executed": 2,
+      "successes": 0,
+      "behavior_successes": 0,
+      "wrong_analogy_runs": 1,
+      "new_regressions": 2,
+      "elapsed_seconds": 110.84206662499999,
+      "model_calls": 18,
+      "tool_calls": 20,
+      "tool_errors": 3,
+      "usage": {
+        "input": 25318,
+        "output": 14415,
+        "cacheRead": 97536,
+        "cacheWrite": 0,
+        "totalTokens": 137269
+      }
+    },
+    "E": {
+      "executed": 2,
+      "successes": 0,
+      "behavior_successes": 0,
+      "wrong_analogy_runs": 1,
+      "new_regressions": 2,
+      "elapsed_seconds": 86.00769991599999,
+      "model_calls": 16,
+      "tool_calls": 18,
+      "tool_errors": 2,
+      "usage": {
+        "input": 27767,
+        "output": 10270,
+        "cacheRead": 61312,
+        "cacheWrite": 0,
+        "totalTokens": 99349
+      }
+    }
+  },
+  "cash_cost_usd": null,
+  "human_time_saving": null,
+  "source_experience_creation_and_coordinator_cost": null,
+  "causal_reasoning_mechanism": "unobserved; behavioral outcomes only",
+  "original_blocked_snapshot": "results.json"
+}

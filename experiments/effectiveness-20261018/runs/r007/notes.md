@@ -1,0 +1,7 @@
+Cause: init passed imported issue records through structural checks only; unlike complete, it did not enforce the status/evidence/completion invariants or verify evidence against current workspace files. Persisted completed records also need to remain listable and reopenable after evidence artifacts change.
+
+Change: state validation now limits status to open/done, validates evidence list entries and lowercase SHA-256 formatting, requires nonempty acceptance and evidence for done issues, and rejects done parents with open descendants. Init validates every done record's evidence for relative-path containment, current file existence, and matching hash before atomic state creation. Ordinary state loading deliberately does not recheck artifact files, so list works after changes and reopen clears evidence for recertification.
+
+Validation: functions.tests ran the original tracker tests plus test_candidate.py: all 15 passed. Regression cases cover missing done evidence/acceptance, invalid status and evidence, nonexistent and mismatched artifacts, done parent with open descendant, and changed artifact followed by list/reopen.
+
+Remaining limits: import validation checks current filesystem state when init runs; artifacts can change afterward. Such changes are exposed to recertification through reopen rather than making ordinary reads unavailable.

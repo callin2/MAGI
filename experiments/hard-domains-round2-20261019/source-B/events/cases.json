@@ -1,0 +1,4280 @@
+[
+  {
+    "id": "empty",
+    "axis": "normal",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": []
+    },
+    "value": {
+      "watermark": null,
+      "sessions": []
+    }
+  },
+  {
+    "id": "simple",
+    "axis": "normal",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 1,
+          "count": 1,
+          "ids": [
+            "a"
+          ],
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "bridge-merges",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 1,
+          "key": "x",
+          "event_time": 20,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": 10,
+          "amount": 1
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 30,
+          "total": 3,
+          "count": 3,
+          "ids": [
+            "a",
+            "b",
+            "c"
+          ],
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "remove-bridge-splits",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 1,
+          "key": "x",
+          "event_time": 20,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": 10,
+          "amount": 1
+        },
+        {
+          "kind": "delete",
+          "id": "b",
+          "rev": 2
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 1,
+          "count": 1,
+          "ids": [
+            "a"
+          ],
+          "final": false
+        },
+        {
+          "key": "x",
+          "start": 20,
+          "end": 30,
+          "total": 1,
+          "count": 1,
+          "ids": [
+            "c"
+          ],
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "equal-gap-connects",
+    "axis": "counterexample",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": 10,
+          "amount": 1
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 20,
+          "total": 2,
+          "count": 2,
+          "ids": [
+            "a",
+            "b"
+          ],
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "one-more-gap-separates",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": 11,
+          "amount": 1
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 1,
+          "count": 1,
+          "ids": [
+            "a"
+          ],
+          "final": false
+        },
+        {
+          "key": "x",
+          "start": 11,
+          "end": 21,
+          "total": 1,
+          "count": 1,
+          "ids": [
+            "b"
+          ],
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "distinct-ids-count",
+    "axis": "regression",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 2,
+          "count": 2,
+          "ids": [
+            "a",
+            "b"
+          ],
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "signed-zero-total",
+    "axis": "regression",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": -3
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 0,
+          "count": 2,
+          "ids": [
+            "a",
+            "b"
+          ],
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "replace-moves-session",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": 10,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 2,
+          "key": "x",
+          "event_time": 40,
+          "amount": 1
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 10,
+          "end": 20,
+          "total": 1,
+          "count": 1,
+          "ids": [
+            "b"
+          ],
+          "final": false
+        },
+        {
+          "key": "x",
+          "start": 40,
+          "end": 50,
+          "total": 1,
+          "count": 1,
+          "ids": [
+            "a"
+          ],
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "seal-exact-boundary",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        },
+        {
+          "kind": "watermark",
+          "time": 10
+        }
+      ]
+    },
+    "value": {
+      "watermark": 10,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 1,
+          "count": 1,
+          "ids": [
+            "a"
+          ],
+          "final": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "new-touch-sealed-rejected",
+    "axis": "counterexample",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        },
+        {
+          "kind": "watermark",
+          "time": 10
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": 10,
+          "amount": 1
+        }
+      ]
+    },
+    "value": {
+      "watermark": 10,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 1,
+          "count": 1,
+          "ids": [
+            "a"
+          ],
+          "final": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "old-left-touch-rejected",
+    "axis": "counterexample",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 20,
+          "amount": 1
+        },
+        {
+          "kind": "watermark",
+          "time": 30
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": 10,
+          "amount": 1
+        }
+      ]
+    },
+    "value": {
+      "watermark": 30,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 20,
+          "end": 30,
+          "total": 1,
+          "count": 1,
+          "ids": [
+            "a"
+          ],
+          "final": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "sealed-cannot-be-bridged",
+    "axis": "counterexample",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 1,
+          "key": "x",
+          "event_time": 20,
+          "amount": 1
+        },
+        {
+          "kind": "watermark",
+          "time": 10
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": 10,
+          "amount": 1
+        }
+      ]
+    },
+    "value": {
+      "watermark": 10,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 1,
+          "count": 1,
+          "ids": [
+            "a"
+          ],
+          "final": true
+        },
+        {
+          "key": "x",
+          "start": 20,
+          "end": 30,
+          "total": 1,
+          "count": 1,
+          "ids": [
+            "c"
+          ],
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "old-event-joins-open",
+    "axis": "counterexample",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": 20,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 1,
+          "key": "x",
+          "event_time": 30,
+          "amount": 1
+        },
+        {
+          "kind": "watermark",
+          "time": 25
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 10,
+          "amount": 1
+        }
+      ]
+    },
+    "value": {
+      "watermark": 25,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 10,
+          "end": 40,
+          "total": 3,
+          "count": 3,
+          "ids": [
+            "a",
+            "b",
+            "c"
+          ],
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "isolated-old-rejected",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "watermark",
+          "time": 20
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        }
+      ]
+    },
+    "value": {
+      "watermark": 20,
+      "sessions": []
+    }
+  },
+  {
+    "id": "delete-split-finalizes",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": 10,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 1,
+          "key": "x",
+          "event_time": 20,
+          "amount": 1
+        },
+        {
+          "kind": "watermark",
+          "time": 15
+        },
+        {
+          "kind": "delete",
+          "id": "b",
+          "rev": 2
+        }
+      ]
+    },
+    "value": {
+      "watermark": 15,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 1,
+          "count": 1,
+          "ids": [
+            "a"
+          ],
+          "final": true
+        },
+        {
+          "key": "x",
+          "start": 20,
+          "end": 30,
+          "total": 1,
+          "count": 1,
+          "ids": [
+            "c"
+          ],
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "split-created-seal-protects",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": 10,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 1,
+          "key": "x",
+          "event_time": 20,
+          "amount": 1
+        },
+        {
+          "kind": "watermark",
+          "time": 15
+        },
+        {
+          "kind": "delete",
+          "id": "b",
+          "rev": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 1,
+          "key": "x",
+          "event_time": 5,
+          "amount": 1
+        }
+      ]
+    },
+    "value": {
+      "watermark": 15,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 1,
+          "count": 1,
+          "ids": [
+            "a"
+          ],
+          "final": true
+        },
+        {
+          "key": "x",
+          "start": 20,
+          "end": 30,
+          "total": 1,
+          "count": 1,
+          "ids": [
+            "c"
+          ],
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "move-from-sealed-atomic",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        },
+        {
+          "kind": "watermark",
+          "time": 10
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 2,
+          "key": "x",
+          "event_time": 40,
+          "amount": 1
+        }
+      ]
+    },
+    "value": {
+      "watermark": 10,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 1,
+          "count": 1,
+          "ids": [
+            "a"
+          ],
+          "final": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "move-to-sealed-atomic",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": 40,
+          "amount": 1
+        },
+        {
+          "kind": "watermark",
+          "time": 10
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 2,
+          "key": "x",
+          "event_time": 5,
+          "amount": 1
+        }
+      ]
+    },
+    "value": {
+      "watermark": 10,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 1,
+          "count": 1,
+          "ids": [
+            "a"
+          ],
+          "final": true
+        },
+        {
+          "key": "x",
+          "start": 40,
+          "end": 50,
+          "total": 1,
+          "count": 1,
+          "ids": [
+            "b"
+          ],
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "rejected-version-not-poison",
+    "axis": "regression",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        },
+        {
+          "kind": "watermark",
+          "time": 10
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 2,
+          "key": "x",
+          "event_time": 5,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 2,
+          "key": "x",
+          "event_time": 40,
+          "amount": 1
+        }
+      ]
+    },
+    "value": {
+      "watermark": 10,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 1,
+          "count": 1,
+          "ids": [
+            "a"
+          ],
+          "final": true
+        },
+        {
+          "key": "x",
+          "start": 40,
+          "end": 50,
+          "total": 1,
+          "count": 1,
+          "ids": [
+            "b"
+          ],
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "delete-sealed-keeps-version",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        },
+        {
+          "kind": "watermark",
+          "time": 10
+        },
+        {
+          "kind": "delete",
+          "id": "a",
+          "rev": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 2,
+          "key": "x",
+          "event_time": 40,
+          "amount": 1
+        }
+      ]
+    },
+    "value": {
+      "watermark": 10,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 1,
+          "count": 1,
+          "ids": [
+            "a"
+          ],
+          "final": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "unknown-delete-tombstone",
+    "axis": "regression",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "delete",
+          "id": "a",
+          "rev": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 2,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "sessions": []
+    }
+  },
+  {
+    "id": "replay-after-seal",
+    "axis": "regression",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        },
+        {
+          "kind": "watermark",
+          "time": 10
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        }
+      ]
+    },
+    "value": {
+      "watermark": 10,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 1,
+          "count": 1,
+          "ids": [
+            "a"
+          ],
+          "final": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "lower-revision-ignored",
+    "axis": "regression",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 3,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 2,
+          "key": "x",
+          "event_time": 40,
+          "amount": 1
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 1,
+          "count": 1,
+          "ids": [
+            "a"
+          ],
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "explicit-lateness",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 1,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        },
+        {
+          "kind": "watermark",
+          "time": 10
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": 10,
+          "amount": 1
+        }
+      ]
+    },
+    "value": {
+      "watermark": 10,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 20,
+          "total": 2,
+          "count": 2,
+          "ids": [
+            "a",
+            "b"
+          ],
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "watermark-monotone",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        },
+        {
+          "kind": "watermark",
+          "time": 10
+        },
+        {
+          "kind": "watermark",
+          "time": -10
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": 10,
+          "amount": 1
+        }
+      ]
+    },
+    "value": {
+      "watermark": 10,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 1,
+          "count": 1,
+          "ids": [
+            "a"
+          ],
+          "final": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "negative-time",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": -10,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": -1,
+          "amount": 1
+        },
+        {
+          "kind": "watermark",
+          "time": 9
+        }
+      ]
+    },
+    "value": {
+      "watermark": 9,
+      "sessions": [
+        {
+          "key": "x",
+          "start": -10,
+          "end": 9,
+          "total": 2,
+          "count": 2,
+          "ids": [
+            "a",
+            "b"
+          ],
+          "final": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "same-rev-conflict",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 8
+        }
+      ]
+    },
+    "throws": true
+  },
+  {
+    "id": "sealed-conflict-still-throws",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        },
+        {
+          "kind": "watermark",
+          "time": 10
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 8
+        }
+      ]
+    },
+    "throws": true
+  },
+  {
+    "id": "move-key-removes-old",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 0,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 2,
+          "key": "y",
+          "event_time": 0,
+          "amount": 1
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "sessions": [
+        {
+          "key": "y",
+          "start": 0,
+          "end": 10,
+          "total": 1,
+          "count": 1,
+          "ids": [
+            "a"
+          ],
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "mixed-session-history-0",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 10,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 1,
+          "key": "y",
+          "event_time": 30,
+          "amount": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 1,
+          "key": "y",
+          "event_time": 1,
+          "amount": 3
+        },
+        {
+          "kind": "delete",
+          "id": "c",
+          "rev": 2
+        },
+        {
+          "kind": "delete",
+          "id": "e",
+          "rev": 2
+        },
+        {
+          "kind": "delete",
+          "id": "c",
+          "rev": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 3,
+          "key": "y",
+          "event_time": 12,
+          "amount": 1
+        },
+        {
+          "kind": "watermark",
+          "time": 20
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "y",
+          "event_time": 50,
+          "amount": 3
+        },
+        {
+          "kind": "delete",
+          "id": "c",
+          "rev": 2
+        },
+        {
+          "kind": "delete",
+          "id": "b",
+          "rev": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 4,
+          "key": "y",
+          "event_time": 14,
+          "amount": -2
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "y",
+          "event_time": 43,
+          "amount": 4
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 2,
+          "key": "y",
+          "event_time": 42,
+          "amount": -2
+        },
+        {
+          "kind": "watermark",
+          "time": 5
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 3,
+          "key": "y",
+          "event_time": 19,
+          "amount": -1
+        },
+        {
+          "kind": "delete",
+          "id": "d",
+          "rev": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 4,
+          "key": "x",
+          "event_time": 31,
+          "amount": 2
+        },
+        {
+          "kind": "delete",
+          "id": "c",
+          "rev": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 5,
+          "key": "x",
+          "event_time": 4,
+          "amount": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 2,
+          "key": "y",
+          "event_time": 42,
+          "amount": 1
+        },
+        {
+          "kind": "watermark",
+          "time": 34
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 3,
+          "key": "y",
+          "event_time": 35,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 5,
+          "key": "y",
+          "event_time": -4,
+          "amount": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 4,
+          "key": "x",
+          "event_time": 26,
+          "amount": -3
+        },
+        {
+          "kind": "delete",
+          "id": "c",
+          "rev": 6
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 5,
+          "key": "y",
+          "event_time": 18,
+          "amount": -2
+        },
+        {
+          "kind": "delete",
+          "id": "c",
+          "rev": 2
+        },
+        {
+          "kind": "watermark",
+          "time": 39
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 4,
+          "key": "x",
+          "event_time": 8,
+          "amount": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 3,
+          "key": "y",
+          "event_time": -4,
+          "amount": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 6,
+          "key": "y",
+          "event_time": 7,
+          "amount": 3
+        },
+        {
+          "kind": "delete",
+          "id": "d",
+          "rev": 5
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 7,
+          "key": "x",
+          "event_time": 3,
+          "amount": -1
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 7,
+          "key": "y",
+          "event_time": 39,
+          "amount": 1
+        },
+        {
+          "kind": "watermark",
+          "time": 9
+        }
+      ]
+    },
+    "value": {
+      "watermark": 39,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 4,
+          "end": 14,
+          "total": 2,
+          "count": 1,
+          "ids": [
+            "a"
+          ],
+          "final": true
+        },
+        {
+          "key": "y",
+          "start": 12,
+          "end": 24,
+          "total": -1,
+          "count": 2,
+          "ids": [
+            "c",
+            "e"
+          ],
+          "final": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "mixed-session-history-1",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 10,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "y",
+          "event_time": 19,
+          "amount": -3
+        },
+        {
+          "kind": "delete",
+          "id": "a",
+          "rev": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 1,
+          "key": "y",
+          "event_time": 9,
+          "amount": 5
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 2,
+          "key": "x",
+          "event_time": 42,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 2,
+          "key": "y",
+          "event_time": 49,
+          "amount": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 3,
+          "key": "x",
+          "event_time": 13,
+          "amount": 2
+        },
+        {
+          "kind": "watermark",
+          "time": 6
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 1,
+          "key": "y",
+          "event_time": 16,
+          "amount": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 3,
+          "key": "x",
+          "event_time": 13,
+          "amount": 2
+        },
+        {
+          "kind": "delete",
+          "id": "e",
+          "rev": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 2,
+          "key": "x",
+          "event_time": 7,
+          "amount": 5
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 3,
+          "key": "y",
+          "event_time": 0,
+          "amount": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 2,
+          "key": "x",
+          "event_time": 4,
+          "amount": 5
+        },
+        {
+          "kind": "watermark",
+          "time": 23
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 3,
+          "key": "y",
+          "event_time": 47,
+          "amount": -3
+        },
+        {
+          "kind": "delete",
+          "id": "e",
+          "rev": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 4,
+          "key": "y",
+          "event_time": 15,
+          "amount": 0
+        },
+        {
+          "kind": "delete",
+          "id": "a",
+          "rev": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 3,
+          "key": "x",
+          "event_time": -4,
+          "amount": -2
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 4,
+          "key": "x",
+          "event_time": 50,
+          "amount": 3
+        },
+        {
+          "kind": "watermark",
+          "time": 31
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 5,
+          "key": "y",
+          "event_time": 16,
+          "amount": 1
+        },
+        {
+          "kind": "delete",
+          "id": "b",
+          "rev": 6
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 3,
+          "key": "y",
+          "event_time": 27,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 4,
+          "key": "y",
+          "event_time": 40,
+          "amount": -2
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 4,
+          "key": "x",
+          "event_time": 34,
+          "amount": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 4,
+          "key": "x",
+          "event_time": 34,
+          "amount": 3
+        },
+        {
+          "kind": "watermark",
+          "time": 15
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 5,
+          "key": "x",
+          "event_time": 3,
+          "amount": -3
+        },
+        {
+          "kind": "delete",
+          "id": "e",
+          "rev": 5
+        },
+        {
+          "kind": "delete",
+          "id": "e",
+          "rev": 6
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 5,
+          "key": "y",
+          "event_time": 17,
+          "amount": 1
+        },
+        {
+          "kind": "delete",
+          "id": "d",
+          "rev": 6
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 4,
+          "key": "x",
+          "event_time": 25,
+          "amount": 5
+        },
+        {
+          "kind": "watermark",
+          "time": 33
+        }
+      ]
+    },
+    "value": {
+      "watermark": 33,
+      "sessions": [
+        {
+          "key": "x",
+          "start": -4,
+          "end": 6,
+          "total": -2,
+          "count": 1,
+          "ids": [
+            "e"
+          ],
+          "final": true
+        },
+        {
+          "key": "y",
+          "start": 0,
+          "end": 10,
+          "total": 0,
+          "count": 1,
+          "ids": [
+            "c"
+          ],
+          "final": true
+        },
+        {
+          "key": "x",
+          "start": 25,
+          "end": 35,
+          "total": 5,
+          "count": 1,
+          "ids": [
+            "a"
+          ],
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "mixed-session-history-2",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 10,
+      "records": [
+        {
+          "kind": "delete",
+          "id": "a",
+          "rev": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 1,
+          "key": "y",
+          "event_time": 45,
+          "amount": 5
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 1,
+          "key": "x",
+          "event_time": 32,
+          "amount": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 2,
+          "key": "y",
+          "event_time": 6,
+          "amount": -1
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": 36,
+          "amount": -1
+        },
+        {
+          "kind": "delete",
+          "id": "c",
+          "rev": 1
+        },
+        {
+          "kind": "watermark",
+          "time": 23
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 2,
+          "key": "x",
+          "event_time": 16,
+          "amount": -2
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": 36,
+          "amount": -1
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 3,
+          "key": "y",
+          "event_time": 2,
+          "amount": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 2,
+          "key": "y",
+          "event_time": 5,
+          "amount": 4
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 2,
+          "key": "y",
+          "event_time": 29,
+          "amount": -1
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 3,
+          "key": "x",
+          "event_time": -1,
+          "amount": -3
+        },
+        {
+          "kind": "watermark",
+          "time": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 4,
+          "key": "x",
+          "event_time": 39,
+          "amount": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 3,
+          "key": "x",
+          "event_time": 38,
+          "amount": -3
+        },
+        {
+          "kind": "delete",
+          "id": "a",
+          "rev": 4
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": 36,
+          "amount": -1
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 3,
+          "key": "x",
+          "event_time": 1,
+          "amount": 4
+        },
+        {
+          "kind": "delete",
+          "id": "c",
+          "rev": 2
+        },
+        {
+          "kind": "watermark",
+          "time": 30
+        },
+        {
+          "kind": "delete",
+          "id": "a",
+          "rev": 5
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 6,
+          "key": "x",
+          "event_time": 28,
+          "amount": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 4,
+          "key": "x",
+          "event_time": 13,
+          "amount": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 3,
+          "key": "x",
+          "event_time": 39,
+          "amount": -1
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 5,
+          "key": "y",
+          "event_time": 3,
+          "amount": -1
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 1,
+          "key": "x",
+          "event_time": 32,
+          "amount": 2
+        },
+        {
+          "kind": "watermark",
+          "time": 30
+        },
+        {
+          "kind": "delete",
+          "id": "e",
+          "rev": 5
+        },
+        {
+          "kind": "delete",
+          "id": "c",
+          "rev": 4
+        },
+        {
+          "kind": "delete",
+          "id": "d",
+          "rev": 6
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 5,
+          "key": "y",
+          "event_time": 49,
+          "amount": -3
+        },
+        {
+          "kind": "delete",
+          "id": "a",
+          "rev": 7
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 6,
+          "key": "y",
+          "event_time": 32,
+          "amount": -2
+        },
+        {
+          "kind": "watermark",
+          "time": 6
+        }
+      ]
+    },
+    "value": {
+      "watermark": 30,
+      "sessions": [
+        {
+          "key": "y",
+          "start": 2,
+          "end": 12,
+          "total": 2,
+          "count": 1,
+          "ids": [
+            "e"
+          ],
+          "final": true
+        },
+        {
+          "key": "y",
+          "start": 29,
+          "end": 42,
+          "total": -3,
+          "count": 2,
+          "ids": [
+            "b",
+            "c"
+          ],
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "mixed-session-history-3",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 10,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 1,
+          "key": "y",
+          "event_time": 28,
+          "amount": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 2,
+          "key": "x",
+          "event_time": 0,
+          "amount": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 1,
+          "key": "x",
+          "event_time": 48,
+          "amount": -1
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 2,
+          "key": "y",
+          "event_time": 44,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 3,
+          "key": "x",
+          "event_time": 15,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "y",
+          "event_time": 35,
+          "amount": -2
+        },
+        {
+          "kind": "watermark",
+          "time": 5
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 1,
+          "key": "y",
+          "event_time": 3,
+          "amount": -1
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 1,
+          "key": "y",
+          "event_time": 28,
+          "amount": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 3,
+          "key": "y",
+          "event_time": 41,
+          "amount": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": 12,
+          "amount": 0
+        },
+        {
+          "kind": "delete",
+          "id": "c",
+          "rev": 4
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 5,
+          "key": "y",
+          "event_time": 34,
+          "amount": -3
+        },
+        {
+          "kind": "watermark",
+          "time": 28
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 2,
+          "key": "x",
+          "event_time": 23,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 6,
+          "key": "y",
+          "event_time": 12,
+          "amount": -3
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 7,
+          "key": "y",
+          "event_time": 15,
+          "amount": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 2,
+          "key": "x",
+          "event_time": 0,
+          "amount": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 2,
+          "key": "x",
+          "event_time": 7,
+          "amount": -1
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 3,
+          "key": "x",
+          "event_time": 40,
+          "amount": 3
+        },
+        {
+          "kind": "watermark",
+          "time": 12
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 4,
+          "key": "y",
+          "event_time": -3,
+          "amount": 5
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 2,
+          "key": "x",
+          "event_time": 42,
+          "amount": -1
+        },
+        {
+          "kind": "delete",
+          "id": "b",
+          "rev": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 3,
+          "key": "x",
+          "event_time": 42,
+          "amount": -3
+        },
+        {
+          "kind": "delete",
+          "id": "a",
+          "rev": 5
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "y",
+          "event_time": 35,
+          "amount": -2
+        },
+        {
+          "kind": "watermark",
+          "time": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 4,
+          "key": "x",
+          "event_time": 38,
+          "amount": 5
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 4,
+          "key": "y",
+          "event_time": 0,
+          "amount": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 4,
+          "key": "y",
+          "event_time": 39,
+          "amount": 5
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 6,
+          "key": "x",
+          "event_time": 35,
+          "amount": -3
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 8,
+          "key": "y",
+          "event_time": 10,
+          "amount": -2
+        },
+        {
+          "kind": "delete",
+          "id": "d",
+          "rev": 5
+        },
+        {
+          "kind": "watermark",
+          "time": 14
+        }
+      ]
+    },
+    "value": {
+      "watermark": 28,
+      "sessions": [
+        {
+          "key": "y",
+          "start": 3,
+          "end": 13,
+          "total": -1,
+          "count": 1,
+          "ids": [
+            "e"
+          ],
+          "final": true
+        },
+        {
+          "key": "y",
+          "start": 15,
+          "end": 25,
+          "total": 2,
+          "count": 1,
+          "ids": [
+            "c"
+          ],
+          "final": false
+        },
+        {
+          "key": "x",
+          "start": 35,
+          "end": 45,
+          "total": -3,
+          "count": 1,
+          "ids": [
+            "a"
+          ],
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "mixed-session-history-4",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 10,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 1,
+          "key": "y",
+          "event_time": 36,
+          "amount": 4
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 2,
+          "key": "y",
+          "event_time": 24,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 3,
+          "key": "x",
+          "event_time": 12,
+          "amount": -3
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 4,
+          "key": "y",
+          "event_time": 15,
+          "amount": -1
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 1,
+          "key": "y",
+          "event_time": 28,
+          "amount": -3
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": 31,
+          "amount": -1
+        },
+        {
+          "kind": "watermark",
+          "time": 8
+        },
+        {
+          "kind": "delete",
+          "id": "a",
+          "rev": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 1,
+          "key": "y",
+          "event_time": 28,
+          "amount": -3
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 2,
+          "key": "x",
+          "event_time": 44,
+          "amount": 2
+        },
+        {
+          "kind": "delete",
+          "id": "b",
+          "rev": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 3,
+          "key": "x",
+          "event_time": 27,
+          "amount": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 1,
+          "key": "y",
+          "event_time": 30,
+          "amount": 5
+        },
+        {
+          "kind": "watermark",
+          "time": 9
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 5,
+          "key": "y",
+          "event_time": 17,
+          "amount": 2
+        },
+        {
+          "kind": "delete",
+          "id": "c",
+          "rev": 6
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 2,
+          "key": "x",
+          "event_time": -4,
+          "amount": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 5,
+          "key": "y",
+          "event_time": 17,
+          "amount": 2
+        },
+        {
+          "kind": "delete",
+          "id": "d",
+          "rev": 4
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 7,
+          "key": "y",
+          "event_time": 40,
+          "amount": 1
+        },
+        {
+          "kind": "watermark",
+          "time": 9
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 2,
+          "key": "x",
+          "event_time": 45,
+          "amount": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 8,
+          "key": "x",
+          "event_time": 31,
+          "amount": -1
+        },
+        {
+          "kind": "delete",
+          "id": "e",
+          "rev": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 9,
+          "key": "x",
+          "event_time": 34,
+          "amount": -3
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 3,
+          "key": "x",
+          "event_time": 34,
+          "amount": -2
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 1,
+          "key": "y",
+          "event_time": 36,
+          "amount": 4
+        },
+        {
+          "kind": "watermark",
+          "time": 18
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 5,
+          "key": "y",
+          "event_time": 23,
+          "amount": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 3,
+          "key": "x",
+          "event_time": 23,
+          "amount": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 10,
+          "key": "x",
+          "event_time": 30,
+          "amount": -3
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 4,
+          "key": "x",
+          "event_time": 2,
+          "amount": 0
+        },
+        {
+          "kind": "delete",
+          "id": "a",
+          "rev": 5
+        },
+        {
+          "kind": "delete",
+          "id": "b",
+          "rev": 4
+        },
+        {
+          "kind": "watermark",
+          "time": 3
+        }
+      ]
+    },
+    "value": {
+      "watermark": 18,
+      "sessions": [
+        {
+          "key": "y",
+          "start": 23,
+          "end": 33,
+          "total": 0,
+          "count": 1,
+          "ids": [
+            "d"
+          ],
+          "final": false
+        },
+        {
+          "key": "x",
+          "start": 30,
+          "end": 40,
+          "total": -3,
+          "count": 1,
+          "ids": [
+            "c"
+          ],
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "mixed-session-history-5",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 10,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "y",
+          "event_time": 18,
+          "amount": 4
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 28,
+          "amount": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 2,
+          "key": "x",
+          "event_time": 42,
+          "amount": 4
+        },
+        {
+          "kind": "delete",
+          "id": "e",
+          "rev": 1
+        },
+        {
+          "kind": "delete",
+          "id": "c",
+          "rev": 1
+        },
+        {
+          "kind": "delete",
+          "id": "e",
+          "rev": 2
+        },
+        {
+          "kind": "watermark",
+          "time": 4
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 3,
+          "key": "y",
+          "event_time": 32,
+          "amount": 1
+        },
+        {
+          "kind": "delete",
+          "id": "e",
+          "rev": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 4,
+          "key": "x",
+          "event_time": 48,
+          "amount": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 2,
+          "key": "y",
+          "event_time": 35,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 3,
+          "key": "y",
+          "event_time": 39,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 5,
+          "key": "y",
+          "event_time": 16,
+          "amount": 2
+        },
+        {
+          "kind": "watermark",
+          "time": 7
+        },
+        {
+          "kind": "delete",
+          "id": "a",
+          "rev": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 3,
+          "key": "y",
+          "event_time": -1,
+          "amount": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 4,
+          "key": "x",
+          "event_time": 5,
+          "amount": -1
+        },
+        {
+          "kind": "delete",
+          "id": "a",
+          "rev": 2
+        },
+        {
+          "kind": "delete",
+          "id": "a",
+          "rev": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 5,
+          "key": "y",
+          "event_time": 4,
+          "amount": 2
+        },
+        {
+          "kind": "watermark",
+          "time": 18
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 6,
+          "key": "x",
+          "event_time": 45,
+          "amount": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 4,
+          "key": "y",
+          "event_time": -2,
+          "amount": 4
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 6,
+          "key": "x",
+          "event_time": 40,
+          "amount": 3
+        },
+        {
+          "kind": "delete",
+          "id": "a",
+          "rev": 4
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 1,
+          "key": "y",
+          "event_time": 26,
+          "amount": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 5,
+          "key": "y",
+          "event_time": 4,
+          "amount": 2
+        },
+        {
+          "kind": "watermark",
+          "time": 11
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 7,
+          "key": "x",
+          "event_time": -5,
+          "amount": 4
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 5,
+          "key": "x",
+          "event_time": 46,
+          "amount": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 2,
+          "key": "y",
+          "event_time": 43,
+          "amount": 3
+        },
+        {
+          "kind": "delete",
+          "id": "c",
+          "rev": 8
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 6,
+          "key": "y",
+          "event_time": 45,
+          "amount": 2
+        },
+        {
+          "kind": "delete",
+          "id": "b",
+          "rev": 7
+        },
+        {
+          "kind": "watermark",
+          "time": 17
+        }
+      ]
+    },
+    "value": {
+      "watermark": 18,
+      "sessions": [
+        {
+          "key": "y",
+          "start": -2,
+          "end": 8,
+          "total": 4,
+          "count": 1,
+          "ids": [
+            "b"
+          ],
+          "final": true
+        },
+        {
+          "key": "y",
+          "start": 43,
+          "end": 53,
+          "total": 3,
+          "count": 1,
+          "ids": [
+            "d"
+          ],
+          "final": false
+        },
+        {
+          "key": "x",
+          "start": 45,
+          "end": 55,
+          "total": 3,
+          "count": 1,
+          "ids": [
+            "e"
+          ],
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "mixed-session-history-6",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 10,
+      "records": [
+        {
+          "kind": "delete",
+          "id": "b",
+          "rev": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 1,
+          "key": "x",
+          "event_time": 11,
+          "amount": 2
+        },
+        {
+          "kind": "delete",
+          "id": "e",
+          "rev": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 1,
+          "key": "x",
+          "event_time": 7,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 2,
+          "key": "y",
+          "event_time": 40,
+          "amount": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 3,
+          "key": "x",
+          "event_time": 33,
+          "amount": 0
+        },
+        {
+          "kind": "watermark",
+          "time": 40
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "y",
+          "event_time": 18,
+          "amount": 0
+        },
+        {
+          "kind": "delete",
+          "id": "e",
+          "rev": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 2,
+          "key": "y",
+          "event_time": 18,
+          "amount": -1
+        },
+        {
+          "kind": "delete",
+          "id": "d",
+          "rev": 4
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 3,
+          "key": "x",
+          "event_time": 11,
+          "amount": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 1,
+          "key": "x",
+          "event_time": 49,
+          "amount": -3
+        },
+        {
+          "kind": "watermark",
+          "time": 7
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 5,
+          "key": "x",
+          "event_time": 31,
+          "amount": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 4,
+          "key": "y",
+          "event_time": 40,
+          "amount": 5
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 2,
+          "key": "x",
+          "event_time": 21,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 2,
+          "key": "y",
+          "event_time": 40,
+          "amount": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 3,
+          "key": "x",
+          "event_time": 45,
+          "amount": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 6,
+          "key": "y",
+          "event_time": -5,
+          "amount": 5
+        },
+        {
+          "kind": "watermark",
+          "time": 7
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 5,
+          "key": "y",
+          "event_time": 32,
+          "amount": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 7,
+          "key": "x",
+          "event_time": 2,
+          "amount": 5
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 2,
+          "key": "x",
+          "event_time": 37,
+          "amount": 2
+        },
+        {
+          "kind": "delete",
+          "id": "b",
+          "rev": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 4,
+          "key": "x",
+          "event_time": 31,
+          "amount": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 1,
+          "key": "x",
+          "event_time": 11,
+          "amount": 2
+        },
+        {
+          "kind": "watermark",
+          "time": 29
+        },
+        {
+          "kind": "delete",
+          "id": "b",
+          "rev": 5
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 3,
+          "key": "x",
+          "event_time": 40,
+          "amount": -3
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 6,
+          "key": "x",
+          "event_time": 3,
+          "amount": -3
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 4,
+          "key": "y",
+          "event_time": 3,
+          "amount": 5
+        },
+        {
+          "kind": "delete",
+          "id": "c",
+          "rev": 5
+        },
+        {
+          "kind": "delete",
+          "id": "c",
+          "rev": 6
+        },
+        {
+          "kind": "watermark",
+          "time": 38
+        }
+      ]
+    },
+    "value": {
+      "watermark": 40,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 31,
+          "end": 41,
+          "total": 3,
+          "count": 1,
+          "ids": [
+            "d"
+          ],
+          "final": false
+        },
+        {
+          "key": "y",
+          "start": 32,
+          "end": 42,
+          "total": 0,
+          "count": 1,
+          "ids": [
+            "e"
+          ],
+          "final": false
+        },
+        {
+          "key": "x",
+          "start": 45,
+          "end": 55,
+          "total": 2,
+          "count": 1,
+          "ids": [
+            "a"
+          ],
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "mixed-session-history-7",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 10,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "y",
+          "event_time": 49,
+          "amount": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 2,
+          "key": "x",
+          "event_time": 20,
+          "amount": 4
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 1,
+          "key": "y",
+          "event_time": 24,
+          "amount": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 1,
+          "key": "y",
+          "event_time": -5,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 2,
+          "key": "y",
+          "event_time": 41,
+          "amount": -1
+        },
+        {
+          "kind": "delete",
+          "id": "c",
+          "rev": 1
+        },
+        {
+          "kind": "watermark",
+          "time": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 22,
+          "amount": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 1,
+          "key": "y",
+          "event_time": 24,
+          "amount": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 2,
+          "key": "x",
+          "event_time": 15,
+          "amount": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 2,
+          "key": "x",
+          "event_time": 34,
+          "amount": -1
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 2,
+          "key": "y",
+          "event_time": 28,
+          "amount": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 3,
+          "key": "y",
+          "event_time": 23,
+          "amount": 2
+        },
+        {
+          "kind": "watermark",
+          "time": 13
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 3,
+          "key": "x",
+          "event_time": 31,
+          "amount": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 3,
+          "key": "x",
+          "event_time": 12,
+          "amount": -3
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 4,
+          "key": "y",
+          "event_time": 22,
+          "amount": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 2,
+          "key": "x",
+          "event_time": 15,
+          "amount": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 3,
+          "key": "y",
+          "event_time": 39,
+          "amount": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 4,
+          "key": "x",
+          "event_time": 11,
+          "amount": 4
+        },
+        {
+          "kind": "watermark",
+          "time": 29
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 5,
+          "key": "y",
+          "event_time": -2,
+          "amount": 2
+        },
+        {
+          "kind": "delete",
+          "id": "e",
+          "rev": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 5,
+          "key": "x",
+          "event_time": -2,
+          "amount": -1
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 4,
+          "key": "x",
+          "event_time": 23,
+          "amount": -1
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 5,
+          "key": "x",
+          "event_time": 2,
+          "amount": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 5,
+          "key": "x",
+          "event_time": 2,
+          "amount": 0
+        },
+        {
+          "kind": "watermark",
+          "time": 31
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 6,
+          "key": "y",
+          "event_time": 34,
+          "amount": -1
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 7,
+          "key": "y",
+          "event_time": 44,
+          "amount": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 8,
+          "key": "y",
+          "event_time": 17,
+          "amount": -1
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 9,
+          "key": "y",
+          "event_time": 26,
+          "amount": -1
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 6,
+          "key": "y",
+          "event_time": -2,
+          "amount": -2
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 10,
+          "key": "x",
+          "event_time": 3,
+          "amount": 4
+        },
+        {
+          "kind": "watermark",
+          "time": 27
+        }
+      ]
+    },
+    "value": {
+      "watermark": 31,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 2,
+          "end": 21,
+          "total": 4,
+          "count": 2,
+          "ids": [
+            "b",
+            "c"
+          ],
+          "final": true
+        },
+        {
+          "key": "y",
+          "start": 22,
+          "end": 32,
+          "total": 0,
+          "count": 1,
+          "ids": [
+            "a"
+          ],
+          "final": false
+        },
+        {
+          "key": "x",
+          "start": 31,
+          "end": 41,
+          "total": 2,
+          "count": 1,
+          "ids": [
+            "d"
+          ],
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "mixed-session-history-8",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 10,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 1,
+          "key": "x",
+          "event_time": 42,
+          "amount": -3
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "y",
+          "event_time": 44,
+          "amount": 5
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 2,
+          "key": "y",
+          "event_time": 29,
+          "amount": -1
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 3,
+          "key": "y",
+          "event_time": 27,
+          "amount": 0
+        },
+        {
+          "kind": "delete",
+          "id": "d",
+          "rev": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 2,
+          "key": "x",
+          "event_time": 49,
+          "amount": 1
+        },
+        {
+          "kind": "watermark",
+          "time": 14
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 3,
+          "key": "x",
+          "event_time": 48,
+          "amount": -1
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 3,
+          "key": "y",
+          "event_time": 27,
+          "amount": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 2,
+          "key": "y",
+          "event_time": 9,
+          "amount": -1
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 4,
+          "key": "y",
+          "event_time": 23,
+          "amount": -2
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 5,
+          "key": "x",
+          "event_time": 8,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 1,
+          "key": "x",
+          "event_time": 36,
+          "amount": 3
+        },
+        {
+          "kind": "watermark",
+          "time": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 4,
+          "key": "y",
+          "event_time": 38,
+          "amount": -3
+        },
+        {
+          "kind": "delete",
+          "id": "c",
+          "rev": 2
+        },
+        {
+          "kind": "delete",
+          "id": "a",
+          "rev": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 4,
+          "key": "y",
+          "event_time": 23,
+          "amount": -2
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 3,
+          "key": "y",
+          "event_time": 43,
+          "amount": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 2,
+          "key": "x",
+          "event_time": 4,
+          "amount": 2
+        },
+        {
+          "kind": "watermark",
+          "time": 26
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 3,
+          "key": "y",
+          "event_time": 16,
+          "amount": 5
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 5,
+          "key": "x",
+          "event_time": 17,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 4,
+          "key": "x",
+          "event_time": 44,
+          "amount": 4
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 6,
+          "key": "y",
+          "event_time": 22,
+          "amount": -3
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 5,
+          "key": "x",
+          "event_time": 47,
+          "amount": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 2,
+          "key": "y",
+          "event_time": 29,
+          "amount": -1
+        },
+        {
+          "kind": "watermark",
+          "time": 1
+        },
+        {
+          "kind": "delete",
+          "id": "c",
+          "rev": 4
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 6,
+          "key": "y",
+          "event_time": 41,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 7,
+          "key": "x",
+          "event_time": -5,
+          "amount": 5
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 5,
+          "key": "y",
+          "event_time": 36,
+          "amount": -1
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 6,
+          "key": "x",
+          "event_time": 45,
+          "amount": 5
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 8,
+          "key": "x",
+          "event_time": 8,
+          "amount": 2
+        },
+        {
+          "kind": "watermark",
+          "time": 15
+        }
+      ]
+    },
+    "value": {
+      "watermark": 26,
+      "sessions": [
+        {
+          "key": "x",
+          "start": 8,
+          "end": 18,
+          "total": 3,
+          "count": 2,
+          "ids": [
+            "a",
+            "b"
+          ],
+          "final": false
+        },
+        {
+          "key": "y",
+          "start": 9,
+          "end": 19,
+          "total": -1,
+          "count": 1,
+          "ids": [
+            "d"
+          ],
+          "final": false
+        },
+        {
+          "key": "y",
+          "start": 22,
+          "end": 32,
+          "total": -3,
+          "count": 1,
+          "ids": [
+            "e"
+          ],
+          "final": false
+        },
+        {
+          "key": "x",
+          "start": 45,
+          "end": 55,
+          "total": 5,
+          "count": 1,
+          "ids": [
+            "c"
+          ],
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "mixed-session-history-9",
+    "axis": "boundary",
+    "input": {
+      "gap_ms": 10,
+      "lateness_ms": 10,
+      "records": [
+        {
+          "kind": "delete",
+          "id": "d",
+          "rev": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "y",
+          "event_time": 39,
+          "amount": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 2,
+          "key": "y",
+          "event_time": 18,
+          "amount": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 3,
+          "key": "x",
+          "event_time": 2,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": 28,
+          "amount": 4
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 1,
+          "key": "y",
+          "event_time": 43,
+          "amount": 2
+        },
+        {
+          "kind": "watermark",
+          "time": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 2,
+          "key": "y",
+          "event_time": 10,
+          "amount": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 3,
+          "key": "x",
+          "event_time": 2,
+          "amount": 1
+        },
+        {
+          "kind": "delete",
+          "id": "b",
+          "rev": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 3,
+          "key": "x",
+          "event_time": 3,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 1,
+          "key": "y",
+          "event_time": 24,
+          "amount": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 4,
+          "key": "x",
+          "event_time": 22,
+          "amount": 3
+        },
+        {
+          "kind": "watermark",
+          "time": 11
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 2,
+          "key": "y",
+          "event_time": 33,
+          "amount": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 2,
+          "key": "x",
+          "event_time": 41,
+          "amount": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 3,
+          "key": "x",
+          "event_time": 47,
+          "amount": -1
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 3,
+          "key": "x",
+          "event_time": 2,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 3,
+          "key": "x",
+          "event_time": 43,
+          "amount": 5
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 4,
+          "key": "x",
+          "event_time": 3,
+          "amount": 1
+        },
+        {
+          "kind": "watermark",
+          "time": 13
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 5,
+          "key": "x",
+          "event_time": -2,
+          "amount": 5
+        },
+        {
+          "kind": "upsert",
+          "id": "e",
+          "rev": 4,
+          "key": "y",
+          "event_time": 11,
+          "amount": -1
+        },
+        {
+          "kind": "delete",
+          "id": "a",
+          "rev": 6
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 3,
+          "key": "y",
+          "event_time": 33,
+          "amount": -2
+        },
+        {
+          "kind": "upsert",
+          "id": "d",
+          "rev": 4,
+          "key": "x",
+          "event_time": 11,
+          "amount": 2
+        },
+        {
+          "kind": "delete",
+          "id": "b",
+          "rev": 2
+        },
+        {
+          "kind": "watermark",
+          "time": 8
+        },
+        {
+          "kind": "delete",
+          "id": "c",
+          "rev": 4
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 5,
+          "key": "x",
+          "event_time": 33,
+          "amount": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 5,
+          "key": "y",
+          "event_time": 4,
+          "amount": 1
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 6,
+          "key": "x",
+          "event_time": 13,
+          "amount": 3
+        },
+        {
+          "kind": "delete",
+          "id": "a",
+          "rev": 7
+        },
+        {
+          "kind": "upsert",
+          "id": "c",
+          "rev": 6,
+          "key": "x",
+          "event_time": -5,
+          "amount": 3
+        },
+        {
+          "kind": "watermark",
+          "time": 18
+        }
+      ]
+    },
+    "value": {
+      "watermark": 18,
+      "sessions": [
+        {
+          "key": "x",
+          "start": -5,
+          "end": 5,
+          "total": 3,
+          "count": 1,
+          "ids": [
+            "c"
+          ],
+          "final": true
+        },
+        {
+          "key": "x",
+          "start": 11,
+          "end": 23,
+          "total": 5,
+          "count": 2,
+          "ids": [
+            "b",
+            "d"
+          ],
+          "final": false
+        },
+        {
+          "key": "y",
+          "start": 11,
+          "end": 21,
+          "total": -1,
+          "count": 1,
+          "ids": [
+            "e"
+          ],
+          "final": false
+        }
+      ]
+    }
+  }
+]

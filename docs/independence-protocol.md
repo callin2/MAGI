@@ -1,4 +1,15 @@
+---
+id: magi.independence-protocol
+type: contract
+status: draft
+owner: MAGI
+reviewed: 2026-10-18
+issue: https://github.com/callin2/MAGI/issues/3
+---
+
 # MAGI 독립 평가·공통 오판 프로토콜 v0.1
+
+[문서 목차](README.md)
 
 ## 목적과 지위
 

@@ -1,0 +1,54 @@
+{
+  "id": "luna-b004",
+  "family": "luna",
+  "model_id": "gpt-6-luna",
+  "response_models": [
+    "gpt-6-luna"
+  ],
+  "arm": "G",
+  "repetition": 1,
+  "status": "executed",
+  "success": false,
+  "behavior_success": false,
+  "behavior_passed": 25,
+  "behavior_total": 26,
+  "axes": {
+    "counterexample": {
+      "passed": 2,
+      "total": 2
+    },
+    "integration": {
+      "passed": 4,
+      "total": 4
+    },
+    "regression": {
+      "passed": 10,
+      "total": 11
+    },
+    "repair": {
+      "passed": 9,
+      "total": 9
+    }
+  },
+  "wrong_analogy_counterexample_failure": false,
+  "new_regression_count": 1,
+  "schema_valid": true,
+  "artifacts_present": true,
+  "successful_worker_test_call": true,
+  "immutable_inputs_preserved": true,
+  "elapsed_seconds": 28.748766833,
+  "model_calls": 6,
+  "tool_calls": 7,
+  "tool_errors": 0,
+  "stop": "settled",
+  "usage": {
+    "input": 19287,
+    "output": 2653,
+    "cacheRead": 0,
+    "cacheWrite": 0,
+    "totalTokens": 21940
+  },
+  "user_corrections": 0,
+  "cash_cost_usd": null,
+  "human_time_saving": null
+}

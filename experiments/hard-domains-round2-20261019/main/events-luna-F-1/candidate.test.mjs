@@ -1,0 +1,12 @@
+import {sessions} from './solution.mjs';
+import assert from 'node:assert/strict';
+const u=(id,rev,key,t,amount=1)=>({kind:'upsert',id,rev,key,event_time:t,amount});
+let x=sessions({gap_ms:10,lateness_ms:0,records:[u('a',1,'k',0),u('b',1,'k',11),u('c',1,'k',22),u('bridge',1,'k',6),{kind:'delete',id:'bridge',rev:2}]});
+assert.deepEqual(x.sessions.map(s=>[s.start,s.end,s.count,s.final]),[[0,10,1,false],[11,21,1,false],[22,32,1,false]]);
+x=sessions({gap_ms:10,lateness_ms:0,records:[u('a',1,'k',0),{kind:'watermark',time:10},u('b',1,'k',10)]});
+assert.equal(x.sessions.length,1);assert.equal(x.sessions[0].final,true);
+x=sessions({gap_ms:10,lateness_ms:0,records:[u('a',1,'k',0),u('b',1,'k',10),{kind:'watermark',time:20},{kind:'delete',id:'a',rev:2}]});
+assert.equal(x.sessions.length,1);assert.equal(x.sessions[0].count,2);
+x=sessions({gap_ms:5,lateness_ms:3,records:[u('z',1,'k',100,0),u('a',1,'k',104,2),{kind:'watermark',time:100}]});
+assert.deepEqual(x.sessions[0].ids,['a','z']);assert.equal(x.sessions[0].total,2);assert.equal(x.watermark,100);
+assert.deepEqual(sessions({gap_ms:1,lateness_ms:0,records:[]}),{watermark:null,sessions:[]});

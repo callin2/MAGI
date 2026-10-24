@@ -1,0 +1,106 @@
+[
+  {
+    "id": "events-observed-source-A",
+    "rule": "Choose ordering and identity from the business contract rather than arrival position, and test replay/permutation. In this unversioned snapshot source greatest observed time and its reading-id tie-break select one value. That policy is not a universal command to discard every late arrival in other consumers.",
+    "conditions": {
+      "source_system": "synthetic unversioned telemetry snapshot",
+      "scope": "one latest value per device; timestamp/id ordering is this source policy"
+    },
+    "provenance": "Coordinator-authored synthetic precursor with intentionally seeded defects; actually executed and repaired before target B construction. Not a historical product defect or autonomous worker-learned lesson.",
+    "observed_failures": [
+      {
+        "id": "late-arrival",
+        "input": [
+          {
+            "device": "a",
+            "observed_ms": 100,
+            "value": 10,
+            "reading_id": "z"
+          },
+          {
+            "device": "a",
+            "observed_ms": 50,
+            "value": 5,
+            "reading_id": "b"
+          }
+        ],
+        "expected": {
+          "a": 10
+        },
+        "actual": {
+          "a": 5
+        },
+        "passed": false
+      },
+      {
+        "id": "stable-tie",
+        "input": [
+          {
+            "device": "a",
+            "observed_ms": 100,
+            "value": 10,
+            "reading_id": "z"
+          },
+          {
+            "device": "a",
+            "observed_ms": 100,
+            "value": 11,
+            "reading_id": "y"
+          }
+        ],
+        "expected": {
+          "a": 10
+        },
+        "actual": {
+          "a": 11
+        },
+        "passed": false
+      },
+      {
+        "id": "independent-device",
+        "input": [
+          {
+            "device": "a",
+            "observed_ms": 100,
+            "value": 10,
+            "reading_id": "z"
+          },
+          {
+            "device": "b",
+            "observed_ms": 1,
+            "value": 9,
+            "reading_id": "a"
+          },
+          {
+            "device": "a",
+            "observed_ms": 50,
+            "value": 5,
+            "reading_id": "b"
+          }
+        ],
+        "expected": {
+          "a": 10,
+          "b": 9
+        },
+        "actual": {
+          "a": 5,
+          "b": 9
+        },
+        "passed": false
+      }
+    ],
+    "observed_repair": {
+      "passed": 6,
+      "total": 6,
+      "repair_kind": "coordinator code repair; source A only"
+    },
+    "falsifier": "A change satisfying the source contract still reproduces these source-A failures, or this scoped lesson is forced on a consumer with a different explicit policy.",
+    "source_files": [
+      "experiments/hard-domains-20261019/source-A/events/contract.txt",
+      "experiments/hard-domains-20261019/source-A/events/before.mjs",
+      "experiments/hard-domains-20261019/source-A/events/after.mjs",
+      "experiments/hard-domains-20261019/source-A/events/before-observations.json",
+      "experiments/hard-domains-20261019/source-A/events/after-observations.json"
+    ]
+  }
+]

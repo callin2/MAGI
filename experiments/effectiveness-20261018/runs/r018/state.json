@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "revision": 2,
+  "issues": [
+    {
+      "id": "T1",
+      "title": "MAGI useful work",
+      "goal": "Complete the assigned MAGI work package",
+      "parent_id": null,
+      "acceptance": [
+        "Useful checked artifacts"
+      ],
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "id": "T2",
+      "title": "Existing work item",
+      "goal": "Repair tracker import completion invariants",
+      "parent_id": "T1",
+      "acceptance": [
+        "Requested artifacts and evidence"
+      ],
+      "status": "open",
+      "evidence": []
+    }
+  ],
+  "audit": [
+    {
+      "op": "complete",
+      "id": "T2"
+    },
+    {
+      "op": "reopen",
+      "id": "T2",
+      "reason": "Root completion attempted with hashes not resolving in tracker workspace; refresh child evidence",
+      "prior_evidence": [
+        {
+          "id": "T2",
+          "evidence": [
+            {
+              "path": "tracker.py",
+              "sha256": "56a6ca725a3577b58cea56641981ccd6ad85879e4aac92c2eaabcbc573afe8f0"
+            },
+            {
+              "path": "test_candidate.py",
+              "sha256": "840a0e9bc65b8a83f5d72f3fe8f3e48a820055966d789587ecc905b85cb4da69"
+            },
+            {
+              "path": "deliverable.json",
+              "sha256": "403b5661a1fa7a186d045c49e5d0f2f7791c94d842d5950aedb2d3d234cae6ac"
+            },
+            {
+              "path": "notes.md",
+              "sha256": "e535abe27f0d772ba338e8968f9052c2a8ceaf9157cbc3570aa9524886bc5d3e"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"schema_version":1,"task":"code","summary":"Hardened tracker imports to reject invalid completed issues atomically while preserving list/reopen after evidence artifacts change.","tests_run":["tests tool: original test_tracker.py and test_candidate.py; 15 tests passed"],"limitations":[]}

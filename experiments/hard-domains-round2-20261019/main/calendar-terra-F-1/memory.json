@@ -1,0 +1,9 @@
+[
+  {
+    "rule": "Resolve civil labels under explicit zone/fold policy before comparing actual half-open intervals; elapsed duration and local labels differ. Preserve occurrence identity instead of collapsing equal clock strings. In this weekly availability source both-fold means two independent returned occurrences, not a universal policy for other booking consumers.",
+    "conditions": {
+      "source": "synthetic weekly availability repaired in actual G screen",
+      "scope": "five supported IANA zones, rule-local exclusions and independent occurrences; no universal interval boundary assumptions beyond the contract"
+    }
+  }
+]

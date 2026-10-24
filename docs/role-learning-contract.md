@@ -1,4 +1,15 @@
+---
+id: magi.role-learning-contract
+type: contract
+status: draft
+owner: MAGI
+reviewed: 2026-10-18
+issue: https://github.com/callin2/MAGI/issues/13
+---
+
 # 역할 경험의 지속·검증 계약 v1 — #13, #14, #15
+
+[문서 목차](README.md)
 
 근거: #11, #12, [기존 구현 비교](learning-precedents.md). 세 독립 평가의 원문은 `experiments/role-learning/design/`에 보존한다. 구현·효과 통과를 의미하지 않는 설계 계약이다.
 

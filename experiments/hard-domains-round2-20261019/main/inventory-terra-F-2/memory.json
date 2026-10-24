@@ -1,0 +1,9 @@
+[
+  {
+    "rule": "Separate immutable transport-replay results from current business state, and bind each business identity to its accepted terms. Expiry follows the source receipt clock; ended transitions must not repeat physical effects. The source policy for pre-creation cancellation and terminal reuse is local to that reservation API.",
+    "conditions": {
+      "source": "synthetic warehouse replay repaired in actual G screen",
+      "scope": "two identities, receipt-clock expiry, physical/held conservation; source-specific lifecycle policies"
+    }
+  }
+]

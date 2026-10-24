@@ -1,0 +1,3 @@
+# Evidence hashes refer to bytes, including Windows source line endings.
+experiments/effectiveness-20261018/** -text
+scripts/effectiveness/** -text

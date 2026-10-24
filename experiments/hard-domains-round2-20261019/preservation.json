@@ -1,0 +1,36 @@
+{
+  "scope": "Supplement to integrity.json: first bundle and round2 screens preserved after scoring/main; source-before-target commit ordering.",
+  "checks": [
+    {
+      "baseline_commit": "55fc025",
+      "prefix": "experiments/hard-domains-20261019",
+      "files": 370,
+      "changed": [],
+      "passed": true
+    },
+    {
+      "baseline_commit": "b694aa1",
+      "prefix": "experiments/hard-domains-round2-20261019/screen",
+      "files": 99,
+      "changed": [],
+      "passed": true
+    },
+    {
+      "source_freeze": "fc98c5c",
+      "B_freeze": "2964abf",
+      "ancestor": true,
+      "passed": true
+    },
+    {
+      "source_freeze": "55fc025",
+      "B_freeze": "e08292b",
+      "ancestor": true,
+      "passed": true
+    },
+    {
+      "A2_freeze_commit_contains_no_B2_files": true,
+      "passed": true
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "revision": 2,
+  "issues": [
+    {
+      "id": "T1",
+      "title": "MAGI useful work",
+      "goal": "Complete the assigned MAGI work package",
+      "parent_id": null,
+      "acceptance": [
+        "Useful checked artifacts"
+      ],
+      "status": "done",
+      "evidence": [
+        {
+          "path": "deliverable.json",
+          "sha256": "fb059617d9f6df52555f5f5bd480b028c60c9a0957a61b8713152ca091c353e3"
+        },
+        {
+          "path": "notes.md",
+          "sha256": "6063918017c79ca393a3fa867edf246b9836236c4e98fe4a9fab2367e4fb4bbe"
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "title": "Existing work item",
+      "goal": "Create evidence-bounded MAGI handover",
+      "parent_id": "T1",
+      "acceptance": [
+        "Requested artifacts and evidence"
+      ],
+      "status": "done",
+      "evidence": [
+        {
+          "path": "deliverable.json",
+          "sha256": "fb059617d9f6df52555f5f5bd480b028c60c9a0957a61b8713152ca091c353e3"
+        },
+        {
+          "path": "notes.md",
+          "sha256": "6063918017c79ca393a3fa867edf246b9836236c4e98fe4a9fab2367e4fb4bbe"
+        }
+      ]
+    }
+  ],
+  "audit": [
+    {
+      "op": "complete",
+      "id": "T2"
+    },
+    {
+      "op": "complete",
+      "id": "T1"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "summary": "Hardened the verdict.mjs classifier to require explicit evidence.source buffer/string and evidence.holdout capture with successful exit code and confirmation line. Validated source SHA-256 must match the finalSourceSha256 claim in the report. CLI augmentations added to load source and holdout-result.json. Fixed candidate.persistedCandidate check and re-validated test passing for all cases including missing evidence rejection and exitCode validation from captures, not report metadata.",
+  "tests_run": ["public.test.mjs", "candidate.test.mjs"],
+  "limitations": ["Does not check candidate file contents beyond SHA-256 match in stdout logs.", "No handling of multiple evidence sources or dynamic evidence arrays.", "CLI does not recover from existing verdict.json evidence files."]
+}

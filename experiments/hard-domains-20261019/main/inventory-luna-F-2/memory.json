@@ -1,0 +1,9 @@
+[
+  {
+    "rule": "Bind an effect to its stable business receipt and reverse the recorded effect at most once. Repeated delivery is not a new operation; equal amounts under distinct receipts remain distinct. Do not invent a reversal when no original effect exists.",
+    "conditions": {
+      "source_system": "synthetic reward-credit replay",
+      "scope": "receipt-scoped reversible effects; this source ignores unknown voids"
+    }
+  }
+]

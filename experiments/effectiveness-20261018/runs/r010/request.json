@@ -1,0 +1,14 @@
+{
+  "op": "complete",
+  "id": "T1",
+  "evidence": [
+    {
+      "path": "deliverable.json",
+      "sha256": "6f7ed760724506d31c428f2a7eb9824fb02efaf140e466abb4a46cc6b5611f81"
+    },
+    {
+      "path": "notes.md",
+      "sha256": "ce3c291e646d81c37d12373648f6792fc27350cce1f94fe1b0a070b08eb59c65"
+    }
+  ]
+}

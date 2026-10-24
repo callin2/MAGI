@@ -1,0 +1,187 @@
+{
+  "started_at": "2026-10-19T01:04:32.139Z",
+  "ended_at": "2026-10-19T01:05:40.320Z",
+  "elapsed_seconds": 68.18097249999997,
+  "model_calls": 12,
+  "tool_calls": 13,
+  "tool_errors": 3,
+  "stop": "settled",
+  "provider_error": false,
+  "provider": "openrouter",
+  "configured_model": "openai/gpt-4.1-mini",
+  "usage": [
+    {
+      "input": 615,
+      "output": 51,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 666,
+      "cost": {
+        "input": 0.00024599999999999996,
+        "output": 0.00008159999999999999,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0.00032759999999999994
+      }
+    },
+    {
+      "input": 173,
+      "output": 1826,
+      "cacheRead": 1792,
+      "cacheWrite": 0,
+      "totalTokens": 3791,
+      "cost": {
+        "input": 0.0000692,
+        "output": 0.0029216,
+        "cacheRead": 0.0001792,
+        "cacheWrite": 0,
+        "total": 0.00317
+      }
+    },
+    {
+      "input": 1921,
+      "output": 1890,
+      "cacheRead": 1920,
+      "cacheWrite": 0,
+      "totalTokens": 5731,
+      "cost": {
+        "input": 0.0007683999999999999,
+        "output": 0.0030239999999999998,
+        "cacheRead": 0.000192,
+        "cacheWrite": 0,
+        "total": 0.0039844
+      }
+    },
+    {
+      "input": 2075,
+      "output": 38,
+      "cacheRead": 3712,
+      "cacheWrite": 0,
+      "totalTokens": 5825,
+      "cost": {
+        "input": 0.00083,
+        "output": 0.0000608,
+        "cacheRead": 0.00037119999999999997,
+        "cacheWrite": 0,
+        "total": 0.0012619999999999999
+      }
+    },
+    {
+      "input": 8267,
+      "output": 2027,
+      "cacheRead": 5632,
+      "cacheWrite": 0,
+      "totalTokens": 15926,
+      "cost": {
+        "input": 0.0033068,
+        "output": 0.0032432,
+        "cacheRead": 0.0005632,
+        "cacheWrite": 0,
+        "total": 0.0071132
+      }
+    },
+    {
+      "input": 2025,
+      "output": 10,
+      "cacheRead": 13952,
+      "cacheWrite": 0,
+      "totalTokens": 15987,
+      "cost": {
+        "input": 0.00081,
+        "output": 0.000016,
+        "cacheRead": 0.0013951999999999999,
+        "cacheWrite": 0,
+        "total": 0.0022211999999999996
+      }
+    },
+    {
+      "input": 1020,
+      "output": 530,
+      "cacheRead": 15872,
+      "cacheWrite": 0,
+      "totalTokens": 17422,
+      "cost": {
+        "input": 0.000408,
+        "output": 0.000848,
+        "cacheRead": 0.0015872,
+        "cacheWrite": 0,
+        "total": 0.0028431999999999997
+      }
+    },
+    {
+      "input": 2026,
+      "output": 1888,
+      "cacheRead": 17280,
+      "cacheWrite": 0,
+      "totalTokens": 21194,
+      "cost": {
+        "input": 0.0008104,
+        "output": 0.0030207999999999997,
+        "cacheRead": 0.001728,
+        "cacheWrite": 0,
+        "total": 0.0055592
+      }
+    },
+    {
+      "input": 2041,
+      "output": 10,
+      "cacheRead": 19200,
+      "cacheWrite": 0,
+      "totalTokens": 21251,
+      "cost": {
+        "input": 0.0008164,
+        "output": 0.000016,
+        "cacheRead": 0.0019199999999999998,
+        "cacheWrite": 0,
+        "total": 0.0027524
+      }
+    },
+    {
+      "input": 413,
+      "output": 218,
+      "cacheRead": 21120,
+      "cacheWrite": 0,
+      "totalTokens": 21751,
+      "cost": {
+        "input": 0.0001652,
+        "output": 0.00034879999999999997,
+        "cacheRead": 0.0021119999999999997,
+        "cacheWrite": 0,
+        "total": 0.002626
+      }
+    },
+    {
+      "input": 425,
+      "output": 418,
+      "cacheRead": 21376,
+      "cacheWrite": 0,
+      "totalTokens": 22219,
+      "cost": {
+        "input": 0.00016999999999999999,
+        "output": 0.0006688,
+        "cacheRead": 0.0021376,
+        "cacheWrite": 0,
+        "total": 0.0029763999999999997
+      }
+    },
+    {
+      "input": 508,
+      "output": 197,
+      "cacheRead": 21760,
+      "cacheWrite": 0,
+      "totalTokens": 22465,
+      "cost": {
+        "input": 0.00020319999999999998,
+        "output": 0.00031519999999999996,
+        "cacheRead": 0.002176,
+        "cacheWrite": 0,
+        "total": 0.0026944
+      }
+    }
+  ],
+  "fresh_conversation": true,
+  "history_messages_at_start": 1,
+  "user_corrections": 0,
+  "api_cost_usd": null,
+  "human_time_saving": null
+}

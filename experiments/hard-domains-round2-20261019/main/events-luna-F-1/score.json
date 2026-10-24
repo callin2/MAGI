@@ -1,0 +1,54 @@
+{
+  "id": "events-luna-F-1",
+  "phase": "main",
+  "domain": "events",
+  "family": "luna",
+  "model_id": "gpt-6-luna",
+  "arm": "F",
+  "repetition": 1,
+  "status": "executed",
+  "valid": true,
+  "task_success": false,
+  "package_complete": false,
+  "behavior_passed": 39,
+  "behavior_total": 40,
+  "axes": {
+    "boundary": {
+      "passed": 26,
+      "total": 27
+    },
+    "counterexample": {
+      "passed": 5,
+      "total": 5
+    },
+    "normal": {
+      "passed": 2,
+      "total": 2
+    },
+    "regression": {
+      "passed": 6,
+      "total": 6
+    }
+  },
+  "schema_valid": true,
+  "artifacts_present": true,
+  "successful_worker_test": true,
+  "response_models": [
+    "gpt-6-luna"
+  ],
+  "elapsed_seconds": 47.86592695900001,
+  "model_calls": 9,
+  "tool_calls": 8,
+  "tool_errors": 1,
+  "stop": "settled",
+  "usage": {
+    "input": 23983,
+    "output": 2549,
+    "cacheRead": 4224,
+    "cacheWrite": 0,
+    "totalTokens": 30756
+  },
+  "user_corrections": 0,
+  "cash_cost_usd": null,
+  "human_time_saving": null
+}

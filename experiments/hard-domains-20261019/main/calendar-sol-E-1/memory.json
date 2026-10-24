@@ -1,0 +1,62 @@
+[
+  {
+    "id": "calendar-observed-source-A",
+    "rule": "Resolve civil-time labels under the named zone and the source ambiguity policy before reasoning about elapsed instants. Local labels can have zero or multiple instants; fixed offsets and inclusive interval ends can misclassify them. The earlier-fold choice belongs to this alarm source, not all future consumers.",
+    "conditions": {
+      "source_system": "synthetic single civil-time alarm",
+      "scope": "minute precision; earlier-fold policy only in this source; half-open intervals"
+    },
+    "provenance": "Coordinator-authored synthetic precursor with intentionally seeded defects; actually executed and repaired before target B construction. Not a historical product defect or autonomous worker-learned lesson.",
+    "observed_failures": [
+      {
+        "id": "winter-zone",
+        "expected": 1704636000000,
+        "actual": 1704618000000,
+        "passed": false
+      },
+      {
+        "id": "summer-zone",
+        "expected": 1720357200000,
+        "actual": 1720342800000,
+        "passed": false
+      },
+      {
+        "id": "gap-no-instant",
+        "expected": null,
+        "actual": 1710037800000,
+        "passed": false
+      },
+      {
+        "id": "fold-source-policy-earlier",
+        "expected": 1730611800000,
+        "actual": 1730597400000,
+        "passed": false
+      },
+      {
+        "id": "nonhour-zone",
+        "expected": 1704078900000,
+        "actual": 1704099600000,
+        "passed": false
+      },
+      {
+        "id": "adjacent-open-end",
+        "expected": false,
+        "actual": true,
+        "passed": false
+      }
+    ],
+    "observed_repair": {
+      "passed": 7,
+      "total": 7,
+      "repair_kind": "coordinator code repair; source A only"
+    },
+    "falsifier": "A change satisfying the source contract still reproduces these source-A failures, or this scoped lesson is forced on a consumer with a different explicit policy.",
+    "source_files": [
+      "experiments/hard-domains-20261019/source-A/calendar/contract.txt",
+      "experiments/hard-domains-20261019/source-A/calendar/before.mjs",
+      "experiments/hard-domains-20261019/source-A/calendar/after.mjs",
+      "experiments/hard-domains-20261019/source-A/calendar/before-observations.json",
+      "experiments/hard-domains-20261019/source-A/calendar/after-observations.json"
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+export function sessions({gap_ms,lateness_ms,records}){let watermark=null;let state=new Map();const sealed=new Set();
+ const payload=r=>JSON.stringify(r.kind==='delete'?['delete']:['upsert',r.key,r.event_time,r.amount]);
+ function groups(map){const keys=new Map();for(const r of map.values())if(r.kind==='upsert'){if(!keys.has(r.key))keys.set(r.key,[]);keys.get(r.key).push(r);}const out=[];for(const [key,ev] of keys){ev.sort((a,b)=>a.event_time-b.event_time||(a.id<b.id?-1:1));let g;for(const r of ev){if(!g||r.event_time-g.last>gap_ms){g={key,start:r.event_time,last:r.event_time,total:0,ids:[]};out.push(g);}g.last=r.event_time;g.total+=r.amount;g.ids.push(r.id);}}return out;}
+ function finalize(){if(watermark!==null)for(const g of groups(state))if(g.last+gap_ms<=watermark-lateness_ms)for(const id of g.ids)sealed.add(id);}
+ for(const r of records){if(r.kind==='watermark'){watermark=watermark===null?r.time:Math.max(watermark,r.time);finalize();continue;}const old=state.get(r.id);if(old&&r.rev<old.rev)continue;if(old&&r.rev===old.rev){if(payload(old)!==payload(r))throw Error('CONFLICT');continue;}if(old?.kind==='upsert'&&sealed.has(r.id))continue;
+  if(r.kind==='upsert'&&groups(state).some(g=>g.key===r.key&&g.ids.some(id=>sealed.has(id))&&r.event_time>=g.start-gap_ms&&r.event_time<=g.last+gap_ms))continue;
+  const proposed=new Map(state);proposed.set(r.id,{...r});if(r.kind==='upsert'&&watermark!==null){const g=groups(proposed).find(g=>g.ids.includes(r.id));if(g.last+gap_ms<=watermark-lateness_ms)continue;}state=proposed;finalize();
+ }
+ return {watermark,sessions:groups(state).map(g=>({key:g.key,start:g.start,end:g.last+gap_ms,total:g.total,count:g.ids.length,ids:g.ids.sort(),final:g.ids.every(id=>sealed.has(id))})).sort((a,b)=>a.start-b.start||(a.key<b.key?-1:a.key>b.key?1:0))};}

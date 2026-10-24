@@ -1,0 +1,135 @@
+{
+  "started_at": "2026-10-19T06:27:37.715Z",
+  "ended_at": "2026-10-19T06:28:58.802Z",
+  "elapsed_seconds": 81.089212291,
+  "model_calls": 8,
+  "tool_calls": 7,
+  "tool_errors": 0,
+  "stop": "settled",
+  "provider_error": false,
+  "provider": "openai-codex",
+  "configured_model": "gpt-6.1-sol",
+  "family": "sol",
+  "domain": "events",
+  "arm": "G",
+  "phase": "main",
+  "usage": [
+    {
+      "input": 888,
+      "output": 20,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 908,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 1054,
+      "output": 21,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 1075,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 1293,
+      "output": 1130,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 2423,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 2477,
+      "output": 1622,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 4099,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 4154,
+      "output": 13,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 4167,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 4469,
+      "output": 247,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 4716,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 4774,
+      "output": 386,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 5160,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    {
+      "input": 5217,
+      "output": 94,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 5311,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    }
+  ],
+  "fresh_conversation": true,
+  "history_messages_at_start": 1,
+  "user_corrections": 0,
+  "api_cost_usd": null,
+  "human_time_saving": null
+}

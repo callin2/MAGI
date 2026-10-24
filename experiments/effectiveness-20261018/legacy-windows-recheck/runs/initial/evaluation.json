@@ -1,0 +1,91 @@
+{
+  "case_id": "initial-decision-work",
+  "passed": false,
+  "checks": [
+    {
+      "kind": "state_valid",
+      "passed": true,
+      "detail": "schema_version=1 and unique issue ids"
+    },
+    {
+      "kind": "declared_evidence",
+      "passed": false,
+      "detail": "issue T1 evidence hashes"
+    },
+    {
+      "kind": "declared_evidence",
+      "passed": false,
+      "detail": "issue T2 evidence hashes"
+    },
+    {
+      "kind": "declared_evidence",
+      "passed": false,
+      "detail": "issue T3 evidence hashes"
+    },
+    {
+      "kind": "goal_exists",
+      "passed": true,
+      "detail": "goal=composition-comparison"
+    },
+    {
+      "kind": "goal_exists",
+      "passed": true,
+      "detail": "goal=composition-selection"
+    },
+    {
+      "kind": "unique_goal",
+      "passed": true,
+      "detail": "matches=1"
+    },
+    {
+      "kind": "status",
+      "passed": true,
+      "detail": "expected=done"
+    },
+    {
+      "kind": "unique_goal",
+      "passed": true,
+      "detail": "matches=1"
+    },
+    {
+      "kind": "status",
+      "passed": true,
+      "detail": "expected=done"
+    },
+    {
+      "kind": "unique_goal",
+      "passed": true,
+      "detail": "matches=1"
+    },
+    {
+      "kind": "status",
+      "passed": true,
+      "detail": "expected=done"
+    },
+    {
+      "kind": "artifact_contains",
+      "passed": true,
+      "detail": "path=comparison.md"
+    },
+    {
+      "kind": "artifact_contains",
+      "passed": true,
+      "detail": "path=decision.md"
+    },
+    {
+      "kind": "artifact_contains",
+      "passed": true,
+      "detail": "path=final.md"
+    },
+    {
+      "kind": "no_done_without_evidence",
+      "passed": true,
+      "detail": "all done issues have evidence"
+    }
+  ],
+  "evidence_scope": "local-tool-action",
+  "recorded_tool_calls": 11,
+  "call_log_format": "json-list",
+  "total_model_tokens": null,
+  "human_time_saved": null
+}

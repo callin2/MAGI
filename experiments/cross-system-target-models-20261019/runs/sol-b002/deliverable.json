@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "summary": "Hardened farm_studio_api verdict classification and CLI evidence loading: actual process exits, saved-source SHA-256, and fixed-holdout output now corroborate report claims while conversational completion remains independent of candidate production. Added regression tests for missing and conflicting evidence and historical verdict overwrite protection.",
+  "tests_run": [
+    "functions.tests: public.test.mjs and candidate.test.mjs, 8 tests passed, 0 failed",
+    "Candidate regressions exercised the real CLI entry branch in-process using temporary workspace case files, including missing source, changed source, missing holdout, failed holdout, missing turn capture, and overwrite refusal"
+  ],
+  "limitations": [
+    "No external compiler, farm_studio_api process, or fixed holdout was executed; tests use synthetic captures and source fixtures.",
+    "CLI integration was exercised in-process rather than through a spawned Node process, consistent with the provided tool permissions.",
+    "The classifier verifies supplied evidence consistency, not the provenance or authenticity of independently supplied capture files."
+  ]
+}

@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {sessions} from './solution.mjs';
+const u=(id,t,amount=1,key='k',rev=1)=>({kind:'upsert',id,rev,key,event_time:t,amount});
+test('bridge merges and retraction splits open components',()=>{const r=sessions({gap_ms:5,lateness_ms:0,records:[u('a',0),u('b',10),u('c',5),{kind:'delete',id:'c',rev:2}]});assert.deepEqual(r.sessions.map(x=>[x.start,x.end,x.count]),[[0,5,1],[10,15,1]]);});
+test('watermark finalizes, immutable and nearby late event rejected',()=>{const r=sessions({gap_ms:5,lateness_ms:0,records:[u('a',0),{kind:'watermark',time:5},u('b',5)]});assert.equal(r.sessions.length,1);assert.equal(r.sessions[0].final,true);});
+test('proposal uses resulting component and rejected revision remains reusable',()=>{const x=sessions({gap_ms:10,lateness_ms:0,records:[u('a',0),u('b',30),{kind:'watermark',time:20},u('a',31,3,'k',2),u('a',15,4,'k',2)]});assert.equal(x.sessions.some(s=>s.ids.includes('a')),true);});
+test('revisions, zero totals, ascii ids',()=>{const r=sessions({gap_ms:2,lateness_ms:3,records:[u('z',-1,0),u('a',1,0)]});assert.deepEqual(r.sessions[0].ids,['a','z']);assert.equal(r.sessions[0].total,0);});

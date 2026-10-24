@@ -1,0 +1,490 @@
+{
+  "planned_runs": 22,
+  "evaluated_runs": 22,
+  "primary": {
+    "G": {
+      "runs": 4,
+      "passed": 1,
+      "median_seconds": 104.4094654,
+      "median_model_calls": 10.0,
+      "median_tool_calls": 12.0,
+      "tool_errors": 2,
+      "provider_reported_input_tokens": 87731,
+      "provider_reported_output_tokens": 18871,
+      "provider_reported_cache_read_tokens": 316416,
+      "provider_reported_total_tokens": 423018,
+      "median_reported_total_tokens": 104011.5,
+      "failures": [
+        {
+          "id": "r003",
+          "task": "handover",
+          "checks": [
+            "claim_memory-benefit"
+          ],
+          "stop": "settled"
+        },
+        {
+          "id": "r012",
+          "task": "code",
+          "checks": [
+            "import_contract"
+          ],
+          "stop": "settled"
+        },
+        {
+          "id": "r014",
+          "task": "code",
+          "checks": [
+            "import_contract"
+          ],
+          "stop": "settled"
+        }
+      ]
+    },
+    "F": {
+      "runs": 4,
+      "passed": 4,
+      "median_seconds": 88.28915144999999,
+      "median_model_calls": 8.5,
+      "median_tool_calls": 11.0,
+      "tool_errors": 0,
+      "provider_reported_input_tokens": 43929,
+      "provider_reported_output_tokens": 14757,
+      "provider_reported_cache_read_tokens": 281600,
+      "provider_reported_total_tokens": 340286,
+      "median_reported_total_tokens": 80062.5,
+      "failures": []
+    },
+    "L": {
+      "runs": 4,
+      "passed": 3,
+      "median_seconds": 116.41631979999994,
+      "median_model_calls": 10.0,
+      "median_tool_calls": 11.5,
+      "tool_errors": 2,
+      "provider_reported_input_tokens": 77102,
+      "provider_reported_output_tokens": 22140,
+      "provider_reported_cache_read_tokens": 371456,
+      "provider_reported_total_tokens": 470698,
+      "median_reported_total_tokens": 111001.0,
+      "failures": [
+        {
+          "id": "r019",
+          "task": "handover",
+          "checks": [
+            "claim_expert-routing"
+          ],
+          "stop": "settled"
+        }
+      ]
+    },
+    "E": {
+      "runs": 4,
+      "passed": 4,
+      "median_seconds": 112.07919840000002,
+      "median_model_calls": 9.5,
+      "median_tool_calls": 11.5,
+      "tool_errors": 0,
+      "provider_reported_input_tokens": 57922,
+      "provider_reported_output_tokens": 21081,
+      "provider_reported_cache_read_tokens": 362112,
+      "provider_reported_total_tokens": 441115,
+      "median_reported_total_tokens": 108812.0,
+      "failures": []
+    }
+  },
+  "by_task": {
+    "code": {
+      "G": {
+        "runs": 2,
+        "passed": 0,
+        "median_seconds": 169.34845245000002,
+        "median_model_calls": 12.5,
+        "median_tool_calls": 14.5,
+        "tool_errors": 2,
+        "provider_reported_input_tokens": 53531,
+        "provider_reported_output_tokens": 15631,
+        "provider_reported_cache_read_tokens": 266240,
+        "provider_reported_total_tokens": 335402,
+        "median_reported_total_tokens": 167701.0,
+        "failures": [
+          {
+            "id": "r012",
+            "task": "code",
+            "checks": [
+              "import_contract"
+            ],
+            "stop": "settled"
+          },
+          {
+            "id": "r014",
+            "task": "code",
+            "checks": [
+              "import_contract"
+            ],
+            "stop": "settled"
+          }
+        ]
+      },
+      "F": {
+        "runs": 2,
+        "passed": 2,
+        "median_seconds": 131.32409275000003,
+        "median_model_calls": 11.0,
+        "median_tool_calls": 13.0,
+        "tool_errors": 0,
+        "provider_reported_input_tokens": 25700,
+        "provider_reported_output_tokens": 11411,
+        "provider_reported_cache_read_tokens": 216576,
+        "provider_reported_total_tokens": 253687,
+        "median_reported_total_tokens": 126843.5,
+        "failures": []
+      },
+      "L": {
+        "runs": 2,
+        "passed": 2,
+        "median_seconds": 199.07770210000012,
+        "median_model_calls": 13.0,
+        "median_tool_calls": 15.0,
+        "tool_errors": 2,
+        "provider_reported_input_tokens": 54600,
+        "provider_reported_output_tokens": 18670,
+        "provider_reported_cache_read_tokens": 312192,
+        "provider_reported_total_tokens": 385462,
+        "median_reported_total_tokens": 192731.0,
+        "failures": []
+      },
+      "E": {
+        "runs": 2,
+        "passed": 2,
+        "median_seconds": 190.7218861,
+        "median_model_calls": 13.0,
+        "median_tool_calls": 14.0,
+        "tool_errors": 0,
+        "provider_reported_input_tokens": 33598,
+        "provider_reported_output_tokens": 17854,
+        "provider_reported_cache_read_tokens": 301696,
+        "provider_reported_total_tokens": 353148,
+        "median_reported_total_tokens": 176574.0,
+        "failures": []
+      },
+      "A": {
+        "runs": 1,
+        "passed": 0,
+        "median_seconds": 203.664814,
+        "median_model_calls": 15,
+        "median_tool_calls": 17,
+        "tool_errors": 2,
+        "provider_reported_input_tokens": 31349,
+        "provider_reported_output_tokens": 9439,
+        "provider_reported_cache_read_tokens": 184064,
+        "provider_reported_total_tokens": 224852,
+        "median_reported_total_tokens": 224852,
+        "failures": [
+          {
+            "id": "r018",
+            "task": "code",
+            "checks": [
+              "actual_tracker_completion",
+              "current_hash_evidence"
+            ],
+            "stop": "settled"
+          }
+        ]
+      },
+      "C": {
+        "runs": 1,
+        "passed": 1,
+        "median_seconds": 122.45233239999999,
+        "median_model_calls": 12,
+        "median_tool_calls": 11,
+        "tool_errors": 0,
+        "provider_reported_input_tokens": 29298,
+        "provider_reported_output_tokens": 5385,
+        "provider_reported_cache_read_tokens": 90496,
+        "provider_reported_total_tokens": 125179,
+        "median_reported_total_tokens": 125179,
+        "failures": []
+      },
+      "R": {
+        "runs": 1,
+        "passed": 1,
+        "median_seconds": 121.6851969000001,
+        "median_model_calls": 13,
+        "median_tool_calls": 12,
+        "tool_errors": 0,
+        "provider_reported_input_tokens": 17429,
+        "provider_reported_output_tokens": 5327,
+        "provider_reported_cache_read_tokens": 103808,
+        "provider_reported_total_tokens": 126564,
+        "median_reported_total_tokens": 126564,
+        "failures": []
+      }
+    },
+    "handover": {
+      "G": {
+        "runs": 2,
+        "passed": 1,
+        "median_seconds": 41.65929079999997,
+        "median_model_calls": 7.5,
+        "median_tool_calls": 9.5,
+        "tool_errors": 0,
+        "provider_reported_input_tokens": 34200,
+        "provider_reported_output_tokens": 3240,
+        "provider_reported_cache_read_tokens": 50176,
+        "provider_reported_total_tokens": 87616,
+        "median_reported_total_tokens": 43808.0,
+        "failures": [
+          {
+            "id": "r003",
+            "task": "handover",
+            "checks": [
+              "claim_memory-benefit"
+            ],
+            "stop": "settled"
+          }
+        ]
+      },
+      "F": {
+        "runs": 2,
+        "passed": 2,
+        "median_seconds": 44.05757454999996,
+        "median_model_calls": 6.5,
+        "median_tool_calls": 9.5,
+        "tool_errors": 0,
+        "provider_reported_input_tokens": 18229,
+        "provider_reported_output_tokens": 3346,
+        "provider_reported_cache_read_tokens": 65024,
+        "provider_reported_total_tokens": 86599,
+        "median_reported_total_tokens": 43299.5,
+        "failures": []
+      },
+      "L": {
+        "runs": 2,
+        "passed": 1,
+        "median_seconds": 44.36621179999993,
+        "median_model_calls": 7.0,
+        "median_tool_calls": 9.0,
+        "tool_errors": 0,
+        "provider_reported_input_tokens": 22502,
+        "provider_reported_output_tokens": 3470,
+        "provider_reported_cache_read_tokens": 59264,
+        "provider_reported_total_tokens": 85236,
+        "median_reported_total_tokens": 42618.0,
+        "failures": [
+          {
+            "id": "r019",
+            "task": "handover",
+            "checks": [
+              "claim_expert-routing"
+            ],
+            "stop": "settled"
+          }
+        ]
+      },
+      "E": {
+        "runs": 2,
+        "passed": 2,
+        "median_seconds": 38.93776274999996,
+        "median_model_calls": 6.0,
+        "median_tool_calls": 9.0,
+        "tool_errors": 0,
+        "provider_reported_input_tokens": 24324,
+        "provider_reported_output_tokens": 3227,
+        "provider_reported_cache_read_tokens": 60416,
+        "provider_reported_total_tokens": 87967,
+        "median_reported_total_tokens": 43983.5,
+        "failures": []
+      },
+      "A": {
+        "runs": 1,
+        "passed": 0,
+        "median_seconds": 46.67898609999998,
+        "median_model_calls": 6,
+        "median_tool_calls": 9,
+        "tool_errors": 0,
+        "provider_reported_input_tokens": 17896,
+        "provider_reported_output_tokens": 1854,
+        "provider_reported_cache_read_tokens": 23168,
+        "provider_reported_total_tokens": 42918,
+        "median_reported_total_tokens": 42918,
+        "failures": [
+          {
+            "id": "r009",
+            "task": "handover",
+            "checks": [
+              "claim_expert-routing"
+            ],
+            "stop": "settled"
+          }
+        ]
+      },
+      "C": {
+        "runs": 1,
+        "passed": 1,
+        "median_seconds": 38.63562189999997,
+        "median_model_calls": 7,
+        "median_tool_calls": 10,
+        "tool_errors": 0,
+        "provider_reported_input_tokens": 18417,
+        "provider_reported_output_tokens": 1597,
+        "provider_reported_cache_read_tokens": 32384,
+        "provider_reported_total_tokens": 52398,
+        "median_reported_total_tokens": 52398,
+        "failures": []
+      },
+      "R": {
+        "runs": 1,
+        "passed": 1,
+        "median_seconds": 37.97481149999995,
+        "median_model_calls": 5,
+        "median_tool_calls": 9,
+        "tool_errors": 0,
+        "provider_reported_input_tokens": 10602,
+        "provider_reported_output_tokens": 1581,
+        "provider_reported_cache_read_tokens": 22528,
+        "provider_reported_total_tokens": 34711,
+        "median_reported_total_tokens": 34711,
+        "failures": []
+      }
+    }
+  },
+  "diagnostic_probes": {
+    "A": {
+      "runs": 2,
+      "passed": 0,
+      "median_seconds": 125.17190004999999,
+      "median_model_calls": 10.5,
+      "median_tool_calls": 13.0,
+      "tool_errors": 2,
+      "provider_reported_input_tokens": 49245,
+      "provider_reported_output_tokens": 11293,
+      "provider_reported_cache_read_tokens": 207232,
+      "provider_reported_total_tokens": 267770,
+      "median_reported_total_tokens": 133885.0,
+      "failures": [
+        {
+          "id": "r009",
+          "task": "handover",
+          "checks": [
+            "claim_expert-routing"
+          ],
+          "stop": "settled"
+        },
+        {
+          "id": "r018",
+          "task": "code",
+          "checks": [
+            "actual_tracker_completion",
+            "current_hash_evidence"
+          ],
+          "stop": "settled"
+        }
+      ]
+    },
+    "C": {
+      "runs": 2,
+      "passed": 2,
+      "median_seconds": 80.54397714999998,
+      "median_model_calls": 9.5,
+      "median_tool_calls": 10.5,
+      "tool_errors": 0,
+      "provider_reported_input_tokens": 47715,
+      "provider_reported_output_tokens": 6982,
+      "provider_reported_cache_read_tokens": 122880,
+      "provider_reported_total_tokens": 177577,
+      "median_reported_total_tokens": 88788.5,
+      "failures": []
+    },
+    "R": {
+      "runs": 2,
+      "passed": 2,
+      "median_seconds": 79.83000420000002,
+      "median_model_calls": 9.0,
+      "median_tool_calls": 10.5,
+      "tool_errors": 0,
+      "provider_reported_input_tokens": 28031,
+      "provider_reported_output_tokens": 6908,
+      "provider_reported_cache_read_tokens": 126336,
+      "provider_reported_total_tokens": 161275,
+      "median_reported_total_tokens": 80637.5,
+      "failures": []
+    }
+  },
+  "total": {
+    "runs": 22,
+    "passed": 16,
+    "median_seconds": 85.09885794999997,
+    "median_model_calls": 9.0,
+    "median_tool_calls": 10.5,
+    "tool_errors": 6,
+    "provider_reported_input_tokens": 391675,
+    "provider_reported_output_tokens": 102032,
+    "provider_reported_cache_read_tokens": 1788032,
+    "provider_reported_total_tokens": 2281739,
+    "median_reported_total_tokens": 82634.0,
+    "failures": [
+      {
+        "id": "r003",
+        "task": "handover",
+        "checks": [
+          "claim_memory-benefit"
+        ],
+        "stop": "settled"
+      },
+      {
+        "id": "r009",
+        "task": "handover",
+        "checks": [
+          "claim_expert-routing"
+        ],
+        "stop": "settled"
+      },
+      {
+        "id": "r012",
+        "task": "code",
+        "checks": [
+          "import_contract"
+        ],
+        "stop": "settled"
+      },
+      {
+        "id": "r014",
+        "task": "code",
+        "checks": [
+          "import_contract"
+        ],
+        "stop": "settled"
+      },
+      {
+        "id": "r018",
+        "task": "code",
+        "checks": [
+          "actual_tracker_completion",
+          "current_hash_evidence"
+        ],
+        "stop": "settled"
+      },
+      {
+        "id": "r019",
+        "task": "handover",
+        "checks": [
+          "claim_expert-routing"
+        ],
+        "stop": "settled"
+      }
+    ]
+  },
+  "measurement_limits": {
+    "pricing_usd": null,
+    "historical_training_and_review_tokens": null,
+    "parent_orchestration_tokens": null,
+    "human_time_saved": null,
+    "full_lifecycle_cost": null,
+    "provider_identity": "Configured/live-advertised model ID, not attested weights",
+    "counterfactual": "Same current task and mandatory instructions. G has less historical information. F/L/E share central rules but representations and surrounding information differ.",
+    "generality": "Two tasks, one repository, one provider/model, two repetitions per primary cell. No multi-agent coordination efficacy measured.",
+    "time": "Wall time contains provider, network and tool variance; not human effort.",
+    "zero_usage": "Provider error/aborted results can contain zero or partial usage, not proof of free execution."
+  }
+}

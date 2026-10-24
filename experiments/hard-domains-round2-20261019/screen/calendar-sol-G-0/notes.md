@@ -1,0 +1,9 @@
+# Implementation and validation
+
+Replaced greedy selection with exact branch-and-bound assignment over meeting IDs, offered instants, rooms, and omission. Objective bounds include zero-value meetings for the count tie-break. ASCII-sorted traversal establishes the tuple tie-break without locale collation. Dependencies, room occupancy, shared-person overlap, range bounds, and room blocks are enforced. Person setup is checked only between chronological neighbors; partial failures are retained when a future intermediate meeting could repair them, so nonmetric transitions do not cause unsafe pruning.
+
+Civil starts are resolved using Node Intl zone data, sampling offsets on both sides of nearby transitions and round-tripping candidates. Fold alternatives remain choices of one meeting. Durations are elapsed milliseconds. Inputs are not modified; no network or calendar APIs are used.
+
+Validation: ran the provided tests runner: 8 tests passed, 0 failed. This includes both public tests and six candidate tests covering global value/count optimization, ASCII tie-breaking, input preservation, directed/nonmetric setup, dependencies, blocks, DST gaps/folds, Kathmandu and Lord Howe, and an independent exhaustive leaf-only oracle on 100 seeded five-meeting instances. The timezone conversion test intentionally uses a broad query window to isolate civil conversion; production behavior remains range-filtered.
+
+Limits: relies on the runtime's standard Intl time-zone database and the specified well-formed inputs/supported zones in 2024–2026. Search is exponential in the worst case, appropriate to the supplied ten-meeting/three-room bound; no claim of polynomial scaling. No live calendar integration and no validation of malformed or out-of-contract inputs. Tests are representative, not exhaustive over every possible bounded input.

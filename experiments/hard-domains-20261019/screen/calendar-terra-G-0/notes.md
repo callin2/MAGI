@@ -1,0 +1,5 @@
+Validation completed: ran the supplied public tests and candidate.test.mjs with the workspace test runner. All 6 tests passed. Candidate coverage includes New York spring gaps and fall folds (both/later), Lord Howe's 30-minute fold, Kathmandu's fixed non-hour offset, elapsed duration over a fallback, local-date exclusions, half-open busy adjacency, overlap rejection, and inclusive range-end containment.
+
+Implementation notes: local wall times are resolved by trying the known offsets for each contract-supported zone and validating the resulting instant through Intl. This rejects gaps and retains both distinct instants in folds. Busy and range tests use numeric half-open instant interval comparisons.
+
+Limits: the module intentionally supports only the five zones and 2024-2026 scope specified by the contract; the finite offset lists are based on that scope. It relies on the Node Intl time-zone database to validate transitions.

@@ -1,0 +1,28 @@
+{
+  "at": "2026-10-19T06:01:01.707926+00:00",
+  "round2_B_not_constructed": true,
+  "donor": "actual first-bundle Sol G repairs, not target-round2 answers",
+  "files": {
+    "experiments/hard-domains-round2-20261019/source-A/calendar/observed-after.json": "ba792cbe645fba2535b9448f3e685c19b3c6331aedb0d1595c8c7037c009b9ea",
+    "experiments/hard-domains-round2-20261019/source-A/calendar/worker-execution.json": "b5785f2238922d2ffc9e764671ec5e36a9a9e6b5e2ed62e5a8dbfc4abf9fa830",
+    "experiments/hard-domains-round2-20261019/source-A/calendar/experience.json": "818c7932f04406bde76a8f64324ec4e9b87ae8043f709f551c0a17396cf36ed6",
+    "experiments/hard-domains-round2-20261019/source-A/calendar/before.mjs": "0f9032819b64288a8fb269fb27b459559072ce81fb0e4858d4449fd1309384d4",
+    "experiments/hard-domains-round2-20261019/source-A/calendar/after.mjs": "33fee574304ed135d1a4157cff27e17f9f82b3d17a4d3cabf41436a82abb0129",
+    "experiments/hard-domains-round2-20261019/source-A/calendar/worker-notes.md": "bb953f7e80beebd7b3625a0d6b0e5c4b7f36408c84203ffc6510e2596a70ff03",
+    "experiments/hard-domains-round2-20261019/source-A/calendar/observed-before.json": "a41deae0f097bbbc06b9790487246f059932e24fa52c42b0cefce7e526f5c3fc",
+    "experiments/hard-domains-round2-20261019/source-A/inventory/observed-after.json": "a16c626196ca4900a939a4e99674d8fc51df8a46940493c3f821afa0666a49a2",
+    "experiments/hard-domains-round2-20261019/source-A/inventory/worker-execution.json": "4407dc4cd136e523a1965cc86d113e669b7310fa450cdf68a9b11f833926bb33",
+    "experiments/hard-domains-round2-20261019/source-A/inventory/experience.json": "c587ab9cb522d8219a9a477098ca587f55530639f11d41431f90853f1617b60d",
+    "experiments/hard-domains-round2-20261019/source-A/inventory/before.mjs": "5be93673f7553154b70450ea0f2ed87eaf841d4dd01bc627175d556362855897",
+    "experiments/hard-domains-round2-20261019/source-A/inventory/after.mjs": "0374b181d383ee380e0ac587a39f66a7f5468e0925685cbf2894fe2ea43cce06",
+    "experiments/hard-domains-round2-20261019/source-A/inventory/worker-notes.md": "94431143297632c64dc14f149f45b958f74c2b3e49ae1147ca23dc7922f0e87e",
+    "experiments/hard-domains-round2-20261019/source-A/inventory/observed-before.json": "3baddb134b8d7bcd417abef743dffd54cff2ecc07608e973ba61d6c81ef053b5",
+    "experiments/hard-domains-round2-20261019/source-A/events/observed-after.json": "c7ad026bc55aeb61d2a02365afd74472400a0073fc1b10674ab6b9ba09031187",
+    "experiments/hard-domains-round2-20261019/source-A/events/worker-execution.json": "a4201a8903318ef8450daeb137a9abc610f2ff6f864123fb399a2d6d61c13c56",
+    "experiments/hard-domains-round2-20261019/source-A/events/experience.json": "3c764be0782f570ff771d04b1f3d6dbb3df78403a040a8c452dd0b0e8cb93be4",
+    "experiments/hard-domains-round2-20261019/source-A/events/before.mjs": "5900ddc8c8b31f705a0e9ee1c856c2dd833112a9fe50e284c22b08c94d72379f",
+    "experiments/hard-domains-round2-20261019/source-A/events/after.mjs": "fb3deb71e5c2502c34ca9eec8545dbdeeda04b7b95b906c19fdbc6f694fdec48",
+    "experiments/hard-domains-round2-20261019/source-A/events/worker-notes.md": "c32500113ee5c037a96d86ec00c96a312896211fd2147a3afc679efa80e84133",
+    "experiments/hard-domains-round2-20261019/source-A/events/observed-before.json": "2a36b184004e2b8c60d080fe420cc96966d2e494c8ae3042adc7d91f0f3056c5"
+  }
+}

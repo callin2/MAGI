@@ -1,0 +1,68 @@
+[
+  {
+    "id": "b001",
+    "arm": "E",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "80f5c7916110ca8117247a9805894908399f9c28ee944c542a3512b0b77d3b72",
+      "verdict.mjs": "4477382ee51f6ee895a2de45b4adf0730a4dd2141525ff927957a60207d5a487",
+      "memory.json": "d1e9da96d96ec837ee52ac3c52999ced4ad4f8ced5d051baa7f46c43e4d8a611",
+      "task.md": "8c94eb6acaa96f7b091fed95c58b65525d9d80a1cfdb0302428037313cf13db3"
+    }
+  },
+  {
+    "id": "b002",
+    "arm": "G",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "80f5c7916110ca8117247a9805894908399f9c28ee944c542a3512b0b77d3b72",
+      "verdict.mjs": "4477382ee51f6ee895a2de45b4adf0730a4dd2141525ff927957a60207d5a487",
+      "memory.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "task.md": "8c94eb6acaa96f7b091fed95c58b65525d9d80a1cfdb0302428037313cf13db3"
+    }
+  },
+  {
+    "id": "b003",
+    "arm": "F",
+    "repetition": 2,
+    "inputs": {
+      "public.test.mjs": "80f5c7916110ca8117247a9805894908399f9c28ee944c542a3512b0b77d3b72",
+      "verdict.mjs": "4477382ee51f6ee895a2de45b4adf0730a4dd2141525ff927957a60207d5a487",
+      "memory.json": "a38aacb270d5f2f9ff76b340d9dc41511e241760ee2cfc0a9ae75c361171f4fc",
+      "task.md": "8c94eb6acaa96f7b091fed95c58b65525d9d80a1cfdb0302428037313cf13db3"
+    }
+  },
+  {
+    "id": "b004",
+    "arm": "G",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "80f5c7916110ca8117247a9805894908399f9c28ee944c542a3512b0b77d3b72",
+      "verdict.mjs": "4477382ee51f6ee895a2de45b4adf0730a4dd2141525ff927957a60207d5a487",
+      "memory.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "task.md": "8c94eb6acaa96f7b091fed95c58b65525d9d80a1cfdb0302428037313cf13db3"
+    }
+  },
+  {
+    "id": "b005",
+    "arm": "F",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "80f5c7916110ca8117247a9805894908399f9c28ee944c542a3512b0b77d3b72",
+      "verdict.mjs": "4477382ee51f6ee895a2de45b4adf0730a4dd2141525ff927957a60207d5a487",
+      "memory.json": "a38aacb270d5f2f9ff76b340d9dc41511e241760ee2cfc0a9ae75c361171f4fc",
+      "task.md": "8c94eb6acaa96f7b091fed95c58b65525d9d80a1cfdb0302428037313cf13db3"
+    }
+  },
+  {
+    "id": "b006",
+    "arm": "E",
+    "repetition": 1,
+    "inputs": {
+      "public.test.mjs": "80f5c7916110ca8117247a9805894908399f9c28ee944c542a3512b0b77d3b72",
+      "verdict.mjs": "4477382ee51f6ee895a2de45b4adf0730a4dd2141525ff927957a60207d5a487",
+      "memory.json": "d1e9da96d96ec837ee52ac3c52999ced4ad4f8ced5d051baa7f46c43e4d8a611",
+      "task.md": "8c94eb6acaa96f7b091fed95c58b65525d9d80a1cfdb0302428037313cf13db3"
+    }
+  }
+]

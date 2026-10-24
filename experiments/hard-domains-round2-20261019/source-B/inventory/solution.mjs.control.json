@@ -1,0 +1,1321 @@
+{
+  "domain": "inventory",
+  "cases": [
+    {
+      "id": "empty",
+      "axis": "normal",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "one-order",
+      "axis": "normal",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "greedy-is-suboptimal",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 9,
+        "count": 2,
+        "allocations": [
+          {
+            "order_id": "b",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "c",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 0
+        }
+      },
+      "actual": {
+        "value": 8,
+        "count": 1,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 0
+        }
+      }
+    },
+    {
+      "id": "global-alternative-choice",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 11,
+        "count": 2,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "b"
+          },
+          {
+            "order_id": "b",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 0,
+          "t": 0
+        }
+      },
+      "actual": {
+        "value": 6,
+        "count": 1,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 0,
+          "t": 2
+        }
+      }
+    },
+    {
+      "id": "value-tie-prefers-count",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 10,
+        "count": 2,
+        "allocations": [
+          {
+            "order_id": "b",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "c",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 0
+        }
+      },
+      "actual": {
+        "value": 10,
+        "count": 1,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 0
+        }
+      }
+    },
+    {
+      "id": "lex-selected-identities",
+      "axis": "regression",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 10,
+        "count": 2,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "b",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 0
+        }
+      },
+      "actual": {
+        "value": 10,
+        "count": 2,
+        "allocations": [
+          {
+            "order_id": "b",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "c",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 0
+        }
+      }
+    },
+    {
+      "id": "lex-choice-identity",
+      "axis": "regression",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 5,
+        "count": 1,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 2
+        }
+      },
+      "actual": {
+        "value": 5,
+        "count": 1,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "z"
+          }
+        ],
+        "remaining": {
+          "s": 2
+        }
+      }
+    },
+    {
+      "id": "group-competition",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 10,
+        "count": 2,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "c",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 1
+        }
+      },
+      "actual": {
+        "value": 15,
+        "count": 3,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "b",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "c",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 0
+        }
+      }
+    },
+    {
+      "id": "zero-value-count-objective",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "active-hold-capacity",
+      "axis": "regression",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 5,
+        "count": 1,
+        "allocations": [
+          {
+            "order_id": "b",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 0
+        }
+      },
+      "actual": {
+        "value": 6,
+        "count": 1,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 0
+        }
+      }
+    },
+    {
+      "id": "existing-expired8",
+      "axis": "counterexample",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "existing-reserved10",
+      "axis": "counterexample",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "existing-committed8",
+      "axis": "counterexample",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 0,
+        "count": 0,
+        "allocations": [],
+        "remaining": {
+          "s": 3
+        }
+      },
+      "actual": {
+        "value": 5,
+        "count": 1,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 2
+        }
+      }
+    },
+    {
+      "id": "existing-cancelled8",
+      "axis": "counterexample",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 0,
+        "count": 0,
+        "allocations": [],
+        "remaining": {
+          "s": 3
+        }
+      },
+      "actual": {
+        "value": 5,
+        "count": 1,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 2
+        }
+      }
+    },
+    {
+      "id": "commit-already-in-snapshot",
+      "axis": "counterexample",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "duplicate-orders-once",
+      "axis": "regression",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 5,
+        "count": 1,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 2
+        }
+      },
+      "actual": {
+        "value": 10,
+        "count": 2,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "a",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 1
+        }
+      }
+    },
+    {
+      "id": "canonical-duplicate-order",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 5,
+        "count": 1,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 2,
+          "t": 1
+        }
+      },
+      "actual": {
+        "value": 10,
+        "count": 2,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "a",
+            "choice_id": "b"
+          }
+        ],
+        "remaining": {
+          "s": 0,
+          "t": 1
+        }
+      }
+    },
+    {
+      "id": "duplicate-conflict",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "throws": true
+      },
+      "actual": {
+        "value": 11,
+        "count": 2,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "a",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 1
+        }
+      }
+    },
+    {
+      "id": "symmetric-bounded-search",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 24,
+        "count": 12,
+        "allocations": [
+          {
+            "order_id": "o01",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "o02",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "o03",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "o05",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "o06",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "o07",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "o09",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "o10",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "o11",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "o13",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "o14",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "o15",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 0
+        }
+      },
+      "actual": {
+        "value": 24,
+        "count": 12,
+        "allocations": [
+          {
+            "order_id": "o01",
+            "choice_id": "z"
+          },
+          {
+            "order_id": "o02",
+            "choice_id": "z"
+          },
+          {
+            "order_id": "o03",
+            "choice_id": "z"
+          },
+          {
+            "order_id": "o05",
+            "choice_id": "z"
+          },
+          {
+            "order_id": "o06",
+            "choice_id": "z"
+          },
+          {
+            "order_id": "o07",
+            "choice_id": "z"
+          },
+          {
+            "order_id": "o09",
+            "choice_id": "z"
+          },
+          {
+            "order_id": "o10",
+            "choice_id": "z"
+          },
+          {
+            "order_id": "o11",
+            "choice_id": "z"
+          },
+          {
+            "order_id": "o13",
+            "choice_id": "z"
+          },
+          {
+            "order_id": "o14",
+            "choice_id": "z"
+          },
+          {
+            "order_id": "o15",
+            "choice_id": "z"
+          }
+        ],
+        "remaining": {
+          "s": 0
+        }
+      }
+    },
+    {
+      "id": "mixed-capacity-0",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 34,
+        "count": 4,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "c",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "g",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "h",
+            "choice_id": "b"
+          }
+        ],
+        "remaining": {
+          "s": 0,
+          "t": 2,
+          "u": 7
+        }
+      },
+      "actual": {
+        "value": 54,
+        "count": 7,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "b",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "c",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "e",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "f",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "g",
+            "choice_id": "b"
+          },
+          {
+            "order_id": "h",
+            "choice_id": "b"
+          }
+        ],
+        "remaining": {
+          "s": 0,
+          "t": 1,
+          "u": 3
+        }
+      }
+    },
+    {
+      "id": "mixed-capacity-1",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 39,
+        "count": 5,
+        "allocations": [
+          {
+            "order_id": "b",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "c",
+            "choice_id": "b"
+          },
+          {
+            "order_id": "e",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "g",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "h",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 0,
+          "t": 2,
+          "u": 0
+        }
+      },
+      "actual": {
+        "value": 45,
+        "count": 6,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "b",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "c",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "e",
+            "choice_id": "b"
+          },
+          {
+            "order_id": "f",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "h",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 3,
+          "t": 0,
+          "u": 1
+        }
+      }
+    },
+    {
+      "id": "mixed-capacity-2",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 30,
+        "count": 5,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "e",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "f",
+            "choice_id": "b"
+          },
+          {
+            "order_id": "g",
+            "choice_id": "b"
+          },
+          {
+            "order_id": "h",
+            "choice_id": "b"
+          }
+        ],
+        "remaining": {
+          "s": 0,
+          "t": 4,
+          "u": 1
+        }
+      },
+      "actual": {
+        "value": 31,
+        "count": 6,
+        "allocations": [
+          {
+            "order_id": "b",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "c",
+            "choice_id": "b"
+          },
+          {
+            "order_id": "d",
+            "choice_id": "b"
+          },
+          {
+            "order_id": "e",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "f",
+            "choice_id": "b"
+          },
+          {
+            "order_id": "h",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 0,
+          "t": 0,
+          "u": 0
+        }
+      }
+    },
+    {
+      "id": "mixed-capacity-3",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "mixed-capacity-4",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 25,
+        "count": 3,
+        "allocations": [
+          {
+            "order_id": "f",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "g",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "h",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 0,
+          "t": 5,
+          "u": 1
+        }
+      },
+      "actual": {
+        "value": 29,
+        "count": 5,
+        "allocations": [
+          {
+            "order_id": "d",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "e",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "f",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "g",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "h",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 0,
+          "t": 0,
+          "u": 1
+        }
+      }
+    },
+    {
+      "id": "mixed-capacity-5",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 19,
+        "count": 3,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "g",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "h",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 0,
+          "t": 2,
+          "u": 4
+        }
+      },
+      "actual": {
+        "value": 26,
+        "count": 4,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "b",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "c",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "h",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 0,
+          "t": 1,
+          "u": 4
+        }
+      }
+    },
+    {
+      "id": "mixed-capacity-6",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 45,
+        "count": 5,
+        "allocations": [
+          {
+            "order_id": "c",
+            "choice_id": "b"
+          },
+          {
+            "order_id": "d",
+            "choice_id": "b"
+          },
+          {
+            "order_id": "e",
+            "choice_id": "b"
+          },
+          {
+            "order_id": "f",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "g",
+            "choice_id": "b"
+          }
+        ],
+        "remaining": {
+          "s": 1,
+          "t": 0,
+          "u": 2
+        }
+      },
+      "actual": {
+        "value": 51,
+        "count": 5,
+        "allocations": [
+          {
+            "order_id": "b",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "c",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "e",
+            "choice_id": "b"
+          },
+          {
+            "order_id": "g",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "h",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 0,
+          "t": 0,
+          "u": 0
+        }
+      }
+    },
+    {
+      "id": "mixed-capacity-7",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 23,
+        "count": 4,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "d",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "g",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "h",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 0,
+          "t": 3,
+          "u": 2
+        }
+      },
+      "actual": {
+        "value": 33,
+        "count": 5,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "b",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "d",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "e",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "g",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 1,
+          "t": 1,
+          "u": 0
+        }
+      }
+    },
+    {
+      "id": "mixed-capacity-8",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 24,
+        "count": 4,
+        "allocations": [
+          {
+            "order_id": "b",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "c",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "d",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "h",
+            "choice_id": "b"
+          }
+        ],
+        "remaining": {
+          "s": 2,
+          "t": 0,
+          "u": 0
+        }
+      },
+      "actual": {
+        "value": 20,
+        "count": 5,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "b"
+          },
+          {
+            "order_id": "c",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "d",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "e",
+            "choice_id": "b"
+          },
+          {
+            "order_id": "h",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 1,
+          "t": 0,
+          "u": 1
+        }
+      }
+    },
+    {
+      "id": "mixed-capacity-9",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 16,
+        "count": 2,
+        "allocations": [
+          {
+            "order_id": "c",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "e",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 6,
+          "t": 6,
+          "u": 1
+        }
+      },
+      "actual": {
+        "value": 30,
+        "count": 6,
+        "allocations": [
+          {
+            "order_id": "a",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "b",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "c",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "d",
+            "choice_id": "b"
+          },
+          {
+            "order_id": "e",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "g",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 0,
+          "t": 4,
+          "u": 0
+        }
+      }
+    },
+    {
+      "id": "mixed-capacity-10",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 35,
+        "count": 4,
+        "allocations": [
+          {
+            "order_id": "e",
+            "choice_id": "b"
+          },
+          {
+            "order_id": "f",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "g",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "h",
+            "choice_id": "b"
+          }
+        ],
+        "remaining": {
+          "s": 2,
+          "t": 0,
+          "u": 1
+        }
+      },
+      "actual": {
+        "value": 37,
+        "count": 5,
+        "allocations": [
+          {
+            "order_id": "d",
+            "choice_id": "b"
+          },
+          {
+            "order_id": "e",
+            "choice_id": "b"
+          },
+          {
+            "order_id": "f",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "g",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "h",
+            "choice_id": "b"
+          }
+        ],
+        "remaining": {
+          "s": 2,
+          "t": 0,
+          "u": 0
+        }
+      }
+    },
+    {
+      "id": "mixed-capacity-11",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 28,
+        "count": 3,
+        "allocations": [
+          {
+            "order_id": "b",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "f",
+            "choice_id": "b"
+          },
+          {
+            "order_id": "g",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 2,
+          "t": 0,
+          "u": 0
+        }
+      },
+      "actual": {
+        "value": 29,
+        "count": 4,
+        "allocations": [
+          {
+            "order_id": "b",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "c",
+            "choice_id": "b"
+          },
+          {
+            "order_id": "d",
+            "choice_id": "a"
+          },
+          {
+            "order_id": "h",
+            "choice_id": "a"
+          }
+        ],
+        "remaining": {
+          "s": 0,
+          "t": 0,
+          "u": 0
+        }
+      }
+    }
+  ],
+  "passed": 7,
+  "total": 31,
+  "success": false
+}

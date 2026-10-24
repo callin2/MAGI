@@ -1,0 +1,1 @@
+{"schema_version":1,"task":"code","summary":"Hardened tracker initialization against invalid imported completion states while preserving list and reopen after evidence artifacts change.","tests_run":["functions.tests: 14 tests passed (test_tracker.py and test_candidate.py)"],"limitations":[]}

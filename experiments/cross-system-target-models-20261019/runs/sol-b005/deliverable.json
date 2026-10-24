@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "summary": "Hardened verdict.mjs and its CLI evidence loader: real process exits, stored source SHA-256, and actual fixed-holdout output now corroborate report claims. Preserved response-kind, compiler-pin, count/status, saved-final-candidate, and historical-verdict overwrite protections. Added candidate.test.mjs regression coverage and notes.md.",
+  "tests_run": [
+    "Ran the provided tests tool twice against public.test.mjs and candidate.test.mjs; both runs passed all 8 tests with exit code 0.",
+    "Final run covered source digest verification, actual turn exit codes, response parsing, status separation, report/capture holdout agreement, real CLI file loading through runCli, missing evidence, and historical verdict overwrite rejection."
+  ],
+  "limitations": [
+    "CLI filesystem behavior was exercised through its shared runCli entry point, not a spawned Node process.",
+    "No compiler or holdout executable was rerun; validation checks supplied captures and stored source bytes.",
+    "Evidence consistency checks do not authenticate files against an actor able to modify all reports, captures, and source."
+  ]
+}

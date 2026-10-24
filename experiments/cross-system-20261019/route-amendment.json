@@ -1,0 +1,21 @@
+{
+  "amended_at": "2026-10-19T01:00:43.506094+00:00",
+  "original_frozen_sha256": "e9178ad8a8ffae6d31c7c4aacab56bbb5c5a064b62de1c1eac93e75e6ad6cf6a",
+  "prior_review_commit": "75bc997c28211a53644f70a0b86f401d6f0c41a8",
+  "provider": "openrouter",
+  "model": "openai/gpt-4.1-mini",
+  "reasoning": "none; nonreasoning model",
+  "task_responses_before_amendment": 0,
+  "old_auth_retried": false,
+  "credentials_relocated": false,
+  "persistent_settings_changed": false,
+  "files": {
+    "scripts/cross_system/resume/evaluate.py": "a7451de995e76b76ea4d8d54b1aef6813c03ebfcd05e56116c9361a8536e9f55",
+    "scripts/cross_system/resume/inspect_connections.py": "2348012dbef6d2b01dc8f59ea11d9e91e3664577980fa834c234d1b08614bcfd",
+    "scripts/cross_system/resume/openrouter_inventory.py": "f27dd47bc9c7aeb4ae0fbcd500faabee917497dd48666c705b814d0f40fd3319",
+    "scripts/cross_system/resume/provider.mjs": "2fdd636fa4dfdc28e07ba640a939d0b6b9625c1e1a8208872c7c6c08004dc140",
+    "scripts/cross_system/resume/run.mjs": "a6b59193296cdb6a8c19ebb90baa530e9272d3a00defec2c8b63e26b754dcf77",
+    "scripts/cross_system/resume/smoke.mjs": "f0c019681bbda911e166803a61741d335d97940b2f7a34b00a1b996e4a07e760",
+    "experiments/cross-system-20261019/connection-review/route-amendment.md": "47ada46a15bafff13c6a4dcc4bb008c84d073a79a171bee3164ca241057301a9"
+  }
+}

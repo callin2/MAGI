@@ -1,0 +1,165 @@
+{
+  "executed_at": "2026-10-19T05:39:47.657593+00:00",
+  "command": [
+    "node",
+    "experiments/hard-domains-20261019/source-A/events/check-after.mjs"
+  ],
+  "cases": [
+    {
+      "id": "late-arrival",
+      "input": [
+        {
+          "device": "a",
+          "observed_ms": 100,
+          "value": 10,
+          "reading_id": "z"
+        },
+        {
+          "device": "a",
+          "observed_ms": 50,
+          "value": 5,
+          "reading_id": "b"
+        }
+      ],
+      "expected": {
+        "a": 10
+      },
+      "actual": {
+        "a": 10
+      },
+      "passed": true
+    },
+    {
+      "id": "reordered",
+      "input": [
+        {
+          "device": "a",
+          "observed_ms": 50,
+          "value": 5,
+          "reading_id": "b"
+        },
+        {
+          "device": "a",
+          "observed_ms": 100,
+          "value": 10,
+          "reading_id": "z"
+        }
+      ],
+      "expected": {
+        "a": 10
+      },
+      "actual": {
+        "a": 10
+      },
+      "passed": true
+    },
+    {
+      "id": "retry",
+      "input": [
+        {
+          "device": "a",
+          "observed_ms": 100,
+          "value": 10,
+          "reading_id": "z"
+        },
+        {
+          "device": "a",
+          "observed_ms": 100,
+          "value": 10,
+          "reading_id": "z"
+        }
+      ],
+      "expected": {
+        "a": 10
+      },
+      "actual": {
+        "a": 10
+      },
+      "passed": true
+    },
+    {
+      "id": "stable-tie",
+      "input": [
+        {
+          "device": "a",
+          "observed_ms": 100,
+          "value": 10,
+          "reading_id": "z"
+        },
+        {
+          "device": "a",
+          "observed_ms": 100,
+          "value": 11,
+          "reading_id": "y"
+        }
+      ],
+      "expected": {
+        "a": 10
+      },
+      "actual": {
+        "a": 10
+      },
+      "passed": true
+    },
+    {
+      "id": "tie-permutation",
+      "input": [
+        {
+          "device": "a",
+          "observed_ms": 100,
+          "value": 11,
+          "reading_id": "y"
+        },
+        {
+          "device": "a",
+          "observed_ms": 100,
+          "value": 10,
+          "reading_id": "z"
+        }
+      ],
+      "expected": {
+        "a": 10
+      },
+      "actual": {
+        "a": 10
+      },
+      "passed": true
+    },
+    {
+      "id": "independent-device",
+      "input": [
+        {
+          "device": "a",
+          "observed_ms": 100,
+          "value": 10,
+          "reading_id": "z"
+        },
+        {
+          "device": "b",
+          "observed_ms": 1,
+          "value": 9,
+          "reading_id": "a"
+        },
+        {
+          "device": "a",
+          "observed_ms": 50,
+          "value": 5,
+          "reading_id": "b"
+        }
+      ],
+      "expected": {
+        "a": 10,
+        "b": 9
+      },
+      "actual": {
+        "a": 10,
+        "b": 9
+      },
+      "passed": true
+    }
+  ],
+  "passed": 6,
+  "total": 6,
+  "stdout": "[{\"id\":\"late-arrival\",\"input\":[{\"device\":\"a\",\"observed_ms\":100,\"value\":10,\"reading_id\":\"z\"},{\"device\":\"a\",\"observed_ms\":50,\"value\":5,\"reading_id\":\"b\"}],\"expected\":{\"a\":10},\"actual\":{\"a\":10},\"passed\":true},{\"id\":\"reordered\",\"input\":[{\"device\":\"a\",\"observed_ms\":50,\"value\":5,\"reading_id\":\"b\"},{\"device\":\"a\",\"observed_ms\":100,\"value\":10,\"reading_id\":\"z\"}],\"expected\":{\"a\":10},\"actual\":{\"a\":10},\"passed\":true},{\"id\":\"retry\",\"input\":[{\"device\":\"a\",\"observed_ms\":100,\"value\":10,\"reading_id\":\"z\"},{\"device\":\"a\",\"observed_ms\":100,\"value\":10,\"reading_id\":\"z\"}],\"expected\":{\"a\":10},\"actual\":{\"a\":10},\"passed\":true},{\"id\":\"stable-tie\",\"input\":[{\"device\":\"a\",\"observed_ms\":100,\"value\":10,\"reading_id\":\"z\"},{\"device\":\"a\",\"observed_ms\":100,\"value\":11,\"reading_id\":\"y\"}],\"expected\":{\"a\":10},\"actual\":{\"a\":10},\"passed\":true},{\"id\":\"tie-permutation\",\"input\":[{\"device\":\"a\",\"observed_ms\":100,\"value\":11,\"reading_id\":\"y\"},{\"device\":\"a\",\"observed_ms\":100,\"value\":10,\"reading_id\":\"z\"}],\"expected\":{\"a\":10},\"actual\":{\"a\":10},\"passed\":true},{\"id\":\"independent-device\",\"input\":[{\"device\":\"a\",\"observed_ms\":100,\"value\":10,\"reading_id\":\"z\"},{\"device\":\"b\",\"observed_ms\":1,\"value\":9,\"reading_id\":\"a\"},{\"device\":\"a\",\"observed_ms\":50,\"value\":5,\"reading_id\":\"b\"}],\"expected\":{\"a\":10,\"b\":9},\"actual\":{\"a\":10,\"b\":9},\"passed\":true}]\n",
+  "stderr": ""
+}

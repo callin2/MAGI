@@ -1,0 +1,211 @@
+{
+  "domain": "events",
+  "cases": [
+    {
+      "id": "empty",
+      "axis": "normal",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "simple",
+      "axis": "normal",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "retransmission",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "same-payload-distinct-ids",
+      "axis": "counterexample",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "replace-not-add",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "older-time-higher-revision",
+      "axis": "counterexample",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "newer-time-lower-revision",
+      "axis": "counterexample",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "move-key-and-window",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "delete-removes",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "unknown-delete-tombstone",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "resurrection-higher-revision",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "zero-total-not-empty",
+      "axis": "counterexample",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "zero-amount-counts",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "negative-time-floor",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "exact-window-boundary",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "late-new-after-finalization",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "allowed-lateness-open",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "exact-seal-with-lateness",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "watermark-never-rewinds",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "duplicate-after-finalization",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "move-from-sealed-atomic",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "move-to-sealed-atomic",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "rejected-version-does-not-poison",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "delete-sealed-rejected",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "signed-watermark-zero",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "conflicting-revision",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "delete-conflict-same-revision",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "lower-revision-different-payload",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "distinct-keys-with-separator",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    }
+  ],
+  "passed": 29,
+  "total": 29,
+  "success": true
+}

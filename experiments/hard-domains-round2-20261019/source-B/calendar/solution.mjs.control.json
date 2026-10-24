@@ -1,0 +1,932 @@
+{
+  "domain": "calendar",
+  "cases": [
+    {
+      "id": "empty",
+      "axis": "normal",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "simple",
+      "axis": "normal",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "global-short-pair-beats-long",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 9,
+        "count": 2,
+        "bookings": [
+          {
+            "meeting_id": "b",
+            "room_id": "a",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T10:00:00.000Z"
+          },
+          {
+            "meeting_id": "c",
+            "room_id": "a",
+            "start": "2024-01-07T10:00:00.000Z",
+            "end": "2024-01-07T11:00:00.000Z"
+          }
+        ]
+      },
+      "actual": {
+        "value": 8,
+        "count": 1,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T11:00:00.000Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "assign-room-globally",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 10,
+        "count": 2,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "b",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:30:00.000Z"
+          },
+          {
+            "meeting_id": "b",
+            "room_id": "a",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:30:00.000Z"
+          }
+        ]
+      },
+      "actual": {
+        "value": 5,
+        "count": 1,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:30:00.000Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "shared-person-conflict",
+      "axis": "regression",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 5,
+        "count": 1,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:30:00.000Z"
+          }
+        ]
+      },
+      "actual": {
+        "value": 10,
+        "count": 2,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:30:00.000Z"
+          },
+          {
+            "meeting_id": "b",
+            "room_id": "b",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:30:00.000Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "directed-setup-boundary",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 5,
+        "count": 1,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:30:00.000Z"
+          }
+        ]
+      },
+      "actual": {
+        "value": 10,
+        "count": 2,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:30:00.000Z"
+          },
+          {
+            "meeting_id": "b",
+            "room_id": "b",
+            "start": "2024-01-07T09:35:00.000Z",
+            "end": "2024-01-07T10:05:00.000Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "setup-equality",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "consecutive-not-all-pairs",
+      "axis": "counterexample",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "required-booking-unavailable",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 0,
+        "count": 0,
+        "bookings": []
+      },
+      "actual": {
+        "value": 10,
+        "count": 2,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-01-07T08:00:00.000Z",
+            "end": "2024-01-07T08:30:00.000Z"
+          },
+          {
+            "meeting_id": "b",
+            "room_id": "a",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:30:00.000Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "dependency-ends-at-start",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "dependency-order-not-id-order",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "either-fold-one-booking",
+      "axis": "counterexample",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 5,
+        "count": 1,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-11-03T05:30:00.000Z",
+            "end": "2024-11-03T06:00:00.000Z"
+          }
+        ]
+      },
+      "actual": {
+        "value": 5,
+        "count": 1,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-11-03T01:30:00.000Z",
+            "end": "2024-11-03T02:00:00.000Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "either-fold-selects-later-option",
+      "axis": "counterexample",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 5,
+        "count": 1,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-11-03T06:30:00.000Z",
+            "end": "2024-11-03T07:00:00.000Z"
+          }
+        ]
+      },
+      "actual": {
+        "value": 5,
+        "count": 1,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-11-03T01:30:00.000Z",
+            "end": "2024-11-03T02:00:00.000Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "gap-not-bookable",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 0,
+        "count": 0,
+        "bookings": []
+      },
+      "actual": {
+        "value": 5,
+        "count": 1,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-03-10T02:30:00.000Z",
+            "end": "2024-03-10T03:00:00.000Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quarter-offset",
+      "axis": "regression",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 5,
+        "count": 1,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-01-07T03:15:00.000Z",
+            "end": "2024-01-07T03:45:00.000Z"
+          }
+        ]
+      },
+      "actual": {
+        "value": 5,
+        "count": 1,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:30:00.000Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "half-hour-fold-choice",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 5,
+        "count": 1,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-04-06T14:45:00.000Z",
+            "end": "2024-04-06T15:15:00.000Z"
+          }
+        ]
+      },
+      "actual": {
+        "value": 5,
+        "count": 1,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-04-07T01:45:00.000Z",
+            "end": "2024-04-07T02:15:00.000Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "block-is-room-only",
+      "axis": "regression",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 5,
+        "count": 1,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "b",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:30:00.000Z"
+          }
+        ]
+      },
+      "actual": {
+        "value": 5,
+        "count": 1,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:30:00.000Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "zero-value-count-and-lex",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 0,
+        "count": 2,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-01-07T10:00:00.000Z",
+            "end": "2024-01-07T10:30:00.000Z"
+          },
+          {
+            "meeting_id": "b",
+            "room_id": "a",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:30:00.000Z"
+          }
+        ]
+      },
+      "actual": {
+        "value": 0,
+        "count": 2,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "b",
+            "start": "2024-01-07T10:00:00.000Z",
+            "end": "2024-01-07T10:30:00.000Z"
+          },
+          {
+            "meeting_id": "b",
+            "room_id": "b",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:30:00.000Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mixed-assignment-0",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 18,
+        "count": 3,
+        "bookings": [
+          {
+            "meeting_id": "b",
+            "room_id": "a",
+            "start": "2024-01-07T10:15:00.000Z",
+            "end": "2024-01-07T10:55:00.000Z"
+          },
+          {
+            "meeting_id": "c",
+            "room_id": "a",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:40:00.000Z"
+          },
+          {
+            "meeting_id": "e",
+            "room_id": "b",
+            "start": "2024-01-07T09:15:00.000Z",
+            "end": "2024-01-07T09:35:00.000Z"
+          }
+        ]
+      },
+      "actual": {
+        "value": 20,
+        "count": 3,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-01-07T09:30:00.000Z",
+            "end": "2024-01-07T09:50:00.000Z"
+          },
+          {
+            "meeting_id": "b",
+            "room_id": "a",
+            "start": "2024-01-07T10:15:00.000Z",
+            "end": "2024-01-07T10:55:00.000Z"
+          },
+          {
+            "meeting_id": "e",
+            "room_id": "b",
+            "start": "2024-01-07T09:15:00.000Z",
+            "end": "2024-01-07T09:35:00.000Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mixed-assignment-1",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 14,
+        "count": 3,
+        "bookings": [
+          {
+            "meeting_id": "b",
+            "room_id": "a",
+            "start": "2024-01-07T09:45:00.000Z",
+            "end": "2024-01-07T10:05:00.000Z"
+          },
+          {
+            "meeting_id": "d",
+            "room_id": "b",
+            "start": "2024-01-07T09:30:00.000Z",
+            "end": "2024-01-07T10:00:00.000Z"
+          },
+          {
+            "meeting_id": "f",
+            "room_id": "b",
+            "start": "2024-01-07T10:00:00.000Z",
+            "end": "2024-01-07T10:20:00.000Z"
+          }
+        ]
+      },
+      "actual": {
+        "value": 6,
+        "count": 2,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "b",
+            "start": "2024-01-07T09:15:00.000Z",
+            "end": "2024-01-07T09:55:00.000Z"
+          },
+          {
+            "meeting_id": "c",
+            "room_id": "a",
+            "start": "2024-01-07T10:15:00.000Z",
+            "end": "2024-01-07T10:45:00.000Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mixed-assignment-2",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 15,
+        "count": 3,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-01-07T09:30:00.000Z",
+            "end": "2024-01-07T10:10:00.000Z"
+          },
+          {
+            "meeting_id": "c",
+            "room_id": "a",
+            "start": "2024-01-07T10:15:00.000Z",
+            "end": "2024-01-07T10:35:00.000Z"
+          },
+          {
+            "meeting_id": "f",
+            "room_id": "b",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:40:00.000Z"
+          }
+        ]
+      },
+      "actual": {
+        "value": 14,
+        "count": 3,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "b",
+            "start": "2024-01-07T09:30:00.000Z",
+            "end": "2024-01-07T10:10:00.000Z"
+          },
+          {
+            "meeting_id": "b",
+            "room_id": "a",
+            "start": "2024-01-07T10:15:00.000Z",
+            "end": "2024-01-07T10:45:00.000Z"
+          },
+          {
+            "meeting_id": "d",
+            "room_id": "a",
+            "start": "2024-01-07T09:30:00.000Z",
+            "end": "2024-01-07T10:00:00.000Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mixed-assignment-3",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 13,
+        "count": 3,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "b",
+            "start": "2024-01-07T09:30:00.000Z",
+            "end": "2024-01-07T10:00:00.000Z"
+          },
+          {
+            "meeting_id": "b",
+            "room_id": "b",
+            "start": "2024-01-07T10:00:00.000Z",
+            "end": "2024-01-07T10:20:00.000Z"
+          },
+          {
+            "meeting_id": "e",
+            "room_id": "a",
+            "start": "2024-01-07T09:30:00.000Z",
+            "end": "2024-01-07T10:00:00.000Z"
+          }
+        ]
+      },
+      "actual": {
+        "value": 14,
+        "count": 4,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "b",
+            "start": "2024-01-07T09:30:00.000Z",
+            "end": "2024-01-07T10:00:00.000Z"
+          },
+          {
+            "meeting_id": "b",
+            "room_id": "b",
+            "start": "2024-01-07T10:00:00.000Z",
+            "end": "2024-01-07T10:20:00.000Z"
+          },
+          {
+            "meeting_id": "c",
+            "room_id": "a",
+            "start": "2024-01-07T10:00:00.000Z",
+            "end": "2024-01-07T10:20:00.000Z"
+          },
+          {
+            "meeting_id": "e",
+            "room_id": "a",
+            "start": "2024-01-07T09:30:00.000Z",
+            "end": "2024-01-07T10:00:00.000Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mixed-assignment-4",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 31,
+        "count": 5,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:20:00.000Z"
+          },
+          {
+            "meeting_id": "c",
+            "room_id": "b",
+            "start": "2024-01-07T10:15:00.000Z",
+            "end": "2024-01-07T10:35:00.000Z"
+          },
+          {
+            "meeting_id": "d",
+            "room_id": "b",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:20:00.000Z"
+          },
+          {
+            "meeting_id": "e",
+            "room_id": "b",
+            "start": "2024-01-07T09:30:00.000Z",
+            "end": "2024-01-07T10:10:00.000Z"
+          },
+          {
+            "meeting_id": "f",
+            "room_id": "a",
+            "start": "2024-01-07T09:45:00.000Z",
+            "end": "2024-01-07T10:15:00.000Z"
+          }
+        ]
+      },
+      "actual": {
+        "value": 22,
+        "count": 5,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:20:00.000Z"
+          },
+          {
+            "meeting_id": "b",
+            "room_id": "b",
+            "start": "2024-01-07T09:45:00.000Z",
+            "end": "2024-01-07T10:05:00.000Z"
+          },
+          {
+            "meeting_id": "c",
+            "room_id": "b",
+            "start": "2024-01-07T10:15:00.000Z",
+            "end": "2024-01-07T10:35:00.000Z"
+          },
+          {
+            "meeting_id": "d",
+            "room_id": "b",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:20:00.000Z"
+          },
+          {
+            "meeting_id": "f",
+            "room_id": "a",
+            "start": "2024-01-07T09:45:00.000Z",
+            "end": "2024-01-07T10:15:00.000Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mixed-assignment-5",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 12,
+        "count": 3,
+        "bookings": [
+          {
+            "meeting_id": "c",
+            "room_id": "a",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:30:00.000Z"
+          },
+          {
+            "meeting_id": "e",
+            "room_id": "b",
+            "start": "2024-01-07T09:30:00.000Z",
+            "end": "2024-01-07T09:50:00.000Z"
+          },
+          {
+            "meeting_id": "f",
+            "room_id": "a",
+            "start": "2024-01-07T09:45:00.000Z",
+            "end": "2024-01-07T10:25:00.000Z"
+          }
+        ]
+      },
+      "actual": {
+        "value": 5,
+        "count": 3,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-01-07T09:15:00.000Z",
+            "end": "2024-01-07T09:45:00.000Z"
+          },
+          {
+            "meeting_id": "b",
+            "room_id": "a",
+            "start": "2024-01-07T10:00:00.000Z",
+            "end": "2024-01-07T10:30:00.000Z"
+          },
+          {
+            "meeting_id": "e",
+            "room_id": "b",
+            "start": "2024-01-07T09:30:00.000Z",
+            "end": "2024-01-07T09:50:00.000Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mixed-assignment-6",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 28,
+        "count": 4,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "b",
+            "start": "2024-01-07T09:45:00.000Z",
+            "end": "2024-01-07T10:15:00.000Z"
+          },
+          {
+            "meeting_id": "c",
+            "room_id": "b",
+            "start": "2024-01-07T10:15:00.000Z",
+            "end": "2024-01-07T10:35:00.000Z"
+          },
+          {
+            "meeting_id": "d",
+            "room_id": "a",
+            "start": "2024-01-07T09:45:00.000Z",
+            "end": "2024-01-07T10:25:00.000Z"
+          },
+          {
+            "meeting_id": "e",
+            "room_id": "b",
+            "start": "2024-01-07T09:15:00.000Z",
+            "end": "2024-01-07T09:45:00.000Z"
+          }
+        ]
+      },
+      "actual": {
+        "value": 34,
+        "count": 5,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "b",
+            "start": "2024-01-07T09:45:00.000Z",
+            "end": "2024-01-07T10:15:00.000Z"
+          },
+          {
+            "meeting_id": "c",
+            "room_id": "b",
+            "start": "2024-01-07T10:15:00.000Z",
+            "end": "2024-01-07T10:35:00.000Z"
+          },
+          {
+            "meeting_id": "d",
+            "room_id": "a",
+            "start": "2024-01-07T09:45:00.000Z",
+            "end": "2024-01-07T10:25:00.000Z"
+          },
+          {
+            "meeting_id": "e",
+            "room_id": "b",
+            "start": "2024-01-07T09:15:00.000Z",
+            "end": "2024-01-07T09:45:00.000Z"
+          },
+          {
+            "meeting_id": "f",
+            "room_id": "a",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:30:00.000Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mixed-assignment-7",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "value": 24,
+        "count": 3,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-01-07T09:15:00.000Z",
+            "end": "2024-01-07T09:55:00.000Z"
+          },
+          {
+            "meeting_id": "d",
+            "room_id": "a",
+            "start": "2024-01-07T10:00:00.000Z",
+            "end": "2024-01-07T10:40:00.000Z"
+          },
+          {
+            "meeting_id": "f",
+            "room_id": "b",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:40:00.000Z"
+          }
+        ]
+      },
+      "actual": {
+        "value": 17,
+        "count": 3,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "b",
+            "start": "2024-01-07T09:15:00.000Z",
+            "end": "2024-01-07T09:55:00.000Z"
+          },
+          {
+            "meeting_id": "c",
+            "room_id": "a",
+            "start": "2024-01-07T10:15:00.000Z",
+            "end": "2024-01-07T10:55:00.000Z"
+          },
+          {
+            "meeting_id": "e",
+            "room_id": "b",
+            "start": "2024-01-07T10:00:00.000Z",
+            "end": "2024-01-07T10:40:00.000Z"
+          }
+        ]
+      }
+    }
+  ],
+  "passed": 6,
+  "total": 26,
+  "success": false
+}

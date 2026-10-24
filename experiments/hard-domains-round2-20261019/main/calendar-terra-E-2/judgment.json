@@ -1,0 +1,190 @@
+{
+  "domain": "calendar",
+  "cases": [
+    {
+      "id": "empty",
+      "axis": "normal",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "simple",
+      "axis": "normal",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "global-short-pair-beats-long",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "assign-room-globally",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "shared-person-conflict",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "directed-setup-boundary",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "setup-equality",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "consecutive-not-all-pairs",
+      "axis": "counterexample",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "required-booking-unavailable",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "dependency-ends-at-start",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "dependency-order-not-id-order",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "either-fold-one-booking",
+      "axis": "counterexample",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "either-fold-selects-later-option",
+      "axis": "counterexample",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "gap-not-bookable",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "quarter-offset",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "half-hour-fold-choice",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "block-is-room-only",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "zero-value-count-and-lex",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "mixed-assignment-0",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "mixed-assignment-1",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "mixed-assignment-2",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "mixed-assignment-3",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "mixed-assignment-4",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "mixed-assignment-5",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "mixed-assignment-6",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "mixed-assignment-7",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    }
+  ],
+  "passed": 26,
+  "total": 26,
+  "success": true
+}

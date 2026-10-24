@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "summary": "Hardened the standalone verdict classifier and CLI to require actual process captures, exact saved-source SHA-256 corroboration, and a successful fixed-holdout capture. Kept conversational completion distinct from final-candidate and holdout acceptance, and preserved verdict overwrite protections.",
+  "tests_run": [
+    "Ran the provided tests tool against public.test.mjs and candidate.test.mjs: 10 tests passed, 0 failed (exit code 0).",
+    "Candidate regression suite exercised source strings and Buffers, absent or mismatched evidence, numeric process exits, strict holdout report claims and capture output, conversational completion, compiler-pin parity, response parsing, turn counts, and multiple turns.",
+    "CLI integration regression executed the module entry path through isolated dynamic imports using real temporary case files; checked valid artifacts, missing source/holdout/turn captures, modified source, failing CLI exit status, and refusal to overwrite existing verdict files."
+  ],
+  "limitations": [
+    "No external compiler or fixed-holdout program was executed; acceptance uses the supplied source bytes and recorded process/check captures.",
+    "CLI integration was exercised in-process through the actual entry path, not by spawning a child process.",
+    "Evidence files are trusted as captures supplied to this offline classifier; this repair does not authenticate their provenance."
+  ]
+}

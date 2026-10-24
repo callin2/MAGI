@@ -1,0 +1,145 @@
+{
+  "started_at": "2026-10-19T01:01:27.079Z",
+  "ended_at": "2026-10-19T01:02:19.252Z",
+  "elapsed_seconds": 52.13975095799999,
+  "model_calls": 9,
+  "tool_calls": 10,
+  "tool_errors": 2,
+  "stop": "settled",
+  "provider_error": false,
+  "provider": "openrouter",
+  "configured_model": "openai/gpt-4.1-mini",
+  "usage": [
+    {
+      "input": 951,
+      "output": 51,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 1002,
+      "cost": {
+        "input": 0.0003804,
+        "output": 0.00008159999999999999,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0.00046199999999999995
+      }
+    },
+    {
+      "input": 2301,
+      "output": 1832,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 4133,
+      "cost": {
+        "input": 0.0009203999999999999,
+        "output": 0.0029311999999999997,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0.0038515999999999997
+      }
+    },
+    {
+      "input": 2008,
+      "output": 1355,
+      "cacheRead": 2176,
+      "cacheWrite": 0,
+      "totalTokens": 5539,
+      "cost": {
+        "input": 0.0008032,
+        "output": 0.002168,
+        "cacheRead": 0.00021759999999999998,
+        "cacheWrite": 0,
+        "total": 0.0031888
+      }
+    },
+    {
+      "input": 1493,
+      "output": 38,
+      "cacheRead": 4096,
+      "cacheWrite": 0,
+      "totalTokens": 5627,
+      "cost": {
+        "input": 0.0005972,
+        "output": 0.0000608,
+        "cacheRead": 0.0004096,
+        "cacheWrite": 0,
+        "total": 0.0010676
+      }
+    },
+    {
+      "input": 6763,
+      "output": 1981,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 8744,
+      "cost": {
+        "input": 0.0027052,
+        "output": 0.0031696,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0.0058747999999999995
+      }
+    },
+    {
+      "input": 2013,
+      "output": 10,
+      "cacheRead": 6784,
+      "cacheWrite": 0,
+      "totalTokens": 8807,
+      "cost": {
+        "input": 0.0008052,
+        "output": 0.000016,
+        "cacheRead": 0.0006784,
+        "cacheWrite": 0,
+        "total": 0.0014995999999999998
+      }
+    },
+    {
+      "input": 393,
+      "output": 202,
+      "cacheRead": 8704,
+      "cacheWrite": 0,
+      "totalTokens": 9299,
+      "cost": {
+        "input": 0.0001572,
+        "output": 0.0003232,
+        "cacheRead": 0.0008703999999999999,
+        "cacheWrite": 0,
+        "total": 0.0013507999999999999
+      }
+    },
+    {
+      "input": 394,
+      "output": 508,
+      "cacheRead": 8960,
+      "cacheWrite": 0,
+      "totalTokens": 9862,
+      "cost": {
+        "input": 0.00015759999999999998,
+        "output": 0.0008127999999999999,
+        "cacheRead": 0.000896,
+        "cacheWrite": 0,
+        "total": 0.0018663999999999998
+      }
+    },
+    {
+      "input": 704,
+      "output": 196,
+      "cacheRead": 9216,
+      "cacheWrite": 0,
+      "totalTokens": 10116,
+      "cost": {
+        "input": 0.0002816,
+        "output": 0.0003136,
+        "cacheRead": 0.0009216,
+        "cacheWrite": 0,
+        "total": 0.0015168
+      }
+    }
+  ],
+  "fresh_conversation": true,
+  "history_messages_at_start": 1,
+  "user_corrections": 0,
+  "api_cost_usd": null,
+  "human_time_saving": null
+}

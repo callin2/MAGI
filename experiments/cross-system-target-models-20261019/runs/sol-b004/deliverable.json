@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "summary": "Hardened the farm_studio_api verdict classifier and CLI evidence loading. Actual numeric process exits are required for completion, final candidates require a saved-source claim corroborated by SHA-256 of supplied source bytes, and fixed holdout success requires both explicit report success and a successful actual capture with the required output marker. Added classifier and real CLI-path regression tests while preserving status/count fields and overwrite protections.",
+  "tests_run": [
+    "functions.tests: public.test.mjs and candidate.test.mjs; 10 tests passed, 0 failed (exit code 0).",
+    "Candidate regression tests exercised the CLI module in-process against temporary case directories, including valid evidence, missing/changed source, missing/malformed holdout, missing/failed turn captures, and historical verdict overwrite refusal."
+  ],
+  "limitations": [
+    "Evidence is validated from provided local files; no compiler or fixed-holdout executable was run independently.",
+    "CLI tests invoke the real module entry path in-process rather than spawning a separate Node process, consistent with available tool permissions.",
+    "The holdout output contract is the specified line prefix; no additional expectations-count format or unrelated evidence-array schema is imposed."
+  ]
+}

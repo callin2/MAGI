@@ -1,0 +1,87 @@
+{
+  "status": "blocked_authentication",
+  "model_experiment_executed": false,
+  "planned_runs": 6,
+  "executed_runs": 0,
+  "provider": "zai",
+  "model": "glm-4.7",
+  "preflight_calls": 1,
+  "preflight_error": "401 Authentication Failed",
+  "preflight_elapsed_seconds": 0.245,
+  "retry_performed": false,
+  "auth_or_config_changed": false,
+  "simulated_model_responses": false,
+  "runs": [
+    {
+      "id": "b001",
+      "arm": "E",
+      "repetition": 2,
+      "status": "not_run",
+      "success": null,
+      "elapsed_seconds": null,
+      "usage": null,
+      "user_corrections": null
+    },
+    {
+      "id": "b002",
+      "arm": "G",
+      "repetition": 2,
+      "status": "not_run",
+      "success": null,
+      "elapsed_seconds": null,
+      "usage": null,
+      "user_corrections": null
+    },
+    {
+      "id": "b003",
+      "arm": "F",
+      "repetition": 2,
+      "status": "not_run",
+      "success": null,
+      "elapsed_seconds": null,
+      "usage": null,
+      "user_corrections": null
+    },
+    {
+      "id": "b004",
+      "arm": "G",
+      "repetition": 1,
+      "status": "not_run",
+      "success": null,
+      "elapsed_seconds": null,
+      "usage": null,
+      "user_corrections": null
+    },
+    {
+      "id": "b005",
+      "arm": "F",
+      "repetition": 1,
+      "status": "not_run",
+      "success": null,
+      "elapsed_seconds": null,
+      "usage": null,
+      "user_corrections": null
+    },
+    {
+      "id": "b006",
+      "arm": "E",
+      "repetition": 1,
+      "status": "not_run",
+      "success": null,
+      "elapsed_seconds": null,
+      "usage": null,
+      "user_corrections": null
+    }
+  ],
+  "deterministic_calibration": {
+    "baseline_passed": 15,
+    "reference_passed": 26,
+    "criteria": 26,
+    "integrity_passed": 59,
+    "integrity_checks": 59
+  },
+  "inference_token_usage": null,
+  "api_cost_usd": null,
+  "human_time_saving": null,
+  "pending": "Actual six fresh conversations and outcome comparison require materially new evidence that existing provider authentication works; no retry under denied auth."
+}

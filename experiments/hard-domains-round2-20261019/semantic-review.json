@@ -1,0 +1,414 @@
+{
+  "scope": "Frozen raw scores unchanged. Actual candidate functions executed, independent frozen Python oracle used. No model calls or worker feedback.",
+  "reproductions": [
+    {
+      "run": "calendar-luna-G-2",
+      "domain": "calendar",
+      "case": "directed-setup-boundary",
+      "origin": "Existing frozen case; no new scoring criterion.",
+      "input": {
+        "range_start": "2024-01-07T00:00Z",
+        "range_end": "2024-01-08T00:00Z",
+        "rooms": [
+          "a",
+          "b"
+        ],
+        "transitions": {
+          "a": {
+            "a": 0,
+            "b": 10
+          },
+          "b": {
+            "a": 1,
+            "b": 0
+          }
+        },
+        "meetings": [
+          {
+            "id": "a",
+            "zone": "UTC",
+            "local_start": "2024-01-07T09:00",
+            "minutes": 30,
+            "value": 5,
+            "eligible_rooms": [
+              "a"
+            ],
+            "people": [
+              "p"
+            ],
+            "requires": [],
+            "fold": "earlier"
+          },
+          {
+            "id": "b",
+            "zone": "UTC",
+            "local_start": "2024-01-07T09:35",
+            "minutes": 30,
+            "value": 5,
+            "eligible_rooms": [
+              "b"
+            ],
+            "people": [
+              "p"
+            ],
+            "requires": [],
+            "fold": "earlier"
+          }
+        ],
+        "blocks": []
+      },
+      "expected": {
+        "value": 5,
+        "count": 1,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:30:00.000Z"
+          }
+        ]
+      },
+      "actual": {
+        "value": 10,
+        "count": 2,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:30:00.000Z"
+          },
+          {
+            "meeting_id": "b",
+            "room_id": "b",
+            "start": "2024-01-07T09:35:00.000Z",
+            "end": "2024-01-07T10:05:00.000Z"
+          }
+        ]
+      },
+      "exit_code": 0,
+      "matches": false,
+      "explanation": "The submitted code adds transition minutes directly to millisecond timestamps; 5 minutes is accepted even though a→b requires10 minutes."
+    },
+    {
+      "run": "calendar-terra-F-2",
+      "domain": "calendar",
+      "case": "consecutive-not-all-pairs",
+      "origin": "Existing frozen case; no new scoring criterion.",
+      "input": {
+        "range_start": "2024-01-07T00:00Z",
+        "range_end": "2024-01-08T00:00Z",
+        "rooms": [
+          "a",
+          "b",
+          "c"
+        ],
+        "transitions": {
+          "a": {
+            "a": 0,
+            "b": 0,
+            "c": 50
+          },
+          "b": {
+            "a": 0,
+            "b": 0,
+            "c": 0
+          },
+          "c": {
+            "a": 0,
+            "b": 0,
+            "c": 0
+          }
+        },
+        "meetings": [
+          {
+            "id": "a",
+            "zone": "UTC",
+            "local_start": "2024-01-07T09:00",
+            "minutes": 30,
+            "value": 5,
+            "eligible_rooms": [
+              "a"
+            ],
+            "people": [
+              "p"
+            ],
+            "requires": [],
+            "fold": "earlier"
+          },
+          {
+            "id": "c",
+            "zone": "UTC",
+            "local_start": "2024-01-07T10:00",
+            "minutes": 30,
+            "value": 5,
+            "eligible_rooms": [
+              "c"
+            ],
+            "people": [
+              "p"
+            ],
+            "requires": [],
+            "fold": "earlier"
+          },
+          {
+            "id": "z",
+            "zone": "UTC",
+            "local_start": "2024-01-07T09:30",
+            "minutes": 30,
+            "value": 5,
+            "eligible_rooms": [
+              "b"
+            ],
+            "people": [
+              "p"
+            ],
+            "requires": [],
+            "fold": "earlier"
+          }
+        ],
+        "blocks": []
+      },
+      "expected": {
+        "value": 15,
+        "count": 3,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:30:00.000Z"
+          },
+          {
+            "meeting_id": "c",
+            "room_id": "c",
+            "start": "2024-01-07T10:00:00.000Z",
+            "end": "2024-01-07T10:30:00.000Z"
+          },
+          {
+            "meeting_id": "z",
+            "room_id": "b",
+            "start": "2024-01-07T09:30:00.000Z",
+            "end": "2024-01-07T10:00:00.000Z"
+          }
+        ]
+      },
+      "actual": {
+        "value": 10,
+        "count": 2,
+        "bookings": [
+          {
+            "meeting_id": "a",
+            "room_id": "a",
+            "start": "2024-01-07T09:00:00.000Z",
+            "end": "2024-01-07T09:30:00.000Z"
+          },
+          {
+            "meeting_id": "z",
+            "room_id": "b",
+            "start": "2024-01-07T09:30:00.000Z",
+            "end": "2024-01-07T10:00:00.000Z"
+          }
+        ]
+      },
+      "exit_code": 0,
+      "matches": false,
+      "explanation": "The submitted code prunes a/c as a conflicting pair although the selected middle z makes consecutive transitions a→b→c feasible. Directed transitions need not satisfy triangle inequality."
+    },
+    {
+      "run": "events-luna-G-1",
+      "domain": "events",
+      "case": "sealed-end-double-gap-minimized",
+      "origin": "Post-hoc minimized reproduction of frozen mixed-session-history-3; diagnostic only, not added to scores.",
+      "input": {
+        "gap_ms": 10,
+        "lateness_ms": 10,
+        "records": [
+          {
+            "kind": "upsert",
+            "id": "e",
+            "rev": 1,
+            "key": "y",
+            "event_time": 3,
+            "amount": -1
+          },
+          {
+            "kind": "watermark",
+            "time": 28
+          },
+          {
+            "kind": "upsert",
+            "id": "c",
+            "rev": 1,
+            "key": "y",
+            "event_time": 34,
+            "amount": -3
+          },
+          {
+            "kind": "upsert",
+            "id": "c",
+            "rev": 2,
+            "key": "y",
+            "event_time": 15,
+            "amount": 2
+          }
+        ]
+      },
+      "expected": {
+        "watermark": 28,
+        "sessions": [
+          {
+            "key": "y",
+            "start": 3,
+            "end": 13,
+            "total": -1,
+            "count": 1,
+            "ids": [
+              "e"
+            ],
+            "final": true
+          },
+          {
+            "key": "y",
+            "start": 15,
+            "end": 25,
+            "total": 2,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 28,
+        "sessions": [
+          {
+            "key": "y",
+            "start": 3,
+            "end": 13,
+            "total": -1,
+            "count": 1,
+            "ids": [
+              "e"
+            ],
+            "final": true
+          },
+          {
+            "key": "y",
+            "start": 34,
+            "end": 44,
+            "total": -3,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "exit_code": 0,
+      "matches": false,
+      "explanation": "Sealed e last=3 already has end=13. c time15 is12 from e and its resulting end25 exceeds cutoff18, so it stays open. Candidate compares with end+gap=23 and wrongly rejects the move, leaving c at34. This is a state/acceptance error independent of throw-versus-skip interpretation."
+    },
+    {
+      "run": "events-luna-F-1",
+      "domain": "events",
+      "case": "sealed-end-double-gap-minimized",
+      "origin": "Post-hoc minimized reproduction of frozen mixed-session-history-3; diagnostic only, not added to scores.",
+      "input": {
+        "gap_ms": 10,
+        "lateness_ms": 10,
+        "records": [
+          {
+            "kind": "upsert",
+            "id": "e",
+            "rev": 1,
+            "key": "y",
+            "event_time": 3,
+            "amount": -1
+          },
+          {
+            "kind": "watermark",
+            "time": 28
+          },
+          {
+            "kind": "upsert",
+            "id": "c",
+            "rev": 1,
+            "key": "y",
+            "event_time": 34,
+            "amount": -3
+          },
+          {
+            "kind": "upsert",
+            "id": "c",
+            "rev": 2,
+            "key": "y",
+            "event_time": 15,
+            "amount": 2
+          }
+        ]
+      },
+      "expected": {
+        "watermark": 28,
+        "sessions": [
+          {
+            "key": "y",
+            "start": 3,
+            "end": 13,
+            "total": -1,
+            "count": 1,
+            "ids": [
+              "e"
+            ],
+            "final": true
+          },
+          {
+            "key": "y",
+            "start": 15,
+            "end": 25,
+            "total": 2,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 28,
+        "sessions": [
+          {
+            "key": "y",
+            "start": 3,
+            "end": 13,
+            "total": -1,
+            "count": 1,
+            "ids": [
+              "e"
+            ],
+            "final": true
+          },
+          {
+            "key": "y",
+            "start": 34,
+            "end": 44,
+            "total": -3,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "exit_code": 0,
+      "matches": false,
+      "explanation": "Sealed e last=3 already has end=13. c time15 is12 from e and its resulting end25 exceeds cutoff18, so it stays open. Candidate compares with end+gap=23 and wrongly rejects the move, leaving c at34. This is a state/acceptance error independent of throw-versus-skip interpretation."
+    }
+  ]
+}

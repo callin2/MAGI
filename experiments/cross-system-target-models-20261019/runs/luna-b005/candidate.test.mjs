@@ -1,0 +1,13 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {classifyCase} from './verdict.mjs';
+const source='# source\n', hash=createHash('sha256').update(source).digest('hex');
+const report=(kind='candidate')=>({identity:{scriptedTurns:1,currentPinParity:true,case:'x'},turns:[{turn:1,expectedKind:kind,exitCode:0,sourceSha256:hash}],finalSourceSha256:hash,holdout:{exitCode:0,fixedExpectationsPassed:true}});
+const capture={exitCode:0,stdout:`GHOSTFLOW_RESULT_JSON:{"kind":"candidate"}\nSaved x.ghost.md: SHA-256 ${hash}.\n`};
+const holdout={exitCode:0,stdout:'User expectations passed: 2\n'};
+test('all independent evidence supports candidate and holdout',()=>{const v=classifyCase(report(),[capture],{source,holdout});assert.equal(v.complete,true);assert.equal(v.finalCandidate,true);assert.equal(v.fixedHoldoutPass,true)});
+test('missing or mismatched source cannot substantiate candidate',()=>{for(const evidence of [{holdout},{source:'# other',holdout}]){const v=classifyCase(report(),[capture],evidence);assert.equal(v.complete,true);assert.equal(v.finalCandidate,false);assert.equal(v.fixedHoldoutPass,false)}});
+test('clarification may complete without source or candidate',()=>{const v=classifyCase(report('clarification'),[{exitCode:0,stdout:'GHOSTFLOW_RESULT_JSON:{"kind":"clarification"}'}]);assert.equal(v.complete,true);assert.equal(v.finalCandidate,false)});
+test('report holdout claims without actual success do not pass',()=>{assert.equal(classifyCase(report(),[capture],{source,holdout:{exitCode:0,stdout:'no marker'}}).fixedHoldoutPass,false)});
+test('capture exit status, not report claim, governs completion',()=>{assert.equal(classifyCase(report(),[{...capture,exitCode:1}],{source,holdout}).complete,false)});

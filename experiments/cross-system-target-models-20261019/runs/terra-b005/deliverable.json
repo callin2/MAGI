@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "summary": "Hardened verdict classification and CLI evidence loading so completion uses real turn captures, final candidates require a matching saved source file, and fixed holdouts require their actual successful capture.",
+  "tests_run": [
+    "functions.tests (public.test.mjs and candidate.test.mjs): 7 passing tests"
+  ],
+  "limitations": [
+    "CLI integration behavior was validated through classifier regression tests; no external process or filesystem fixture runner was available through the supplied test tool.",
+    "The verdict relies on the specified report, turn capture, source, and holdout-result files and does not independently execute the candidate or holdout."
+  ]
+}

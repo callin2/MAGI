@@ -1,4 +1,15 @@
+---
+id: magi.recursive-work-pilot
+type: report
+status: recorded
+owner: MAGI
+reviewed: 2026-10-18
+issue: https://github.com/callin2/MAGI/issues/19
+---
+
 # 실제 업무를 분해하고, 실패를 고쳐 완결한 MAGI 파일럿 — #19
+
+[문서 목차](README.md) · 해당 실험 당시의 기록. 후속 결과는 목차의 연구 기록에서 확인한다.
 
 ## 결과
 
@@ -38,30 +49,9 @@ G/F/E는 도구 요청 형식을 추측하는 실패와 조기 완료 보고를 
 
 ## 실행 가능한 도구와 재현
 
-Python 표준 라이브러리만 사용한다.
+당시 25개 실패 지향 도구 시험이 통과했다. [실행 원문](../experiments/recursive-work/tests.txt)에 보존한다. 검토 화면은 실제 Chrome에서 내용·링크·레이아웃을 확인했다. 이 수치는 당시 관측이며 이후 추가 회귀 시험 수와 다를 수 있다.
 
-```sh
-python3 -m unittest discover -s scripts/work_pilot -p 'test_*.py' -v
-python3 scripts/work_pilot/check_runs.py
-```
-
-25개 실패 지향 도구 시험이 통과했다. [실행 원문](../experiments/recursive-work/tests.txt). 두 번째 명령은 보존된 실제 작업의 상태·파일을 다시 판정하며 새 모델을 호출하지 않는다. 저장된 모델 출력을 새 실행으로 보고하지 않는다.
-
-작업 도구는 request JSON 파일을 받아 실제 상태를 변경한다.
-
-```sh
-python3 scripts/work_pilot/tracker.py /absolute/workspace/state.json /absolute/request.json
-```
-
-처음에는 `{"op":"describe"}`를 넣어 모든 지원 연산의 계약을 조회한다. init/list/show/create/register_followups/complete/reopen/branch를 제공한다. completed artifact의 실제 hash와 상태를 검사하며, semantic correctness는 별도 검토한다. worker의 자유로운 파일 접근을 통제하는 OS sandbox나 임의 목표의 일반 계획 런타임은 아니다.
-
-결과 화면을 다시 만들려면 다음을 실행한다.
-
-```sh
-python3 scripts/work_pilot/render_report.py experiments/recursive-work/review-data.json experiments/recursive-work/review.html
-```
-
-화면은 실제 Chrome에서 로드·내용·링크·레이아웃을 확인했다. 산출물 바로가기를 상단에 두었다. 실제 문서의 구체 수치들은 작성 당시 확인 근거이며 현재 도구의 추가 회귀 시험 수와 다를 수 있다.
+현재 시험 명령, Tracker 연산 조회와 화면 재생성은 [실행·검증 안내](verification.md)에 모았다. 과거 판정 재실행은 결과 파일을 덮어쓰며 Windows 줄바꿈의 영향을 받으므로 안내의 해당 절을 먼저 확인한다.
 
 ## 비용·학습·미완료
 

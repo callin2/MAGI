@@ -1,0 +1,364 @@
+{
+  "domain": "events",
+  "cases": [
+    {
+      "id": "empty",
+      "axis": "normal",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "simple",
+      "axis": "normal",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "bridge-merges",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "remove-bridge-splits",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "equal-gap-connects",
+      "axis": "counterexample",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "one-more-gap-separates",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "distinct-ids-count",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "signed-zero-total",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "replace-moves-session",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "seal-exact-boundary",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "new-touch-sealed-rejected",
+      "axis": "counterexample",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "old-left-touch-rejected",
+      "axis": "counterexample",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "sealed-cannot-be-bridged",
+      "axis": "counterexample",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "old-event-joins-open",
+      "axis": "counterexample",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "isolated-old-rejected",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "delete-split-finalizes",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "split-created-seal-protects",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "move-from-sealed-atomic",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "move-to-sealed-atomic",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "rejected-version-not-poison",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "delete-sealed-keeps-version",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "unknown-delete-tombstone",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "replay-after-seal",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "lower-revision-ignored",
+      "axis": "regression",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "explicit-lateness",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "watermark-monotone",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "negative-time",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "same-rev-conflict",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "sealed-conflict-still-throws",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "move-key-removes-old",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "mixed-session-history-0",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "mixed-session-history-1",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "mixed-session-history-2",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "mixed-session-history-3",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 28,
+        "sessions": [
+          {
+            "key": "y",
+            "start": 3,
+            "end": 13,
+            "total": -1,
+            "count": 1,
+            "ids": [
+              "e"
+            ],
+            "final": true
+          },
+          {
+            "key": "y",
+            "start": 15,
+            "end": 25,
+            "total": 2,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 35,
+            "end": 45,
+            "total": -3,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 28,
+        "sessions": [
+          {
+            "key": "y",
+            "start": 3,
+            "end": 13,
+            "total": -1,
+            "count": 1,
+            "ids": [
+              "e"
+            ],
+            "final": true
+          },
+          {
+            "key": "y",
+            "start": 34,
+            "end": 44,
+            "total": -3,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 35,
+            "end": 45,
+            "total": -3,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "mixed-session-history-4",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "mixed-session-history-5",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "mixed-session-history-6",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "mixed-session-history-7",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "mixed-session-history-8",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "mixed-session-history-9",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    }
+  ],
+  "passed": 39,
+  "total": 40,
+  "success": false
+}

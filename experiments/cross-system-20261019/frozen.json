@@ -1,0 +1,29 @@
+{
+  "frozen_at": "2026-10-19T00:53:07.878994+00:00",
+  "base_commit": "d2769ab01c185ec8fff71cd31ad7b7dd4b0856d0",
+  "provider": "zai",
+  "model": "glm-4.7",
+  "reasoning": "minimal (Pi zai route disables thinking)",
+  "limits": {
+    "model_turns": 16,
+    "tool_calls": 60,
+    "seconds": 300,
+    "max_output_tokens_per_turn": 8192
+  },
+  "runs_sha256": "865e5f088ad9902d48e3da2be7fc30ca6e236c0f08f30f1ff09caacda1b4daaa",
+  "files": {
+    "experiments/cross-system-20261019/source/experience-A.json": "c197c7299f981c5fabe1b8f9fa6388b136fb25335c8f060d11f3a7c8f341f186",
+    "experiments/cross-system-20261019/source/preregistration.md": "1a77136fe2ea44d6a32ea0021f879b6ed93e202496e72dab5c4a3db45d104eb8",
+    "experiments/cross-system-20261019/source/provenance.json": "662589702d4718dcd472f2f03881caa5f9eb1843757532d7f9462917e56c9c47",
+    "experiments/cross-system-20261019/source/public.test.mjs": "80f5c7916110ca8117247a9805894908399f9c28ee944c542a3512b0b77d3b72",
+    "experiments/cross-system-20261019/source/task.md": "8c94eb6acaa96f7b091fed95c58b65525d9d80a1cfdb0302428037313cf13db3",
+    "experiments/cross-system-20261019/source/verdict-before.mjs": "4477382ee51f6ee895a2de45b4adf0730a4dd2141525ff927957a60207d5a487",
+    "experiments/cross-system-20261019/source/verdict-upstream-reference.mjs": "5b389aa397b560255a6b28c7b7b7d5c7d482e78388ded376edffc79f301e1010",
+    "scripts/cross_system/check.py": "f489a788e590db9c3d957c3cf14323605f0b2dbd2e6f9764027f81fb313c1d96",
+    "scripts/cross_system/judge.mjs": "d3b4209a8ec4fee5e0fbca39388e91eaacbbc85e732143c4e67b123b1f78d3a8",
+    "scripts/cross_system/prepare.py": "fcabdac14c21395557f846b7e2a28ec766de5dad73923ab58c45cc6feeb92ed4",
+    "scripts/cross_system/provider.mjs": "b5417412c8a7b062316a2cd29a05deda9e520fed6da7f64200b8bda1b9d462d9",
+    "scripts/cross_system/run.mjs": "1ce921d03aa84974b98e92e21605f994aeb90a3a8721469ab66c457a4d13ca4d",
+    "scripts/cross_system/smoke.mjs": "447da4f2c5b2ad95d1409cf04caabd4c115509c6201fd2048873d387d0008632"
+  }
+}

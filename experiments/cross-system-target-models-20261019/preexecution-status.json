@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-19T01:24:18.198269+00:00",
+  "status": "ready_frozen",
+  "scored_runs_executed": 0,
+  "planned_runs": 18,
+  "exact_models": [
+    "gpt-6-luna",
+    "gpt-5.6-terra",
+    "gpt-6.1-sol"
+  ],
+  "reasoning": "medium",
+  "scored_max_output_tokens": 8192,
+  "existing_auth_only": true,
+  "new_auth_or_persistent_config_changes": false,
+  "gpt41_results_pooled": false
+}

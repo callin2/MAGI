@@ -1,0 +1,12 @@
+{
+  "domain": "inventory",
+  "success": false,
+  "passed": 0,
+  "total": 31,
+  "cases": [],
+  "infrastructure_error": "evaluation_timeout",
+  "evaluation_timeout": true,
+  "timeout_seconds": 90,
+  "partial_stdout": null,
+  "partial_stderr": null
+}

@@ -1,0 +1,3 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {plan} from './solution.mjs';
+test("empty",async()=>assert.deepEqual(await plan({"zone": "UTC", "range_start": "2024-01-07T00:00Z", "range_end": "2024-01-08T00:00Z", "rules": [], "exclusions": [], "busy": []}),[]));
+test("simple-utc",async()=>assert.deepEqual(await plan({"zone": "UTC", "range_start": "2024-01-07T00:00Z", "range_end": "2024-01-08T00:00Z", "rules": [{"id": "a", "weekday": 0, "start": "09:00", "minutes": 30, "from": "2024-01-01", "through": "2026-12-31", "fold": "earlier"}], "exclusions": [], "busy": []}),[{"rule_id": "a", "local_date": "2024-01-07", "start": "2024-01-07T09:00:00.000Z", "end": "2024-01-07T09:30:00.000Z"}]));

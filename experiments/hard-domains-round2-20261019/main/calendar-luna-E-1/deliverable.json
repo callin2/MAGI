@@ -1,0 +1,1 @@
+{"schema_version":1,"summary":"Implemented exhaustive global schedule search with fold-aware timezone resolution and directed consecutive-meeting setup checks.","tests_run":["functions.tests (public and candidate tests; latest run failed on New York fold test)"],"limitations":["Candidate suite did not pass validation; ambiguous-time handling requires further debugging."]}

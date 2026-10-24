@@ -1,0 +1,1 @@
+Synthetic unversioned telemetry snapshot: choose greatest observed_ms per device, then greatest reading_id for ties. Delivery order and replay do not establish freshness.

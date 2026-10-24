@@ -1,0 +1,48 @@
+{
+  "id": "b001",
+  "arm": "E",
+  "repetition": 2,
+  "status": "executed",
+  "success": false,
+  "behavior_success": false,
+  "axes": {
+    "counterexample": {
+      "passed": 0,
+      "total": 2
+    },
+    "integration": {
+      "passed": 4,
+      "total": 4
+    },
+    "regression": {
+      "passed": 9,
+      "total": 11
+    },
+    "repair": {
+      "passed": 8,
+      "total": 9
+    }
+  },
+  "wrong_analogy_counterexample_failure": true,
+  "new_regression_count": 2,
+  "schema_valid": true,
+  "artifacts_present": true,
+  "successful_worker_test_call": true,
+  "immutable_inputs_preserved": true,
+  "elapsed_seconds": 52.13975095799999,
+  "model_calls": 9,
+  "tool_calls": 10,
+  "tool_errors": 2,
+  "stop": "settled",
+  "usage": {
+    "input": 17020,
+    "output": 6173,
+    "cacheRead": 39936,
+    "cacheWrite": 0,
+    "totalTokens": 63129
+  },
+  "edited_lines": 156,
+  "user_corrections": 0,
+  "api_cost_usd": null,
+  "human_time_saving": null
+}

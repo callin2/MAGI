@@ -1,0 +1,28 @@
+{
+  "provider": "zai",
+  "model": "glm-4.7",
+  "elapsed_seconds": 0.245,
+  "response": {
+    "role": "assistant",
+    "content": [],
+    "provider": "zai",
+    "model": "glm-4.7",
+    "usage": {
+      "input": 0,
+      "output": 0,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "totalTokens": 0,
+      "cost": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    "stopReason": "error",
+    "timestamp": 1792370975148,
+    "errorMessage": "401 Authentication Failed"
+  }
+}

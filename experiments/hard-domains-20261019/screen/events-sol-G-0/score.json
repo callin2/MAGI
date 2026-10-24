@@ -1,0 +1,54 @@
+{
+  "id": "events-sol-G-0",
+  "phase": "screen",
+  "domain": "events",
+  "family": "sol",
+  "model_id": "gpt-6.1-sol",
+  "arm": "G",
+  "repetition": 0,
+  "status": "executed",
+  "valid": true,
+  "task_success": true,
+  "package_complete": true,
+  "behavior_passed": 29,
+  "behavior_total": 29,
+  "axes": {
+    "boundary": {
+      "passed": 17,
+      "total": 17
+    },
+    "counterexample": {
+      "passed": 4,
+      "total": 4
+    },
+    "normal": {
+      "passed": 2,
+      "total": 2
+    },
+    "regression": {
+      "passed": 6,
+      "total": 6
+    }
+  },
+  "schema_valid": true,
+  "artifacts_present": true,
+  "successful_worker_test": true,
+  "response_models": [
+    "gpt-6.1-sol"
+  ],
+  "elapsed_seconds": 63.090135209,
+  "model_calls": 8,
+  "tool_calls": 7,
+  "tool_errors": 0,
+  "stop": "settled",
+  "usage": {
+    "input": 22132,
+    "output": 2967,
+    "cacheRead": 0,
+    "cacheWrite": 0,
+    "totalTokens": 25099
+  },
+  "user_corrections": 0,
+  "cash_cost_usd": null,
+  "human_time_saving": null
+}

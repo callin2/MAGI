@@ -1,0 +1,9 @@
+[
+  {
+    "rule": "Distinguish logical revision from event-time and arrival order. Apply replacement/retraction atomically, preserve rejected versions, and keep finalized contributions stable. In this source the affected footprint is fixed epoch windows; this is a scoped window policy, not a universal late-arrival cutoff for different aggregation models.",
+    "conditions": {
+      "source": "synthetic revised fixed-window consumer repaired in actual G screen",
+      "scope": "accepted-version identity, fixed-window watermarks and atomic old/new footprint"
+    }
+  }
+]

@@ -1,0 +1,14 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
+import { classifyCase } from './verdict.mjs';
+const source = '# source\n', hash = createHash('sha256').update(source).digest('hex');
+const report = { identity: { scriptedTurns: 1, currentPinParity: true }, turns: [{turn:1,expectedKind:'candidate',exitCode:0,sourceSha256:hash}], finalSourceSha256:hash, holdout:{exitCode:0,fixedExpectationsPassed:true} };
+const capture = {exitCode:0,stdout:`GHOSTFLOW_RESULT_JSON:{"kind":"candidate"}\nSaved x: SHA-256 ${hash}.\n`};
+const evidence = {source,holdout:{exitCode:0,stdout:'User expectations passed: 1\n'}};
+test('substantiated candidate and holdout pass',()=>{const v=classifyCase(report,[capture],evidence);assert.equal(v.complete,true);assert.equal(v.finalCandidate,true);assert.equal(v.fixedHoldoutPass,true)});
+test('no evidence cannot certify',()=>{const v=classifyCase(report,[capture]);assert.equal(v.complete,true);assert.equal(v.finalCandidate,false);assert.equal(v.fixedHoldoutPass,false)});
+test('source mismatch blocks candidate',()=>assert.equal(classifyCase(report,[capture],{...evidence,source:'tampered'}).finalCandidate,false));
+test('report cannot substitute for successful process capture',()=>assert.equal(classifyCase(report,[{...capture,exitCode:'0'}],evidence).complete,false));
+test('holdout needs actual success marker and zero numeric status',()=>{assert.equal(classifyCase(report,[capture],{...evidence,holdout:{exitCode:0,stdout:'passed'}}).fixedHoldoutPass,false);assert.equal(classifyCase(report,[capture],{...evidence,holdout:{exitCode:'0',stdout:'User expectations passed:'}}).fixedHoldoutPass,false)});
+test('clarification can complete without candidate source',()=>{const r={identity:report.identity,turns:[{turn:1,expectedKind:'clarification'}]};const c={exitCode:0,stdout:'GHOSTFLOW_RESULT_JSON:{"kind":"clarification"}'};assert.equal(classifyCase(r,[c]).complete,true);assert.equal(classifyCase(r,[c]).finalCandidate,false)});

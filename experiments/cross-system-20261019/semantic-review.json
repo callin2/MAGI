@@ -1,0 +1,407 @@
+{
+  "purpose": "Post-score explanatory reproduction; frozen scores remain unchanged",
+  "runs": [
+    {
+      "id": "b001",
+      "arm": "E",
+      "reproduced_statuses": [
+        {
+          "id": "valid",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-source",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "tampered-source",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "failed-process-capture",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "missing-process-exit",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-process-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "reported-holdout-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "nonboolean-claimed-pass",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "artifact-free-clarification",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-answer",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        }
+      ],
+      "candidate_tests_contain_skip_markers": false
+    },
+    {
+      "id": "b002",
+      "arm": "G",
+      "reproduced_statuses": [
+        {
+          "id": "valid",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "tampered-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "failed-process-capture",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "missing-process-exit",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-process-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "reported-holdout-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "nonboolean-claimed-pass",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "artifact-free-clarification",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-answer",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        }
+      ],
+      "candidate_tests_contain_skip_markers": false
+    },
+    {
+      "id": "b003",
+      "arm": "F",
+      "reproduced_statuses": [
+        {
+          "id": "valid",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-source",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "tampered-source",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "failed-process-capture",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-process-exit",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "reported-process-failure",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-holdout-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "nonboolean-claimed-pass",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "artifact-free-clarification",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-answer",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        }
+      ],
+      "candidate_tests_contain_skip_markers": false
+    },
+    {
+      "id": "b004",
+      "arm": "G",
+      "reproduced_statuses": [
+        {
+          "id": "valid",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-source",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "tampered-source",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "failed-process-capture",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-process-exit",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "reported-process-failure",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-holdout-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "nonboolean-claimed-pass",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "artifact-free-clarification",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-answer",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        }
+      ],
+      "candidate_tests_contain_skip_markers": false
+    },
+    {
+      "id": "b005",
+      "arm": "F",
+      "reproduced_statuses": [
+        {
+          "id": "valid",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-source",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "tampered-source",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "failed-process-capture",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-process-exit",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "reported-process-failure",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-holdout-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "nonboolean-claimed-pass",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "artifact-free-clarification",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-answer",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        }
+      ],
+      "candidate_tests_contain_skip_markers": false
+    },
+    {
+      "id": "b006",
+      "arm": "E",
+      "reproduced_statuses": [
+        {
+          "id": "valid",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "tampered-source",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "failed-process-capture",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "missing-process-exit",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "reported-process-failure",
+          "complete": false,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "reported-holdout-failure",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "nonboolean-claimed-pass",
+          "complete": true,
+          "finalCandidate": true,
+          "fixedHoldoutPass": true
+        },
+        {
+          "id": "artifact-free-clarification",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        },
+        {
+          "id": "artifact-free-answer",
+          "complete": true,
+          "finalCandidate": false,
+          "fixedHoldoutPass": false
+        }
+      ],
+      "candidate_tests_contain_skip_markers": false
+    }
+  ]
+}

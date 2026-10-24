@@ -1,0 +1,2055 @@
+{
+  "domain": "events",
+  "cases": [
+    {
+      "id": "empty",
+      "axis": "normal",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "simple",
+      "axis": "normal",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "bridge-merges",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": null,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 30,
+            "total": 3,
+            "count": 3,
+            "ids": [
+              "a",
+              "b",
+              "c"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": null,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 10,
+            "end": 20,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "b"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 20,
+            "end": 30,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "remove-bridge-splits",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "equal-gap-connects",
+      "axis": "counterexample",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": null,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 20,
+            "total": 2,
+            "count": 2,
+            "ids": [
+              "a",
+              "b"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": null,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 10,
+            "end": 20,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "b"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "one-more-gap-separates",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "distinct-ids-count",
+      "axis": "regression",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": null,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 2,
+            "count": 2,
+            "ids": [
+              "a",
+              "b"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": null,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "b"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "signed-zero-total",
+      "axis": "regression",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": null,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 0,
+            "count": 2,
+            "ids": [
+              "a",
+              "b"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": null,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 3,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": -3,
+            "count": 1,
+            "ids": [
+              "b"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "replace-moves-session",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "seal-exact-boundary",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": true
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "new-touch-sealed-rejected",
+      "axis": "counterexample",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": true
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 10,
+            "end": 20,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "b"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "old-left-touch-rejected",
+      "axis": "counterexample",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 30,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 20,
+            "end": 30,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": true
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 30,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 10,
+            "end": 20,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "b"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 20,
+            "end": 30,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "sealed-cannot-be-bridged",
+      "axis": "counterexample",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": true
+          },
+          {
+            "key": "x",
+            "start": 20,
+            "end": 30,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 10,
+            "end": 20,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "b"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 20,
+            "end": 30,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "old-event-joins-open",
+      "axis": "counterexample",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 25,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 10,
+            "end": 40,
+            "total": 3,
+            "count": 3,
+            "ids": [
+              "a",
+              "b",
+              "c"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 25,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 10,
+            "end": 20,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 20,
+            "end": 30,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "b"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 30,
+            "end": 40,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "isolated-old-rejected",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 20,
+        "sessions": []
+      },
+      "actual": {
+        "watermark": 20,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "delete-split-finalizes",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 15,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": true
+          },
+          {
+            "key": "x",
+            "start": 20,
+            "end": 30,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 15,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 20,
+            "end": 30,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "split-created-seal-protects",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 15,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": true
+          },
+          {
+            "key": "x",
+            "start": 20,
+            "end": 30,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 15,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 5,
+            "end": 15,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "d"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 20,
+            "end": 30,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "move-from-sealed-atomic",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": true
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 40,
+            "end": 50,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "move-to-sealed-atomic",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": true
+          },
+          {
+            "key": "x",
+            "start": 40,
+            "end": 50,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "b"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 5,
+            "end": 15,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "b"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "rejected-version-not-poison",
+      "axis": "regression",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": true
+          },
+          {
+            "key": "x",
+            "start": 40,
+            "end": 50,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "b"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 40,
+            "end": 50,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "b"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "delete-sealed-keeps-version",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": true
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 40,
+            "end": 50,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "unknown-delete-tombstone",
+      "axis": "regression",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": null,
+        "sessions": []
+      },
+      "actual": {
+        "watermark": null,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "replay-after-seal",
+      "axis": "regression",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": true
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "lower-revision-ignored",
+      "axis": "regression",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": null,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": null,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 40,
+            "end": 50,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "explicit-lateness",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 20,
+            "total": 2,
+            "count": 2,
+            "ids": [
+              "a",
+              "b"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 10,
+            "end": 20,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "b"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "watermark-monotone",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": true
+          }
+        ]
+      },
+      "actual": {
+        "watermark": -10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 10,
+            "end": 20,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "b"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "negative-time",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 9,
+        "sessions": [
+          {
+            "key": "x",
+            "start": -10,
+            "end": 9,
+            "total": 2,
+            "count": 2,
+            "ids": [
+              "a",
+              "b"
+            ],
+            "final": true
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 9,
+        "sessions": [
+          {
+            "key": "x",
+            "start": -10,
+            "end": 0,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": -1,
+            "end": 9,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "b"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "same-rev-conflict",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "throws": true
+      },
+      "actual": {
+        "watermark": null,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 8,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "sealed-conflict-still-throws",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "throws": true
+      },
+      "actual": {
+        "watermark": 10,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 0,
+            "end": 10,
+            "total": 8,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "move-key-removes-old",
+      "axis": "boundary",
+      "passed": true,
+      "behavior_passed": true,
+      "input_preserved": true
+    },
+    {
+      "id": "mixed-session-history-0",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 39,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 4,
+            "end": 14,
+            "total": 2,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": true
+          },
+          {
+            "key": "y",
+            "start": 12,
+            "end": 24,
+            "total": -1,
+            "count": 2,
+            "ids": [
+              "c",
+              "e"
+            ],
+            "final": true
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 9,
+        "sessions": [
+          {
+            "key": "y",
+            "start": -4,
+            "end": 6,
+            "total": 0,
+            "count": 1,
+            "ids": [
+              "b"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 3,
+            "end": 13,
+            "total": -1,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          },
+          {
+            "key": "y",
+            "start": 18,
+            "end": 28,
+            "total": -2,
+            "count": 1,
+            "ids": [
+              "e"
+            ],
+            "final": false
+          },
+          {
+            "key": "y",
+            "start": 39,
+            "end": 49,
+            "total": 1,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "mixed-session-history-1",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 33,
+        "sessions": [
+          {
+            "key": "x",
+            "start": -4,
+            "end": 6,
+            "total": -2,
+            "count": 1,
+            "ids": [
+              "e"
+            ],
+            "final": true
+          },
+          {
+            "key": "y",
+            "start": 0,
+            "end": 10,
+            "total": 0,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": true
+          },
+          {
+            "key": "x",
+            "start": 25,
+            "end": 35,
+            "total": 5,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 33,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 3,
+            "end": 13,
+            "total": -3,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 25,
+            "end": 35,
+            "total": 5,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "mixed-session-history-2",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 30,
+        "sessions": [
+          {
+            "key": "y",
+            "start": 2,
+            "end": 12,
+            "total": 2,
+            "count": 1,
+            "ids": [
+              "e"
+            ],
+            "final": true
+          },
+          {
+            "key": "y",
+            "start": 29,
+            "end": 42,
+            "total": -3,
+            "count": 2,
+            "ids": [
+              "b",
+              "c"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 6,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 1,
+            "end": 11,
+            "total": 4,
+            "count": 1,
+            "ids": [
+              "b"
+            ],
+            "final": false
+          },
+          {
+            "key": "y",
+            "start": 32,
+            "end": 42,
+            "total": -2,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "mixed-session-history-3",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 28,
+        "sessions": [
+          {
+            "key": "y",
+            "start": 3,
+            "end": 13,
+            "total": -1,
+            "count": 1,
+            "ids": [
+              "e"
+            ],
+            "final": true
+          },
+          {
+            "key": "y",
+            "start": 15,
+            "end": 25,
+            "total": 2,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 35,
+            "end": 45,
+            "total": -3,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 14,
+        "sessions": [
+          {
+            "key": "y",
+            "start": 0,
+            "end": 10,
+            "total": 2,
+            "count": 1,
+            "ids": [
+              "b"
+            ],
+            "final": false
+          },
+          {
+            "key": "y",
+            "start": 10,
+            "end": 20,
+            "total": -2,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 35,
+            "end": 45,
+            "total": -3,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          },
+          {
+            "key": "y",
+            "start": 39,
+            "end": 49,
+            "total": 5,
+            "count": 1,
+            "ids": [
+              "e"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "mixed-session-history-4",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 18,
+        "sessions": [
+          {
+            "key": "y",
+            "start": 23,
+            "end": 33,
+            "total": 0,
+            "count": 1,
+            "ids": [
+              "d"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 30,
+            "end": 40,
+            "total": -3,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 3,
+        "sessions": [
+          {
+            "key": "y",
+            "start": 23,
+            "end": 33,
+            "total": 0,
+            "count": 1,
+            "ids": [
+              "d"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 30,
+            "end": 40,
+            "total": -3,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "mixed-session-history-5",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 18,
+        "sessions": [
+          {
+            "key": "y",
+            "start": -2,
+            "end": 8,
+            "total": 4,
+            "count": 1,
+            "ids": [
+              "b"
+            ],
+            "final": true
+          },
+          {
+            "key": "y",
+            "start": 43,
+            "end": 53,
+            "total": 3,
+            "count": 1,
+            "ids": [
+              "d"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 45,
+            "end": 55,
+            "total": 3,
+            "count": 1,
+            "ids": [
+              "e"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 17,
+        "sessions": [
+          {
+            "key": "y",
+            "start": 43,
+            "end": 53,
+            "total": 3,
+            "count": 1,
+            "ids": [
+              "d"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 45,
+            "end": 55,
+            "total": 3,
+            "count": 1,
+            "ids": [
+              "e"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "mixed-session-history-6",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 40,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 31,
+            "end": 41,
+            "total": 3,
+            "count": 1,
+            "ids": [
+              "d"
+            ],
+            "final": false
+          },
+          {
+            "key": "y",
+            "start": 32,
+            "end": 42,
+            "total": 0,
+            "count": 1,
+            "ids": [
+              "e"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 45,
+            "end": 55,
+            "total": 2,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 38,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 2,
+            "end": 12,
+            "total": 5,
+            "count": 1,
+            "ids": [
+              "d"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 3,
+            "end": 13,
+            "total": -3,
+            "count": 1,
+            "ids": [
+              "b"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 11,
+            "end": 21,
+            "total": 2,
+            "count": 1,
+            "ids": [
+              "e"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 45,
+            "end": 55,
+            "total": 2,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "mixed-session-history-7",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 31,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 2,
+            "end": 21,
+            "total": 4,
+            "count": 2,
+            "ids": [
+              "b",
+              "c"
+            ],
+            "final": true
+          },
+          {
+            "key": "y",
+            "start": 22,
+            "end": 32,
+            "total": 0,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 31,
+            "end": 41,
+            "total": 2,
+            "count": 1,
+            "ids": [
+              "d"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 27,
+        "sessions": [
+          {
+            "key": "y",
+            "start": -2,
+            "end": 8,
+            "total": 2,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          },
+          {
+            "key": "y",
+            "start": -2,
+            "end": 8,
+            "total": -2,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 3,
+            "end": 13,
+            "total": 4,
+            "count": 1,
+            "ids": [
+              "b"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 31,
+            "end": 41,
+            "total": 2,
+            "count": 1,
+            "ids": [
+              "d"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "mixed-session-history-8",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 26,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 8,
+            "end": 18,
+            "total": 3,
+            "count": 2,
+            "ids": [
+              "a",
+              "b"
+            ],
+            "final": false
+          },
+          {
+            "key": "y",
+            "start": 9,
+            "end": 19,
+            "total": -1,
+            "count": 1,
+            "ids": [
+              "d"
+            ],
+            "final": false
+          },
+          {
+            "key": "y",
+            "start": 22,
+            "end": 32,
+            "total": -3,
+            "count": 1,
+            "ids": [
+              "e"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 45,
+            "end": 55,
+            "total": 5,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 15,
+        "sessions": [
+          {
+            "key": "x",
+            "start": 8,
+            "end": 18,
+            "total": 2,
+            "count": 1,
+            "ids": [
+              "a"
+            ],
+            "final": false
+          },
+          {
+            "key": "y",
+            "start": 9,
+            "end": 19,
+            "total": -1,
+            "count": 1,
+            "ids": [
+              "d"
+            ],
+            "final": false
+          },
+          {
+            "key": "y",
+            "start": 23,
+            "end": 33,
+            "total": -2,
+            "count": 1,
+            "ids": [
+              "b"
+            ],
+            "final": false
+          },
+          {
+            "key": "y",
+            "start": 29,
+            "end": 39,
+            "total": -1,
+            "count": 1,
+            "ids": [
+              "e"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 45,
+            "end": 55,
+            "total": 5,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "mixed-session-history-9",
+      "axis": "boundary",
+      "passed": false,
+      "behavior_passed": false,
+      "input_preserved": true,
+      "expected": {
+        "watermark": 18,
+        "sessions": [
+          {
+            "key": "x",
+            "start": -5,
+            "end": 5,
+            "total": 3,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": true
+          },
+          {
+            "key": "x",
+            "start": 11,
+            "end": 23,
+            "total": 5,
+            "count": 2,
+            "ids": [
+              "b",
+              "d"
+            ],
+            "final": false
+          },
+          {
+            "key": "y",
+            "start": 11,
+            "end": 21,
+            "total": -1,
+            "count": 1,
+            "ids": [
+              "e"
+            ],
+            "final": false
+          }
+        ]
+      },
+      "actual": {
+        "watermark": 18,
+        "sessions": [
+          {
+            "key": "x",
+            "start": -5,
+            "end": 5,
+            "total": 3,
+            "count": 1,
+            "ids": [
+              "c"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 11,
+            "end": 21,
+            "total": 2,
+            "count": 1,
+            "ids": [
+              "d"
+            ],
+            "final": false
+          },
+          {
+            "key": "y",
+            "start": 11,
+            "end": 21,
+            "total": -1,
+            "count": 1,
+            "ids": [
+              "e"
+            ],
+            "final": false
+          },
+          {
+            "key": "x",
+            "start": 13,
+            "end": 23,
+            "total": 3,
+            "count": 1,
+            "ids": [
+              "b"
+            ],
+            "final": false
+          }
+        ]
+      }
+    }
+  ],
+  "passed": 6,
+  "total": 40,
+  "success": false
+}

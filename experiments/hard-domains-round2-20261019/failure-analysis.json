@@ -1,0 +1,2198 @@
+{
+  "scope": "Descriptive review of frozen judgments; no changed assertions, candidates, or scores. Error-policy ambiguity is not resolved by discarding cases.",
+  "runs": [
+    {
+      "cohort": "hard-domains-20261019",
+      "phase": "screen",
+      "run": "inventory-luna-G-0",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-20261019",
+      "phase": "screen",
+      "run": "calendar-luna-G-0",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-20261019",
+      "phase": "screen",
+      "run": "events-luna-G-0",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-20261019",
+      "phase": "screen",
+      "run": "inventory-terra-G-0",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-20261019",
+      "phase": "screen",
+      "run": "calendar-terra-G-0",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-20261019",
+      "phase": "screen",
+      "run": "events-terra-G-0",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-20261019",
+      "phase": "screen",
+      "run": "inventory-sol-G-0",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-20261019",
+      "phase": "screen",
+      "run": "calendar-sol-G-0",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-20261019",
+      "phase": "screen",
+      "run": "events-sol-G-0",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "screen",
+      "run": "inventory-luna-G-0",
+      "valid": false,
+      "evaluation_timeout": true,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "screen",
+      "run": "calendar-luna-G-0",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "screen",
+      "run": "events-luna-G-0",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [
+        {
+          "id": "new-touch-sealed-rejected",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "touches finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "old-left-touch-rejected",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "touches finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "sealed-cannot-be-bridged",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "touches finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "isolated-old-rejected",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "late session",
+          "input_preserved": true
+        },
+        {
+          "id": "split-created-seal-protects",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "touches finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "move-from-sealed-atomic",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "finalized event",
+          "input_preserved": true
+        },
+        {
+          "id": "move-to-sealed-atomic",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "touches finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "rejected-version-not-poison",
+          "axis": "regression",
+          "expected_throw": false,
+          "error": "touches finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "delete-sealed-keeps-version",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "finalized event",
+          "input_preserved": true
+        },
+        {
+          "id": "watermark-monotone",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "touches finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-0",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "finalized event",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-1",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "finalized event",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-2",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "late session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-3",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "touches finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-5",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "late session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-6",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "late session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-7",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "late session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-8",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "late session",
+          "input_preserved": true
+        }
+      ],
+      "unexpected_throw_count": 18,
+      "interpretation_limit": "For round2 sessions an unexpected throw on a late/sealed rejection may reflect ambiguous batch reject/continue policy. This diagnostic does not rescore or prove all other logic correct."
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "screen",
+      "run": "inventory-terra-G-0",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "screen",
+      "run": "calendar-terra-G-0",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [
+        {
+          "id": "consecutive-not-all-pairs",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        }
+      ],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "screen",
+      "run": "events-terra-G-0",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [
+        {
+          "id": "new-touch-sealed-rejected",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "event is too close to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "old-left-touch-rejected",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "event is too close to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "sealed-cannot-be-bridged",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "event is too close to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "isolated-old-rejected",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is already final",
+          "input_preserved": true
+        },
+        {
+          "id": "split-created-seal-protects",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event is too close to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "move-from-sealed-atomic",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot revise finalized event",
+          "input_preserved": true
+        },
+        {
+          "id": "move-to-sealed-atomic",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event is too close to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "rejected-version-not-poison",
+          "axis": "regression",
+          "expected_throw": false,
+          "error": "event is too close to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "delete-sealed-keeps-version",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot revise finalized event",
+          "input_preserved": true
+        },
+        {
+          "id": "watermark-monotone",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event is too close to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-0",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot revise finalized event",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-1",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot revise finalized event",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-2",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is already final",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-3",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event is too close to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-5",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is already final",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-6",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is already final",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-7",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is already final",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-8",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is already final",
+          "input_preserved": true
+        }
+      ],
+      "unexpected_throw_count": 18,
+      "interpretation_limit": "For round2 sessions an unexpected throw on a late/sealed rejection may reflect ambiguous batch reject/continue policy. This diagnostic does not rescore or prove all other logic correct."
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "screen",
+      "run": "inventory-sol-G-0",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "screen",
+      "run": "calendar-sol-G-0",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "screen",
+      "run": "events-sol-G-0",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": "For round2 sessions an unexpected throw on a late/sealed rejection may reflect ambiguous batch reject/continue policy. This diagnostic does not rescore or prove all other logic correct."
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-luna-E-1",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": "For round2 sessions an unexpected throw on a late/sealed rejection may reflect ambiguous batch reject/continue policy. This diagnostic does not rescore or prove all other logic correct."
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-luna-G-2",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [
+        {
+          "id": "new-touch-sealed-rejected",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "event is adjacent to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "old-left-touch-rejected",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "event is adjacent to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "sealed-cannot-be-bridged",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "event is adjacent to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "isolated-old-rejected",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is already final",
+          "input_preserved": true
+        },
+        {
+          "id": "split-created-seal-protects",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event is adjacent to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "move-from-sealed-atomic",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event is finalized",
+          "input_preserved": true
+        },
+        {
+          "id": "move-to-sealed-atomic",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event is adjacent to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "rejected-version-not-poison",
+          "axis": "regression",
+          "expected_throw": false,
+          "error": "event is adjacent to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "delete-sealed-keeps-version",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event is finalized",
+          "input_preserved": true
+        },
+        {
+          "id": "watermark-monotone",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event is adjacent to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-0",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event is finalized",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-1",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event is finalized",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-2",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is already final",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-3",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event is adjacent to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-5",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is already final",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-6",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is already final",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-7",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is already final",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-8",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is already final",
+          "input_preserved": true
+        }
+      ],
+      "unexpected_throw_count": 18,
+      "interpretation_limit": "For round2 sessions an unexpected throw on a late/sealed rejection may reflect ambiguous batch reject/continue policy. This diagnostic does not rescore or prove all other logic correct."
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-luna-F-2",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": "For round2 sessions an unexpected throw on a late/sealed rejection may reflect ambiguous batch reject/continue policy. This diagnostic does not rescore or prove all other logic correct."
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-luna-F-1",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [
+        {
+          "id": "mixed-session-history-3",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        }
+      ],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": "For round2 sessions an unexpected throw on a late/sealed rejection may reflect ambiguous batch reject/continue policy. This diagnostic does not rescore or prove all other logic correct."
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-luna-E-2",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [
+        {
+          "id": "consecutive-not-all-pairs",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        }
+      ],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-luna-G-2",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [
+        {
+          "id": "directed-setup-boundary",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        }
+      ],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-luna-E-2",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [
+        {
+          "id": "new-touch-sealed-rejected",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "event touches finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "old-left-touch-rejected",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "event touches finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "sealed-cannot-be-bridged",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "event touches finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "isolated-old-rejected",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is finalized",
+          "input_preserved": true
+        },
+        {
+          "id": "split-created-seal-protects",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event touches finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "move-from-sealed-atomic",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot revise finalized event",
+          "input_preserved": true
+        },
+        {
+          "id": "move-to-sealed-atomic",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event touches finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "rejected-version-not-poison",
+          "axis": "regression",
+          "expected_throw": false,
+          "error": "event touches finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "delete-sealed-keeps-version",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot revise finalized event",
+          "input_preserved": true
+        },
+        {
+          "id": "watermark-monotone",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event touches finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-0",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot revise finalized event",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-1",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot revise finalized event",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-2",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is finalized",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-3",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event touches finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-5",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is finalized",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-6",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is finalized",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-7",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is finalized",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-8",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is finalized",
+          "input_preserved": true
+        }
+      ],
+      "unexpected_throw_count": 18,
+      "interpretation_limit": "For round2 sessions an unexpected throw on a late/sealed rejection may reflect ambiguous batch reject/continue policy. This diagnostic does not rescore or prove all other logic correct."
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-luna-G-1",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [
+        {
+          "id": "mixed-session-history-3",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        }
+      ],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": "For round2 sessions an unexpected throw on a late/sealed rejection may reflect ambiguous batch reject/continue policy. This diagnostic does not rescore or prove all other logic correct."
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-luna-E-1",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [
+        {
+          "id": "directed-setup-boundary",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        }
+      ],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-luna-F-1",
+      "valid": false,
+      "evaluation_timeout": false,
+      "failed_cases": [
+        {
+          "id": "consecutive-not-all-pairs",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-assignment-2",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        }
+      ],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-luna-G-1",
+      "valid": false,
+      "evaluation_timeout": false,
+      "failed_cases": [
+        {
+          "id": "global-short-pair-beats-long",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "assign-room-globally",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "shared-person-conflict",
+          "axis": "regression",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "directed-setup-boundary",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "required-booking-unavailable",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "either-fold-one-booking",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "either-fold-selects-later-option",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "gap-not-bookable",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "quarter-offset",
+          "axis": "regression",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "half-hour-fold-choice",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "block-is-room-only",
+          "axis": "regression",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "zero-value-count-and-lex",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-assignment-0",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-assignment-1",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-assignment-2",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-assignment-3",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-assignment-4",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-assignment-5",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-assignment-6",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-assignment-7",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        }
+      ],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-luna-F-2",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [
+        {
+          "id": "directed-setup-boundary",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        }
+      ],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-terra-E-1",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": "For round2 sessions an unexpected throw on a late/sealed rejection may reflect ambiguous batch reject/continue policy. This diagnostic does not rescore or prove all other logic correct."
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-terra-G-2",
+      "valid": false,
+      "evaluation_timeout": false,
+      "failed_cases": [
+        {
+          "id": "new-touch-sealed-rejected",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "event is too close to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "old-left-touch-rejected",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "event is too close to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "sealed-cannot-be-bridged",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "event is too close to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "isolated-old-rejected",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is already final",
+          "input_preserved": true
+        },
+        {
+          "id": "split-created-seal-protects",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event is too close to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "move-from-sealed-atomic",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot revise finalized event",
+          "input_preserved": true
+        },
+        {
+          "id": "move-to-sealed-atomic",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event is too close to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "rejected-version-not-poison",
+          "axis": "regression",
+          "expected_throw": false,
+          "error": "event is too close to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "delete-sealed-keeps-version",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot revise finalized event",
+          "input_preserved": true
+        },
+        {
+          "id": "watermark-monotone",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event is too close to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-0",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot revise finalized event",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-1",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot revise finalized event",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-2",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is already final",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-3",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event is too close to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-5",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is already final",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-6",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is already final",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-7",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is already final",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-8",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is already final",
+          "input_preserved": true
+        }
+      ],
+      "unexpected_throw_count": 18,
+      "interpretation_limit": "For round2 sessions an unexpected throw on a late/sealed rejection may reflect ambiguous batch reject/continue policy. This diagnostic does not rescore or prove all other logic correct."
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-terra-F-2",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [
+        {
+          "id": "new-touch-sealed-rejected",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "event would join or extend a finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "old-left-touch-rejected",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "event would join or extend a finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "sealed-cannot-be-bridged",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "event would join or extend a finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "isolated-old-rejected",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is already final",
+          "input_preserved": true
+        },
+        {
+          "id": "split-created-seal-protects",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event would join or extend a finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "move-from-sealed-atomic",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot change an event in a finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "move-to-sealed-atomic",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event would join or extend a finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "rejected-version-not-poison",
+          "axis": "regression",
+          "expected_throw": false,
+          "error": "event would join or extend a finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "delete-sealed-keeps-version",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot change an event in a finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "watermark-monotone",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event would join or extend a finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-0",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot change an event in a finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-1",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot change an event in a finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-2",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is already final",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-3",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event would join or extend a finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-5",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is already final",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-6",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is already final",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-7",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is already final",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-8",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "proposed session is already final",
+          "input_preserved": true
+        }
+      ],
+      "unexpected_throw_count": 18,
+      "interpretation_limit": "For round2 sessions an unexpected throw on a late/sealed rejection may reflect ambiguous batch reject/continue policy. This diagnostic does not rescore or prove all other logic correct."
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-terra-F-1",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [
+        {
+          "id": "new-touch-sealed-rejected",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "event is adjacent to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "old-left-touch-rejected",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "event is adjacent to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "sealed-cannot-be-bridged",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "event is adjacent to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "isolated-old-rejected",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event would create finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "split-created-seal-protects",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event is adjacent to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "move-from-sealed-atomic",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot change finalized event",
+          "input_preserved": true
+        },
+        {
+          "id": "move-to-sealed-atomic",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event is adjacent to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "rejected-version-not-poison",
+          "axis": "regression",
+          "expected_throw": false,
+          "error": "event is adjacent to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "delete-sealed-keeps-version",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot retract finalized event",
+          "input_preserved": true
+        },
+        {
+          "id": "watermark-monotone",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event is adjacent to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-0",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot change finalized event",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-1",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot change finalized event",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-2",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event would create finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-3",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event is adjacent to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-5",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event would create finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-6",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event would create finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-7",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event would create finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-8",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event would create finalized session",
+          "input_preserved": true
+        }
+      ],
+      "unexpected_throw_count": 18,
+      "interpretation_limit": "For round2 sessions an unexpected throw on a late/sealed rejection may reflect ambiguous batch reject/continue policy. This diagnostic does not rescore or prove all other logic correct."
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-terra-E-2",
+      "valid": false,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-terra-G-2",
+      "valid": false,
+      "evaluation_timeout": false,
+      "failed_cases": [
+        {
+          "id": "global-short-pair-beats-long",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "assign-room-globally",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "shared-person-conflict",
+          "axis": "regression",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "directed-setup-boundary",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "required-booking-unavailable",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "either-fold-one-booking",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "either-fold-selects-later-option",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "gap-not-bookable",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "quarter-offset",
+          "axis": "regression",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "half-hour-fold-choice",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "block-is-room-only",
+          "axis": "regression",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "zero-value-count-and-lex",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-assignment-0",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-assignment-1",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-assignment-2",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-assignment-3",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-assignment-4",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-assignment-5",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-assignment-6",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-assignment-7",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        }
+      ],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-terra-E-2",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [
+        {
+          "id": "new-touch-sealed-rejected",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "cannot join finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "old-left-touch-rejected",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "cannot join finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "sealed-cannot-be-bridged",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "cannot join finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "isolated-old-rejected",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "upsert would already be finalized",
+          "input_preserved": true
+        },
+        {
+          "id": "split-created-seal-protects",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot join finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "move-from-sealed-atomic",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot revise finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "move-to-sealed-atomic",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot join finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "rejected-version-not-poison",
+          "axis": "regression",
+          "expected_throw": false,
+          "error": "cannot join finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "delete-sealed-keeps-version",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot revise finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "watermark-monotone",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot join finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-0",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot revise finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-1",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot revise finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-2",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "upsert would already be finalized",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-3",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "cannot join finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-5",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "upsert would already be finalized",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-6",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "upsert would already be finalized",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-7",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "upsert would already be finalized",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-8",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "upsert would already be finalized",
+          "input_preserved": true
+        }
+      ],
+      "unexpected_throw_count": 18,
+      "interpretation_limit": "For round2 sessions an unexpected throw on a late/sealed rejection may reflect ambiguous batch reject/continue policy. This diagnostic does not rescore or prove all other logic correct."
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-terra-G-1",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [
+        {
+          "id": "new-touch-sealed-rejected",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "event is adjacent to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "old-left-touch-rejected",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "event is adjacent to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "sealed-cannot-be-bridged",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": "event is adjacent to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "isolated-old-rejected",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event would create a final session",
+          "input_preserved": true
+        },
+        {
+          "id": "split-created-seal-protects",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event is adjacent to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "move-from-sealed-atomic",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "finalized event cannot change",
+          "input_preserved": true
+        },
+        {
+          "id": "move-to-sealed-atomic",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event is adjacent to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "rejected-version-not-poison",
+          "axis": "regression",
+          "expected_throw": false,
+          "error": "event is adjacent to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "delete-sealed-keeps-version",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "finalized event cannot change",
+          "input_preserved": true
+        },
+        {
+          "id": "watermark-monotone",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event is adjacent to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-0",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "finalized event cannot change",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-1",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "finalized event cannot change",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-2",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event would create a final session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-3",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event is adjacent to finalized session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-5",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event would create a final session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-6",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event would create a final session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-7",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event would create a final session",
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-session-history-8",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": "event would create a final session",
+          "input_preserved": true
+        }
+      ],
+      "unexpected_throw_count": 18,
+      "interpretation_limit": "For round2 sessions an unexpected throw on a late/sealed rejection may reflect ambiguous batch reject/continue policy. This diagnostic does not rescore or prove all other logic correct."
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-terra-E-1",
+      "valid": false,
+      "evaluation_timeout": false,
+      "failed_cases": [
+        {
+          "id": "consecutive-not-all-pairs",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        }
+      ],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-terra-F-1",
+      "valid": false,
+      "evaluation_timeout": false,
+      "failed_cases": [
+        {
+          "id": "global-short-pair-beats-long",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "assign-room-globally",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "shared-person-conflict",
+          "axis": "regression",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "directed-setup-boundary",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "required-booking-unavailable",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "either-fold-one-booking",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "either-fold-selects-later-option",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "gap-not-bookable",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "quarter-offset",
+          "axis": "regression",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "half-hour-fold-choice",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "block-is-room-only",
+          "axis": "regression",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "zero-value-count-and-lex",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-assignment-0",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-assignment-1",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-assignment-2",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-assignment-3",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-assignment-4",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-assignment-5",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-assignment-6",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        },
+        {
+          "id": "mixed-assignment-7",
+          "axis": "boundary",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        }
+      ],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-terra-G-1",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-terra-F-2",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [
+        {
+          "id": "consecutive-not-all-pairs",
+          "axis": "counterexample",
+          "expected_throw": false,
+          "error": null,
+          "input_preserved": true
+        }
+      ],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-sol-E-1",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": "For round2 sessions an unexpected throw on a late/sealed rejection may reflect ambiguous batch reject/continue policy. This diagnostic does not rescore or prove all other logic correct."
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-sol-G-2",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": "For round2 sessions an unexpected throw on a late/sealed rejection may reflect ambiguous batch reject/continue policy. This diagnostic does not rescore or prove all other logic correct."
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-sol-F-2",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": "For round2 sessions an unexpected throw on a late/sealed rejection may reflect ambiguous batch reject/continue policy. This diagnostic does not rescore or prove all other logic correct."
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-sol-F-1",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": "For round2 sessions an unexpected throw on a late/sealed rejection may reflect ambiguous batch reject/continue policy. This diagnostic does not rescore or prove all other logic correct."
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-sol-E-2",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-sol-G-2",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-sol-E-2",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": "For round2 sessions an unexpected throw on a late/sealed rejection may reflect ambiguous batch reject/continue policy. This diagnostic does not rescore or prove all other logic correct."
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "events-sol-G-1",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": "For round2 sessions an unexpected throw on a late/sealed rejection may reflect ambiguous batch reject/continue policy. This diagnostic does not rescore or prove all other logic correct."
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-sol-E-1",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-sol-F-1",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-sol-G-1",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    },
+    {
+      "cohort": "hard-domains-round2-20261019",
+      "phase": "main",
+      "run": "calendar-sol-F-2",
+      "valid": true,
+      "evaluation_timeout": false,
+      "failed_cases": [],
+      "unexpected_throw_count": 0,
+      "interpretation_limit": null
+    }
+  ]
+}

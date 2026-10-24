@@ -1,0 +1,321 @@
+{
+  "scope": "Instrumented re-execution for public fs calls; original scores and model generations unchanged. Native/obfuscated bypasses not formally excluded. Same-process oracle-access limitation remains.",
+  "runs": [
+    {
+      "phase": "screen",
+      "id": "calendar-luna-G-0",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "screen",
+      "id": "calendar-sol-G-0",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "screen",
+      "id": "calendar-terra-G-0",
+      "exit_code": 1,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "screen",
+      "id": "events-luna-G-0",
+      "exit_code": 1,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "screen",
+      "id": "events-sol-G-0",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "screen",
+      "id": "events-terra-G-0",
+      "exit_code": 1,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "screen",
+      "id": "inventory-luna-G-0",
+      "calls": null,
+      "skipped_known_evaluation_timeout": true
+    },
+    {
+      "phase": "screen",
+      "id": "inventory-sol-G-0",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "screen",
+      "id": "inventory-terra-G-0",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "calendar-luna-E-1",
+      "exit_code": 1,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "calendar-luna-E-2",
+      "exit_code": 1,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "calendar-luna-F-1",
+      "exit_code": 1,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "calendar-luna-F-2",
+      "exit_code": 1,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "calendar-luna-G-1",
+      "exit_code": 1,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "calendar-luna-G-2",
+      "exit_code": 1,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "calendar-sol-E-1",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "calendar-sol-E-2",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "calendar-sol-F-1",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "calendar-sol-F-2",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "calendar-sol-G-1",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "calendar-sol-G-2",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "calendar-terra-E-1",
+      "exit_code": 1,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "calendar-terra-E-2",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "calendar-terra-F-1",
+      "exit_code": 1,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "calendar-terra-F-2",
+      "exit_code": 1,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "calendar-terra-G-1",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "calendar-terra-G-2",
+      "exit_code": 1,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "events-luna-E-1",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "events-luna-E-2",
+      "exit_code": 1,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "events-luna-F-1",
+      "exit_code": 1,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "events-luna-F-2",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "events-luna-G-1",
+      "exit_code": 1,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "events-luna-G-2",
+      "exit_code": 1,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "events-sol-E-1",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "events-sol-E-2",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "events-sol-F-1",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "events-sol-F-2",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "events-sol-G-1",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "events-sol-G-2",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "events-terra-E-1",
+      "exit_code": 0,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "events-terra-E-2",
+      "exit_code": 1,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "events-terra-F-1",
+      "exit_code": 1,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "events-terra-F-2",
+      "exit_code": 1,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "events-terra-G-1",
+      "exit_code": 1,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    },
+    {
+      "phase": "main",
+      "id": "events-terra-G-2",
+      "exit_code": 1,
+      "diagnostic": "public filesystem API calls with submitted-workspace frames; not all bypasses are covered",
+      "calls": []
+    }
+  ],
+  "access_call_count": 0,
+  "inconclusive": 1
+}

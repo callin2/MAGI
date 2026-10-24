@@ -1,4 +1,15 @@
+---
+id: magi.role-learning-pilot-report
+type: report
+status: recorded
+owner: MAGI
+reviewed: 2026-10-18
+issue: https://github.com/callin2/MAGI/issues/16
+---
+
 # 역할 경험 지속·전이 실행 결과 — #10, #13~#18
+
+[문서 목차](README.md) · 해당 실험 당시의 기록. 후속 결과는 목차의 연구 기록에서 확인한다.
 
 2026-10-16. 조사·계약·최소 구현·실제 LLM 탐색 실행을 수행했다. **지속/조회 경로는 동작했지만 정제 교훈의 독립적 우월성과 토큰 효율은 입증하지 못했다.**
 
@@ -61,9 +72,4 @@ pagination 교훈을 제외한 새 worker와 철회 뒤 새 worker는 교훈 ID�
 
 ## 재현
 
-```sh
-python3 scripts/test_role_memory.py -v
-python3 scripts/check_role_learning.py
-```
-
-둘 다 새 모델 호출을 하지 않는다. 첫 명령은 실제 임시 DB/새 프로세스에서 계약을 시험하고, 두 번째는 고정 해시·영수증·원문 응답과 점수를 확인한다. `prepare_role_learning.py /absolute/path/new-state.sqlite`는 비어 있는 DB에 저장된 후보와 사건을 재생하고 입력을 만든다. 기존 실험 산출물을 다시 쓸 수 있으므로 별도 checkout에서 실행한다. 새 LLM 응답은 현재 도구로 별도 실행해야 하며 저장된 답을 새 실행이라고 보고하지 않는다.
+현재 명령과 결과 파일 변경 범위는 [실행·검증 안내](verification.md)를 따른다. adapter 시험은 임시 fixture를 사용하고, 보관 응답 재집계는 모델을 새로 호출하지 않는다. 저장된 답을 새 실행이라고 보고하지 않는다.

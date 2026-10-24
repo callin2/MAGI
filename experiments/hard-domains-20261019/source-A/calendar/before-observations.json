@@ -1,0 +1,55 @@
+{
+  "executed_at": "2026-10-19T05:39:47.000414+00:00",
+  "command": [
+    "node",
+    "experiments/hard-domains-20261019/source-A/calendar/check-before.mjs"
+  ],
+  "cases": [
+    {
+      "id": "winter-zone",
+      "expected": 1704636000000,
+      "actual": 1704618000000,
+      "passed": false
+    },
+    {
+      "id": "summer-zone",
+      "expected": 1720357200000,
+      "actual": 1720342800000,
+      "passed": false
+    },
+    {
+      "id": "gap-no-instant",
+      "expected": null,
+      "actual": 1710037800000,
+      "passed": false
+    },
+    {
+      "id": "fold-source-policy-earlier",
+      "expected": 1730611800000,
+      "actual": 1730597400000,
+      "passed": false
+    },
+    {
+      "id": "nonhour-zone",
+      "expected": 1704078900000,
+      "actual": 1704099600000,
+      "passed": false
+    },
+    {
+      "id": "adjacent-open-end",
+      "expected": false,
+      "actual": true,
+      "passed": false
+    },
+    {
+      "id": "true-overlap",
+      "expected": true,
+      "actual": true,
+      "passed": true
+    }
+  ],
+  "passed": 1,
+  "total": 7,
+  "stdout": "[{\"id\":\"winter-zone\",\"expected\":1704636000000,\"actual\":1704618000000,\"passed\":false},{\"id\":\"summer-zone\",\"expected\":1720357200000,\"actual\":1720342800000,\"passed\":false},{\"id\":\"gap-no-instant\",\"expected\":null,\"actual\":1710037800000,\"passed\":false},{\"id\":\"fold-source-policy-earlier\",\"expected\":1730611800000,\"actual\":1730597400000,\"passed\":false},{\"id\":\"nonhour-zone\",\"expected\":1704078900000,\"actual\":1704099600000,\"passed\":false},{\"id\":\"adjacent-open-end\",\"expected\":false,\"actual\":true,\"passed\":false},{\"id\":\"true-overlap\",\"expected\":true,\"actual\":true,\"passed\":true}]\n",
+  "stderr": ""
+}

@@ -1,0 +1,48 @@
+{
+  "frozen_at": "2026-10-19T01:23:50.910731+00:00",
+  "models": [
+    {
+      "family": "luna",
+      "id": "gpt-6-luna"
+    },
+    {
+      "family": "terra",
+      "id": "gpt-5.6-terra"
+    },
+    {
+      "family": "sol",
+      "id": "gpt-6.1-sol"
+    }
+  ],
+  "reasoning": "medium for every model and arm",
+  "original_freeze_sha256": "e9178ad8a8ffae6d31c7c4aacab56bbb5c5a064b62de1c1eac93e75e6ad6cf6a",
+  "original_task_sha256": "8c94eb6acaa96f7b091fed95c58b65525d9d80a1cfdb0302428037313cf13db3",
+  "judge_sha256": "d3b4209a8ec4fee5e0fbca39388e91eaacbbc85e732143c4e67b123b1f78d3a8",
+  "checker_sha256": "f489a788e590db9c3d957c3cf14323605f0b2dbd2e6f9764027f81fb313c1d96",
+  "runs_sha256": "85029a711e346c144d71238319a5f57e9abe15e05b7789e4a9719da12aa7543a",
+  "files": {
+    "scripts/cross_system/target_models/run.mjs": "c66c28e04c49bcccadbba8f14d8cc18fce27585e6d805e1e7436f8258cc79b13",
+    "scripts/cross_system/target_models/smoke.mjs": "c6e29907b2b957e20a3d1f364cd52f22a45e0f0fd75efac5bb36ac0a15c3e7a7",
+    "scripts/cross_system/target_models/provider.mjs": "2d594ccdc86cb5f58859a8bcb8565e13038f987872ddddc14f5f864bafe65a58",
+    "scripts/cross_system/target_models/evaluate.py": "941a21aed5d6f37c10f8d0c32fa82499e05b58c6358aa9a9cb6558c1dc5788eb",
+    "scripts/cross_system/target_models/verify.py": "c515232bcdead4ee426be924b806c0db875873d738542c9ca07ac6e3dd7b8eb0",
+    "scripts/cross_system/target_models/prepare.py": "b6011db187305849d8c3fa474eed6bd0d4db5e83faf424f4787c25e2391f051d",
+    "scripts/cross_system/target_models/inventory.py": "93a4ed8b3e2d7c4c3be8d320c498fc3bc6321d9884829b7df00e025194f7b7d3",
+    "experiments/cross-system-target-models-20261019/source/public.test.mjs": "80f5c7916110ca8117247a9805894908399f9c28ee944c542a3512b0b77d3b72",
+    "experiments/cross-system-target-models-20261019/source/preregistration.md": "1a77136fe2ea44d6a32ea0021f879b6ed93e202496e72dab5c4a3db45d104eb8",
+    "experiments/cross-system-target-models-20261019/source/verdict-before.mjs": "4477382ee51f6ee895a2de45b4adf0730a4dd2141525ff927957a60207d5a487",
+    "experiments/cross-system-target-models-20261019/source/verdict-upstream-reference.mjs": "5b389aa397b560255a6b28c7b7b7d5c7d482e78388ded376edffc79f301e1010",
+    "experiments/cross-system-target-models-20261019/source/provenance.json": "662589702d4718dcd472f2f03881caa5f9eb1843757532d7f9462917e56c9c47",
+    "experiments/cross-system-target-models-20261019/source/experience-A.json": "c197c7299f981c5fabe1b8f9fa6388b136fb25335c8f060d11f3a7c8f341f186",
+    "experiments/cross-system-target-models-20261019/source/task.md": "8c94eb6acaa96f7b091fed95c58b65525d9d80a1cfdb0302428037313cf13db3",
+    "experiments/cross-system-target-models-20261019/selected-models.json": "2d2e8c1c830d723087343cdf3d2d08a5ec233784918985bd9acd30aec45065c9",
+    "experiments/cross-system-target-models-20261019/protocol.md": "84bb4a50a41d158618334318875d9bf19510fc7bb782b908ca0100b009b37650"
+  },
+  "limits": {
+    "model_turns": 16,
+    "tool_calls": 60,
+    "seconds": 300,
+    "max_output_tokens_per_turn": 8192
+  },
+  "comparison": "three-model cohort only; never pool prior GPT-4.1 Mini runs"
+}

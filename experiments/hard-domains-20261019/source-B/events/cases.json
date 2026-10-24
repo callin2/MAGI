@@ -1,0 +1,1035 @@
+[
+  {
+    "id": "empty",
+    "axis": "normal",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": []
+    },
+    "value": {
+      "watermark": null,
+      "windows": []
+    }
+  },
+  {
+    "id": "simple",
+    "axis": "normal",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 1,
+          "amount": 3
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "windows": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 3,
+          "count": 1,
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "retransmission",
+    "axis": "boundary",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 1,
+          "amount": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 1,
+          "amount": 3
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "windows": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 3,
+          "count": 1,
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "same-payload-distinct-ids",
+    "axis": "counterexample",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 1,
+          "amount": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": 1,
+          "amount": 3
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "windows": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 6,
+          "count": 2,
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "replace-not-add",
+    "axis": "boundary",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 1,
+          "amount": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 2,
+          "key": "x",
+          "event_time": 1,
+          "amount": 8
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "windows": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 8,
+          "count": 1,
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "older-time-higher-revision",
+    "axis": "counterexample",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 8,
+          "amount": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 2,
+          "key": "x",
+          "event_time": 1,
+          "amount": 9
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "windows": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 9,
+          "count": 1,
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "newer-time-lower-revision",
+    "axis": "counterexample",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 3,
+          "key": "x",
+          "event_time": 1,
+          "amount": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 2,
+          "key": "x",
+          "event_time": 8,
+          "amount": 99
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "windows": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 3,
+          "count": 1,
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "move-key-and-window",
+    "axis": "boundary",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 1,
+          "amount": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 2,
+          "key": "y",
+          "event_time": 12,
+          "amount": 9
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "windows": [
+        {
+          "key": "y",
+          "start": 10,
+          "end": 20,
+          "total": 9,
+          "count": 1,
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "delete-removes",
+    "axis": "regression",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 1,
+          "amount": 3
+        },
+        {
+          "kind": "delete",
+          "id": "a",
+          "rev": 2
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "windows": []
+    }
+  },
+  {
+    "id": "unknown-delete-tombstone",
+    "axis": "boundary",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "delete",
+          "id": "a",
+          "rev": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 2,
+          "key": "x",
+          "event_time": 1,
+          "amount": 3
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "windows": []
+    }
+  },
+  {
+    "id": "resurrection-higher-revision",
+    "axis": "regression",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 1,
+          "amount": 3
+        },
+        {
+          "kind": "delete",
+          "id": "a",
+          "rev": 2
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 3,
+          "key": "x",
+          "event_time": 1,
+          "amount": 7
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "windows": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 7,
+          "count": 1,
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "zero-total-not-empty",
+    "axis": "counterexample",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 1,
+          "amount": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": 1,
+          "amount": -3
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "windows": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 0,
+          "count": 2,
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "zero-amount-counts",
+    "axis": "boundary",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 1,
+          "amount": 0
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "windows": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 0,
+          "count": 1,
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "negative-time-floor",
+    "axis": "boundary",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": -1,
+          "amount": 3
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "windows": [
+        {
+          "key": "x",
+          "start": -10,
+          "end": 0,
+          "total": 3,
+          "count": 1,
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "exact-window-boundary",
+    "axis": "boundary",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 9,
+          "amount": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": 10,
+          "amount": 3
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "windows": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 3,
+          "count": 1,
+          "final": false
+        },
+        {
+          "key": "x",
+          "start": 10,
+          "end": 20,
+          "total": 3,
+          "count": 1,
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "late-new-after-finalization",
+    "axis": "boundary",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "watermark",
+          "time": 10
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 1,
+          "amount": 3
+        }
+      ]
+    },
+    "value": {
+      "watermark": 10,
+      "windows": []
+    }
+  },
+  {
+    "id": "allowed-lateness-open",
+    "axis": "boundary",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 1,
+      "records": [
+        {
+          "kind": "watermark",
+          "time": 10
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 1,
+          "amount": 3
+        }
+      ]
+    },
+    "value": {
+      "watermark": 10,
+      "windows": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 3,
+          "count": 1,
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "exact-seal-with-lateness",
+    "axis": "boundary",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 1,
+      "records": [
+        {
+          "kind": "watermark",
+          "time": 11
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 1,
+          "amount": 3
+        }
+      ]
+    },
+    "value": {
+      "watermark": 11,
+      "windows": []
+    }
+  },
+  {
+    "id": "watermark-never-rewinds",
+    "axis": "regression",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "watermark",
+          "time": 20
+        },
+        {
+          "kind": "watermark",
+          "time": 0
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 11,
+          "amount": 3
+        }
+      ]
+    },
+    "value": {
+      "watermark": 20,
+      "windows": []
+    }
+  },
+  {
+    "id": "duplicate-after-finalization",
+    "axis": "regression",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 1,
+          "amount": 3
+        },
+        {
+          "kind": "watermark",
+          "time": 10
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 1,
+          "amount": 3
+        }
+      ]
+    },
+    "value": {
+      "watermark": 10,
+      "windows": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 3,
+          "count": 1,
+          "final": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "move-from-sealed-atomic",
+    "axis": "boundary",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 1,
+          "amount": 3
+        },
+        {
+          "kind": "watermark",
+          "time": 10
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 2,
+          "key": "x",
+          "event_time": 11,
+          "amount": 8
+        }
+      ]
+    },
+    "value": {
+      "watermark": 10,
+      "windows": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 3,
+          "count": 1,
+          "final": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "move-to-sealed-atomic",
+    "axis": "boundary",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 11,
+          "amount": 3
+        },
+        {
+          "kind": "watermark",
+          "time": 10
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 2,
+          "key": "x",
+          "event_time": 1,
+          "amount": 8
+        }
+      ]
+    },
+    "value": {
+      "watermark": 10,
+      "windows": [
+        {
+          "key": "x",
+          "start": 10,
+          "end": 20,
+          "total": 3,
+          "count": 1,
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "rejected-version-does-not-poison",
+    "axis": "boundary",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 11,
+          "amount": 3
+        },
+        {
+          "kind": "watermark",
+          "time": 10
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 2,
+          "key": "x",
+          "event_time": 1,
+          "amount": 8
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 2,
+          "key": "x",
+          "event_time": 12,
+          "amount": 9
+        }
+      ]
+    },
+    "value": {
+      "watermark": 10,
+      "windows": [
+        {
+          "key": "x",
+          "start": 10,
+          "end": 20,
+          "total": 9,
+          "count": 1,
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "delete-sealed-rejected",
+    "axis": "boundary",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 1,
+          "amount": 3
+        },
+        {
+          "kind": "watermark",
+          "time": 10
+        },
+        {
+          "kind": "delete",
+          "id": "a",
+          "rev": 2
+        }
+      ]
+    },
+    "value": {
+      "watermark": 10,
+      "windows": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 3,
+          "count": 1,
+          "final": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "signed-watermark-zero",
+    "axis": "boundary",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": -1,
+          "amount": 3
+        },
+        {
+          "kind": "watermark",
+          "time": 0
+        }
+      ]
+    },
+    "value": {
+      "watermark": 0,
+      "windows": [
+        {
+          "key": "x",
+          "start": -10,
+          "end": 0,
+          "total": 3,
+          "count": 1,
+          "final": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "conflicting-revision",
+    "axis": "boundary",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 1,
+          "amount": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 1,
+          "amount": 8
+        }
+      ]
+    },
+    "throws": true
+  },
+  {
+    "id": "delete-conflict-same-revision",
+    "axis": "boundary",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x",
+          "event_time": 1,
+          "amount": 3
+        },
+        {
+          "kind": "delete",
+          "id": "a",
+          "rev": 1
+        }
+      ]
+    },
+    "throws": true
+  },
+  {
+    "id": "lower-revision-different-payload",
+    "axis": "regression",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 3,
+          "key": "x",
+          "event_time": 1,
+          "amount": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 2,
+          "key": "y",
+          "event_time": 1,
+          "amount": 99
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "windows": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 3,
+          "count": 1,
+          "final": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "distinct-keys-with-separator",
+    "axis": "regression",
+    "input": {
+      "window_ms": 10,
+      "lateness_ms": 0,
+      "records": [
+        {
+          "kind": "upsert",
+          "id": "a",
+          "rev": 1,
+          "key": "x|0",
+          "event_time": 1,
+          "amount": 3
+        },
+        {
+          "kind": "upsert",
+          "id": "b",
+          "rev": 1,
+          "key": "x",
+          "event_time": 1,
+          "amount": 3
+        }
+      ]
+    },
+    "value": {
+      "watermark": null,
+      "windows": [
+        {
+          "key": "x",
+          "start": 0,
+          "end": 10,
+          "total": 3,
+          "count": 1,
+          "final": false
+        },
+        {
+          "key": "x|0",
+          "start": 0,
+          "end": 10,
+          "total": 3,
+          "count": 1,
+          "final": false
+        }
+      ]
+    }
+  }
+]

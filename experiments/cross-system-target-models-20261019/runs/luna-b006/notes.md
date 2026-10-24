@@ -1,0 +1,9 @@
+# Repair notes
+
+The classifier previously treated report fields as proof of fixed-holdout success and inferred candidate persistence from turn metadata plus a saved-hash-looking stdout line. The CLI also never loaded the stored source or actual fixed-holdout capture. This allowed claimed results to certify a verdict without checking underlying artifacts.
+
+The repaired classifier preserves `observedKind`, `classifyCase`, the existing status/count fields, and the write-once verdict protections. `complete` now requires matching observed/expected response kinds, successful numeric process exits for all scripted turns, scripted-turn-count parity, and current pin parity; it does not require a candidate. `finalCandidate` additionally requires a final candidate turn with matching saved-source hash evidence and the actual source bytes/string hashing to the report's final SHA-256 claim. `fixedHoldoutPass` additionally requires the report's affirmative holdout claim and an actual zero-exit capture containing a line beginning `User expectations passed:`. The CLI reads `<case>.ghost.md` and `holdout-result.json`, passing those as evidence; absent files cannot establish success.
+
+Validation run: `functions.tests`, which ran supplied `public.test.mjs` and added `candidate.test.mjs`; all six tests passed. Regression coverage includes missing evidence, altered source, false holdout stdout, noncandidate completion, failed exits, and candidate hash mismatch.
+
+Remembered experience was provided about rejecting empty evidence for a different tracker completion workflow. That tracker rule and its evidence-array schema do not apply here: this classifier has explicit source, process-capture, and holdout-capture evidence semantics, and valid clarification/answer completion need not produce a candidate.

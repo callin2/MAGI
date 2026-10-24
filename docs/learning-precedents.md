@@ -1,4 +1,15 @@
+---
+id: magi.learning-precedents
+type: research
+status: snapshot
+owner: MAGI
+reviewed: 2026-10-18
+issue: https://github.com/callin2/MAGI/issues/10
+---
+
 # 경험 학습 사례와 MAGI 재사용 결정 — #10
+
+[문서 목차](README.md)
 
 확인일: 2026-10-16 UTC. 공개 문서(D), 소스 확인(C), 원저자 실험(A), MAGI 직접 시험(M)을 구분한다. 현재 표에는 M이 없다. 수치 우월성은 이 문서에서 채택 근거로 사용하지 않는다.
 
