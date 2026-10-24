@@ -82,3 +82,10 @@ README는 최신 보관 연구로 연결하고, 주제별 목차에 후속 연�
 검증 결과: 관리 문서 21개의 ID와 메타데이터, 관리 파일 23개의 로컬 링크 220개(헤딩 11개), 목차 연결이 통과했다. 긴 문단 완전 일치 중복은 0건이다. 보호 파일 2,008개 중 435개는 Git 원문 바이트와 같고, 1,573개는 기존 Windows checkout의 CRLF 변환만 다르다. Git 콘텐츠 변경은 없으며 checkout manifest hash를 보존했다. 최초 엄격한 바이트 검사의 실패와 줄바꿈 원인을 감사 파일에 남겼다. 실험 실행·채점·원본 파일 재작성은 하지 않았다.
 
 문서 변경은 [커밋 3377445](https://github.com/callin2/MAGI/commit/3377445bf31976c61b4bf8b5d88571c9865e27bd)로 push했다. [#26 검증 기록](https://github.com/callin2/MAGI/issues/26#issuecomment-6363047888)과 [후속 연구 브랜치 대상 PR27](https://github.com/callin2/MAGI/pull/27)에서 확인한다.
+
+
+## 2026-10-24 사용자 승인 dev 통합
+
+사용자가 하던 작업 전부를 dev에 병합·push하도록 요청했다. 기존 MAGI에는 dev가 없으므로 확인된 main244c7c7에서 dev를 만들고, 그 후손인 현재 문서·실험 이력 브랜치를 PR27로 통합한다. main과 기존 연구 브랜치는 보존한다. 현재 HEAD가 효과 검증·교차 시스템·세 모델·다중 분야 연구 브랜치를 모두 포함함을 Git ancestry로 확인했다. 별도로 갈라진 연구 결과를 임의로 합치거나 실험을 다시 채점하지 않는다.
+
+Windows에서 tracker32개, 역할 기억7개, 효과 판정5개 및 import 반례 검사가 통과했다. 최초 sandbox TEMP 접근 거부와 그 후 자식 Python의 cp949 기록/부모 UTF-8 읽기 오류를 보존했다. 부모에만 -X utf8을 주는 대신 PYTHONUTF8=1을 자식에도 전달하자 동일 검사가 통과했다. 모델 호출·원점수 수정·보관 실험 파일 재작성은 없다. [정확한 소스 및 로그 해시](2026-10-24-dev-integration.json), [통합 PR27](https://github.com/callin2/MAGI/pull/27), [기록 이슈26](https://github.com/callin2/MAGI/issues/26). dev 통합은 MAGI의 실제 효과가 입증됐다는 뜻이 아니며 보고서의 한계는 유지한다.
